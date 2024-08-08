@@ -307,7 +307,7 @@ After the solution is enabled, the iFrame will display a pop-up “Enter The Gam
 Note: This cookie pop-up message will show only 1 time on 1 device, if that device clears the saved cookies it will show again on the next login.
 请知悉，此 cookie 弹出视窗仅将在 1 台设备上显示 1 次，如果该设备清除 cookie 后，它将会在下 次登录时再次显示。
 
-![Workflow](./../res/enter_the_game.jpg)
+![Workflow](./../res/enter_the_game.png)
 
 ## 3. API Functions API功能 <a name="3-api-functions-api"></a>
 
