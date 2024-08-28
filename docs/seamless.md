@@ -944,6 +944,7 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
             "Period": 0,
             "SettlementTime": "2019-05-14 06:00:00",
             "ResettlementTime": "2019-05-14 07:00:00",
+            "PartialStatus": 1,
             "EventId": 985845048,
             "EventName": "Yokohama Bay Stars-vs-Chunichi Dragons",
             "LeagueId": 187703,
@@ -1021,6 +1022,7 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
             "Outcome": "LOSE",
             "SettlementTime": "2019-05-14 06:00:00",
             "ResettlementTime": "2019-05-14 07:00:00",
+            "PartialStatus": 1,
             "Legs": [{
                     "SportId": 29,
                     "Sport": "Soccer",
@@ -1122,6 +1124,7 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
         "Period": 0,
         "SettlementTime": "2021-07-02 12:51:54",
         "ResettlementTime": "2021-07-02 13:51:54",
+        "PartialStatus": 1,
         "Description": "Baseball - MLB\nMinnesota Twins vs Chicago White Sox - Over 8.5 @ -128 for Game\nArizona Diamondbacks vs St. Louis Cardinals - Over 8.5 @ -123 for Game\n\nBaseball - Korea Professional Baseball\nDoosan Bears vs Hanwha Eagles - Doosan Bears @ -162 for Game\nG2 Samsung Lions vs G2 SSG Landers - Over 8.5 @ -135 for Game\n\nOld ticket : Ref No: 0000000 / 00000000\nMember id : ABCXYZ",
 	"OriginalWagerId": 725755354
       }

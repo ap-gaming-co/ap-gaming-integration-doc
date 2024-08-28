@@ -17,6 +17,7 @@
     - [13. User Status 用户状态](#13-user-status-%E7%94%A8%E6%88%B7%E7%8A%B6%E6%80%81)
     - [14. Leg Status Result 选项结果](#14-leg-status-result-%E9%80%89%E9%A1%B9%E7%BB%93%E6%9E%9C)
     - [15. Non-login currency display 未登录币种显示](#15-non-login-currency-display-%E6%9C%AA%E7%99%BB%E5%BD%95%E5%B8%81%E7%A7%8D%E6%98%BE%E7%A4%BA)
+    - [16. Bet Status Partial Result 投注半\/全数结算状态](#16-bet-status-partial-result-%E6%8A%95%E6%B3%A8%E5%8D%8A%E5%85%A8%E6%95%B0%E7%BB%93%E7%AE%97%E7%8A%B6%E6%80%81)
 
 
 ## 1. Sports 体育项目
@@ -973,3 +974,11 @@ If you would like to display MYR when non-login → https://fv-ab123.tender.com/
 域名 → https://fv-ab123.tender.com/en 若欲在未登录时显示 MYR 币种 → https://fv-ab123.tender.com/en/?currency=MYR <br/>
 Note: Without this parameter, the default non-login currency would be CNY. <br/>
 请注意：如果没有此参数，默认的未登录币种显示为 CNY
+
+## 16. Bet Status Partial Result 投注半\/全数结算状态
+
+| Code 代码 | Description 描述 |
+| --- | --- |
+| 0 | Half 半数结算 | 
+| 1 | Full 全数结算 | 
+
