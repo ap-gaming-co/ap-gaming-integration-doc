@@ -307,7 +307,7 @@ After the solution is enabled, the iFrame will display a pop-up “Enter The Gam
 Note: This cookie pop-up message will show only 1 time on 1 device, if that device clears the saved cookies it will show again on the next login.
 请知悉，此 cookie 弹出视窗仅将在 1 台设备上显示 1 次，如果该设备清除 cookie 后，它将会在下 次登录时再次显示。
 
-![Workflow](./../res/enter_the_game.png)
+![Workflow](./../res/enter_the_game.jpg)
 
 ## 3. API Functions API功能 <a name="3-api-functions-api"></a>
 
@@ -332,8 +332,8 @@ Endpoint 端点
 | Name | Value | Validation | Description |
 | --- | --- | --- | --- |
 | `userCode` | String<br/>(required 必需项) | | This is the user code / loginID of the player. E.g: *PA10000000* 此为玩家登录名/用户名，例如*PA10000000* |
-| `locale` | String <br/>(optional 非必需项) | Supported locales based on brand’s available languages. | See Locale (Language) in the Appendix. |
-| `oddsFormat` | String <br/>(optional 非必需项) | A list of supported oddsFormats is available in the Appendix. | See Odds Format in the Appendix. |
+| `locale` | String <br/>(optional 非必需项) | Supported locales based on brand’s available languages. | See Locale (Language) in the Data-format. |
+| `oddsFormat` | String <br/>(optional 非必需项) | A list of supported oddsFormats is available in the Data-format. | See Odds Format in the Data-format. |
 | `desktopView` | Boolean <br/>(optional 非必需项) | `true`/`false` *(Default: false)*  Only applicable to Asian view  仅限用于亚洲界面 | If true then desktop view be used when their players use mobile device Otherwise, the appropriate view will be displayed based on the device (desktop or mobile). |
 | `view` | String <br/>(optional 非必需项) | Default: COMPACT | Once the parameter is set, this view would be the default view in the iFrame. 该参数可设置并更改默认界面 |
 | `target` | String <br/>(optional 非必需项) | `LIVE`/`HIGHLIGHTS` *(Default: LIVE)* Only applicable to mobile Euro view. 仅限用于手机欧洲界面。 | Players will be directed to the corresponding page tab. 玩家将被定向到相对应的标签页 |
@@ -549,15 +549,15 @@ This service is used to create a new user and generate a URL that will allow the
 | `userCode` | Header | String <br/>(required 必需项) | | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String<br/> (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 | |
 | `loginId`  | Query | String <br/>(required 必需项)  | If loginId does not exist in the system, it will validate and create a new player based on this loginId.<br/>Validation Rule for loginId: Must be between 6 and 50 alphanumeric characters. | This is the user code / loginID of the player. 此为玩家登录名/用户名，例如 |
-| `locale` | Query | String <br/>(optional 非必需项) | Supported locales based on brand’s available languages. | See Locale (Language) in the Appendix. |
-| `sport` | Query | String <br/>(optional 非必需项) | A list of supported sports is available in the Appendix.<br/>**Notes:**<br/>If you only want to show only e-sports in the iFrame, you must contact us to enable the setting and the sport parameter must be "e-sports".<br/>若您想在iframe中只显示电子竞技，需与我们联系以启用设置，并且需将sport参数设置为”e-sports” | See Sport in the Appendix. |
-| `oddsFormat` | Query | String<br/>(optional 非必需项) | A list of supported odds formats is available in the Appendix. | See Odds Format in the Appendix. |
+| `locale` | Query | String <br/>(optional 非必需项) | Supported locales based on brand’s available languages. | See Locale (Language) in the Data-format. |
+| `sport` | Query | String <br/>(optional 非必需项) | A list of supported sports is available in the Data-format.<br/>**Notes:**<br/>If you only want to show only e-sports in the iFrame, you must contact us to enable the setting and the sport parameter must be "e-sports".<br/>若您想在iframe中只显示电子竞技，需与我们联系以启用设置，并且需将sport参数设置为”e-sports” | See Sport in the Data-format. |
+| `oddsFormat` | Query | String<br/>(optional 非必需项) | A list of supported odds formats is available in the Data-format. | See Odds Format in the Data-format. |
 | `desktopView` | Query | Boolean<br/>(optional 非必需项) | `true`/`false` *(Default: false)*  Only applicable to Asian view  仅限用于亚洲界面 | If true, then desktop view will be used when the players use a mobile device. Otherwise, the appropriate view will be displayed based on the device (desktop or mobile). |
-| `view` | Query | String<br/>(optional 非必需项) | Default: COMPACT | See View in the Appendix. <br/>Once the parameter is set, the view will be the default view in the iFrame. 该参数可设置并更改默认界面 |
+| `view` | Query | String<br/>(optional 非必需项) | Default: COMPACT | See View in the Data-format. <br/>Once the parameter is set, the view will be the default view in the iFrame. 该参数可设置并更改默认界面 |
 | `eventId` | Query | Number<br/>(optional 非必需项) | Event ID can be obtained by the Get Hot Event API. event Id 可以通过热门赛事 API获取。 | Players will be redirected to the corresponding event page. 玩家将被定向到相对应的赛事页面。 |
 | `parentUrl` | Query | String <br/>(optional 非必需项) | Client's domain which will be used for live streaming in the Esports-Hub | This parameter is only supported for Esports-Hub 该参数仅支持在Esports-Hub |
-| `tab` | Query | String <br/>(optional 非必需项) | | See Tab in the Appendix. <br/>This parameter is only supported for Esports-Hub 该参数仅支持在Esports-Hub |
-| `gameName` | Query | String <br/>(optional 非必需项) | | See Game Name in the Appendix.<br/>This parameter is only supported for Esports-Hub 该参数仅支持在Esports-Hub |
+| `tab` | Query | String <br/>(optional 非必需项) | | See Tab in the Data-format. <br/>This parameter is only supported for Esports-Hub 该参数仅支持在Esports-Hub |
+| `gameName` | Query | String <br/>(optional 非必需项) | | See Game Name in the Data-format.<br/>This parameter is only supported for Esports-Hub 该参数仅支持在Esports-Hub |
 | `leagueId` | Query | Number<br/>(optional 非必需项) | League ID can be obtained by the Get Hot Event API. league Id 可以通过热门赛事 API获取。 | Players will be redirected to the corresponding League page. 玩家将被定向到相对应的联赛页面。 |
 | `target` | Query | String <br/>(optional 非必需项) | `LIVE`/`HIGHLIGHTS` *(Default: LIVE)* Only applicable to mobile Euro view. 仅限用于手机欧洲界面。 | Players will be redirected to the corresponding page tab. 玩家将被定向到相对应的标签页。 |
 | `mode` | Query | String <br/>(optional 非必需项) | `LIGHT`/`DARK` *(Default: LIGHT)* The mode to be displayed by default. 默认显示的模式。 | Only applicable to new visitors. Existing user preferences will supersede this setting. 仅适用于新用户。 现有用户的偏好选项将取代此设置。|
@@ -945,7 +945,7 @@ This service updates the status for a player.
 | `userCode`  | Header | String  (required 必需项)  |  | This is agent code that you get at step 2. E.g: CO1AP1 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `userCode` | Query | String (required 必需项)  |  | This is the user code / loginID of the player. E.g: PA10000000.<br/>此为玩家登录名/用户名，例如PA10000000 |
-| `status` | Query | String (required 必需项)  | `ACTIVE`, `INACTIVE`, `SUSPENDED` | See User Status in the Appendix. |
+| `status` | Query | String (required 必需项)  | `ACTIVE`, `INACTIVE`, `SUSPENDED` | See User Status in the Data-format. |
 
 **Note:**
 -	`INACTIVE` player CANNOT login on Member site
@@ -1049,7 +1049,7 @@ We also provide a wager feed to Push wager changes to B2B customer servers (see 
 | `userCode` | Query | String (required 必需项) |  | This is the user code / loginID of the player. E.g: PA10000000 此为玩家登录名/用户名，例如PA10000000 |
 | `settle` | Query | Boolean(optional 非必需项) | true/false(Default: false) | If true, wagers of status included: SETTLED, CANCELLED Else also included: OPEN, PENDING  |
 | `filterBy` | Query | String (optional 非必需项) | event_date/wager_date (Default: event_date) | If settle (above) equals FALSE date range is based on filterBy‘s value otherwise it is based on settlement date 如果settle返回FAlSE, 日期会按照filterBy的数值，否则按照注单结算日期 |
-| `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Appendix. |
+| `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format. |
 
 *Sample code (java) - See HttpUtils class at Appendix*
 *示例代码（java）– 请参阅附录里的 HttpUtils class*
@@ -1535,7 +1535,7 @@ This service returns all wagers for a player (this function works as FR001 and w
 | `userCode` | Query | String (optional 非必需项) |  | This is the user code / loginID of the player. E.g: PA10000000. 玩家用户名/登录名 |
 | `settle` | Query | Int (optional 非必需项) | 1: settled <br/>0: unsettled <br/>-1: all (both settled and unsettled) (Default: -1) | 1 = wager status: SETTLED or CANCELLED<br/>0 = wager status includes: OPEN or PENDING<br/>-1 All wager status values |
 | `filterBy (2)` | Query | String(optional非必需项) | event_date wager_date settle_date update_date (Default: wager_date) |
-| `locale` | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Appendix. |
+| `locale` | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format. |
 | `wagerIds` | Query | String(optional 非必需项) | A comma-separated list of wagerIDs to be returned.  |  Example: `6862955`,`6862947` |
 
 **Note:**
@@ -1841,7 +1841,7 @@ Parameters 参数
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String(required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `loginId`  | Query | String  (required 必需项)  |  | This is the user code / loginID of the player. E.g: PA10000000 or PA10.02 此为玩家登录名/用户名，例如PA10000000或PA10.abc123 |
-| `locale`  | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Appendix. |
+| `locale`  | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format. |
 
 
 Format of URL for the My Bet page: 前往"我的投注" 的URL格式
@@ -2270,8 +2270,8 @@ This service will get match announcements.
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `dateFrom` | Query | Date (optional 非必需项) | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-15 23:59:59  |
 | `dateTo`  | Query | Date (optional 非必需项) | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 168 hours (7 days) |
-| `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Appendix. |
-| `sport` | Query | String(optional 非必需项) | The sport name |  See Sport in the Appendix. |
+| `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format. |
+| `sport` | Query | String(optional 非必需项) | The sport name |  See Sport in the Data-format. |
 
 **Note:**
 
@@ -2407,9 +2407,9 @@ The Event IDs parameter obtained by the Get Hot Event API can be passed into the
 | Name  | Type | Value  | Validation  | Description  |
 | ---  | ---  | ---  | ---  | ---  |
 | `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 这是在 Step 2里获取的agent code,例如：CO1AP1 |
-| `locale` 区域设置 | Query | String (optional非必需项) | Supported locales based on brand’s available languages. 在基于现有品牌的语言下，列出所支持区域 |  See Locale (Language) in the Appendix. 参见附件区域设置（语言） |
-| `oddsFormat` 赔率格式 | Query | String (optional 非必需项) | List supported oddsFormat: AM, EU, HK, ID, MY 列出所支持赔率格式 | See Odds Format in the Appendix. 参见附件赔率格式 |
-| `sports` | Query | String(required必需项) | A comma-separated list of sport names. |  See Sport in the Appendix. |
+| `locale` 区域设置 | Query | String (optional非必需项) | Supported locales based on brand’s available languages. 在基于现有品牌的语言下，列出所支持区域 |  See Locale (Language) in the Data-format. 参见附件区域设置（语言） |
+| `oddsFormat` 赔率格式 | Query | String (optional 非必需项) | List supported oddsFormat: AM, EU, HK, ID, MY 列出所支持赔率格式 | See Odds Format in the Data-format. 参见附件赔率格式 |
+| `sports` | Query | String(required必需项) | A comma-separated list of sport names. |  See Sport in the Data-format. |
 
 
 *Sample code (java) - See HttpUtils class at Appendix*
