@@ -2519,12 +2519,12 @@ This section shows basic workflows for each of the API functions.
 ## 5. Appendix 附录 <a name="5-appendix"></a>
 
 ### 5.1. View 界面 <a name="51-view"></a>
-| View Code 界面代码 | Description 描述 |Supported Odds Format|
-| --- | ---  | ---  |
-| ASIA | Asia View 亚洲界面 |AM, EU, HK, ID, MY|
-| EURO | Europe View 欧洲界面 |AM, EU|
-| ESPORTS-HUB | Esports View 平博电竞 |AM, EU, HK, MY|
-| COMPACT | New Asian View 新亚洲界面 |AM, EU, HK, MY|
+| View Code 界面代码 | Description 描述 |
+| --- | ---  |
+| ASIA | Asia View 亚洲界面 |
+| EURO | Europe View 欧洲界面 |
+| ESPORTS-HUB | Esports View 平博电竞 |
+| COMPACT | New Asian View 新亚洲界面 |
 
 ### 5.2. Tab 登入标签 <a name="52-tab"></a>
 | Tab 登入标签|
