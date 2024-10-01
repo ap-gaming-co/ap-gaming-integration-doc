@@ -2383,13 +2383,13 @@ Call the API along with the Sport name to get events. Each Sport has its own log
 使用体育名称调用API以获取赛事，并且每种体育项目都有其自己的逻辑来获取热门赛事：
 
 - If the requested Sports are in configurations as B2B Hot Events on the Partner Service BO Site, the system will return the Hot Events for that Sport. 若请求的体育项目在配置B2B热门赛事–后台中，则系统将以config形式返回该项目的热门赛事API。
-- If the requested Sport is Soccer: The Hot Events will be based on the following information to return 10 Hot Events. 若请求的体育项目是足球：系统将基于以下信息进行计算以获取10个热门赛事
+- If the requested Sport is Soccer: The Hot Events will be based on the following information to return 50 Hot Events. 若请求的体育项目是足球：系统将基于以下信息进行计算以获取50个热门赛事
 	- Hot Soccer Team and Hot Leagues. 热门足球队和热门联赛。
 	- Highest max bet of Money Line. 最高赔率投注。
-- If requested Sport is E-Sports: The Hot Events will be based on the following information to return 10 Hot Events for each Game. 若请求的体育项目是电子竞技：系统将基于以下信息进行计算，以获取每种游戏的10个热门赛事。
+- If requested Sport is E-Sports: The Hot Events will be based on the following information to return 50 Hot Events for each Game. 若请求的体育项目是电子竞技：系统将基于以下信息进行计算，以获取每种游戏的50个热门赛事。
 	- Hot E-Sports team and Hot Leagues. 热门电子竞技团队和热门联赛。
 	- Highest max bet of Money Line 最高赔率投注。
-- For all other Sports: The Hot Events will be based on the following information to return 10 Hot Events for each Sport. 若请求的体育项目是其他：系统将基于以下信息进行计算，以获取每种体育项目的10个热门事件。
+- For all other Sports: The Hot Events will be based on the following information to return 50 Hot Events for each Sport. 若请求的体育项目是其他：系统将基于以下信息进行计算，以获取每种体育项目的50个热门事件。
 	- Hot Leagues. 热门联赛。
 	- Highest max bets of Money line. 最高赔率投注。
 
