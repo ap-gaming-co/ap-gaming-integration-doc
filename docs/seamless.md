@@ -373,6 +373,7 @@ In `BETTED` action, we send the number of bets that will be generated using the 
 		"PlayerIPAddress": "10.10.12.8",
                 "Legs": [
                     {
+			"LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
                         "SportId": 29,
                         "Sport": "Soccer",
                         "SportGroup": 0,
@@ -392,6 +393,7 @@ In `BETTED` action, we send the number of bets that will be generated using the 
                         "Selection": "Draw"
                     },
                     {
+			"LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
                         "SportId": 29,
                         "Sport": "Soccer",
                         "SportGroup": 0,
@@ -411,6 +413,7 @@ In `BETTED` action, we send the number of bets that will be generated using the 
                         "Selection": "Konyaspor Club"
                     },
                     {
+			"LegId": "b0bbbc91-a8f8-4b37-b439-149060fcaa16",
                         "SportId": 29,
                         "Sport": "Soccer",
                         "SportGroup": 0,
@@ -677,6 +680,7 @@ Response data when accepting a bet with balance adjustment.
             "ToWin": 39.890,
             "ToRisk": 12.000,
             "Legs": [{
+                    "LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
                     "SportId": 29,
                     "Sport": "Soccer",
                     "SportGroup": 0,
@@ -695,6 +699,7 @@ Response data when accepting a bet with balance adjustment.
                     "EventName": "Oeste Itapolis-vs-Cuiaba"
                 },
                 {
+		    "LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
                     "SportId": 29,
                     "Sport": "Soccer",
                     "SportGroup": 0,
@@ -774,6 +779,7 @@ Response data when accepting bet with no balance adjustment.
             "ToWin": 39.890,
             "ToRisk": 12.000,
             "Legs": [{
+		    "LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
                     "SportId": 29,
                     "Sport": "Soccer",
                     "SportGroup": 0,
@@ -792,6 +798,7 @@ Response data when accepting bet with no balance adjustment.
                     "EventName": "Oeste Itapolis-vs-Cuiaba"
                 },
                 {
+		    "LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
                     "SportId": 29,
                     "Sport": "Soccer",
                     "SportGroup": 0,
@@ -1024,6 +1031,7 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
             "ResettlementTime": "2019-05-14 07:00:00",
             "PartialStatus": 1,
             "Legs": [{
+		    "LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
                     "SportId": 29,
                     "Sport": "Soccer",
                     "SportGroup": 0,
@@ -1042,6 +1050,7 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
                     "EventName": "Chornomorets Odessa-vs-Karpaty Lviv"
                 },
                 {
+		    "LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
                     "SportId": 29,
                     "Sport": "Soccer",
                     "SportGroup": 0,
