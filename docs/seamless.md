@@ -252,6 +252,10 @@ When a player is placing a bet in the player site, the Sportsbook Platform sends
 
 当玩家在网站下注，体育平台将执行已下注的操作并将注单信息一起发送给运营商以扣除玩家的相应金额并保存注单。响应的可用余额为交易完成之后的余额。
 
+If the response received from the BETTED action is invalid or incomplete, the Sportsbook Platform will send a ROLLBACKED action as we cannot be certain that the wager information was successfully processed by the Operator.
+
+如果从投注操作收到的响应无效或不完整，体育平台将发送投注的返回操作，因为我们无法确定运营商是否成功处理了投注信息。
+
 **Single Wager Type: POST Data for Request 单一注单：请求的POST数据**
 
 ```js
@@ -1262,9 +1266,9 @@ When the bet is cancelled, the Sportsbook Platform will call the Operator with t
 
 ### 2.2.6. ROLLBACKED Actions 已返回
 
-If a response is not received from the server, or a timeout (499) or gateway error (502, 504) is received, on sending a BETTED action, a ROLLBACKED action will be sent for the wager. The Operator must rollback the wager using the WagerId and refund the Amount that Sportsbook Platform sent in betted action using the TransactionId. If the Transaction and Wager are not found in Operator side, no adjustment is to be made.
+If a response is not received from the server, a timeout (499), gateway error (502, 504), or an invalid response is received, on sending a BETTED action, a ROLLBACKED action will be sent for the wager. The Operator must rollback the wager using the WagerId and refund the Amount that Sportsbook Platform sent in betted action using the TransactionId. If the Transaction and Wager are not found in Operator side, no adjustment is to be made.
 
-如果未从服务器收到响应，或者收到超时 (499) 或网关错误 (502、504)，则在发送投注操作时，将发送投注的返回操作。 运营商必须使用 WagerId 返回投注，并退还体育博彩平台使用 TransactionId 在投注操作中发送的金额。 如果运营商端没有找到交易和投注，则无需进行调整。
+如果未从服务器收到完整响应，而收到超时 (499)、网关错误 (502、504) 或收到无效响应，则在发送投注操作时，将发送投注的返回操作。运营商必须使用 WagerId 返回投注，并根据TransactionId 来退还体育平台投注操作中发送的金额。 如果运营商端没有找到交易和投注，则无需进行调整。
 
 *Note: The rollback action will be sent when there is a problem during the bet placement process. Request includes wager information and transaction type of “rollbacked”. This request has only 1 action and does not include other actions.*
 
@@ -1295,7 +1299,8 @@ In the Transaction of Rollback action, we send a ReferTransactionId property. Th
         },
         "WagerInfo": {
             "WagerId": 724839645
-        }
+        },
+	"RollbackReason": "Malformed response"
     }]
 }
 ```
