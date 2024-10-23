@@ -72,6 +72,7 @@ The API only supports JSON format. API 只支持JSON格式
 5. Myanmar Krat (MMK)
 6. Malagasy ariary (MGA)
 7. Ugandan Shilling (UGX)
+8. Iranian Rial (IRR)
 
 Example: 100 IDR in system mean 100,000 IDR
 
