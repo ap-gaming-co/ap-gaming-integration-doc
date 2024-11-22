@@ -556,7 +556,7 @@ This service is used to create a new user and generate a URL that will allow the
 | `desktopView` | Query | Boolean<br/>(optional 非必需项) | `true`/`false` *(Default: false)*  Only applicable to Asian view  仅限用于亚洲界面 | If true, then desktop view will be used when the players use a mobile device. Otherwise, the appropriate view will be displayed based on the device (desktop or mobile). |
 | `view` | Query | String<br/>(optional 非必需项) | Default: COMPACT | See View in the Data-format. <br/>Once the parameter is set, the view will be the default view in the iFrame. 该参数可设置并更改默认界面 |
 | `eventId` | Query | Number<br/>(optional 非必需项) | Event ID can be obtained by the Get Hot Event API. event Id 可以通过热门赛事 API获取。 | Players will be redirected to the corresponding event page. 玩家将被定向到相对应的赛事页面。 |
-| `parentUrl` | Query | String <br/>(optional 非必需项) | Client's domain which will be used for live streaming in the Esports-Hub | This parameter is only supported for Esports-Hub 该参数仅支持在Esports-Hub |
+| `parentUrl` | Query | String <br/>(optional 非必需项) | Client's domain which will be used for live streaming in all views. 客户的域名将在所有介面中用于直播 | This parameter is supported in all views. 该参数支持所有界面。 |
 | `tab` | Query | String <br/>(optional 非必需项) | | See Tab in the Data-format. <br/>This parameter is only supported for Esports-Hub 该参数仅支持在Esports-Hub |
 | `gameName` | Query | String <br/>(optional 非必需项) | | See Game Name in the Data-format.<br/>This parameter is only supported for Esports-Hub 该参数仅支持在Esports-Hub |
 | `leagueId` | Query | Number<br/>(optional 非必需项) | League ID can be obtained by the Get Hot Event API. league Id 可以通过热门赛事 API获取。 | Players will be redirected to the corresponding League page. 玩家将被定向到相对应的联赛页面。 |
