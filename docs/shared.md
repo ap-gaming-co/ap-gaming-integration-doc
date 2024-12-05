@@ -340,8 +340,8 @@ Endpoint 端点
 | `userCode` | String<br/>(required 必需项) | | This is the user code / loginID of the player. E.g: *PA10000000* 此为玩家登录名/用户名，例如*PA10000000* |
 | `locale` | String <br/>(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 | See Locale (Language) in the Data-format. |
 | `oddsFormat` | String <br/>(optional 非必需项) | A list of supported oddsFormats is available in the Data-format. | See Odds Format in the Data-format. |
-| `desktopView` | Boolean <br/>(optional 非必需项) | `true`/`false` *(Default: false)*  Only applicable to Asian view  仅限用于亚洲界面 | If true then desktop view be used when their players use mobile device Otherwise, the appropriate view will be displayed based on the device (desktop or mobile). |
-| `view` | String <br/>(optional 非必需项) | Default: COMPACT | Once the parameter is set, this view would be the default view in the iFrame. 该参数可设置并更改默认界面 |
+| `desktopView` | Boolean <br/>(optional 非必需项) | `true`/`false` *(Default: false)*  Only applicable to Asian view  仅限用于亚洲界面 | If true then desktop view be used when their players use mobile device Otherwise, the appropriate view will be displayed based on the device (desktop or mobile). 当设置值为true，　用户将会在移动端使用电脑版界面，否则界面会根据使用的设备（电脑端或者移动端）决定 |
+| `view` | String <br/>(optional 非必需项) | Default: COMPACT 默认：COMPACT（新亚洲界面） | Once the parameter is set, this view would be the default view in the iFrame. 该参数可设置并更改默认界面 |
 | `target` | String <br/>(optional 非必需项) | `LIVE`/`HIGHLIGHTS` *(Default: LIVE)* Only applicable to mobile Euro view. 仅限用于手机欧洲界面。 | Players will be directed to the corresponding page tab. 玩家将被定向到相对应的标签页 |
 
 *Format URL login URL登录格式*
