@@ -2384,13 +2384,13 @@ Call the API along with the Sport name to get events. Each Sport has its own log
 
 - If the requested Sports are in configurations as B2B Hot Events on the Partner Service BO Site, the system will return the Hot Events for that Sport. 若请求的体育项目在配置B2B热门赛事–后台中，则系统将以config形式返回该项目的热门赛事API。
 - If the requested Sport is Soccer: The Hot Events will be based on the following information to return 50 Hot Events. 若请求的体育项目是足球：系统将基于以下信息进行计算以获取50个热门赛事
-	- Hot Soccer Team and Hot Leagues. 热门足球队和热门联赛。
+	- Hot Soccer Team and Hot Leagues (return Hot Events which limit time within 15 days). 热门足球队和热门联赛（返还接下来15天开始的炙热事件）。
 	- Highest max bet of Money Line. 最高赔率投注。
 - If requested Sport is E-Sports: The Hot Events will be based on the following information to return 50 Hot Events for each Game. 若请求的体育项目是电子竞技：系统将基于以下信息进行计算，以获取每种游戏的50个热门赛事。
-	- Hot E-Sports team and Hot Leagues. 热门电子竞技团队和热门联赛。
+	- Hot E-Sports team and Hot Leagues (return Hot Events which limit time within 15 days). 热门电子竞技团队和热门联赛（返还接下来15天开始的炙热事件）。
 	- Highest max bet of Money Line 最高赔率投注。
 - For all other Sports: The Hot Events will be based on the following information to return 50 Hot Events for each Sport. 若请求的体育项目是其他：系统将基于以下信息进行计算，以获取每种体育项目的50个热门事件。
-	- Hot Leagues. 热门联赛。
+	- Hot Leagues (return Hot Events which limit time within 15 days). 热门联赛（返还接下来15天开始的炙热事件）。
 	- Highest max bets of Money line. 最高赔率投注。
 
 The Event IDs parameter obtained by the Get Hot Event API can be passed into the LoginV2 API in order to redirect players to the corresponding event page. 热门赛事里获取到的eventId用于LoginV2 API的参数，以定向玩家到对应的赛事页面。
