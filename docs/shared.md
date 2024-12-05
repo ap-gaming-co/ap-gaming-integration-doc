@@ -66,19 +66,20 @@ The API only supports JSON format. API 只支持JSON格式
 
 #### 2.2.1. Truncated Currencies 截短的货币
 
-**Note: List of truncated currencies (x1000)**
+**Note: List of truncated currencies (x1000)** <br/>
 **注：被截断的货币清单（X1000）**
 
-1. Vietnam Dong (VND)
-2. Indonesian Rupiahs (IDR)
-3. Cambodia Riel (KHR)
-4. Lao KIP (LAK)
-5. Myanmar Krat (MMK)
-6. Malagasy ariary (MGA)
-7. Ugandan Shilling (UGX)
+1. Vietnam Dong (VND) 越南盾 (VND)
+2. Indonesian Rupiahs (IDR) 印尼盾 (IDR)
+3. Cambodia Riel (KHR) 柬埔寨瑞尔 (KHR)
+4. Lao KIP (LAK) 老挝基普 (LAK)
+5. Myanmar Krat (MMK) 缅甸克拉特 (MMK)
+6. Malagasy ariary (MGA) 马达加斯加阿里亚里 (MGA)
+7. Ugandan Shilling (UGX) 乌干达先令 (UGX)
 8. Iranian Rial (IRR)
 
-Example: 100 IDR in system mean 100,000 IDR
+Example: 100 IDR in system mean 100,000 IDR <br/>
+例如：100 IDR在系统中实际价值为 100,000 IDR 
 
 #### 2.2.2. Common Data Types 常见数据类型
 
