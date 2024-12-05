@@ -83,15 +83,15 @@ Example: 100 IDR in system mean 100,000 IDR <br/>
 
 #### 2.2.2. Common Data Types 常见数据类型
 
-| Parameter  | Description  | E.g. Type Value   |
+| Parameter 参数 | Description 描述 | E.g. Type Value  例如：类型值 |
 | ---  | ---  | ---   |
-| `Boolean`  | Represents a Boolean logic value. | `true` / `false` |
+| `Boolean`  | Represents a Boolean logic value. 表示Boolean Logic值。 | `true` / `false` |
 | `Date`  | All dates and times are GMT-4.  Using for following format: yyyy-MM-ddTHH:mm:ss.  所有的日期和时间都是使用GMT-4市区。格式为yyyy-MM-ddTHH:mm:ss.  | 2018-12-20T04:05:06 |
 | `Money`  | All monetary amounts are to 2 decimal places or 0 decimal places.  所有金额都为两位小数点或0位小数点 | 12.05 / 10 |
-| `String`  | String value | Message |
-| `Long`  | Long value | 1549009111 |
-| `Integer`  | Integer value | 113 |
-| `Decimal`  | Decimal value. There is a 2-digit decimal number. | 1.09 |
+| `String`  | String value 字符串值 | Message |
+| `Long`  | Long value Long 类型值 | 1549009111 |
+| `Integer`  | Integer value 整型值 | 113 |
+| `Decimal`  | Decimal value. There is a 2-digit decimal number. 小数值，小数点后将有两位数字 | 1.09 |
 
 ### 2.3. Date and Time 日期时间 <a name="23-date-and-time"></a>
 
