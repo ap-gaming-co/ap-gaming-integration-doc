@@ -1,7 +1,7 @@
 
-# Table Contents
-- [Table Contents](#table-contents)
-- [API Integration](#api-integration)
+# Table Contents 目录
+- [Table Contents 目录](#table-contents)
+- [API Integration API 集成](#api-integration)
     - [1. Purpose 目的](#1-purpose)
     - [2. Background 背景](#2-background)
         - [2.1. Authentication & API Requirements 认证和API要求](#21-authentication-api-requirements)
