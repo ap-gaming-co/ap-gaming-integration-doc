@@ -34,7 +34,7 @@
     - [6. Code Example 代码示例](#6-code-example)
     - [7. References 参考资料](#7-references)
   
-# API Integration
+# API Integration API 集成
 
 ## 1. Purpose  目的 <a name="1-purpose"></a>
 
@@ -43,6 +43,8 @@ The I-White-label 3rd Party integration API allows B2B customers to integrate th
 If you are unsure of which integration method to use, please contact us using 24/7 Customer Support in the Skype Channel.
 
 I-外包合作第三方对接API能使B2B客户将体育对接到B2B客户的网站，B2B客户的用户在不需要在体育平台网站注册用户的情况上能够从B2B客户的网站拜访并在体育博彩系统进行投注。
+
+如您不确定使用哪种集成方式，还请在skype群组联系24/7 客服团队。
 
 
 ## 2. Background 背景 <a name="2-background"></a>
@@ -65,6 +67,8 @@ The API only supports JSON format. API 只支持JSON格式
 #### 2.2.1. Truncated Currencies 截短的货币
 
 **Note: List of truncated currencies (x1000)**
+**注：被截断的货币清单（X1000）**
+
 1. Vietnam Dong (VND)
 2. Indonesian Rupiahs (IDR)
 3. Cambodia Riel (KHR)
