@@ -83,7 +83,7 @@ Example: 100 IDR in system mean 100,000 IDR <br/>
 
 #### 2.2.2. Common Data Types 常见数据类型
 
-| Parameter 参数 | Description 描述 | E.g. Type Value  例如：类型值 |
+| Parameter <br/> 参数 | Description 描述 | E.g. Type Value  例如：类型值 |
 | ---  | ---  | ---   |
 | `Boolean`  | Represents a Boolean logic value. 表示Boolean Logic值。 | `true` / `false` |
 | `Date`  | All dates and times are GMT-4.  Using for following format: yyyy-MM-ddTHH:mm:ss.  所有的日期和时间都是使用GMT-4市区。格式为yyyy-MM-ddTHH:mm:ss.  | 2018-12-20T04:05:06 |
