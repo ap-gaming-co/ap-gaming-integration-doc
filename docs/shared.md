@@ -28,8 +28,7 @@
     - [4. Screens and Workflows 截图和工作流程](#4-screens-and-workflows)
     - [5. Appendix 附录](#5-appendix)
         - [5.1. View 界面](#51-view)
-        - [5.2. Tab 登入标签](#52-tab)
-        - [5.3. Game Name 游戏名称](#53-gamename)
+        - [5.2. Game Name 游戏名称](#52-gamename)
     - [6. Code Example](#6-code-example)
     - [7. References](#7-references)
   
@@ -2470,14 +2469,7 @@ This section shows basic workflows for each of the API functions.
 | ESPORTS-HUB | Esports View AP 电竞 |
 | COMPACT | New Asian View 新亚洲界面 |
 
-### 5.2. Tab 登入标签 <a name="52-tab"></a>
-| Tab 登入标签|
-| --- |
-| tournaments |
-| live |
-| matches |
-
-### 5.3. Game Name 游戏名称 <a name="53-gamename"></a>
+### 5.2. Game Name 游戏名称 <a name="52-gamename"></a>
 | Game Name 游戏名称|
 | --- |
 | csgo |
