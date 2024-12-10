@@ -1523,26 +1523,26 @@ This service returns all wagers for a player (this function works as FR001 and w
 
 请参考 Wager 字段返回的翻译: [链接](translation.md)
 
-**Endpoint:**
+**Endpoint 端点:**
 
-| Name  | Value  | Description   |
+| Name 名称 | Value 类型  | Description 设置值  |
 | ---  | ---  | ---   |
 | URL  | `/report/all-wagers`  |   |
 | Method  | `GET`  |   |
 
-**Parameters:**
+**Parameters 参数:**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | ---  | --- | ---  | ---  |
 | `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String(required必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
-| `dateFrom` | Query | Date (optional非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-15 23:59:59  |
-| `dateTo (1)` | Query | Date (optional非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours 限制: dateTo – dateFrom <= 24 小时 |
+| `dateFrom` | Query | Date (optional非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example 例如: 2016-10-15 23:59:59  |
+| `dateTo (1)` | Query | Date (optional非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours <br/>例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
 | `userCode` | Query | String (optional 非必需项) |  | This is the user code / loginID of the player. E.g: PA10000000. 玩家用户名/登录名 |
-| `settle` | Query | Int (optional 非必需项) | 1: settled <br/>0: unsettled <br/>-1: all (both settled and unsettled) (Default: -1) | 1 = wager status: SETTLED or CANCELLED<br/>0 = wager status includes: OPEN or PENDING<br/>-1 All wager status values |
-| `filterBy (2)` | Query | String(optional非必需项) | event_date wager_date settle_date update_date (Default: wager_date) |
-| `locale` | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format. |
-| `wagerIds` | Query | String(optional 非必需项) | A comma-separated list of wagerIDs to be returned.  |  Example: `6862955`,`6862947` |
+| `settle` | Query | Int (optional 非必需项) | 1: settled 已结算 <br/>0: unsettled 未结算 <br/>-1: all (both settled and unsettled) 所有（包含已结算和未结算） (Default: -1) | 1 = wager status: SETTLED or CANCELLED 注单状态：已结算或已取消<br/>0 = wager status includes: OPEN or PENDING 注单状态包括：等待中 或者 注单未结算<br/>-1 All wager status values |
+| `filterBy (2)` | Query | String(optional非必需项) | event_date wager_date settle_date update_date (Default 默认: wager_date) |
+| `locale` | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. 在基于现有品牌的语言下，列出所支持区域 |  See Locale (Language) in the Data-format. |
+| `wagerIds` | Query | String(optional 非必需项) | A comma-separated list of wagerIDs to be returned. 用逗号分隔的注单ID列表将会被返回 |  Example 例如: `6862955`,`6862947` |
 
 **Note:**
 (1):
@@ -1688,22 +1688,22 @@ This service returns a simple win loss report for agent or player.
 
 获取代理和用户的简易盈亏
 
-**Endpoint:**
+**Endpoint 端点:**
 
-| Name  | Value  | Description   |
+| Name 名称 | Value 类型 | Description 设置值  |
 | ---  | ---  | ---   |
 | URL  | `/report/winloss-simple` |   |
 | Method  | `GET`  |  
 
 **Parameters 参数:**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name 名称 | Type 类型 | Value 设置值  | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
-| `dateFrom` | Query | Date (optional 非必需项)  | Created Date format yyyy-MM-dd GMT-4  | Date format Example: 2016-10-15 |
-| `dateTo`  | Query | Date (optional 非必需项)  | Created Date format yyyy-MM-dd GMT-4  | Date format Example: 2016-10-16 Rule: dateTo – dateFrom <= 90 days |
-| `userCode` | Query | String (optional 非必需项) |  | This is the user code / loginID of `AGENT` or `PLAYER` |
+| `dateFrom` | Query | Date (optional 非必需项)  | Created Date format yyyy-MM-dd GMT-4  创建日期格式 yyyy-MM-dd 时区为GMT-4 | Date format Example 日期格式例子: 2016-10-15 |
+| `dateTo`  | Query | Date (optional 非必需项)  | Created Date format yyyy-MM-dd GMT-4  创建日期格式 yyyy-MM-dd 时区为GMT-4 | Date format Example: 2016-10-16 Rule: dateTo – dateFrom <= 90 days 日期格式例子：2016-10-16 规则：结束日期-开始日期小于等于90天 |
+| `userCode` | Query | String (optional 非必需项) |  | This is the user code / loginID  of `AGENT` or `PLAYER` 此处指的是代理或者玩家的用户名/登录ID |
 
 **Note:**
 ```
@@ -1716,9 +1716,9 @@ userCode  != null (specific user code or login id)
 	b. If userCode is player (level = PL), returns data for the player.
 ```
 
-**For example:**
-**userCode** = `CO1AP100` - This is user code of **Agent**
-**userCode** = `PA10000000` - This is user code of **Player**
+**For example 例如:**
+**userCode** = `CO1AP100` - This is user code of **Agent** 这是代理号 <br/>
+**userCode** = `PA10000000` - This is user code of **Player** 这是用户名
 
 **注意:**
 ```
@@ -1730,7 +1730,7 @@ userCode  != null (特定用户名或登录名)
 	a. 如果 userCode 为代理(level != PL ), 获取userCode下所有用户的报表。
 	b. 如果 userCode 为玩家(level = PL ), 获取玩家报表。
 ```
-**For example:**
+**For example 例如:**
 
 ```
 userCode = CO1AP100 - 此为代理用户名。
