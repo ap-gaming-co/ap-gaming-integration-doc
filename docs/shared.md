@@ -10,7 +10,6 @@
         - [2.4. Generate Signature 生成签名](#24-generate-signature)
         - [2.5. Errors and Exceptions 错误和例外](#25-errors-and-exceptions)
         - [2.6. Getting started 如何开始](#26-getting-started)
-        - [2.7. "Please login first" Solution "请先登录"解决方法](#27-please-login-first-solution)
     - [3. API Functions API功能](#3-api-functions-api)
         - [3.1.	FA001 – Login 登入](#31-fa001-login)
         - [3.2.	FA002 – Logout 登出](#32-fa002-logout)
@@ -29,8 +28,7 @@
     - [4. Screens and Workflows 截图和工作流程](#4-screens-and-workflows)
     - [5. Appendix 附录](#5-appendix)
         - [5.1. View 界面](#51-view)
-        - [5.2. Tab 登入标签](#52-tab)
-        - [5.3. Game Name 游戏名称](#53-gamename)
+        - [5.2. Game Name 游戏名称](#52-gamename)
     - [6. Code Example](#6-code-example)
     - [7. References](#7-references)
   
@@ -258,58 +256,6 @@ Please note that for your request to access the API, the IP address must in our 
 
 For each service call, you must pass token verification and the appropriate parameters. 对每个服务呼唤，您需要通过令牌验证以及的合适的参数
 
-### 2.7. "Please login first" Solution "请先登录"解决方法 <a name="27-please-login-first-solution"></a>
-
-There are several enhancements to Intelligent Tracking Prevention (ITP) in iOS and iPadOS 13.4 and Safari 13.1 on macOS, which causes our B2B embedded iFrame to always show a pop-up "Please login first" when the user wants to place bets. 
-
-Cause: With our current implementation, the iFrame uses cookies to authenticate users, however, with those enhancements - especially "Full Third-Party Cookie Blocking", there is no cookie available for authentication.
-
-This means that our AP Gaming iFrame is always a Third-Party Cookie, however, because of ITP, it has fully blocked the Third-Party Cookie.
-
-在 IOS 和 iPadOS 13.4 以及 macOS 上的 Safari 13.1 对智能跟踪预防 (ITP) 进行了多项增强，这导致我们的 B2B 嵌入式 iFrame 在用户想要下注时始终显示弹出视窗“请先登录”。
-
-在技术层面上，根据我们当前的系统行为，iFrame 是使用 Cookie 来验证用户身份，但是有了上述这些增强功能 — 尤其是“完全屏蔽第三方Cookie”，我司便没有 Cookie 来进行用户身份验证了。
-
-这意味着我们的 AP Gaming iFrame 始终为第三方 Cookie，但现在因为 ITP，它已经完全屏蔽了第三方 Cookie。
-
-![Workflow](./../res/please_login_first.jpg)
-
-Solution: It will show a pop-up when players access the iFrame, and they will need to accept the cookies in order to access the iFrame.
-
-解决方案： 当玩家访问 iFrame 时，它将显示弹出视窗，他们需要接受 cookie 才能访问 iFrame。
-
-Fixed script 固定脚本：
-
-```javascript
-// Allow window to listen for a postMessage
-var apGamingOrigin = '.example.com'; // Contact AP Gaming support to get domain info
-window.addEventListener("message", (event) => {
-    // check AP Gaming origin
-    if (event.origin && event.origin.toLowerCase().endsWith(apGamingOrigin)) {
-        var postData = event.data;
-        switch (postData.action) {
-            case 'OPEN_WINDOW':
-                var url = postData.url;
-                window.open(url);
-                break;
-            default:
-                break;
-        }
-    }
-});
-```
-
-![Workflow](./../res/first_login_code_example.jpg)
-
-After the script is added, please provide a test account with the URL for us to check. 添加脚本后，请提供 URL和测试账号供我方检查。
-
-After the solution is enabled, the iFrame will display a pop-up “Enter The Game”, and members need to allow the 3rd party cookies to enter the game. 启用解决方案后，iFrame 会显示弹出视窗 “进入游戏” ，玩家需要允许第三方 cookie 才能进入游戏。
-
-Note: This cookie pop-up message will show only 1 time on 1 device, if that device clears the saved cookies it will show again on the next login.
-请知悉，此 cookie 弹出视窗仅将在 1 台设备上显示 1 次，如果该设备清除 cookie 后，它将会在下 次登录时再次显示。
-
-![Workflow](./../res/enter_the_game.png)
-
 ## 3. API Functions API功能 <a name="3-api-functions-api"></a>
 
 ### 3.1. FA001 – Login 登入 <a name="31-fa001-login"></a>
@@ -337,7 +283,6 @@ Endpoint 端点
 | `oddsFormat` | String <br/>(optional 非必需项) | A list of supported oddsFormats is available in the Data-format. | See Odds Format in the Data-format. |
 | `desktopView` | Boolean <br/>(optional 非必需项) | `true`/`false` *(Default: false)*  Only applicable to Asian view  仅限用于亚洲界面 | If true then desktop view be used when their players use mobile device Otherwise, the appropriate view will be displayed based on the device (desktop or mobile). |
 | `view` | String <br/>(optional 非必需项) | Default: COMPACT | Once the parameter is set, this view would be the default view in the iFrame. 该参数可设置并更改默认界面 |
-| `target` | String <br/>(optional 非必需项) | `LIVE`/`HIGHLIGHTS` *(Default: LIVE)* Only applicable to mobile Euro view. 仅限用于手机欧洲界面。 | Players will be directed to the corresponding page tab. 玩家将被定向到相对应的标签页 |
 
 *Format URL login URL登录格式*
 
@@ -557,10 +502,8 @@ This service is used to create a new user and generate a URL that will allow the
 | `view` | Query | String<br/>(optional 非必需项) | Default: COMPACT | See View in the Data-format. <br/>Once the parameter is set, the view will be the default view in the iFrame. 该参数可设置并更改默认界面 |
 | `eventId` | Query | Number<br/>(optional 非必需项) | Event ID can be obtained by the Get Hot Event API. event Id 可以通过热门赛事 API获取。 | Players will be redirected to the corresponding event page. 玩家将被定向到相对应的赛事页面。 |
 | `parentUrl` | Query | String <br/>(optional 非必需项) | Client's domain which will be used for live streaming in all views. 客户的域名将在所有介面中用于直播 | This parameter is supported in all views. 该参数支持所有界面。 |
-| `tab` | Query | String <br/>(optional 非必需项) | | See Tab in the Data-format. <br/>This parameter is only supported for Esports-Hub 该参数仅支持在Esports-Hub |
 | `gameName` | Query | String <br/>(optional 非必需项) | | See Game Name in the Data-format.<br/>This parameter is only supported for Esports-Hub 该参数仅支持在Esports-Hub |
 | `leagueId` | Query | Number<br/>(optional 非必需项) | League ID can be obtained by the Get Hot Event API. league Id 可以通过热门赛事 API获取。 | Players will be redirected to the corresponding League page. 玩家将被定向到相对应的联赛页面。 |
-| `target` | Query | String <br/>(optional 非必需项) | `LIVE`/`HIGHLIGHTS` *(Default: LIVE)* Only applicable to mobile Euro view. 仅限用于手机欧洲界面。 | Players will be redirected to the corresponding page tab. 玩家将被定向到相对应的标签页。 |
 | `mode` | Query | String <br/>(optional 非必需项) | `LIGHT`/`DARK` *(Default: LIGHT)* The mode to be displayed by default. 默认显示的模式。 | Only applicable to new visitors. Existing user preferences will supersede this setting. 仅适用于新用户。 现有用户的偏好选项将取代此设置。|
 
 *Workflow工作流程*
@@ -2526,14 +2469,7 @@ This section shows basic workflows for each of the API functions.
 | ESPORTS-HUB | Esports View AP 电竞 |
 | COMPACT | New Asian View 新亚洲界面 |
 
-### 5.2. Tab 登入标签 <a name="52-tab"></a>
-| Tab 登入标签|
-| --- |
-| tournaments |
-| live |
-| matches |
-
-### 5.3. Game Name 游戏名称 <a name="53-gamename"></a>
+### 5.2. Game Name 游戏名称 <a name="52-gamename"></a>
 | Game Name 游戏名称|
 | --- |
 | csgo |
