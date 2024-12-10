@@ -683,19 +683,19 @@ This service is used to sign up a player.
 
 **Endpoint 端点**
 
-| Name | Value | Description  |
+| Name 名称 | Value 设置值 | Description  描述 |
 | --- | --- | --- |
 | URL | `/player/create` | |
-| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. |
+| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. <br/>对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。|
 
 **Parameters 参数**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | --- | --- | --- | --- | --- |
 | `userCode` | Header | String<br/> (required 必需项)  |  | This is the agent code obtained in step 2. E.g: `CO1AP1`. 此为在第二步骤获取的代理编号，例如，`CO1AP1` |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `agentCode` | Query | String<br/>  (optional 非必需项) |  | The downline agent code that the newly-created player will belong to. If no agent code is provided, the player will be created direct under agent code calling the API. E.g: `CO1AP100` 新建玩家账户所属的代理编号。如果没有提供代理编号，那么玩家用户会直接创建在调用此API的代理账户之下，例如：`CO1AP100` |
-| `loginId` | Query | String<br/> (optional 非必需项) | If entered, the system will validate the loginId and respond with an error if it already exists in the system. | Validation Rule for loginId: Must be between 6 and 50 alphanumeric characters. |
+| `loginId` | Query | String<br/> (optional 非必需项) | If entered, the system will validate the loginId and respond with an error if it already exists in the system. <br/>输入用户名后，系统会创建用户，若用户名已存在则返回错误 | Validation Rule for loginId: Must be between 6 and 50 alphanumeric characters. <br/>LoginId 的验证规则：必须介于 6 到 50 个字母数字字符之间。|
 
 *Sample code (java) - See HttpUtils class at Appendix*
 *示例代码（HttpU– 请参阅附录里的 HttpUtils class*
