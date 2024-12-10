@@ -765,14 +765,14 @@ This service returns player information.
 
 获取用户资料
 
-| Name | Value | Description |
+| Name 名称 | Value 设置值 | Description 描述 |
 | --- | --- | --- |
 | URL | `/player/info` | |
 | Method | `GET` | |
 
 **Parameters 参数**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name  名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String  (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
@@ -936,24 +936,24 @@ This service updates the status for a player.
 
 更新用户状态
 
-**Endpoint**
+**Endpoint 端点**
 
-| Name  | Value  | Description   |
+| Name 名称 | Value 设置值 | Description  描述 |
 | ---  | ---  | ---   |
 | URL  | `/player/update-status`  |   |
-| Method  | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. |
+| Method  | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. <br/>对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。|
 
 
 **Parameters 参数**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String  (required 必需项)  |  | This is agent code that you get at step 2. E.g: CO1AP1 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `userCode` | Query | String (required 必需项)  |  | This is the user code / loginID of the player. E.g: PA10000000.<br/>此为玩家登录名/用户名，例如PA10000000 |
 | `status` | Query | String (required 必需项)  | `ACTIVE`, `INACTIVE`, `SUSPENDED` | See User Status in the Data-format. |
 
-**Note:**
+**Note 注:**
 -	`INACTIVE` player CANNOT login on Member site
 -	`SUSPENDED` player CAN login on Member site, but CANNOT place bet
 
@@ -1036,26 +1036,26 @@ We also provide a wager feed to Push wager changes to B2B customer servers (see 
 
 请参考 Wager 字段返回的翻译: [链接](translation.md)
 
-**Endpoint**
+**Endpoint 端点**
 
-| Name  | Value  | Description   |
+| Name 名称 | Value 设置值 | Description 描述  |
 | ---  | ---  | ---   |
 | URL  | `/report/wagers`  |   |
 | Method  | `GET`  |   |
 
 **Parameters 参数**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String(required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
-| `dateFrom` | Query | Date (required 必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-15 23:59:59  |
-| `dateTo`  | Query | Date(required 必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours |
+| `dateFrom` | Query | Date (required 必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example 例如: 2016-10-15 23:59:59 |
+| `dateTo`  | Query | Date(required 必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours 例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
 | `product` | Query | String (required 必需项) | SB | Product Sport Book 产品: 体育 |
 | `userCode` | Query | String (required 必需项) |  | This is the user code / loginID of the player. E.g: PA10000000 此为玩家登录名/用户名，例如PA10000000 |
-| `settle` | Query | Boolean(optional 非必需项) | true/false(Default: false) | If true, wagers of status included: SETTLED, CANCELLED Else also included: OPEN, PENDING  |
-| `filterBy` | Query | String (optional 非必需项) | event_date/wager_date (Default: event_date) | If settle (above) equals FALSE date range is based on filterBy‘s value otherwise it is based on settlement date 如果settle返回FAlSE, 日期会按照filterBy的数值，否则按照注单结算日期 |
-| `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format. |
+| `settle` | Query | Boolean(optional 非必需项) | true/false(Default 默认: false) | If true, wagers of status included: SETTLED, CANCELLED Else also included: OPEN, PENDING  如TRUE, 那么注单状态包括： 已结算，已取消 其他还包括：等待中，注单未结算 |
+| `filterBy` | Query | String (optional 非必需项) | event_date/wager_date (Default 默认: event_date) | If settle (above) equals FALSE date range is based on filterBy‘s value otherwise it is based on settlement date 如果settle返回FAlSE, 日期会按照filterBy的数值，否则按照注单结算日期 |
+| `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 |  See Locale (Language) in the Data-format. |
 
 *Sample code (java) - See HttpUtils class at Appendix*
 *示例代码（java）– 请参阅附录里的 HttpUtils class*
