@@ -269,19 +269,19 @@ This service is used to generate a URL without the player needing to login. 这�
 
 Endpoint 端点
 
-| Name 名称 | Value 设置值 | Description 描述 |
+| Name <br/>名称 | Value 设置值 | Description 描述 |
 | --- | --- | --- |
 | URL  | `/player/login`  |   |
 | Method  | `GET`/`POST`  | For POST method, it is recommended to send parameters as an JSON object in the request body 对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。 |
 
-| Name 名称 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name <br/>名称 | Value 设置值 | Validation 验证 | Description 描述 |
 | --- | --- | --- | --- |
 | `userCode`  | String <br/>(required 必需项) | | This is the agent code obtained in step 2. E.g: CO1AP1 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | String<br/>(required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 | |
 
 **Parameters 参数**
 
-| Name 名称 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name <br/>名称 | Value <br/>设置值 | Validation 验证 | Description 描述 |
 | --- | --- | --- | --- |
 | `userCode` | String<br/>(required 必需项) | | This is the user code / loginID of the player. E.g: *PA10000000* 此为玩家登录名/用户名，例如*PA10000000* |
 | `locale` | String <br/>(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 | See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
