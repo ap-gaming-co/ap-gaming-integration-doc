@@ -806,7 +806,7 @@ This service returns a list of player information.
 
 **Parameters 参数**
 
-| Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name <br/> 名称 | Type <br/> 类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
