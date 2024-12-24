@@ -2353,7 +2353,7 @@ The Event IDs parameter obtained by the Get Hot Event API can be passed into the
  
 **Parameters 参数**
 
-| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name 名称 | Type <br/> 类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | ---  | ---  | ---  | ---  |
 | `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 这是在 Step 2里获取的agent code,例如：CO1AP1 |
 | `locale` 区域设置 | Query | String (optional非必需项) | Supported locales based on brand’s available languages. 在基于现有品牌的语言下，列出所支持区域 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
