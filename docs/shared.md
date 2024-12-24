@@ -806,7 +806,7 @@ This service returns a list of player information.
 
 **Parameters 参数**
 
-| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
@@ -889,7 +889,7 @@ This service updates the status for a player.
 
 **Parameters 参数**
 
-| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String  (required 必需项)  |  | This is agent code that you get at step 2. E.g: CO1AP1 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
@@ -988,7 +988,7 @@ We also provide a wager feed to Push wager changes to B2B customer servers (see 
 
 **Parameters 参数**
 
-| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String(required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
@@ -1475,7 +1475,7 @@ This service returns all wagers for a player (this function works as FR001 and w
 
 **Parameters 参数:**
 
-| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name 名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | ---  | --- | ---  | ---  |
 | `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String(required必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
@@ -1640,7 +1640,7 @@ This service returns a simple win loss report for agent or player.
 
 **Parameters 参数:**
 
-| Name 名称 | Type 类型 | Value 设置值  | Validation 验证 | Description 描述 |
+| Name <br/>名称 | Type <br/>类型 | Value 设置值  | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
@@ -1778,14 +1778,14 @@ This service is used to generate a URL to allow the user to redirect to the My B
 
 **Endpoint 端点**
 
-| Name 名称 | Value 设置值 | Description 描述 |
+| Name <br/>名称 | Value 设置值 | Description 描述 |
 | ---  | ---  | ---  |
 | URL  | /player/account/my-bets-full  |   |
 | Method  | GET/POST  | For POST method, it is recommended to send parameters as a JSON object in the request body. |
 
 Parameters 参数
 
-| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String(required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
@@ -2213,7 +2213,7 @@ This service will get match announcements.
  
 **Parameters 参数:**
 
-| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项) |  | This is the agent code obtained in step 2. E.g: CO1AP1. 这里指的是步骤2中获得的代理号，例如：CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
