@@ -2559,7 +2559,7 @@ This section shows basic workflows for each of the API functions.
 | pro-evolution-soccer |
 | ecricket |
 
-## 6. Code Example 不同代码示例 <a name="6-code-example"></a>
+## 6. Code Example 代码示例 <a name="6-code-example"></a>
 
 1. [Java Code for HttpUtils 用于HttpUtils的Java代码](./../codes/HttpUtils.java)
 
