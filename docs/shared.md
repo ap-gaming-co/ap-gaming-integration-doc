@@ -1658,7 +1658,7 @@ userCode  != null (specific user code or login id)
 	b. If userCode is player (level = PL), returns data for the player.
 ```
 
-**For example 例如:** <br/>
+**For example:** <br/>
 **userCode** = `CO1AP100` - This is user code of **Agent**<br/>**userCode** = `PA10000000` - This is user code of **Player**
 
 **注意:**
