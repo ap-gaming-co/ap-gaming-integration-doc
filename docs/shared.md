@@ -1659,8 +1659,7 @@ userCode  != null (specific user code or login id)
 ```
 
 **For example 例如:** <br/>
-**userCode** = `CO1AP100` - This is user code of **Agent** 这是代理号 <br/>
-**userCode** = `PA10000000` - This is user code of **Player** 这是用户名
+**userCode** = `CO1AP100` - This is user code of **Agent**<br/>**userCode** = `PA10000000` - This is user code of **Player**
 
 **注意:**
 ```
@@ -1672,11 +1671,11 @@ userCode  != null (特定用户名或登录名)
 	a. 如果 userCode 为代理(level != PL ), 获取userCode下所有用户的报表。
 	b. 如果 userCode 为玩家(level = PL ), 获取玩家报表。
 ```
-**For example 例如:**
+**例如:**
 
 ```
-userCode = CO1AP100 - 此为代理用户名。
-userCode = PA10000000 – 此为玩家用户名。
+userCode = CO1AP100 - 这是代理号。
+userCode = PA10000000 – 这是用户名。
 ```
 
 *Sample code (Java)*
