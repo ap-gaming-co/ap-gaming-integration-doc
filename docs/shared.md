@@ -64,9 +64,7 @@ The API only supports JSON format. API 只支持JSON格式
 
 #### 2.2.1. Truncated Currencies 截短的货币
 
-| Note: List of truncated currencies (x1000)
-   1. Vietnam Dong (VND) | 注：被截断的货币清单（X1000
-   1. 越南盾 (VND)|
+| **Note: List of truncated currencies (x1000)** <br/>1. Vietnam Dong (VND)| 注：被截断的货币清单（X1000）1. 越南盾 (VND) |
 | ---  | ---  |
 
 **Note: List of truncated currencies (x1000)** <br/>
