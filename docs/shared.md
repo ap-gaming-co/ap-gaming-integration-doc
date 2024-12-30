@@ -1779,7 +1779,7 @@ This service is used to generate a URL to allow the user to redirect to the My B
 | Name <br/>名称 | Value 设置值 | Description 描述 |
 | ---  | ---  | ---  |
 | URL  | /player/account/my-bets-full  |   |
-| Method  | GET/POST  | For POST method, it is recommended to send parameters as a JSON object in the request body. |
+| Method  | GET/POST  | For POST method, it is recommended to send parameters as a JSON object in the request body. <br/>对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。|
 
 Parameters 参数
 
