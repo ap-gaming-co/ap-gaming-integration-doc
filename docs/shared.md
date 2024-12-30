@@ -2215,7 +2215,7 @@ This service will get match announcements.
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项) |  | This is the agent code obtained in step 2. E.g: CO1AP1. 这里指的是步骤2中获得的代理号，例如：CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
-| `dateFrom` | Query | Date (optional 非必需项) | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example 例如: 2016-10-15 23:59:59  |
+| `dateFrom` | Query | Date (optional 非必需项) | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-15 23:59:59  例如: 2016-10-15 23:59:59  |
 | `dateTo`  | Query | Date (optional 非必需项) | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 168 hours (7 days) 例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 168 hours (7 days) 结束日期-开始日期小于等于168小时（7天） |
 | `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
 | `sport` | Query | String(optional 非必需项) | The sport name 体育名称 |  See Sport in the Data-format. 详见数据格式中的体育项目。|
