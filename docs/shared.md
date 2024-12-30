@@ -1468,7 +1468,7 @@ This service returns all wagers for a player (this function works as FR001 and w
 
 **Endpoint 端点:**
 
-| Name 名称 | Value 类型  | Description 设置值  |
+| Name 名称 | Value 设置值  | Description 描述  |
 | ---  | ---  | ---   |
 | URL  | `/report/all-wagers`  |   |
 | Method  | `GET`  |   |
@@ -1633,7 +1633,7 @@ This service returns a simple win loss report for agent or player.
 
 **Endpoint 端点:**
 
-| Name 名称 | Value 类型 | Description 设置值  |
+| Name 名称 | Value 设置值 | Description 描述  |
 | ---  | ---  | ---   |
 | URL  | `/report/winloss-simple` |   |
 | Method  | `GET`  |  
