@@ -66,33 +66,18 @@ The API only supports JSON format. API 只支持JSON格式
 
 ## List of Truncated Currencies (x1000)
 
-| #  | English Name         | Code |
-|----|----------------------|------|
-| 1  | Vietnam Dong         | VND  |
-| 2  | Indonesian Rupiahs   | IDR  |
-| 3  | Cambodia Riel        | KHR  |
-| 4  | Lao KIP              | LAK  |
-| 5  | Myanmar Krat         | MMK  |
-| 6  | Malagasy Ariary      | MGA  |
-| 7  | Ugandan Shilling     | UGX  |
+| **Note: List of truncated currencies (x1000)** | **注: 被截断的货币清单 (X1000)** |
+|-----------------------------------------------|---------------------------------|
+| 1. Vietnam Dong (VND)                         | 1. 越南盾 (VND)                 |
+| 2. Indonesian Rupiahs (IDR)                   | 2. 印尼盾 (IDR)                 |
+| 3. Cambodia Riel (KHR)                        | 3. 柬埔寨瑞尔 (KHR)             |
+| 4. Lao KIP (LAK)                              | 4. 老挝基普 (LAK)               |
+| 5. Myanmar Krat (MMK)                         | 5. 缅甸克拉特 (MMK)             |
+| 6. Malagasy Ariary (MGA)                      | 6. 马达加斯加阿里亚里 (MGA)     |
+| 7. Ugandan Shilling (UGX)                     | 7. 乌干达先令 (UGX)             |
 
-**Note**: Example: 100 IDR in the system means 100,000 IDR.
-
----
-
-## 被截断的货币清单 (X1000)
-
-| #  | 名称                  | 代码  |
-|----|-----------------------|-------|
-| 1  | 越南盾                | VND   |
-| 2  | 印尼盾                | IDR   |
-| 3  | 柬埔寨瑞尔            | KHR   |
-| 4  | 老挝基普              | LAK   |
-| 5  | 缅甸克拉特            | MMK   |
-| 6  | 马达加斯加阿里亚里    | MGA   |
-| 7  | 乌干达先令            | UGX   |
-
-**注意**: 示例: 100 IDR 在系统中实际价值为 100,000 IDR。
+**Example**: 100 IDR in the system means 100,000 IDR  
+**示例**: 100 IDR 在系统中实际价值为 100,000 IDR
 
 **Note: List of truncated currencies (x1000)** <br/>
 **注：被截断的货币清单（X1000）**
