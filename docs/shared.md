@@ -503,7 +503,7 @@ This service is used to create a new user and generate a URL that will allow the
 | `sport` | Query | String <br/>(optional 非必需项) | A list of supported sports is available in the Data-format.<br/>**Notes:**<br/>If you only want to show only e-sports in the iFrame, you must contact us to enable the setting and the sport parameter must be "e-sports".<br/>若您想在iframe中只显示电子竞技，需与我们联系以启用设置，并且需将sport参数设置为”e-sports” | See Sport in the Data-format. 详见数据格式中的体育项目。|
 | `oddsFormat` | Query | String<br/>(optional 非必需项) | A list of supported oddsFormats is available in the Data-format. 支持的数据格式列表请参阅 oddsFormats数据格式。 | See Odds Format in the Data-format. 详见数据格式中的赔率格式。|
 | `desktopView` | Query | Boolean<br/>(optional 非必需项) | `true`/`false` *(Default: false)* Only applicable to Asian view. *默认：false* 仅限用于亚洲界面。| If true, then desktop view will be used when the players use a mobile device. Otherwise, the appropriate view will be displayed based on the device (desktop or mobile). 当设置值为true时，玩家使用移动设备会显示为电脑端界面，否则，界面会根据使用的设备（电脑或者手机）显示。|
-| `view` | Query | String<br/>(optional 非必需项) | Default: COMPACT 默认：COMPACT | See View in the Data-format. <br/>Once the parameter is set, the view will be the default view in the iFrame. 该参数可设置并更改默认界面 |
+| `view` | Query | String<br/>(optional 非必需项) | Default: COMPACT <br/>默认：COMPACT（新亚洲界面） | See View in the Data-format. <br/>Once the parameter is set, the view will be the default view in the iFrame. 该参数可设置并更改默认界面 |
 | `eventId` | Query | Number<br/>(optional 非必需项) | Event ID can be obtained by the Get Hot Event API. event Id 可以通过热门赛事 API获取。 | Players will be redirected to the corresponding event page. 玩家将被定向到相对应的赛事页面。 |
 | `parentUrl` | Query | String <br/>(optional 非必需项) | Client's domain which will be used for live streaming in all views. 客户的域名将在所有介面中用于直播 | This parameter is supported in all views. 该参数支持所有界面。 |
 | `gameName` | Query | String <br/>(optional 非必需项) | | See Game Name in the Data-format.<br/>This parameter is only supported for Esports-Hub 该参数仅支持在Esports-Hub |
@@ -895,11 +895,11 @@ This service updates the status for a player.
 | `userCode` | Query | String (required 必需项)  |  | This is the user code / loginID of the player. E.g: PA10000000.<br/>此为玩家登录名/用户名，例如PA10000000 |
 | `status` | Query | String (required 必需项)  | `ACTIVE`, `INACTIVE`, `SUSPENDED` | See User Status in the Data-format. 详见数据格式中的用户状态。|
 
-**Note 注:**
+**Note:**
 -	`INACTIVE` player CANNOT login on Member site
 -	`SUSPENDED` player CAN login on Member site, but CANNOT place bet
 
-**注意：**
+**注：**
 -	`INACTIVE` 玩家不可登陆 
 -	`SUSPENDED` 玩家可以登陆，但不能投注
 
