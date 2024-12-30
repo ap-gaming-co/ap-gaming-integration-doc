@@ -411,7 +411,7 @@ If you need to logout from system by userCode. You must call this function. 如�
 | Name 名称 | Value 设置值 | Description 描述 |
 | --- | --- | --- |
 | URL | `/player/logout` | |
-| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. |
+| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. <br/>对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。|
 
 **Parameters 参数**
 
