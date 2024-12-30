@@ -65,12 +65,12 @@ The API only supports JSON format. API 只支持JSON格式
 #### 2.2.1. Truncated Currencies 截短的货币
 
 <table style="border: none; border-collapse: collapse;">
-  <tr style="border: none;">
+  <tr style="border: none !important;">
     <th style="border: none !important;">Header 1</th>
     <th style="border: none !important;">Header 2</th>
   </tr>
-  <tr style="border: none;">
-    <td style="border: none;">Row 1</td>
+  <tr style="border: none !important;">
+    <td style="border: none !important;">Row 1</td>
     <td style="border: none;">Data 1</td>
   </tr>
   <tr style="border: none;">
