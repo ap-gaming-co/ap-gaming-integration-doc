@@ -29,8 +29,8 @@
     - [5. Appendix 附录](#5-appendix)
         - [5.1. View 界面](#51-view)
         - [5.2. Game Name 游戏名称](#52-gamename)
-    - [6. Code Example](#6-code-example)
-    - [7. References](#7-references)
+    - [6. Code Example 代码示例](#6-code-example)
+    - [7. References 参考资料](#7-references)
   
 # API Integration API 集成
 
