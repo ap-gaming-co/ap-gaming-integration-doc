@@ -1,7 +1,7 @@
 
-# Table Contents
-- [Table Contents](#table-contents)
-- [API Integration](#api-integration)
+# Table Contents 目录
+- [Table Contents 目录](#table-contents)
+- [API Integration API 集成](#api-integration)
     - [1. Purpose 目的](#1-purpose)
     - [2. Background 背景](#2-background)
         - [2.1. Authentication & API Requirements 认证和API要求](#21-authentication-api-requirements)
@@ -29,10 +29,10 @@
     - [5. Appendix 附录](#5-appendix)
         - [5.1. View 界面](#51-view)
         - [5.2. Game Name 游戏名称](#52-gamename)
-    - [6. Code Example](#6-code-example)
-    - [7. References](#7-references)
+    - [6. Code Example 代码示例](#6-code-example)
+    - [7. References 参考资料](#7-references)
   
-# API Integration
+# API Integration API 集成
 
 ## 1. Purpose  目的 <a name="1-purpose"></a>
 
@@ -41,6 +41,8 @@ The I-White-label 3rd Party integration API allows B2B customers to integrate th
 If you are unsure of which integration method to use, please contact us using 24/7 Customer Support in the Skype Channel.
 
 I-外包合作第三方对接API能使B2B客户将体育对接到B2B客户的网站，B2B客户的用户在不需要在体育平台网站注册用户的情况上能够从B2B客户的网站拜访并在体育博彩系统进行投注。
+
+如您不确定使用哪种集成方式，还请在skype群组联系24/7 客服团队。
 
 
 ## 2. Background 背景 <a name="2-background"></a>
@@ -62,29 +64,31 @@ The API only supports JSON format. API 只支持JSON格式
 
 #### 2.2.1. Truncated Currencies 截短的货币
 
-**Note: List of truncated currencies (x1000)**
-1. Vietnam Dong (VND)
-2. Indonesian Rupiahs (IDR)
-3. Cambodia Riel (KHR)
-4. Lao KIP (LAK)
-5. Myanmar Krat (MMK)
-6. Malagasy ariary (MGA)
-7. Ugandan Shilling (UGX)
-8. Iranian Rial (IRR)
+| **Note: List of truncated currencies (x1000)** | **注：被截断的货币清单（X1000）** |
+|-----------------------------------------------|---------------------------------|
+| 1. Vietnam Dong (VND)                         | 1. 越南盾 (VND)                 |
+| 2. Indonesian Rupiahs (IDR)                   | 2. 印尼盾 (IDR)                 |
+| 3. Cambodia Riel (KHR)                        | 3. 柬埔寨瑞尔 (KHR)             |
+| 4. Lao KIP (LAK)                              | 4. 老挝基普 (LAK)               |
+| 5. Myanmar Krat (MMK)                         | 5. 缅甸克拉特 (MMK)             |
+| 6. Malagasy ariary (MGA)                      | 6. 马达加斯加阿里亚里 (MGA)      |
+| 7. Ugandan Shilling (UGX)                     | 7. 乌干达先令 (UGX)             |
+| 8. Iranian Rial (IRR)                         | 8. 伊朗里亚尔 (IRR)             |
 
-Example: 100 IDR in system mean 100,000 IDR
+Example: 100 IDR in system mean 100,000 IDR <br/>
+例如：100 IDR在系统中实际价值为 100,000 IDR 
 
 #### 2.2.2. Common Data Types 常见数据类型
 
-| Parameter  | Description  | E.g. Type Value   |
+| Parameter <br/> 参数 | Description 描述 | E.g. Type Value <br/> 例如：类型值 |
 | ---  | ---  | ---   |
-| `Boolean`  | Represents a Boolean logic value. | `true` / `false` |
+| `Boolean`  | Represents a Boolean logic value. 表示Boolean Logic值。 | `true` / `false` |
 | `Date`  | All dates and times are GMT-4.  Using for following format: yyyy-MM-ddTHH:mm:ss.  所有的日期和时间都是使用GMT-4市区。格式为yyyy-MM-ddTHH:mm:ss.  | 2018-12-20T04:05:06 |
 | `Money`  | All monetary amounts are to 2 decimal places or 0 decimal places.  所有金额都为两位小数点或0位小数点 | 12.05 / 10 |
-| `String`  | String value | Message |
-| `Long`  | Long value | 1549009111 |
-| `Integer`  | Integer value | 113 |
-| `Decimal`  | Decimal value. There is a 2-digit decimal number. | 1.09 |
+| `String`  | String value 字符串值 | Message |
+| `Long`  | Long value Long 类型值 | 1549009111 |
+| `Integer`  | Integer value 整型值 | 113 |
+| `Decimal`  | Decimal value. There is a 2-digit decimal number. 小数值，小数点后将有两位数字 | 1.09 |
 
 ### 2.3. Date and Time 日期时间 <a name="23-date-and-time"></a>
 
@@ -264,25 +268,25 @@ This service is used to generate a URL without the player needing to login. 这�
 
 Endpoint 端点
 
-| Name  | Value  | Description  |
+| Name <br/>名称 | Value 设置值 | Description 描述 |
 | --- | --- | --- |
 | URL  | `/player/login`  |   |
-| Method  | `GET`/`POST`  | For POST method, it is recommended to send parameters as an JSON object in the request body  |
+| Method  | `GET`/`POST`  | For POST method, it is recommended to send parameters as an JSON object in the request body 对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。 |
 
-| Name | Value | Validation | Description |
+| Name <br/>名称 | Value 设置值 | Validation 验证 | Description 描述 |
 | --- | --- | --- | --- |
 | `userCode`  | String <br/>(required 必需项) | | This is the agent code obtained in step 2. E.g: CO1AP1 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | String<br/>(required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 | |
 
 **Parameters 参数**
 
-| Name | Value | Validation | Description |
+| Name <br/>名称 | Value <br/>设置值 | Validation 验证 | Description 描述 |
 | --- | --- | --- | --- |
 | `userCode` | String<br/>(required 必需项) | | This is the user code / loginID of the player. E.g: *PA10000000* 此为玩家登录名/用户名，例如*PA10000000* |
-| `locale` | String <br/>(optional 非必需项) | Supported locales based on brand’s available languages. | See Locale (Language) in the Data-format. |
-| `oddsFormat` | String <br/>(optional 非必需项) | A list of supported oddsFormats is available in the Data-format. | See Odds Format in the Data-format. |
-| `desktopView` | Boolean <br/>(optional 非必需项) | `true`/`false` *(Default: false)*  Only applicable to Asian view  仅限用于亚洲界面 | If true then desktop view be used when their players use mobile device Otherwise, the appropriate view will be displayed based on the device (desktop or mobile). |
-| `view` | String <br/>(optional 非必需项) | Default: COMPACT | Once the parameter is set, this view would be the default view in the iFrame. 该参数可设置并更改默认界面 |
+| `locale` | String <br/>(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 | See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
+| `oddsFormat` | String <br/>(optional 非必需项) | A list of supported oddsFormats is available in the Data-format. 支持的数据格式列表请参阅 oddsFormats数据格式。 | See Odds Format in the Data-format. 详见数据格式中的赔率格式。|
+| `desktopView` | Boolean <br/>(optional 非必需项) | `true`/`false` *(Default: false)*  Only applicable to Asian view  仅限用于亚洲界面 | If true then desktop view be used when their players use mobile device Otherwise, the appropriate view will be displayed based on the device (desktop or mobile). 当设置值为true，　用户将会在移动端使用电脑版界面，否则界面会根据使用的设备（电脑端或者移动端）决定 |
+| `view` | String <br/>(optional 非必需项) | Default: COMPACT 默认：COMPACT（新亚洲界面） | Once the parameter is set, this view would be the default view in the iFrame. 该参数可设置并更改默认界面 |
 
 *Format URL login URL登录格式*
 
@@ -290,7 +294,7 @@ Endpoint 端点
 <host>/member/<locale>/sports?oddsFormat=HK&token=<token>
 ```
 
-Example: 
+Example 例如：
 http://whitelabelapidomain.com/member/en/sports?oddsFormat=HK&token=TkIxS3pJc2RwdituRmNXam1NVGk0ZlhsZ0lrV285Y2JncFAvVXN2V2dsNVAvNHdXejFadHQ1UTZoeFB6c201cXQ4dXc5NC8vL0pvNHhDQUN4bng0T2c9PQ==
 
 *Note: This token is generated by the AP Gaming system to allow users to log in to our system. This is not a token generated by a third party. 注意 : 这个 令牌 是由 AP Gaming 系统产生让 用 户 登入我 们的系统。这个不是第三方产生的 令牌*
@@ -391,7 +395,7 @@ The result is a URL to the login System. We use this URL to open a new popup in 
 
 In Mobile version we support the “Back” icon ![Workflow](./../res/back-icon.png) to redirect to a [custom URL]. The [custom URL] is the URL that you provide in the “externalUrl” parameter to the Login link response. 在移动版，我们有“返回”的图标 重定向[定制 URL]. 这里的[定制 URL]是你多加的“externalURL”参数给登陆链接回应。
 
-For example: 
+For example 例如: 
 http://whitelabelapidomain.com/en/sports?token=eGRDMFRQZDZQYlhIelBFdXZ2UVN5Nm9MNHlkNThVc0JiRm5SN2hMcVE3dEhHZm00ZnFDbmVMYzB5OTVFYW1NV0NZN0F2c0tqZXFjSU9EdjJhN0tiWXc9PQ==&externalUrl=http://google.com
 
 When the player clicks on the “Back” icon ![Workflow](./../res/back-icon.png), the app will redirect to google.com. 当你点击“返回”图标，应用程序将发送重定向到google.com页面
@@ -404,14 +408,14 @@ If you need to logout from system by userCode. You must call this function. 如�
 
 **Endpoint 端点**
 
-| Name | Value | Description |
+| Name 名称 | Value 设置值 | Description 描述 |
 | --- | --- | --- |
 | URL | `/player/logout` | |
-| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. |
+| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. <br/>对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。|
 
 **Parameters 参数**
 
-| Name | Type | Value | Validation | Description |
+| Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | --- | --- | --- | --- | --- |
 | `userCode` | Header | String <br/>(required 必需项) | | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String <br/>(optional 非必需项) | Token is available for 15 minutes after creation.  令牌在创建之后的15分钟内有效 | |
@@ -483,23 +487,23 @@ This service is used to create a new user and generate a URL that will allow the
 
 **Endpoint 端点**
 
-| Name | Value | Description |
+| Name <br/>名称 | Value 设置值 | Description 描述 |
 | --- | --- | --- |
 | URL | `/player/loginV2 ` | |
-| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. |
+| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. 对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。|
 
 **Parameters 参数**
 
-| Name | Type | Value | Validation | Description |
+| Name <br/>名称 | Type <br/>类型 | Value <br/>设置值 | Validation 验证 | Description 描述 |
 | --- | --- | --- | --- | --- |
 | `userCode` | Header | String <br/>(required 必需项) | | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String<br/> (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 | |
-| `loginId`  | Query | String <br/>(required 必需项)  | If loginId does not exist in the system, it will validate and create a new player based on this loginId.<br/>Validation Rule for loginId: Must be between 6 and 50 alphanumeric characters. | This is the user code / loginID of the player. 此为玩家登录名/用户名，例如 |
-| `locale` | Query | String <br/>(optional 非必需项) | Supported locales based on brand’s available languages. | See Locale (Language) in the Data-format. |
-| `sport` | Query | String <br/>(optional 非必需项) | A list of supported sports is available in the Data-format.<br/>**Notes:**<br/>If you only want to show only e-sports in the iFrame, you must contact us to enable the setting and the sport parameter must be "e-sports".<br/>若您想在iframe中只显示电子竞技，需与我们联系以启用设置，并且需将sport参数设置为”e-sports” | See Sport in the Data-format. |
-| `oddsFormat` | Query | String<br/>(optional 非必需项) | A list of supported odds formats is available in the Data-format. | See Odds Format in the Data-format. |
-| `desktopView` | Query | Boolean<br/>(optional 非必需项) | `true`/`false` *(Default: false)*  Only applicable to Asian view  仅限用于亚洲界面 | If true, then desktop view will be used when the players use a mobile device. Otherwise, the appropriate view will be displayed based on the device (desktop or mobile). |
-| `view` | Query | String<br/>(optional 非必需项) | Default: COMPACT | See View in the Data-format. <br/>Once the parameter is set, the view will be the default view in the iFrame. 该参数可设置并更改默认界面 |
+| `loginId`  | Query | String <br/>(required 必需项)  | If loginId does not exist in the system, it will validate and create a new player based on this loginId.<br/>如果系统中不存在此loginId，则会根据该loginId进行验证并创建新的用户。<br/>Validation Rule for loginId: Must be between 6 and 50 alphanumeric characters.<br/>LoginId 的验证规则：必须介于 6 到 50 个字母数字字符之间。| This is the user code / loginID of the player. 此为玩家登录名/用户名，例如 |
+| `locale` | Query | String <br/>(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言。| See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
+| `sport` | Query | String <br/>(optional 非必需项) | A list of supported sports is available in the Data-format.<br/>**Notes:**<br/>If you only want to show only e-sports in the iFrame, you must contact us to enable the setting and the sport parameter must be "e-sports".<br/>若您想在iframe中只显示电子竞技，需与我们联系以启用设置，并且需将sport参数设置为”e-sports” | See Sport in the Data-format. 详见数据格式中的体育项目。|
+| `oddsFormat` | Query | String<br/>(optional 非必需项) | A list of supported oddsFormats is available in the Data-format. 支持的数据格式列表请参阅 oddsFormats数据格式。 | See Odds Format in the Data-format. 详见数据格式中的赔率格式。|
+| `desktopView` | Query | Boolean<br/>(optional 非必需项) | `true`/`false` *(Default: false)* Only applicable to Asian view. *默认：false* 仅限用于亚洲界面。| If true, then desktop view will be used when the players use a mobile device. Otherwise, the appropriate view will be displayed based on the device (desktop or mobile). 当设置值为true时，玩家使用移动设备会显示为电脑端界面，否则，界面会根据使用的设备（电脑或者手机）显示。|
+| `view` | Query | String<br/>(optional 非必需项) | Default: COMPACT <br/>默认：COMPACT（新亚洲界面） | See View in the Data-format. <br/>Once the parameter is set, the view will be the default view in the iFrame. 该参数可设置并更改默认界面 |
 | `eventId` | Query | Number<br/>(optional 非必需项) | Event ID can be obtained by the Get Hot Event API. event Id 可以通过热门赛事 API获取。 | Players will be redirected to the corresponding event page. 玩家将被定向到相对应的赛事页面。 |
 | `parentUrl` | Query | String <br/>(optional 非必需项) | Client's domain which will be used for live streaming in all views. 客户的域名将在所有介面中用于直播 | This parameter is supported in all views. 该参数支持所有界面。 |
 | `gameName` | Query | String <br/>(optional 非必需项) | | See Game Name in the Data-format.<br/>This parameter is only supported for Esports-Hub 该参数仅支持在Esports-Hub |
@@ -515,7 +519,7 @@ To be added 以后添加
 <host>/member-service/v1/login-token?locale=<en>&sport=<sport>&oddsFormat=<oddsFormat>&token=<token>
 ```
 
-Example: http://whitelabelapidomain.com/member-service/v1/login-token?locale=en&sport=soccer&oddsFormat=HK&token=YkZXSFl5S0VsUElrQzRlRS9ZRERsbDN3dktnb2dnSE1tcTZ1VTEvVnFldTJkVTcyWklJeVVRSk1xY3dpM2VWVXFYY3IxMzRpWGNBWllsakV2Wk1JZ0E9PQ==
+Example 例如: http://whitelabelapidomain.com/member-service/v1/login-token?locale=en&sport=soccer&oddsFormat=HK&token=YkZXSFl5S0VsUElrQzRlRS9ZRERsbDN3dktnb2dnSE1tcTZ1VTEvVnFldTJkVTcyWklJeVVRSk1xY3dpM2VWVXFYY3IxMzRpWGNBWllsakV2Wk1JZ0E9PQ==
 
 *Note: This token is generated by the AP Gaming system to allow users to log in to our system. This is not a token generated by a third party.*
 
@@ -603,7 +607,7 @@ Usage is limited to a maximum of 20 requests per 5 seconds.
 
 In Mobile version we support the “Back” icon ![Workflow](./../res/back-icon.png) to redirect to a [custom URL]. The [custom URL] is the URL that you provide in the “externalUrl” parameter to the Login link response. <br/>在移动版，我们有“返回”的图标 重定向[定制 URL]. 这里的[定制 URL]是你多加的“externalURL”参数给登陆链接回应。
 
-For example:
+For example 例如:
 
 http://whitelabelapidomain.com/member-service/v1/login-token?locale=en&token=eGRDMFRQZDZQYlhIelBFdXZ2UVN5NmZNWXE4RFlnUm1vS1pFeVFnVFV4MEpWYkZ5SlczM0ZmZTlFNUhlTytRYTdXeUNmUTN2ak5iVXpQbTNLVWpCUkE9PQ==&externalUrl=http://google.com
 
@@ -621,19 +625,19 @@ This service is used to sign up a player.
 
 **Endpoint 端点**
 
-| Name | Value | Description  |
+| Name 名称 | Value 设置值 | Description  描述 |
 | --- | --- | --- |
 | URL | `/player/create` | |
-| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. |
+| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. <br/>对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。|
 
 **Parameters 参数**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name <br/>名称 | Type <br/>类型 | Value <br/>设置值 | Validation 验证 | Description 描述 |
 | --- | --- | --- | --- | --- |
 | `userCode` | Header | String<br/> (required 必需项)  |  | This is the agent code obtained in step 2. E.g: `CO1AP1`. 此为在第二步骤获取的代理编号，例如，`CO1AP1` |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `agentCode` | Query | String<br/>  (optional 非必需项) |  | The downline agent code that the newly-created player will belong to. If no agent code is provided, the player will be created direct under agent code calling the API. E.g: `CO1AP100` 新建玩家账户所属的代理编号。如果没有提供代理编号，那么玩家用户会直接创建在调用此API的代理账户之下，例如：`CO1AP100` |
-| `loginId` | Query | String<br/> (optional 非必需项) | If entered, the system will validate the loginId and respond with an error if it already exists in the system. | Validation Rule for loginId: Must be between 6 and 50 alphanumeric characters. |
+| `loginId` | Query | String<br/> (optional 非必需项) | If entered, the system will validate the loginId and respond with an error if it already exists in the system. <br/>输入用户名后，系统会创建用户，若用户名已存在则返回错误 | Validation Rule for loginId: Must be between 6 and 50 alphanumeric characters. <br/>LoginId 的验证规则：必须介于 6 到 50 个字母数字字符之间。|
 
 *Sample code (java) - See HttpUtils class at Appendix*
 *示例代码（HttpU– 请参阅附录里的 HttpUtils class*
@@ -703,14 +707,14 @@ This service returns player information.
 
 获取用户资料
 
-| Name | Value | Description |
+| Name 名称 | Value 设置值 | Description 描述 |
 | --- | --- | --- |
 | URL | `/player/info` | |
 | Method | `GET` | |
 
 **Parameters 参数**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name  <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String  (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
@@ -793,7 +797,7 @@ This service returns a list of player information.
 
 **Endpoint 端点**
 
-| Name | Value | Description  |
+| Name 名称 | Value 设置值 | Description 描述 |
 | --- | --- | ---  |
 | URL | `/list-player/info` | |
 | Method | `GET` | |
@@ -801,7 +805,7 @@ This service returns a list of player information.
 
 **Parameters 参数**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name <br/> 名称 | Type <br/> 类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
@@ -874,28 +878,28 @@ This service updates the status for a player.
 
 更新用户状态
 
-**Endpoint**
+**Endpoint 端点**
 
-| Name  | Value  | Description   |
+| Name 名称 | Value 设置值 | Description  描述 |
 | ---  | ---  | ---   |
 | URL  | `/player/update-status`  |   |
-| Method  | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. |
+| Method  | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. <br/>对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。|
 
 
 **Parameters 参数**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String  (required 必需项)  |  | This is agent code that you get at step 2. E.g: CO1AP1 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `userCode` | Query | String (required 必需项)  |  | This is the user code / loginID of the player. E.g: PA10000000.<br/>此为玩家登录名/用户名，例如PA10000000 |
-| `status` | Query | String (required 必需项)  | `ACTIVE`, `INACTIVE`, `SUSPENDED` | See User Status in the Data-format. |
+| `status` | Query | String (required 必需项)  | `ACTIVE`, `INACTIVE`, `SUSPENDED` | See User Status in the Data-format. 详见数据格式中的用户状态。|
 
 **Note:**
 -	`INACTIVE` player CANNOT login on Member site
 -	`SUSPENDED` player CAN login on Member site, but CANNOT place bet
 
-**注意：**
+**注：**
 -	`INACTIVE` 玩家不可登陆 
 -	`SUSPENDED` 玩家可以登陆，但不能投注
 
@@ -974,26 +978,26 @@ We also provide a wager feed to Push wager changes to B2B customer servers (see 
 
 请参考 Wager 字段返回的翻译: [链接](translation.md)
 
-**Endpoint**
+**Endpoint 端点**
 
-| Name  | Value  | Description   |
+| Name 名称 | Value 设置值 | Description 描述  |
 | ---  | ---  | ---   |
 | URL  | `/report/wagers`  |   |
 | Method  | `GET`  |   |
 
 **Parameters 参数**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String(required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
-| `dateFrom` | Query | Date (required 必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-15 23:59:59  |
-| `dateTo`  | Query | Date(required 必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours |
+| `dateFrom` | Query | Date (required 必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-15 23:59:59 例如: 2016-10-15 23:59:59|
+| `dateTo`  | Query | Date(required 必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours 例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
 | `product` | Query | String (required 必需项) | SB | Product Sport Book 产品: 体育 |
 | `userCode` | Query | String (required 必需项) |  | This is the user code / loginID of the player. E.g: PA10000000 此为玩家登录名/用户名，例如PA10000000 |
-| `settle` | Query | Boolean(optional 非必需项) | true/false(Default: false) | If true, wagers of status included: SETTLED, CANCELLED Else also included: OPEN, PENDING  |
-| `filterBy` | Query | String (optional 非必需项) | event_date/wager_date (Default: event_date) | If settle (above) equals FALSE date range is based on filterBy‘s value otherwise it is based on settlement date 如果settle返回FAlSE, 日期会按照filterBy的数值，否则按照注单结算日期 |
-| `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format. |
+| `settle` | Query | Boolean(optional 非必需项) | true/false(Default: false) 默认: false | If true, wagers of status included: SETTLED, CANCELLED Else also included: OPEN, PENDING  如TRUE, 那么注单状态包括： 已结算，已取消 其他还包括：等待中，注单未结算 |
+| `filterBy` | Query | String (optional 非必需项) | event_date/wager_date (Default: event_date) 默认: event_date | If settle (above) equals FALSE date range is based on filterBy‘s value otherwise it is based on settlement date 如果settle返回FAlSE, 日期会按照filterBy的数值，否则按照注单结算日期 |
+| `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
 
 *Sample code (java) - See HttpUtils class at Appendix*
 *示例代码（java）– 请参阅附录里的 HttpUtils class*
@@ -1461,26 +1465,26 @@ This service returns all wagers for a player (this function works as FR001 and w
 
 请参考 Wager 字段返回的翻译: [链接](translation.md)
 
-**Endpoint:**
+**Endpoint 端点:**
 
-| Name  | Value  | Description   |
+| Name 名称 | Value 设置值  | Description 描述  |
 | ---  | ---  | ---   |
 | URL  | `/report/all-wagers`  |   |
 | Method  | `GET`  |   |
 
-**Parameters:**
+**Parameters 参数:**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name 名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | ---  | --- | ---  | ---  |
 | `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String(required必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
-| `dateFrom` | Query | Date (optional非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-15 23:59:59  |
-| `dateTo (1)` | Query | Date (optional非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours 限制: dateTo – dateFrom <= 24 小时 |
+| `dateFrom` | Query | Date (optional非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-15 23:59:59  例如: 2016-10-15 23:59:59|
+| `dateTo (1)` | Query | Date (optional非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours <br/>例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
 | `userCode` | Query | String (optional 非必需项) |  | This is the user code / loginID of the player. E.g: PA10000000. 玩家用户名/登录名 |
-| `settle` | Query | Int (optional 非必需项) | 1: settled <br/>0: unsettled <br/>-1: all (both settled and unsettled) (Default: -1) | 1 = wager status: SETTLED or CANCELLED<br/>0 = wager status includes: OPEN or PENDING<br/>-1 All wager status values |
-| `filterBy (2)` | Query | String(optional非必需项) | event_date wager_date settle_date update_date (Default: wager_date) |
-| `locale` | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format. |
-| `wagerIds` | Query | String(optional 非必需项) | A comma-separated list of wagerIDs to be returned.  |  Example: `6862955`,`6862947` |
+| `settle` | Query | Int (optional 非必需项) | 1: settled 1: 已结算 <br/>0: unsettled 0: 未结算 <br/>-1: all (both settled and unsettled) (Default: -1) -1: 所有（包含已结算和未结算） | 1 = wager status: SETTLED or CANCELLED 1 = 注单状态：已结算或已取消<br/>0 = wager status includes: OPEN or PENDING 0 = 注单状态包括：等待中 或者 注单未结算<br/>-1 = All wager status values -1 = 所有注单状态值。|
+| `filterBy (2)` | Query | String(optional非必需项) | event_date wager_date settle_date update_date (Default: wager_date) 默认: wager_date |
+| `locale` | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. 在基于现有品牌的语言下，列出所支持区域 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
+| `wagerIds` | Query | String(optional 非必需项) | A comma-separated list of wagerIDs to be returned. 用逗号分隔的注单ID列表将会被返回 |  Example: `6862955`,`6862947` 例如: `6862955`,`6862947`|
 
 **Note:**
 (1):
@@ -1626,22 +1630,22 @@ This service returns a simple win loss report for agent or player.
 
 获取代理和用户的简易盈亏
 
-**Endpoint:**
+**Endpoint 端点:**
 
-| Name  | Value  | Description   |
+| Name 名称 | Value 设置值 | Description 描述  |
 | ---  | ---  | ---   |
 | URL  | `/report/winloss-simple` |   |
 | Method  | `GET`  |  
 
 **Parameters 参数:**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name <br/>名称 | Type <br/>类型 | Value 设置值  | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
-| `dateFrom` | Query | Date (optional 非必需项)  | Created Date format yyyy-MM-dd GMT-4  | Date format Example: 2016-10-15 |
-| `dateTo`  | Query | Date (optional 非必需项)  | Created Date format yyyy-MM-dd GMT-4  | Date format Example: 2016-10-16 Rule: dateTo – dateFrom <= 90 days |
-| `userCode` | Query | String (optional 非必需项) |  | This is the user code / loginID of `AGENT` or `PLAYER` |
+| `dateFrom` | Query | Date (optional 非必需项)  | Created Date format yyyy-MM-dd GMT-4  创建日期格式 yyyy-MM-dd 时区为GMT-4 | Date format Example: 2016-10-15  日期格式例子: 2016-10-15|
+| `dateTo`  | Query | Date (optional 非必需项)  | Created Date format yyyy-MM-dd GMT-4  创建日期格式 yyyy-MM-dd 时区为GMT-4 | Date format Example: 2016-10-16 Rule: dateTo – dateFrom <= 90 days 日期格式例子：2016-10-16 规则：结束日期-开始日期小于等于90天 |
+| `userCode` | Query | String (optional 非必需项) |  | This is the user code / loginID  of `AGENT` or `PLAYER` 此处指的是代理或者玩家的用户名/登录ID |
 
 **Note:**
 ```
@@ -1654,9 +1658,8 @@ userCode  != null (specific user code or login id)
 	b. If userCode is player (level = PL), returns data for the player.
 ```
 
-**For example:**
-**userCode** = `CO1AP100` - This is user code of **Agent**
-**userCode** = `PA10000000` - This is user code of **Player**
+**For example:** <br/>
+**userCode** = `CO1AP100` - This is user code of **Agent**<br/>**userCode** = `PA10000000` - This is user code of **Player**
 
 **注意:**
 ```
@@ -1668,11 +1671,11 @@ userCode  != null (特定用户名或登录名)
 	a. 如果 userCode 为代理(level != PL ), 获取userCode下所有用户的报表。
 	b. 如果 userCode 为玩家(level = PL ), 获取玩家报表。
 ```
-**For example:**
+**例如:**
 
 ```
-userCode = CO1AP100 - 此为代理用户名。
-userCode = PA10000000 – 此为玩家用户名。
+userCode = CO1AP100 - 这是代理号。
+userCode = PA10000000 – 这是用户名。
 ```
 
 *Sample code (Java)*
@@ -1771,21 +1774,21 @@ This service is used to generate a URL to allow the user to redirect to the My B
 
 此服务透过传送登陆产生URL令用户无需登录也能访问‘我的投注’页面。
 
-**Endpoint**
+**Endpoint 端点**
 
-| Name  | Value  | Description  |
+| Name <br/>名称 | Value 设置值 | Description 描述 |
 | ---  | ---  | ---  |
 | URL  | /player/account/my-bets-full  |   |
-| Method  | GET/POST  | For POST method, it is recommended to send parameters as a JSON object in the request body. |
+| Method  | GET/POST  | For POST method, it is recommended to send parameters as a JSON object in the request body. <br/>对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。|
 
 Parameters 参数
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String(required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `loginId`  | Query | String  (required 必需项)  |  | This is the user code / loginID of the player. E.g: PA10000000 or PA10.02 此为玩家登录名/用户名，例如PA10000000或PA10.abc123 |
-| `locale`  | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format. |
+| `locale`  | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
 
 
 Format of URL for the My Bet page: 前往"我的投注" 的URL格式
@@ -1794,7 +1797,7 @@ Format of URL for the My Bet page: 前往"我的投注" 的URL格式
 <host>/member-service/v1/account/my-bets-full?locale=<en>&token=<token>
 ```
 
-Example: http://whitelabelapidomain.com/member-service/v1/account/my-bets-full?locale=en&token=YkZXSFl5S0VsUElrQzRlRS9ZRERsbDN3dktnb2dnSE1tcTZ1VTEvVnFldTJkVTcyWklJeVVRSk1xY3dpM2VWVXFYY3IxMzRpWGNBWllsakV2Wk1JZ0E9PQ==
+Example 例如: http://whitelabelapidomain.com/member-service/v1/account/my-bets-full?locale=en&token=YkZXSFl5S0VsUElrQzRlRS9ZRERsbDN3dktnb2dnSE1tcTZ1VTEvVnFldTJkVTcyWklJeVVRSk1xY3dpM2VWVXFYY3IxMzRpWGNBWllsakV2Wk1JZ0E9PQ==
 
 *Note: This token is generated by the AP Gaming system to allow users to log in to our system. This is not a token generated by a third party.*
 
@@ -1881,7 +1884,8 @@ To use this function, the B2B customer server must make a public Restful service
 
 为了能使用这个功能，B2B客户服务器需要公开一个Restful服务来接收来自我们的JSON数据。在B2B客户配置成功后，您需要将您的公开网址发回给我们
 
-Request URL: url_any Request Method: POST Request Payload: (see defined message model for detail) Message model:
+Request URL: url_any Request Method: POST Request Payload: (see defined message model for detail) Message model:<br/>
+Request 方法：POST 请求有效负载：（详细信息请参阅以下已定义的消息模型） 消息模型：
 
 ```js
 {  
@@ -2198,23 +2202,23 @@ This service will get match announcements.
 
 这项服务用于获取比赛公告
 
-**Endpoint:**
+**Endpoint 端点:**
 
-| Name  | Value  | Description   |
+| Name 名称 | Value 设置值 | Description  描述 |
 | ---  | ---  | ---   |
 | URL  | `/player/account/announcements` |   |
 | Method  | `GET` | |
  
 **Parameters 参数:**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
-| `userCode`  | Header | String (required 必需项) |  | This is the agent code obtained in step 2. E.g: CO1AP1. |
+| `userCode`  | Header | String (required 必需项) |  | This is the agent code obtained in step 2. E.g: CO1AP1. 这里指的是步骤2中获得的代理号，例如：CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
-| `dateFrom` | Query | Date (optional 非必需项) | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-15 23:59:59  |
-| `dateTo`  | Query | Date (optional 非必需项) | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 168 hours (7 days) |
-| `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format. |
-| `sport` | Query | String(optional 非必需项) | The sport name |  See Sport in the Data-format. |
+| `dateFrom` | Query | Date (optional 非必需项) | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-15 23:59:59  例如: 2016-10-15 23:59:59  |
+| `dateTo`  | Query | Date (optional 非必需项) | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 168 hours (7 days) 例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 168 hours (7 days) 结束日期-开始日期小于等于168小时（7天） |
+| `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
+| `sport` | Query | String(optional 非必需项) | The sport name 体育名称 |  See Sport in the Data-format. 详见数据格式中的体育项目。|
 
 **Note:**
 
@@ -2338,21 +2342,21 @@ Call the API along with the Sport name to get events. Each Sport has its own log
 
 The Event IDs parameter obtained by the Get Hot Event API can be passed into the LoginV2 API in order to redirect players to the corresponding event page. 热门赛事里获取到的eventId用于LoginV2 API的参数，以定向玩家到对应的赛事页面。
 
-**Endpoint:**
+**Endpoint 端点:**
 
-| Name  | Value  | Description   |
+| Name 名称 | Value 设置值 | Description 描述  |
 | ---  | ---  | ---   |
 | URL  | `/v1/hot-events` |   |
 | Method  | `GET` | |
  
 **Parameters 参数**
 
-| Name  | Type | Value  | Validation  | Description  |
+| Name 名称 | Type <br/> 类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | ---  | ---  | ---  | ---  |
 | `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 这是在 Step 2里获取的agent code,例如：CO1AP1 |
-| `locale` 区域设置 | Query | String (optional非必需项) | Supported locales based on brand’s available languages. 在基于现有品牌的语言下，列出所支持区域 |  See Locale (Language) in the Data-format. 参见附件区域设置（语言） |
-| `oddsFormat` 赔率格式 | Query | String (optional 非必需项) | List supported oddsFormat: AM, EU, HK, ID, MY 列出所支持赔率格式 | See Odds Format in the Data-format. 参见附件赔率格式 |
-| `sports` | Query | String(required必需项) | A comma-separated list of sport names. |  See Sport in the Data-format. |
+| `locale` 区域设置 | Query | String (optional非必需项) | Supported locales based on brand’s available languages. 在基于现有品牌的语言下，列出所支持区域 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
+| `oddsFormat` 赔率格式 | Query | String (optional 非必需项) | List supported oddsFormat: AM, EU, HK, ID, MY 列出所支持赔率格式 | See Odds Format in the Data-format. 详见数据格式中的赔率格式。 |
+| `sports` | Query | String(required必需项) | A comma-separated list of sport names. 用逗号分隔的体育名称列表 |  See Sport in the Data-format. 详见数据格式中的体育项目。|
 
 
 *Sample code (java) - See HttpUtils class at Appendix*
@@ -2553,17 +2557,17 @@ This section shows basic workflows for each of the API functions.
 | pro-evolution-soccer |
 | ecricket |
 
-## 6. Code Example <a name="6-code-example"></a>
+## 6. Code Example 代码示例 <a name="6-code-example"></a>
 
-1. [Java Code for HttpUtils](./../codes/HttpUtils.java)
+1. [Java Code for HttpUtils 用于HttpUtils的Java代码](./../codes/HttpUtils.java)
 
-2. [Java Code to verify Signature](./../codes/SignatureVerification.java)
+2. [Java Code to verify Signature 用于验证签名的Java代码](./../codes/SignatureVerification.java)
 
-3. [C# Code to verify Signature](./../codes/SignatureVerification.cs)
+3. [C# Code to verify Signature 用于验证签名的C#代码](./../codes/SignatureVerification.cs)
 
-4. [PHP Code to verify Signature](./../codes/SignatureVerification.php)
+4. [PHP Code to verify Signature 用于验证签名的PHP代码](./../codes/SignatureVerification.php)
 
-## 7. References <a name="7-references"></a>
+## 7. References 参考资料<a name="7-references"></a>
 
-1. [Data Format](./data-format.md)
+1. [Data Format 数据格式](./data-format.md)
 
