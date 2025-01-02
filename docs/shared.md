@@ -395,7 +395,7 @@ The result is a URL to the login System. We use this URL to open a new popup in 
 
 In Mobile version we support the “Back” icon ![Workflow](./../res/back-icon.png) to redirect to a [custom URL]. The [custom URL] is the URL that you provide in the “externalUrl” parameter to the Login link response. 在移动版，我们有“返回”的图标 重定向[定制 URL]. 这里的[定制 URL]是你多加的“externalURL”参数给登陆链接回应。
 
-For example: 
+For example 例如: 
 http://whitelabelapidomain.com/en/sports?token=eGRDMFRQZDZQYlhIelBFdXZ2UVN5Nm9MNHlkNThVc0JiRm5SN2hMcVE3dEhHZm00ZnFDbmVMYzB5OTVFYW1NV0NZN0F2c0tqZXFjSU9EdjJhN0tiWXc9PQ==&externalUrl=http://google.com
 
 When the player clicks on the “Back” icon ![Workflow](./../res/back-icon.png), the app will redirect to google.com. 当你点击“返回”图标，应用程序将发送重定向到google.com页面
