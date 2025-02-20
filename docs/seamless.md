@@ -244,7 +244,7 @@ The action to take will depend on the current status of the bet, the status in t
 | UNSETTLED 未结算 | SETTLED 已结算 | No 否 | Ignore action 可忽略 |
 | UNSETTLED 未结算 | SETTLED 已结算 | Yes 是 | Unsettle the bet 取消结算 |
 | UNSETTLED 未结算 | UNSETTLED 未结算 | No 否 | Ignore action 可忽略 |
-| UNSETTLED 未结算 | UNSETTLED 未结算 | Yes 是 | Unsettle the bet, then settle the bet 取消结算後结算注单 |
+| UNSETTLED 未结算 | UNSETTLED 未结算 | Yes 是 | Ignore action 可忽略 |
 
 ### 2.2.1. BETTED Action 已下注
 
