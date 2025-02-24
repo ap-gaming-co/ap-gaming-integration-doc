@@ -2456,7 +2456,130 @@ namespace ChangeStatusForDepositWithdraw
 }]
 ```
 
-### 3.15. FR010 – Get Regrades Wager History <a name="314-fr010-get-regrade-wager-history"></a>
+### 3.15. FR010 – Get Regrades Wager History <a name="315-fr010-get-regrade-wager-history"></a>
+
+This service returns historical wager data related to regrades wagers
+
+**Endpoint 端点:**
+
+| Name 名称 | Value 设置值  | Description 描述  |
+| ---  | ---  | ---   |
+| URL  | `/regrades/wager-history`  |   |
+| Method  | `GET`  |   |
+
+**Parameters 参数:**
+
+| Name 名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| ---  | ---  | --- | ---  | ---  |
+| `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
+| `token` | Header | String(required必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
+| `wagerIds` | Query | String(optional 非必需项)  | A comma-separated list of wagerIDs to be returned. When betIds is submitted, no other parameter is necessary. Maximum is 100 ids. Works for all bets settled in the last 30 days. | Example: 6862955,6862947|
+| `dateFrom` | Query | required必需项  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 | Example: 2016-10-15 23:59:59 |
+| `dateTo` | Query | required必需项  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours |
+| `sortDir` | Query | String (optional 非必需项) | ASC or DESC | The order of returned wagers |
+| `userCode` | Query | String (optional 非必需项) | | This is the user code / loginID of the player. E.g: PA10000000 此为玩家登录名/用户名，例如PA10000000 |
+| `pageSize` | Query | Integer(optional非必需项) | Default: 1000 | |
+| `fromRecord` | Query | Integer (optional 非必需项) | Default: 0 | |
+
+**Response OK 返回OK**
+
+```js
+{
+    "moreAvailable": false,
+    "pageSize": 1000,
+    "fromRecord": 0,
+    "toRecord": 2,
+    "specialBets": [
+        {
+            "betId": 2203008090,
+            "uniqueRequestId": "051e2854-25c5-3cbb-2f9d-465d478e8c34",
+            "wagerNumber": 1,
+            "placedAt": "2025-01-05 22:47:27",
+            "settledAt": "2025-01-05 22:49:14",
+            "betStatus": "WON",
+            "betType": 99,
+            "win": 50000.0,
+            "risk": 10.0,
+            "winLoss": 50000.0,
+            "oddsFormat": 2,
+            "customerCommission": 0.00,
+            "updateSequence": 1736092154000,
+            "sportId": 29,
+            "sportName": "Soccer",
+            "leagueId": 1980,
+            "leagueName": "England - Premier League",
+            "eventId": 0,
+            "handicap": 0.0,
+            "price": 5000.0,
+            "periodNumber": 0,
+            "specialId": 1592296321,
+            "specialName": "England - Premier League Winner 2024/25",
+            "contestantId": 1592296340,
+            "contestantName": "Ipswich Town",
+            "eventStartTime": "2025-02-25 15:30:00",
+            "resultingUnit": null
+        },
+        {
+            "betId": 2203048710,
+            "originalBetId": 2203008090,
+            "wagerNumber": 1,
+            "placedAt": "2025-01-05 22:49:38",
+            "settledAt": "2025-01-05 22:49:38",
+            "betStatus": "REFUNDED",
+            "betType": 99,
+            "win": 50000.0,
+            "risk": 10.0,
+            "winLoss": -50000.0,
+            "oddsFormat": 2,
+            "customerCommission": 0.00,
+            "updateSequence": 1736092178000,
+            "sportId": 29,
+            "sportName": "Soccer",
+            "leagueId": 1980,
+            "leagueName": "England - Premier League",
+            "eventId": 0,
+            "handicap": 0.0,
+            "price": 5000.0,
+            "periodNumber": 0,
+            "specialId": 1592296321,
+            "specialName": "England - Premier League Winner 2024/25",
+            "contestantId": 1592296340,
+            "contestantName": "Ipswich Town",
+            "eventStartTime": "2025-02-25 15:30:00",
+            "resultingUnit": null
+        },
+        {
+            "betId": 2203048711,
+            "originalBetId": 2203008090,
+            "wagerNumber": 1,
+            "placedAt": "2025-01-05 22:49:38",
+            "settledAt": "2025-01-05 22:49:39",
+            "betStatus": "LOSE",
+            "betType": 99,
+            "win": 50000.0,
+            "risk": 10.0,
+            "winLoss": -10.0,
+            "oddsFormat": 2,
+            "customerCommission": 0.00,
+            "updateSequence": 1736092179000,
+            "sportId": 29,
+            "sportName": "Soccer",
+            "leagueId": 1980,
+            "leagueName": "England - Premier League",
+            "eventId": 0,
+            "handicap": 0.0,
+            "price": 5000.0,
+            "periodNumber": 0,
+            "specialId": 1592296321,
+            "specialName": "England - Premier League Winner 2024/25",
+            "contestantId": 1592296340,
+            "contestantName": "Ipswich Town",
+            "eventStartTime": "2025-02-25 15:30:00",
+            "resultingUnit": null
+        }
+    ]
+}
+```
 
 ## 4. Screens and Workflows 截图和工作流程 <a name="4-screens-and-workflows"></a>
 
