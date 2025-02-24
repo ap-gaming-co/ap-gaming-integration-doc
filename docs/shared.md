@@ -25,6 +25,7 @@
         - [3.12. FR005 – Wager Feed – 投注资料](#312-fr005-wager-feed)
         - [3.13. FR006 – Announcement 公告](#313-fr006-announcement)
         - [3.14. FR009 – Get Hot Event 获取热门赛事](#314-fr009-get-hot-event)
+        - [3.15. FR010 – Get Regrades Wager History](#315-fr010-get-regrade-wager-history)
     - [4. Screens and Workflows 截图和工作流程](#4-screens-and-workflows)
     - [5. Appendix 附录](#5-appendix)
         - [5.1. View 界面](#51-view)
@@ -2454,6 +2455,8 @@ namespace ChangeStatusForDepositWithdraw
     ]  
 }]
 ```
+
+### 3.15. FR010 – Get Regrades Wager History <a name="314-fr010-get-regrade-wager-history"></a>
 
 ## 4. Screens and Workflows 截图和工作流程 <a name="4-screens-and-workflows"></a>
 
