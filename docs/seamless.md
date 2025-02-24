@@ -945,6 +945,7 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
         },
         "WagerInfo": {
             "WagerId": 725361010,
+            "ResettledWagerId": 725361011,
             "Type": "single",
             "BetType": 1,
             "Sport": "Baseball",
@@ -1023,6 +1024,7 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
         },
         "WagerInfo": {
             "WagerId": 725755355,
+            "ResettledWagerId": 725755356,
             "Type": "parlay",
             "BetType": 6,
             "Odds": 209.000,
@@ -1125,6 +1127,7 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
       },
       "WagerInfo": {
         "WagerId": 725755355,
+	"ResettledWagerId": 725755356,
 	"Type": "single",
         "BetType": 8,
         "Odds": 9.084,
@@ -1241,7 +1244,8 @@ When the bet is cancelled, the Sportsbook Platform will call the Operator with t
 	    "UserCode": "PXM130000D"
     	},
         "WagerInfo": {
-            "WagerId": 1545454 // (Long)
+            "WagerId": 1545454 // (Long),
+            "ResettledWagerId": 1545455 // (Long)
         },
         "Transaction": {
             "TransactionId": 123456789, // (Long)
@@ -1364,7 +1368,8 @@ When a bet needs to be resettled due to an incorrect result or any other reason 
                 "Amount": 197
             },
             "WagerInfo": {
-                "WagerId": 725057660
+                "WagerId": 725057660,
+		"ResettledWagerId": 725057661
             }
         },
         {
@@ -1381,7 +1386,8 @@ When a bet needs to be resettled due to an incorrect result or any other reason 
                 "Amount": 100
             },
             "WagerInfo": {
-                "WagerId": 725057660
+                "WagerId": 725057660,
+		"ResettledWagerId": 725057662
             }
         }
     ]
