@@ -10,6 +10,10 @@
         - [2.4. Generate Signature 生成签名](#24-generate-signature)
         - [2.5. Errors and Exceptions 错误和例外](#25-errors-and-exceptions)
         - [2.6. Getting started 如何开始](#26-getting-started)
+        - [2.7. Event Post Message 赛事发布消息](#27-event-post-message)
+        - [2.8. Bet Selection　投注选项](#28-post-selection)
+        - [2.9. Login and Bet Placement Screen　登录和投注下单页面](#29-login-and-bet-placement)
+        - [2.10. Error Responses　错误响应](#210-error-response)
     - [3. API Functions API功能](#3-api-functions-api)
         - [3.1.	FA001 – Login 登入](#31-fa001-login)
         - [3.2.	FA002 – Logout 登出](#32-fa002-logout)
@@ -259,6 +263,46 @@ Please note that for your request to access the API, the IP address must in our 
 **Step 4 – Call API service** 步骤4 – 呼唤API服务
 
 For each service call, you must pass token verification and the appropriate parameters. 对每个服务呼唤，您需要通过令牌验证以及的合适的参数
+
+### 2.7. Event Post Message 赛事发布消息 <a name="27-event-post-message"></a>
+
+**1 – From Pinnacle Iframe**
+To avoid the B2B site sends selection info when iframe page have not yet loaded fully then iframe will inform b2b site that now it is ready to receive info via postMessage:
+
+```js
+{
+        "msgCode": "isIframeLoaded",
+        "msgData": true
+}
+```
+
+**2 – From B2B site**
+B2B site (front-end) will send the selection info to Pinnacle Iframe via postMessage with these example models:
+
+•	Spread selection
+
+```js
+{
+  "msgCode": "selectionInfo",
+  "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": " SPREAD",
+    "team": "HOME",
+    "altLineId": 0,
+    "hdp": 0.25,
+  }]
+}
+```
+	Data type:
+    		eventId: number
+   		period: number
+    		betType: string (SPREAD)
+		team: string ( HOME | AWAY)
+		altLineId: number
+    		hdp: number
+
+
 
 ## 3. API Functions API功能 <a name="3-api-functions-api"></a>
 
