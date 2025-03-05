@@ -267,6 +267,7 @@ For each service call, you must pass token verification and the appropriate para
 ### 2.7. Event Post Message 赛事发布消息 <a name="27-event-post-message"></a>
 
 **1 – From Pinnacle Iframe**
+
 To avoid the B2B site sends selection info when iframe page have not yet loaded fully then iframe will inform b2b site that now it is ready to receive info via postMessage:
 
 ```js
@@ -277,6 +278,7 @@ To avoid the B2B site sends selection info when iframe page have not yet loaded 
 ```
 
 **2 – From B2B site**
+
 B2B site (front-end) will send the selection info to Pinnacle Iframe via postMessage with these example models:
 
 •	Spread selection
@@ -294,13 +296,17 @@ B2B site (front-end) will send the selection info to Pinnacle Iframe via postMes
   }]
 }
 ```
-	Data type:
-    		eventId: number
-   		period: number
-    		betType: string (SPREAD)
-		team: string ( HOME | AWAY)
-		altLineId: number
-    		hdp: number
+
+Data type:
+
+| Name <br/> | Type <br/> |
+| --- | --- |
+| `eventId` | number |
+| `period` | number |
+| `betType` | string (SPREAD) |
+| `team` | string ( HOME | AWAY) |
+| `altLineId` | number |
+| `hdp` | number |
 
 
 
