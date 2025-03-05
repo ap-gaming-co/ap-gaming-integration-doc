@@ -25,7 +25,7 @@
         - [3.12. FR005 – Wager Feed – 投注资料](#312-fr005-wager-feed)
         - [3.13. FR006 – Announcement 公告](#313-fr006-announcement)
         - [3.14. FR009 – Get Hot Event 获取热门赛事](#314-fr009-get-hot-event)
-        - [3.15. FR010 – Get Regrades Wager History](#315-fr010-get-regrade-wager-history)
+        - [3.15. FR010 – Get Regrades Wager History 获取重新结算注单历史](#315-fr010-get-regrade-wager-history)
     - [4. Screens and Workflows 截图和工作流程](#4-screens-and-workflows)
     - [5. Appendix 附录](#5-appendix)
         - [5.1. View 界面](#51-view)
@@ -2456,9 +2456,11 @@ namespace ChangeStatusForDepositWithdraw
 }]
 ```
 
-### 3.15. FR010 – Get Regrades Wager History <a name="315-fr010-get-regrade-wager-history"></a>
+### 3.15. FR010 – Get Regrades Wager History 获取重新结算注单历史 <a name="315-fr010-get-regrade-wager-history"></a>
 
 This service returns historical wager data related to regrades wagers
+
+这个服务是返回与重新结算注单相关的历史注单数据
 
 **Endpoint 端点:**
 
@@ -2473,13 +2475,13 @@ This service returns historical wager data related to regrades wagers
 | ---  | ---  | --- | ---  | ---  |
 | `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String(required必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
-| `wagerIds` | Query | String(optional 非必需项)  | A comma-separated list of wagerIDs to be returned. When betIds is submitted, no other parameter is necessary. Maximum is 100 ids. Works for all bets settled in the last 30 days. | Example: 6862955,6862947|
-| `dateFrom` | Query | required必需项  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 | Example: 2016-10-15 23:59:59 |
-| `dateTo` | Query | required必需项  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours |
-| `sortDir` | Query | String (optional 非必需项) | ASC or DESC | The order of returned wagers |
+| `wagerIds` | Query | String(optional 非必需项)  | A comma-separated list of wagerIDs to be returned. When betIds is submitted, no other parameter is necessary. Maximum is 100 ids. Works for all bets settled in the last 30 days. 将会返回用逗号分隔的注单 ID 列表。当提交投注 ID 后，无需其他参数。最多 100 个 ID。适用于过去 30 天内结算的所有投注。| Example: 6862955,6862947. 例如: 6862955,6862947|
+| `dateFrom` | Query | required必需项  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4. 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4| Example: 2016-10-15 23:59:59. 例如: 2016-10-15 23:59:59 |
+| `dateTo` | Query | required必需项  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours.  例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
+| `sortDir` | Query | String (optional 非必需项) | ASC or DESC | The order of returned wagers. 返回的注单的顺序 |
 | `userCode` | Query | String (optional 非必需项) | | This is the user code / loginID of the player. E.g: PA10000000 此为玩家登录名/用户名，例如PA10000000 |
-| `pageSize` | Query | Integer(optional非必需项) | Default: 1000 | |
-| `fromRecord` | Query | Integer (optional 非必需项) | Default: 0 | |
+| `pageSize` | Query | Integer(optional非必需项) | Default: 1000. 默认：1000 | |
+| `fromRecord` | Query | Integer (optional 非必需项) | Default: 0. 默认：0 | |
 
 **Response OK 返回OK**
 
