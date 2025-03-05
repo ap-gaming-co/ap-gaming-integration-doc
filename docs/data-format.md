@@ -198,6 +198,7 @@ E.g. `2018-12-20T04:05:06`
 | fi | Finnish |
 | no | Norwegian |
 | it | Italian |
+| tl | Filipino|
 
 ## 9. Selection Type 选择类型
 
