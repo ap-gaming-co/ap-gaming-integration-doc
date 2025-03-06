@@ -11,7 +11,7 @@
         - [2.5. Errors and Exceptions 错误和例外](#25-errors-and-exceptions)
         - [2.6. Getting started 如何开始](#26-getting-started)
         - [2.7. Event Post Message 赛事发布消息](#27-event-post-message)
-        - [2.8. Bet Selection　投注选项](#28-post-selection)
+        - [2.8. Bet Selection　投注选项](#28-bet-selection)
         - [2.9. Login and Bet Placement Screen　登录和投注下单页面](#29-login-and-bet-placement)
         - [2.10. Error Responses　错误响应](#210-error-response)
     - [3. API Functions API功能](#3-api-functions-api)
@@ -279,9 +279,15 @@ To avoid the B2B site sends selection info when iframe page have not yet loaded 
 
 **2 – From B2B site**
 
-B2B site (front-end) will send the selection info to Pinnacle Iframe via postMessage with these example models:
+Only after receiving the message with the msgCode = "isIframeLoaded" from iframe, B2B site (front-end) will send the selection info to Pinnacle Iframe via postMessage with these type of Bet Selection:
+Spread, MoneyLine, Total Points, Team Total Points, Outright **(Refer to 2.8 )**
 
-•	Spread selection
+
+### 2.8. Bet Selection 赛事发布消息 <a name="28-bet-selection"></a>
+
+We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via postMessage, the msgCode must be "selectionInfo"
+
+**1 – Spread Selection**
 
 ```js
 {
@@ -289,7 +295,7 @@ B2B site (front-end) will send the selection info to Pinnacle Iframe via postMes
   "msgData": [{
     "eventId": 1554532082,
     "period": 0,
-    "betType": " SPREAD",
+    "betType": "SPREAD",
     "team": "HOME",
     "altLineId": 0,
     "hdp": 0.25,
@@ -297,7 +303,7 @@ B2B site (front-end) will send the selection info to Pinnacle Iframe via postMes
 }
 ```
 
-•	Moneyline selection
+**2 – Moneyline Selection**
 
 ```js
 {
@@ -313,7 +319,7 @@ B2B site (front-end) will send the selection info to Pinnacle Iframe via postMes
 }
 ```
 
-•	Total points selection:
+**3 – Total Points Selection**
 
 ```js
 {
@@ -329,7 +335,7 @@ B2B site (front-end) will send the selection info to Pinnacle Iframe via postMes
 }
 ```
 
-•	Team total points selection:
+**4 – Team Total Points Selection**
 
 ```js
 {
@@ -346,7 +352,7 @@ B2B site (front-end) will send the selection info to Pinnacle Iframe via postMes
 }
 ```
 
-•	Outright selection:
+**5 – Outright Selection**
 
 ```js
 {
@@ -362,7 +368,7 @@ B2B site (front-end) will send the selection info to Pinnacle Iframe via postMes
 }
 ```
 
-Data type:
+**6 – Data type**
 
 | Name <br/> | Type <br/> | Description <br/>
 | --- | --- | --- |
