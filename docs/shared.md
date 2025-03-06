@@ -365,16 +365,16 @@ B2B site (front-end) will send the selection info to Pinnacle Iframe via postMes
 Data type:
 
 | Name <br/> | Type <br/> | Description <br/>
-| --- | --- |
-| `eventId` | number | (Required) Event Id Number 
-| `period` | number | (Required) Period Number 
-| `betType` | string | (Required) SPREAD | MONEYLINE | TOTAL_POINTS | TEAM_TOTAL_POINTS | OUTRIGHT
-| `team` | string  | (Required for Spread, MoneyLine, Team Total Points)  HOME | AWAY
-| `altLineId` | number | 0 for Main Line odds, 1 for Alternate Line odds.
-| `hdp` | number | (Required for Spreads, Moneyline and Outright) Decimal Number
-| `points` | number | (Required for Total Points and Team Total Points) Decimal Number
-| `side` | string | (Required for Total Points and Team Total Points) OVER | UNDER
-| `contestantLineId` | number | (Required for Outright)
+| --- | --- | --- |
+| `eventId` | number | (Required) Event Id Number |
+| `period` | number | (Required) Period Number |
+| `betType` | string | (Required) SPREAD, MONEYLINE, TOTAL_POINTS, TEAM_TOTAL_POINTS, OUTRIGHT |
+| `team` | string  | (Required for Spread, MoneyLine, Team Total Points)  HOME, AWAY |
+| `altLineId` | number | 0 for Main Line odds, 1 for Alternate Line odds. |
+| `hdp` | number | (Required for Spreads, Moneyline and Outright) Decimal Number |
+| `points` | number | (Required for Total Points and Team Total Points) Decimal Number |
+| `side` | string | (Required for Total Points and Team Total Points) OVER, UNDER |
+| `contestantLineId` | number | (Required for Outright) |
 
 
 ## 3. API Functions API功能 <a name="3-api-functions-api"></a>
