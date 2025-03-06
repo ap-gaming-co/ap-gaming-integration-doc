@@ -297,17 +297,84 @@ B2B site (front-end) will send the selection info to Pinnacle Iframe via postMes
 }
 ```
 
+•	Moneyline selection
+
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "MONEYLINE",
+    "team": "HOME",
+    "altLineId": 0,
+    "hdp": 0.25,
+  }]
+}
+```
+
+•	Total points selection:
+
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "TOTAL_POINTS",
+    "altLineId": 0,
+    "points": 3.0,
+    "side": "OVER",
+  }]
+}
+```
+
+•	Team total points selection:
+
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "TEAM_TOTAL_POINTS",
+    "altLineId": 0,
+    "points": 3.0,
+    "team": "HOME",
+    "side": "OVER",
+  }]
+}
+```
+
+•	Outright selection:
+
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "OUTRIGHT",
+    "altLineId": 0,
+    "hdp": 3.5,
+    "contestantLineId": 1563789224,
+  }]
+}
+```
+
 Data type:
 
-| Name <br/> | Type <br/> |
+| Name <br/> | Type <br/> | Description <br/>
 | --- | --- |
-| `eventId` | number |
-| `period` | number |
-| `betType` | string (SPREAD) |
-| `team` | string ( HOME | AWAY) |
-| `altLineId` | number |
-| `hdp` | number |
-
+| `eventId` | number | (Required) Event Id Number 
+| `period` | number | (Required) Period Number 
+| `betType` | string | (Required) SPREAD | MONEYLINE | TOTAL_POINTS | TEAM_TOTAL_POINTS | OUTRIGHT
+| `team` | string  | (Required for Spread, MoneyLine, Team Total Points)  HOME | AWAY
+| `altLineId` | number | 0 for Main Line odds, 1 for Alternate Line odds.
+| `hdp` | number | (Required for Spreads, Moneyline and Outright) Decimal Number
+| `points` | number | (Required for Total Points and Team Total Points) Decimal Number
+| `side` | string | (Required for Total Points and Team Total Points) OVER | UNDER
+| `contestantLineId` | number | (Required for Outright)
 
 
 ## 3. API Functions API功能 <a name="3-api-functions-api"></a>
