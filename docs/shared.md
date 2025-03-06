@@ -283,7 +283,7 @@ Only after receiving the message with the msgCode = "isIframeLoaded" from iframe
 Spread, MoneyLine, Total Points, Team Total Points, Outright **(Refer to 2.8 )**
 
 
-### 2.8. Bet Selection 赛事发布消息 <a name="28-bet-selection"></a>
+### 2.8. Bet Selection 投注选项 <a name="28-bet-selection"></a>
 
 We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via postMessage, the msgCode must be "selectionInfo"
 
