@@ -383,6 +383,20 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
 | `contestantLineId` | number | (Applies for Outright) |
 
 
+### 2.9. Login and Bet Placement Screen　登录和投注下单页面 <a name="29-login-and-bet-placement"></a>
+
+**1 – Login**
+A new endpoint/process needs to be created to allow the end user to be redirected to the Bet Selection (and populated bet slip) after login.
+
+This will require a change to the Login API.
+
+Implementation as suggested below:
+
+To use that function, the steps would be:
+1. When player makes a selection on a banner, the B2B site needs to store that selection info and open the login popup
+2. In the login process, B2B needs to call Pinnacle loginV2 API with eventId parameter (Event ID can be obtained by the Get Hot Event API, after log in successfully, players will be redirected to the corresponding event page ).
+3. After login successfully, B2B site (frontend) sends the selection info (from #1) to Pinnacle Iframe via postMessage (we introduced in the 2.8 section above), that selection will be available in the betslip.
+
 ## 3. API Functions API功能 <a name="3-api-functions-api"></a>
 
 ### 3.1. FA001 – Login 登入 <a name="31-fa001-login"></a>
