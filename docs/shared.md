@@ -401,7 +401,34 @@ To use that function, the steps would be:
 
 ### 2.10. Error Responses　错误响应 <a name="210-error-response"></a>
 
-After receving selection info from B2B Website, the selection will be added into the Bet Slip, the error response will be the same as the error response from Bet Slip.
+After receving selection info from B2B Website, the selection will be added into the Bet Slip, the error responses will be the same as the error responses from Bet Slip when placing bets.
+
+| Error Code <br/> | Descriptiona <br/> |
+| --- | --- |
+| `ALL_BETTING_CLOSED` | Betting is not allowed at this moment |
+| `B000` | Bet placement  service error |
+| `BETTING_BUDGET_EXCEEDED` | You have exceeded your betting budget! |
+| `CORRELATED` | This selection is correlated with another selection |
+| `ERROR1004` | An error occurred |
+| `ERROR1005` | An error occurred |
+| `ERROR3105` | Bet was not accepted because the event is currently offline |
+| `EVENT_OFFLINE` | This selection is currently offline |
+| `INSUFFICIENT_FUNDS` | You do not have sufficient funds to place these bets |
+| `INVALID_BET_ACCEPTANCE_TYPE` | The line is no longer available for betting |
+| `INVALID_LEGS` | One or more legs are invalid |
+| `INVALID_SELECTION` | One or more selections are invalid |
+| `LINE_CHANGED` | The odds changed.  Please resubmit and confirm your bet.  |
+| `LINE_ODDS_CHANGED` | The odds changed.  Please resubmit and confirm your bet. |
+| `MAX_PICKS` | You cannot add more than 10 selections to your Bet Slip. |
+| `NOT_ALL_AVAILABLE` | Not all of your selections are available for Multiple bets. |
+| `RESUBMIT_REQUEST` | Bet not accepted. Please try again or remove this selection from your Bet Slip. |
+| `SUSPENDED_LINE` | Your account has been suspended. Please contact Customer Service for help. |
+| `SUSPENDED_LINE_CREDIT` | Your account has been suspended. Please contact your Upline for help. |
+| `SYSTEM_ERROR_3` | Unexpected error or System error |
+| `ROUND_ROBIN_DISALLOWED` | Round robin is not allowed in one of the leagues. |
+| `UNAVAILABLE` | The odds are no longer available for betting. |
+| `UNSUPPORTED_MULTIPLES` | This selection is not available for Multiple bets. |
+
 
 
 ## 3. API Functions API功能 <a name="3-api-functions-api"></a>
