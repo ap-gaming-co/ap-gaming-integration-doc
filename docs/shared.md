@@ -10,6 +10,10 @@
         - [2.4. Generate Signature 生成签名](#24-generate-signature)
         - [2.5. Errors and Exceptions 错误和例外](#25-errors-and-exceptions)
         - [2.6. Getting started 如何开始](#26-getting-started)
+        - [2.7. Event Post Message 赛事发布消息](#27-event-post-message)
+        - [2.8. Bet Selection　投注选项](#28-bet-selection)
+        - [2.9. Login and Bet Placement Screen　登录和投注下单页面](#29-login-and-bet-placement)
+        - [2.10. Error Responses　错误响应](#210-error-response)
     - [3. API Functions API功能](#3-api-functions-api)
         - [3.1.	FA001 – Login 登入](#31-fa001-login)
         - [3.2.	FA002 – Logout 登出](#32-fa002-logout)
@@ -259,6 +263,173 @@ Please note that for your request to access the API, the IP address must in our 
 **Step 4 – Call API service** 步骤4 – 呼唤API服务
 
 For each service call, you must pass token verification and the appropriate parameters. 对每个服务呼唤，您需要通过令牌验证以及的合适的参数
+
+### 2.7. Event Post Message 赛事发布消息 <a name="27-event-post-message"></a>
+
+**1 – From Pinnacle Iframe**
+
+To avoid the B2B site sends selection info when iframe page have not yet loaded fully then iframe will inform b2b site that now it is ready to receive info via postMessage:
+
+```js
+{
+        "msgCode": "isIframeLoaded",
+        "msgData": true
+}
+```
+
+**2 – From B2B site**
+
+Only after receiving the message with the msgCode = "isIframeLoaded" from iframe, B2B site (front-end) will send the selection info to Pinnacle Iframe via postMessage with these type of Bet Selection:
+Spread, MoneyLine, Total Points, Team Total Points, Outright **(Refer to 2.8 )**
+
+
+### 2.8. Bet Selection 投注选项 <a name="28-bet-selection"></a>
+
+We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via postMessage, the msgCode must be "selectionInfo"
+
+**1 – Spread Selection**
+
+```js
+{
+  "msgCode": "selectionInfo",
+  "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "SPREAD",
+    "team": "HOME",
+    "altLineId": 0,
+    "hdp": 0.25,
+  }]
+}
+```
+
+**2 – Moneyline Selection**
+
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "MONEYLINE",
+    "team": "HOME",
+    "altLineId": 0,
+    "hdp": 0.25,
+  }]
+}
+```
+
+**3 – Total Points Selection**
+
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "TOTAL_POINTS",
+    "altLineId": 0,
+    "points": 3.0,
+    "side": "OVER",
+  }]
+}
+```
+
+**4 – Team Total Points Selection**
+
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "TEAM_TOTAL_POINTS",
+    "altLineId": 0,
+    "points": 3.0,
+    "team": "HOME",
+    "side": "OVER",
+  }]
+}
+```
+
+**5 – Outright Selection**
+
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "OUTRIGHT",
+    "altLineId": 0,
+    "hdp": 3.5,
+    "contestantLineId": 1563789224,
+  }]
+}
+```
+
+**6 – Data type**
+
+| Name <br/> | Type <br/> | Description <br/>
+| --- | --- | --- |
+| `eventId` | number | (Required) Event Id Number |
+| `period` | number | (Required) Period Number |
+| `betType` | string | (Required) SPREAD, MONEYLINE, TOTAL_POINTS, TEAM_TOTAL_POINTS, OUTRIGHT |
+| `team` | string  | (Required for Spread, MoneyLine, Team Total Points)  HOME, AWAY |
+| `altLineId` | number | (Required for Spread, Total Points, Team Total Points) Value 0 if is mainline, value > 0 if is Alternate Line. |
+| `hdp` | number | (Required for Spreads, Moneyline and Outright) Decimal Number |
+| `points` | number | (Required for Total Points and Team Total Points) Decimal Number |
+| `side` | string | (Required for Total Points and Team Total Points) OVER, UNDER |
+| `contestantLineId` | number | (Applies for Outright) |
+
+
+### 2.9. Login and Bet Placement Screen　登录和投注下单页面 <a name="29-login-and-bet-placement"></a>
+
+**1 – Login**
+
+A new endpoint/process needs to be created to allow the end user to be redirected to the Bet Selection (and populated bet slip) after login.
+
+This will require a change to the Login API.
+
+Implementation as suggested below:
+
+To use that function, the steps would be:
+1. When player makes a selection on a banner, the B2B site needs to store that selection info and open the login popup
+2. In the login process, B2B needs to call Pinnacle loginV2 API with eventId parameter (Event ID can be obtained by the Get Hot Event API, after log in successfully, players will be redirected to the corresponding event page ).
+3. After login successfully, B2B site (frontend) sends the selection info (from #1) to Pinnacle Iframe via postMessage (we introduced in the 2.8 section above), that selection will be available in the betslip.
+
+
+### 2.10. Error Responses　错误响应 <a name="210-error-response"></a>
+
+After receving selection info from B2B Website, the selection will be added into the Bet Slip, the error responses will be the same as the error responses from Bet Slip when placing bets.
+
+| Error Code <br/> | Descriptiona <br/> |
+| --- | --- |
+| `ALL_BETTING_CLOSED` | Betting is not allowed at this moment |
+| `B000` | Bet placement  service error |
+| `BETTING_BUDGET_EXCEEDED` | You have exceeded your betting budget! |
+| `CORRELATED` | This selection is correlated with another selection |
+| `ERROR1004` | An error occurred |
+| `ERROR1005` | An error occurred |
+| `ERROR3105` | Bet was not accepted because the event is currently offline |
+| `EVENT_OFFLINE` | This selection is currently offline |
+| `INSUFFICIENT_FUNDS` | You do not have sufficient funds to place these bets |
+| `INVALID_BET_ACCEPTANCE_TYPE` | The line is no longer available for betting |
+| `INVALID_LEGS` | One or more legs are invalid |
+| `INVALID_SELECTION` | One or more selections are invalid |
+| `LINE_CHANGED` | The odds changed.  Please resubmit and confirm your bet.  |
+| `LINE_ODDS_CHANGED` | The odds changed.  Please resubmit and confirm your bet. |
+| `MAX_PICKS` | You cannot add more than 10 selections to your Bet Slip. |
+| `NOT_ALL_AVAILABLE` | Not all of your selections are available for Multiple bets. |
+| `RESUBMIT_REQUEST` | Bet not accepted. Please try again or remove this selection from your Bet Slip. |
+| `SUSPENDED_LINE` | Your account has been suspended. Please contact Customer Service for help. |
+| `SUSPENDED_LINE_CREDIT` | Your account has been suspended. Please contact your Upline for help. |
+| `SYSTEM_ERROR_3` | Unexpected error or System error |
+| `ROUND_ROBIN_DISALLOWED` | Round robin is not allowed in one of the leagues. |
+| `UNAVAILABLE` | The odds are no longer available for betting. |
+| `UNSUPPORTED_MULTIPLES` | This selection is not available for Multiple bets. |
+
+
 
 ## 3. API Functions API功能 <a name="3-api-functions-api"></a>
 
