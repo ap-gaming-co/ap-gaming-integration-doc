@@ -2476,9 +2476,9 @@ This service returns historical wager data related to regrades wagers
 | `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String(required必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `wagerIds` | Query | String(optional 非必需项)  | A comma-separated list of wagerIDs to be returned. When betIds is submitted, no other parameter is necessary. Maximum is 100 ids. Works for all bets settled in the last 30 days. 将会返回用逗号分隔的注单 ID 列表。当提交投注 ID 后，无需其他参数。最多 100 个 ID。适用于过去 30 天内结算的所有投注。| Example: 6862955,6862947. 例如: 6862955,6862947|
-| `dateFrom` | Query | required必需项  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4. 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4| Example: 2016-10-15 23:59:59. 例如: 2016-10-15 23:59:59 |
-| `dateTo` | Query | required必需项  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours.  例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
-| `sortDir` | Query | String (optional 非必需项) | ASC or DESC | The order of returned wagers. 返回的注单的顺序 |
+| `dateFrom` | Query | Date (required必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4. 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4| Example: 2016-10-15 23:59:59. 例如: 2016-10-15 23:59:59 |
+| `dateTo` | Query | Date (required必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4. 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4| Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours.  例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
+| `sortDir` | Query | String (optional 非必需项) | ASC or DESC 升序或降序 | The order of returned wagers. 返回的注单的顺序 |
 | `userCode` | Query | String (optional 非必需项) | | This is the user code / loginID of the player. E.g: PA10000000 此为玩家登录名/用户名，例如PA10000000 |
 | `pageSize` | Query | Integer(optional非必需项) | Default: 1000. 默认：1000 | |
 | `fromRecord` | Query | Integer (optional 非必需项) | Default: 0. 默认：0 | |
