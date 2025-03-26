@@ -969,10 +969,10 @@ E.g. `2018-12-20T04:05:06`
 For non-login currency display, please add parameter /?currency=value<br/>
 对于未登录币种显示，请加参数 /?currency=value<br/>
 E.g.  <br/>
-Non-login domain → https://fv-ab123.tender.com/en <br/>
-If you would like to display MYR when non-login → https://fv-ab123.tender.com/en/?currency=MYR <br/>
+Non-login domain → https://whitelabelapidomain.com/en <br/>
+If you would like to display MYR when non-login → https://whitelabelapidomain.com/en/?currency=MYR <br/>
 例： <br/>
-域名 → https://fv-ab123.tender.com/en 若欲在未登录时显示 MYR 币种 → https://fv-ab123.tender.com/en/?currency=MYR <br/>
+域名 → https://whitelabelapidomain.com/en 若欲在未登录时显示 MYR 币种 → https://whitelabelapidomain.com/en/?currency=MYR <br/>
 Note: Without this parameter, the default non-login currency would be CNY. <br/>
 请注意：如果没有此参数，默认的未登录币种显示为 CNY
 
