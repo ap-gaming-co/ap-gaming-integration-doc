@@ -25,6 +25,7 @@
         - [3.12. FR005 – Wager Feed – 投注资料](#312-fr005-wager-feed)
         - [3.13. FR006 – Announcement 公告](#313-fr006-announcement)
         - [3.14. FR009 – Get Hot Event 获取热门赛事](#314-fr009-get-hot-event)
+        - [3.15. FR010 – Get Regrades Wager History 获取重新结算注单历史](#315-fr010-get-regrade-wager-history)
     - [4. Screens and Workflows 截图和工作流程](#4-screens-and-workflows)
     - [5. Appendix 附录](#5-appendix)
         - [5.1. View 界面](#51-view)
@@ -990,14 +991,14 @@ We also provide a wager feed to Push wager changes to B2B customer servers (see 
 | Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
-| `token` | Header | String(required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
+| `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `dateFrom` | Query | Date (required 必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-15 23:59:59 例如: 2016-10-15 23:59:59|
-| `dateTo`  | Query | Date(required 必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours 例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
+| `dateTo`  | Query | Date (required 必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours 例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
 | `product` | Query | String (required 必需项) | SB | Product Sport Book 产品: 体育 |
 | `userCode` | Query | String (required 必需项) |  | This is the user code / loginID of the player. E.g: PA10000000 此为玩家登录名/用户名，例如PA10000000 |
-| `settle` | Query | Boolean(optional 非必需项) | true/false(Default: false) 默认: false | If true, wagers of status included: SETTLED, CANCELLED Else also included: OPEN, PENDING  如TRUE, 那么注单状态包括： 已结算，已取消 其他还包括：等待中，注单未结算 |
+| `settle` | Query | Boolean (optional 非必需项) | true/false(Default: false) 默认: false | If true, wagers of status included: SETTLED, CANCELLED Else also included: OPEN, PENDING  如TRUE, 那么注单状态包括： 已结算，已取消 其他还包括：等待中，注单未结算 |
 | `filterBy` | Query | String (optional 非必需项) | event_date/wager_date (Default: event_date) 默认: event_date | If settle (above) equals FALSE date range is based on filterBy‘s value otherwise it is based on settlement date 如果settle返回FAlSE, 日期会按照filterBy的数值，否则按照注单结算日期 |
-| `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
+| `locale` | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
 
 *Sample code (java) - See HttpUtils class at Appendix*
 *示例代码（java）– 请参阅附录里的 HttpUtils class*
@@ -1477,14 +1478,14 @@ This service returns all wagers for a player (this function works as FR001 and w
 | Name 名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | ---  | --- | ---  | ---  |
 | `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
-| `token` | Header | String(required必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
+| `token` | Header | String (required必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `dateFrom` | Query | Date (optional非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-15 23:59:59  例如: 2016-10-15 23:59:59|
 | `dateTo (1)` | Query | Date (optional非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours <br/>例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
 | `userCode` | Query | String (optional 非必需项) |  | This is the user code / loginID of the player. E.g: PA10000000. 玩家用户名/登录名 |
 | `settle` | Query | Int (optional 非必需项) | 1: settled 1: 已结算 <br/>0: unsettled 0: 未结算 <br/>-1: all (both settled and unsettled) (Default: -1) -1: 所有（包含已结算和未结算） | 1 = wager status: SETTLED or CANCELLED 1 = 注单状态：已结算或已取消<br/>0 = wager status includes: OPEN or PENDING 0 = 注单状态包括：等待中 或者 注单未结算<br/>-1 = All wager status values -1 = 所有注单状态值。|
-| `filterBy (2)` | Query | String(optional非必需项) | event_date wager_date settle_date update_date (Default: wager_date) 默认: wager_date |
+| `filterBy (2)` | Query | String (optional非必需项) | event_date wager_date settle_date update_date (Default: wager_date) 默认: wager_date |
 | `locale` | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. 在基于现有品牌的语言下，列出所支持区域 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
-| `wagerIds` | Query | String(optional 非必需项) | A comma-separated list of wagerIDs to be returned. 用逗号分隔的注单ID列表将会被返回 |  Example: `6862955`,`6862947` 例如: `6862955`,`6862947`|
+| `wagerIds` | Query | String (optional 非必需项) | A comma-separated list of wagerIDs to be returned. 用逗号分隔的注单ID列表将会被返回 |  Example: `6862955`,`6862947` 例如: `6862955`,`6862947`|
 
 **Note:**
 (1):
@@ -1786,8 +1787,8 @@ Parameters 参数
 | Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | --- | ---  | ---  | ---  |
 | `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
-| `token` | Header | String(required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
-| `loginId`  | Query | String  (required 必需项)  |  | This is the user code / loginID of the player. E.g: PA10000000 or PA10.02 此为玩家登录名/用户名，例如PA10000000或PA10.abc123 |
+| `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
+| `loginId`  | Query | String (required 必需项)  |  | This is the user code / loginID of the player. E.g: PA10000000 or PA10.02 此为玩家登录名/用户名，例如PA10000000或PA10.abc123 |
 | `locale`  | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
 
 
@@ -2217,8 +2218,8 @@ This service will get match announcements.
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `dateFrom` | Query | Date (optional 非必需项) | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-15 23:59:59  例如: 2016-10-15 23:59:59  |
 | `dateTo`  | Query | Date (optional 非必需项) | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 168 hours (7 days) 例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 168 hours (7 days) 结束日期-开始日期小于等于168小时（7天） |
-| `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
-| `sport` | Query | String(optional 非必需项) | The sport name 体育名称 |  See Sport in the Data-format. 详见数据格式中的体育项目。|
+| `locale` | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
+| `sport` | Query | String (optional 非必需项) | The sport name 体育名称 |  See Sport in the Data-format. 详见数据格式中的体育项目。|
 
 **Note:**
 
@@ -2356,7 +2357,7 @@ The Event IDs parameter obtained by the Get Hot Event API can be passed into the
 | `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 这是在 Step 2里获取的agent code,例如：CO1AP1 |
 | `locale` 区域设置 | Query | String (optional非必需项) | Supported locales based on brand’s available languages. 在基于现有品牌的语言下，列出所支持区域 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
 | `oddsFormat` 赔率格式 | Query | String (optional 非必需项) | List supported oddsFormat: AM, EU, HK, ID, MY 列出所支持赔率格式 | See Odds Format in the Data-format. 详见数据格式中的赔率格式。 |
-| `sports` | Query | String(required必需项) | A comma-separated list of sport names. 用逗号分隔的体育名称列表 |  See Sport in the Data-format. 详见数据格式中的体育项目。|
+| `sports` | Query | String (required必需项) | A comma-separated list of sport names. 用逗号分隔的体育名称列表 |  See Sport in the Data-format. 详见数据格式中的体育项目。|
 
 
 *Sample code (java) - See HttpUtils class at Appendix*
@@ -2453,6 +2454,133 @@ namespace ChangeStatusForDepositWithdraw
         }  
     ]  
 }]
+```
+
+### 3.15. FR010 – Get Regrades Wager History 获取重新结算注单历史 <a name="315-fr010-get-regrade-wager-history"></a>
+
+This service returns historical wager data related to regrades wagers
+
+这个服务是返回与重新结算注单相关的历史注单数据
+
+**Endpoint 端点:**
+
+| Name 名称 | Value 设置值  | Description 描述  |
+| ---  | ---  | ---   |
+| URL  | `/regrades/wager-history`  |   |
+| Method  | `GET`  |   |
+
+**Parameters 参数:**
+
+| Name 名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| ---  | ---  | --- | ---  | ---  |
+| `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
+| `token` | Header | String (required必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
+| `wagerIds` | Query | String (optional 非必需项)  | A comma-separated list of wagerIDs to be returned. When betIds is submitted, no other parameter is necessary. Maximum is 100 ids. Works for all bets settled in the last 30 days. 将会返回用逗号分隔的注单 ID 列表。当提交投注 ID 后，无需其他参数。最多 100 个 ID。适用于过去 30 天内结算的所有投注。| Example: 6862955,6862947. 例如: 6862955,6862947|
+| `dateFrom` | Query | Date (required必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4. 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4| Example: 2016-10-15 23:59:59. 例如: 2016-10-15 23:59:59 |
+| `dateTo` | Query | Date (required必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4. 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4| Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours.  例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
+| `sortDir` | Query | String (optional 非必需项) | ASC or DESC 升序或降序 | The order of returned wagers. 返回的注单的顺序 |
+| `userCode` | Query | String (optional 非必需项) | | This is the user code / loginID of the player. E.g: PA10000000 此为玩家登录名/用户名，例如PA10000000 |
+| `pageSize` | Query | Integer (optional非必需项) | Default: 1000. 默认：1000 | |
+| `fromRecord` | Query | Integer (optional 非必需项) | Default: 0. 默认：0 | |
+
+**Response OK 返回OK**
+
+```js
+{
+    "moreAvailable": false,
+    "pageSize": 1000,
+    "fromRecord": 0,
+    "toRecord": 2,
+    "specialBets": [
+        {
+            "betId": 2203008090,
+            "uniqueRequestId": "051e2854-25c5-3cbb-2f9d-465d478e8c34",
+            "wagerNumber": 1,
+            "placedAt": "2025-01-05 22:47:27",
+            "settledAt": "2025-01-05 22:49:14",
+            "betStatus": "WON",
+            "betType": 99,
+            "win": 50000.0,
+            "risk": 10.0,
+            "winLoss": 50000.0,
+            "oddsFormat": 2,
+            "customerCommission": 0.00,
+            "updateSequence": 1736092154000,
+            "sportId": 29,
+            "sportName": "Soccer",
+            "leagueId": 1980,
+            "leagueName": "England - Premier League",
+            "eventId": 0,
+            "handicap": 0.0,
+            "price": 5000.0,
+            "periodNumber": 0,
+            "specialId": 1592296321,
+            "specialName": "England - Premier League Winner 2024/25",
+            "contestantId": 1592296340,
+            "contestantName": "Ipswich Town",
+            "eventStartTime": "2025-02-25 15:30:00",
+            "resultingUnit": null
+        },
+        {
+            "betId": 2203048710,
+            "originalBetId": 2203008090,
+            "wagerNumber": 1,
+            "placedAt": "2025-01-05 22:49:38",
+            "settledAt": "2025-01-05 22:49:38",
+            "betStatus": "REFUNDED",
+            "betType": 99,
+            "win": 50000.0,
+            "risk": 10.0,
+            "winLoss": -50000.0,
+            "oddsFormat": 2,
+            "customerCommission": 0.00,
+            "updateSequence": 1736092178000,
+            "sportId": 29,
+            "sportName": "Soccer",
+            "leagueId": 1980,
+            "leagueName": "England - Premier League",
+            "eventId": 0,
+            "handicap": 0.0,
+            "price": 5000.0,
+            "periodNumber": 0,
+            "specialId": 1592296321,
+            "specialName": "England - Premier League Winner 2024/25",
+            "contestantId": 1592296340,
+            "contestantName": "Ipswich Town",
+            "eventStartTime": "2025-02-25 15:30:00",
+            "resultingUnit": null
+        },
+        {
+            "betId": 2203048711,
+            "originalBetId": 2203008090,
+            "wagerNumber": 1,
+            "placedAt": "2025-01-05 22:49:38",
+            "settledAt": "2025-01-05 22:49:39",
+            "betStatus": "LOSE",
+            "betType": 99,
+            "win": 50000.0,
+            "risk": 10.0,
+            "winLoss": -10.0,
+            "oddsFormat": 2,
+            "customerCommission": 0.00,
+            "updateSequence": 1736092179000,
+            "sportId": 29,
+            "sportName": "Soccer",
+            "leagueId": 1980,
+            "leagueName": "England - Premier League",
+            "eventId": 0,
+            "handicap": 0.0,
+            "price": 5000.0,
+            "periodNumber": 0,
+            "specialId": 1592296321,
+            "specialName": "England - Premier League Winner 2024/25",
+            "contestantId": 1592296340,
+            "contestantName": "Ipswich Town",
+            "eventStartTime": "2025-02-25 15:30:00",
+            "resultingUnit": null
+        }
+    ]
+}
 ```
 
 ## 4. Screens and Workflows 截图和工作流程 <a name="4-screens-and-workflows"></a>
