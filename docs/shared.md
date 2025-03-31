@@ -312,7 +312,7 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
 | `altLineId` | Number |
 | `hdp` | Number |
 
-**2 – Moneyline Selection**
+**2 – Moneyline Selection** - 输赢盘选项
 
 ```js
 {
@@ -327,8 +327,16 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
   }]
 }
 ```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (MONEYLINE) |
+| `team` | String (HOME | AWAY)  |
+| `altLineId` | Number |
+| `hdp` | Number |
 
-**3 – Total Points Selection**
+**3 – Total Points Selection** - 总分投注盘选项
 
 ```js
 {
@@ -343,8 +351,16 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
   }]
 }
 ```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (TOTAL_POINTS) |
+| `altLineId` | Number  |
+| `points` | Number |
+| `side` | String (OVER | UNDER) |
 
-**4 – Team Total Points Selection**
+**4 – Team Total Points Selection** - 球队总分盘选项
 
 ```js
 {
@@ -360,8 +376,17 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
   }]
 }
 ```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (TEAM_TOTAL_POINTS) |
+| `altLineId` | Number  |
+| `points` | Number |
+| `team` | String (HOME | AWAY) |
+| `side` | String (OVER | UNDER) |
 
-**5 – Outright Selection**
+**5 – Special selection** - 特殊盘选项
 
 ```js
 {
@@ -370,26 +395,19 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
     "eventId": 1554532082,
     "period": 0,
     "betType": "OUTRIGHT",
-    "altLineId": 0,
     "hdp": 3.5,
     "contestantLineId": 1563789224,
   }]
 }
 ```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (MULTI-WAY_HEAD_TO_HEAD, SPREAD, OVER_UNDER, OUTRIGHT) |
+| `hdp` | Number  |
+| `contestantLineId` | Number |
 
-**6 – Data type**
-
-| Name <br/> | Type <br/> | Description <br/>
-| --- | --- | --- |
-| `eventId` | number | (Required) Event Id Number |
-| `period` | number | (Required) Period Number |
-| `betType` | string | (Required) SPREAD, MONEYLINE, TOTAL_POINTS, TEAM_TOTAL_POINTS, OUTRIGHT |
-| `team` | string  | (Required for Spread, MoneyLine, Team Total Points)  HOME, AWAY |
-| `altLineId` | number | (Required for Spread, Total Points, Team Total Points) Value 0 if is mainline, value > 0 if is Alternate Line. |
-| `hdp` | number | (Required for Spreads, Moneyline and Outright) Decimal Number |
-| `points` | number | (Required for Total Points and Team Total Points) Decimal Number |
-| `side` | string | (Required for Total Points and Team Total Points) OVER, UNDER |
-| `contestantLineId` | number | (Applies for Outright) |
 
 
 ### 2.9. Login and Bet Placement Screen 登录和投注下单页面 <a name="29-login-and-bet-placement"></a>
