@@ -303,6 +303,14 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
   }]
 }
 ```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (SPREAD) |
+| `team` | String (HOME | AWAY)  |
+| `altLineId` | Number |
+| `hdp` | Number |
 
 **2 – Moneyline Selection**
 
