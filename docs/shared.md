@@ -11,9 +11,9 @@
         - [2.5. Errors and Exceptions 错误和例外](#25-errors-and-exceptions)
         - [2.6. Getting started 如何开始](#26-getting-started)
         - [2.7. Event Post Message 赛事发布消息](#27-event-post-message)
-        - [2.8. Bet Selection　投注选项](#28-bet-selection)
-        - [2.9. Login and Bet Placement Screen　登录和投注下单页面](#29-login-and-bet-placement)
-        - [2.10. Error Responses　错误响应](#210-error-response)
+        - [2.8. Bet Selection 投注选项](#28-bet-selection)
+        - [2.9. Login and Bet Placement Screen 登录和投注下单页面](#29-login-and-bet-placement)
+        - [2.10. Error Responses 错误响应](#210-error-response)
     - [3. API Functions API功能](#3-api-functions-api)
         - [3.1.	FA001 – Login 登入](#31-fa001-login)
         - [3.2.	FA002 – Logout 登出](#32-fa002-logout)
@@ -266,9 +266,10 @@ For each service call, you must pass token verification and the appropriate para
 
 ### 2.7. Event Post Message 赛事发布消息 <a name="27-event-post-message"></a>
 
-**1 – From Pinnacle Iframe**
+**1 – AP Gaming Iframe**
 
 To avoid the B2B site sends selection info when iframe page have not yet loaded fully then iframe will inform b2b site that now it is ready to receive info via postMessage:
+为了避免在iFrame页面完全加载之前B2B网站就发送选项信息，iFrame将通过postMessage通知B2B网站何时准备好接收载荷信息：
 
 ```js
 {
@@ -277,17 +278,17 @@ To avoid the B2B site sends selection info when iframe page have not yet loaded 
 }
 ```
 
-**2 – From B2B site**
+**2 – B2B site** 2 - B2B 网站
 
-Only after receiving the message with the msgCode = "isIframeLoaded" from iframe, B2B site (front-end) will send the selection info to Pinnacle Iframe via postMessage with these type of Bet Selection:
-Spread, MoneyLine, Total Points, Team Total Points, Outright **(Refer to 2.8 )**
+The B2B site (front-end) will send the selection information to the AP Gaming iFrame via postMessage with example payload:
+B2B网站（前端）将通过postMessage将选项信息发送到AP Gaming iFrame，示例载荷如下：
 
 
 ### 2.8. Bet Selection 投注选项 <a name="28-bet-selection"></a>
 
 We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via postMessage, the msgCode must be "selectionInfo"
 
-**1 – Spread Selection**
+**1 – Spread Selection** 1 - 让分盘选项
 
 ```js
 {
@@ -383,7 +384,7 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
 | `contestantLineId` | number | (Applies for Outright) |
 
 
-### 2.9. Login and Bet Placement Screen　登录和投注下单页面 <a name="29-login-and-bet-placement"></a>
+### 2.9. Login and Bet Placement Screen 登录和投注下单页面 <a name="29-login-and-bet-placement"></a>
 
 **1 – Login**
 
