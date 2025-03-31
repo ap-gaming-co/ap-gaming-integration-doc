@@ -408,6 +408,29 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
 | `hdp` | Number  |
 | `contestantLineId` | Number |
 
+**6 – Outright selection**
+
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "OUTRIGHT",
+    "hdp": 3.5,
+    "contestantLineId": 1563789224,
+    "altLineId": 0,
+  }]
+}
+```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (OUTRIGHT, SPECIALS) |
+| `hdp` | Number  |
+| `contestantLineId` | Number |
+| `altLineId` | Number |
 
 
 ### 2.9. Login and Bet Placement Screen 登录和投注下单页面 <a name="29-login-and-bet-placement"></a>
@@ -426,7 +449,7 @@ To use that function, the steps would be:
 3. After login successfully, B2B site (frontend) sends the selection info (from #1) to Pinnacle Iframe via postMessage (we introduced in the 2.8 section above), that selection will be available in the betslip.
 
 
-### 2.10. Error Responses　错误响应 <a name="210-error-response"></a>
+### 2.10. Error Responses 错误响应 <a name="210-error-response"></a>
 
 After receving selection info from B2B Website, the selection will be added into the Bet Slip, the error responses will be the same as the error responses from Bet Slip when placing bets.
 
