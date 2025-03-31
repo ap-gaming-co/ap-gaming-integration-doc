@@ -404,7 +404,7 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
 | --- | --- |
 | `eventId` | Number |
 | `period` | Number |
-| `betType` | String (MULTI-WAY_HEAD_TO_HEAD, SPREAD, OVER_UNDER, OUTRIGHT) |
+| `betType` | String (MULTI-WAY_HEAD_TO_HEAD, SPREAD, OVER_UNDER) |
 | `hdp` | Number  |
 | `contestantLineId` | Number |
 
