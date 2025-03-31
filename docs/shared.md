@@ -394,7 +394,7 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
  "msgData": [{
     "eventId": 1554532082,
     "period": 0,
-    "betType": "OUTRIGHT",
+    "betType": "MULTI-WAY_HEAD_TO_HEAD",
     "hdp": 3.5,
     "contestantLineId": 1563789224,
   }]
