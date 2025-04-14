@@ -427,7 +427,7 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
 | --- | --- |
 | `eventId` | Number |
 | `period` | Number |
-| `betType` | String (OUTRIGHT, SPECIALS) |
+| `betType` | String (OUTRIGHT) |
 | `hdp` | Number  |
 | `contestantLineId` | Number |
 | `altLineId` | Number |
