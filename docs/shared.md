@@ -308,7 +308,7 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
 | `eventId` | Number |
 | `period` | Number |
 | `betType` | String (SPREAD) |
-| `team` | String (HOME | AWAY)  |
+| `team` | String (HOME , AWAY)  |
 | `altLineId` | Number |
 | `hdp` | Number |
 
@@ -332,7 +332,7 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
 | `eventId` | Number |
 | `period` | Number |
 | `betType` | String (MONEYLINE) |
-| `team` | String (HOME | AWAY)  |
+| `team` | String (HOME , AWAY)  |
 | `altLineId` | Number |
 | `hdp` | Number |
 
@@ -358,7 +358,7 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
 | `betType` | String (TOTAL_POINTS) |
 | `altLineId` | Number  |
 | `points` | Number |
-| `side` | String (OVER | UNDER) |
+| `side` | String (OVER , UNDER) |
 
 **4 – Team Total Points Selection** - 球队总分盘选项
 
@@ -383,8 +383,8 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
 | `betType` | String (TEAM_TOTAL_POINTS) |
 | `altLineId` | Number  |
 | `points` | Number |
-| `team` | String (HOME | AWAY) |
-| `side` | String (OVER | UNDER) |
+| `team` | String (HOME , AWAY) |
+| `side` | String (OVER , UNDER) |
 
 **5 – Special selection** - 特殊盘选项
 
