@@ -386,29 +386,7 @@ We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via
 | `team` | String (HOME , AWAY) |
 | `side` | String (OVER , UNDER) |
 
-**5 – Special selection** - 特殊盘选项
-
-```js
-{
- "msgCode": "selectionInfo",
- "msgData": [{
-    "eventId": 1554532082,
-    "period": 0,
-    "betType": "MULTI-WAY_HEAD_TO_HEAD",
-    "hdp": 3.5,
-    "contestantLineId": 1563789224,
-  }]
-}
-```
-| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
-| --- | --- |
-| `eventId` | Number |
-| `period` | Number |
-| `betType` | String (MULTI-WAY_HEAD_TO_HEAD, SPREAD, OVER_UNDER) |
-| `hdp` | Number  |
-| `contestantLineId` | Number |
-
-**6 – Outright selection**
+**5 – Outright selection**
 
 ```js
 {
