@@ -87,6 +87,7 @@
 | 63 | Motorsport 赛车运动 |
 | 64 | Simulated Games 模拟比赛 |
 | 65 | Sumo 相扑 |
+| 66 | Slap Fighting 巴掌格斗 |
 
 ## 2. Wager Type 注单类型
 
