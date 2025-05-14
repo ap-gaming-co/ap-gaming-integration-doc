@@ -2487,30 +2487,31 @@ B2B 客户需要在 postMessage 中添加 listender 并存储 URL 值。
 
 Here is the list of deeplink URLs that are used in New Euro View:
 
-| Name 名称 | Deep link | Description 描述  |
-| ---  | ---  | ---   |
-| Home Page  | https://:hostname/:lang/standard/home |   |
-| Jump Page  | https://:hostname/:lang/standard/fwp |   |
-| Block Page  | https://:hostname/:lang/standard/block-page |   |
-| Error Page  | https://:hostname/:lang/standard/error-page |   |
-| Sport Page  | https://:hostname/:lang/standard/:sportCode |   |
-| League Detail Page  | https://:hostname/:lang/standard/:sportCode/:leagueCode |   |
-| Event Page  | https://:hostname/:lang/standard/:sportCode/:leagueCode/:eventName/:eventId |   |
-| Sport Highlight  | https://:hostname/:lang/standard/:sportCode/highlights |   |
-| Esport Highlight | https://:hostname/:lang/standard/esports/highlights |   |
-| Sport Live  | https://:hostname/:lang/standard/:sportCode/live |   |
-| Sport Leagues Page  | https://:hostname/:lang/standard/:sportCode/leagues |   |
-| Esport List Games Page | https://:hostname/:lang/standard/esports/games |   |
-| Esport Game Detail Page  | https://:hostname/:lang/standard/esports/games/:gameCode |   |
-| Esport List Leagues of Game  | https://:hostname/:lang/standard/esports/games/:gameCode/leagues |   |
-| Esport Game Live Page  | https://:hostname/:lang/standard/esports/games/:gameCode/live |   |
-| Esport Game League Detail | https://:hostname/:lang/standard/esports/games/:gameCode/:leagueCode |   |
-| Esport Game Event Detail  | https://:hostname/:lang/standard/esports/games/:gameCode/:leagueCode/:eventName/:eventId |   |
-| Search Page  | https://:hostname/:lang/standard/search#:searchString |   |
-| Favourite Page  | https://:hostname/:lang/standard/favourites |   |
-| Live Centre   | https://:hostname/:lang/standard/live |   |
-| Overview Page   | https://:hostname/:lang/standard/live/overview |   |
-| Multiview Page  | https://:hostname/:lang/standard/live/multiview |   |
+| Name 名称 | Deep link |
+| ---  | ---  |
+| Home Page  | https://:hostname/:lang/standard/home |
+| Jump Page  | https://:hostname/:lang/standard/fwp |
+| Block Page  | https://:hostname/:lang/standard/block-page |
+| Error Page  | https://:hostname/:lang/standard/error-page |
+| Sport Page  | https://:hostname/:lang/standard/:sportCode |
+| League Detail Page  | https://:hostname/:lang/standard/:sportCode/:leagueCode |
+| Event Page  | https://:hostname/:lang/standard/:sportCode/:leagueCode/:eventName/:eventId |
+| Sport Highlight  | https://:hostname/:lang/standard/:sportCode/highlights |
+| Esport Highlight | https://:hostname/:lang/standard/esports/highlights |
+| Sport Live  | https://:hostname/:lang/standard/:sportCode/live |
+| Sport Leagues Page  | https://:hostname/:lang/standard/:sportCode/leagues |
+| Esport List Games Page | https://:hostname/:lang/standard/esports/games |
+| Esport Game Detail Page  | https://:hostname/:lang/standard/esports/games/:gameCode |
+| Esport List Leagues of Game  | https://:hostname/:lang/standard/esports/games/:gameCode/leagues |
+| Esport Game Live Page  | https://:hostname/:lang/standard/esports/games/:gameCode/live |
+| Esport Game League Detail | https://:hostname/:lang/standard/esports/games/:gameCode/:leagueCode |
+| Esport Game Event Detail  | https://:hostname/:lang/standard/esports/games/:gameCode/:leagueCode/:eventName/:eventId |
+| Search Page  | https://:hostname/:lang/standard/search#:searchString |
+| Favourite Page  | https://:hostname/:lang/standard/favourites |
+| Live Centre   | https://:hostname/:lang/standard/live |
+| Overview Page   | https://:hostname/:lang/standard/live/overview |
+| Multiview Page  | https://:hostname/:lang/standard/live/multiview |
+| Esport Hub Page  | https://:hostname/:lang/standard/esports-hub |
 
 
 ## 4. Screens and Workflows 截图和工作流程 <a name="4-screens-and-workflows"></a>
