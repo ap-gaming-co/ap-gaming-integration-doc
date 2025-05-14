@@ -25,6 +25,7 @@
         - [3.12. FR005 – Wager Feed – 投注资料](#312-fr005-wager-feed)
         - [3.13. FR006 – Announcement 公告](#313-fr006-announcement)
         - [3.14. FR009 – Get Hot Event 获取热门赛事](#314-fr009-get-hot-event)
+        - [3.15. FR010 – Deep link content ](#315-fr010-deep-link-content)
     - [4. Screens and Workflows 截图和工作流程](#4-screens-and-workflows)
     - [5. Appendix 附录](#5-appendix)
         - [5.1. View 界面](#51-view)
@@ -2454,6 +2455,26 @@ namespace ChangeStatusForDepositWithdraw
     ]  
 }]
 ```
+### 3.15. FR010 – Deep Link Content <a name="315-fr010-deep-link-content"></a>
+
+Open your Staging iFrame
+打开一个测试环境Iframe
+In the iFrame Euro view, paste the following into the console
+在欧洲界面的Iframe中，粘贴以下代码到控制台。
+```
+window.addEventListener('message', message => {
+{{ if (message.data && message.data.msgCode === 'currentIframeURL') {}}
+{{ console.log(message.data.msgData);}}
+{{ }
+}}
+});
+```
+Navigate to match/event
+导航到比赛/事件
+Expectation result is that there is an URL response in console
+预期结果是在控制台中出现一个响应的 URL
+B2B client need to add the listender to the postMessage and store the URL value.
+B2B 客户需要在 postMessage 中添加 listender 并存储 URL 值。
 
 ## 4. Screens and Workflows 截图和工作流程 <a name="4-screens-and-workflows"></a>
 
