@@ -2485,6 +2485,15 @@ B2B client need to add the listender to the postMessage and store the URL value.
 
 B2B 客户需要在 postMessage 中添加 listender 并存储 URL 值。
 
+Here is the list of deeplink URLs that are used in New Euro View:
+
+| Name 名称 | Deep link | Description 描述  |
+| ---  | ---  | ---   |
+| Home Page  | https://:hostname/:lang/standard/home |   |
+| Jump Page  | https://:hostname/:lang/standard/fwp |   |
+
+home page: '{hostName}/:language/standard/home'
+
 ## 4. Screens and Workflows 截图和工作流程 <a name="4-screens-and-workflows"></a>
 
 This section shows basic workflows for each of the API functions.
