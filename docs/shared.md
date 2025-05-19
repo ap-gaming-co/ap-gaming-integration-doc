@@ -2513,21 +2513,21 @@ Here is the list of deeplink URLs that are used in New Euro View:
 | Live Centre   | https://:hostname/:lang/standard/live |
 | Overview Page   | https://:hostname/:lang/standard/live/overview |
 | Multiview Page  | https://:hostname/:lang/standard/live/multiview |
-| Esport Hub Home Page  | https://:hostname/:lang/standard/esports-hub/home |
-| Esport Hub Highlight   | https://:hostname/:lang/standard/esports-hub/highlights |
-| Esport Hub Live  | https://:hostname/:lang/standard/esports-hub/live |
-| Esport Hub Games  | https://:hostname/:lang/standard/esports-hub/games |
-| Esport Hub Leagues  | https://:hostname/:lang/standard/esports-hub/leagues |
-| Esport Hub Future Page  | https://:hostname/:lang/standard/esports-hub/futures |
-| Esport Hub Game Detail  | https://:hostname/:lang/standard/esports-hub/games/:gameCode |
-| Esport Hub Game Live  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/live |
-| Esport Hub Game Leagues  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/leagues |
-| Esport Hub Game League Detail  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/:leagueCode |
-| Esport Hub Game Event Detail  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/:leagueCode/:eventName/:eventId |
-| Esport Hub Search  | https://:hostname/:lang/standard/esports-hub/search |
-| Esport Hub Favourites  | https://:hostname/:lang/standard/esports-hub/favourites |
-| Esport Hub Favourites Participant  | https://:hostname/:lang/standard/esports-hub/favourites/:sportCode#:name |
-| Esport Hub Multiview  | https://:hostname/:lang/standard/esports-hub/live/multiview |
+| Esport View Home Page  | https://:hostname/:lang/standard/esports-hub/home |
+| Esport View Highlight   | https://:hostname/:lang/standard/esports-hub/highlights |
+| Esport View Live  | https://:hostname/:lang/standard/esports-hub/live |
+| Esport View Games  | https://:hostname/:lang/standard/esports-hub/games |
+| Esport View Leagues  | https://:hostname/:lang/standard/esports-hub/leagues |
+| Esport View Future Page  | https://:hostname/:lang/standard/esports-hub/futures |
+| Esport View Game Detail  | https://:hostname/:lang/standard/esports-hub/games/:gameCode |
+| Esport View Game Live  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/live |
+| Esport View Game Leagues  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/leagues |
+| Esport View Game League Detail  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/:leagueCode |
+| Esport View Game Event Detail  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/:leagueCode/:eventName/:eventId |
+| Esport View Search  | https://:hostname/:lang/standard/esports-hub/search |
+| Esport View Favourites  | https://:hostname/:lang/standard/esports-hub/favourites |
+| Esport View Favourites Participant  | https://:hostname/:lang/standard/esports-hub/favourites/:sportCode#:name |
+| Esport View Multiview  | https://:hostname/:lang/standard/esports-hub/live/multiview |
 
 
 ## 4. Screens and Workflows 截图和工作流程 <a name="4-screens-and-workflows"></a>
