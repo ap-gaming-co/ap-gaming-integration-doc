@@ -8,4 +8,4 @@ For a complete understanding of the integration, please review the documents rel
 | [Data Format](/docs/data-format.md) | [Data Format](/docs/data-format.md) |
 | [Shared Endpoints](/docs/shared.md) | [Shared Endpoints](/docs/shared.md) |
 | [Transfer Wallet](/docs/transfer.md) | [Seamless Wallet](/docs/seamless.md) |
-| [Simplified Line APIs](/docs/transfer.md) | [Simplified Line APIs](/docs/seamless.md) |
+| [Simplified Line APIs](/docs/simplified-line-apis.md) | [Simplified Line APIs](/docs/simplified-line-apis.md) |
