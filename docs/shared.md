@@ -25,7 +25,7 @@
         - [3.12. FR005 – Wager Feed – 投注资料](#312-fr005-wager-feed)
         - [3.13. FR006 – Announcement 公告](#313-fr006-announcement)
         - [3.14. FR009 – Get Hot Event 获取热门赛事](#314-fr009-get-hot-event)
-        - [3.15. FR010 – Deep link content ](#315-fr010-deep-link-content)
+        - [3.15. FR010 – Deep link 深层链接 ](#315-fr010-deep-link-content)
     - [4. Screens and Workflows 截图和工作流程](#4-screens-and-workflows)
     - [5. Appendix 附录](#5-appendix)
         - [5.1. View 界面](#51-view)
@@ -2455,7 +2455,7 @@ namespace ChangeStatusForDepositWithdraw
     ]  
 }]
 ```
-### 3.15. FR010 – Deep Link Content <a name="315-fr010-deep-link-content"></a>
+### 3.15. FR010 – Deep Link 深层链接 <a name="315-fr010-deep-link-content"></a>
 
 Open your Staging iFrame
 
@@ -2487,47 +2487,49 @@ B2B 客户需要在 postMessage 中添加 listender 并存储 URL 值。
 
 Here is the list of deeplink URLs that are used in New Euro View:
 
-| Name 名称 | Deep link |
+以下是欧洲界面中使用的深层链接 URL 列表
+
+| Name 名称 | Deep link 深层链接 |
 | ---  | ---  |
-| Home Page  | https://:hostname/:lang/standard/home |
-| Jump Page  | https://:hostname/:lang/standard/fwp |
-| Block Page  | https://:hostname/:lang/standard/block-page |
-| Error Page  | https://:hostname/:lang/standard/error-page |
-| Sport Page  | https://:hostname/:lang/standard/:sportCode |
-| League Detail Page  | https://:hostname/:lang/standard/:sportCode/:leagueCode |
-| Event Page  | https://:hostname/:lang/standard/:sportCode/:leagueCode/:eventName/:eventId |
-| Sport Highlight  | https://:hostname/:lang/standard/:sportCode/highlights |
-| Esport Highlight | https://:hostname/:lang/standard/esports/highlights |
-| Sport Live  | https://:hostname/:lang/standard/:sportCode/live |
-| Sport Future  | https://:hostname/:lang/standard/:sportCode/futures |
-| Sport Regulation Period  | https://:hostname/:lang/standard/:sportCode/regulation |
-| Sport Leagues Page  | https://:hostname/:lang/standard/:sportCode/leagues |
-| Esport List Games Page | https://:hostname/:lang/standard/esports/games |
-| Esport Game Detail Page  | https://:hostname/:lang/standard/esports/games/:gameCode |
-| Esport List Leagues of Game  | https://:hostname/:lang/standard/esports/games/:gameCode/leagues |
-| Esport Game Live Page  | https://:hostname/:lang/standard/esports/games/:gameCode/live |
-| Esport Game League Detail | https://:hostname/:lang/standard/esports/games/:gameCode/:leagueCode |
-| Esport Game Event Detail  | https://:hostname/:lang/standard/esports/games/:gameCode/:leagueCode/:eventName/:eventId |
-| Search Page  | https://:hostname/:lang/standard/search#:searchString |
-| Favourite Page  | https://:hostname/:lang/standard/favourites |
-| Live Centre   | https://:hostname/:lang/standard/live |
-| Overview Page   | https://:hostname/:lang/standard/live/overview |
-| Multiview Page  | https://:hostname/:lang/standard/live/multiview |
-| Esport View Home Page  | https://:hostname/:lang/standard/esports-hub/home |
-| Esport View Highlight   | https://:hostname/:lang/standard/esports-hub/highlights |
-| Esport View Live  | https://:hostname/:lang/standard/esports-hub/live |
-| Esport View Games  | https://:hostname/:lang/standard/esports-hub/games |
-| Esport View Leagues  | https://:hostname/:lang/standard/esports-hub/leagues |
-| Esport View Future Page  | https://:hostname/:lang/standard/esports-hub/futures |
-| Esport View Game Detail  | https://:hostname/:lang/standard/esports-hub/games/:gameCode |
-| Esport View Game Live  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/live |
-| Esport View Game Leagues  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/leagues |
-| Esport View Game League Detail  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/:leagueCode |
-| Esport View Game Event Detail  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/:leagueCode/:eventName/:eventId |
-| Esport View Search  | https://:hostname/:lang/standard/esports-hub/search |
-| Esport View Favourites  | https://:hostname/:lang/standard/esports-hub/favourites |
-| Esport View Favourites Participant  | https://:hostname/:lang/standard/esports-hub/favourites/:sportCode#:name |
-| Esport View Multiview  | https://:hostname/:lang/standard/esports-hub/live/multiview |
+| Home Page  主页  | https://:hostname/:lang/standard/home |
+| Jump Page  转跳页面 | https://:hostname/:lang/standard/fwp |
+| Block Page  封锁页面 | https://:hostname/:lang/standard/block-page |
+| Error Page  错误页面 | https://:hostname/:lang/standard/error-page |
+| Sport Page  体育页面  | https://:hostname/:lang/standard/:sportCode |
+| League Detail Page  联赛详情页面  | https://:hostname/:lang/standard/:sportCode/:leagueCode |
+| Event Page  赛事页面  | https://:hostname/:lang/standard/:sportCode/:leagueCode/:eventName/:eventId |
+| Sport Highlight  体育精选  | https://:hostname/:lang/standard/:sportCode/highlights |
+| Esport Highlight  电竞精选 | https://:hostname/:lang/standard/esports/highlights |
+| Sport Live  体育滚球  | https://:hostname/:lang/standard/:sportCode/live |
+| Sport Future  体育优胜冠军  | https://:hostname/:lang/standard/:sportCode/futures |
+| Sport Regulation Period  体育规定时间  | https://:hostname/:lang/standard/:sportCode/regulation |
+| Sport Leagues Page  体育联赛页面  | https://:hostname/:lang/standard/:sportCode/leagues |
+| Esport List Games Page  电竞游戏列表页面 | https://:hostname/:lang/standard/esports/games |
+| Esport Game Detail Page  电竞游戏详情页面 | https://:hostname/:lang/standard/esports/games/:gameCode |
+| Esport List Leagues of Game  电竞游戏联赛列表 | https://:hostname/:lang/standard/esports/games/:gameCode/leagues |
+| Esport Game Live Page  电竞游戏直播页面 | https://:hostname/:lang/standard/esports/games/:gameCode/live |
+| Esport Game League Detail 电竞游戏联赛详情 | https://:hostname/:lang/standard/esports/games/:gameCode/:leagueCode |
+| Esport Game Event Detail  电竞游戏赛事详情  | https://:hostname/:lang/standard/esports/games/:gameCode/:leagueCode/:eventName/:eventId |
+| Search Page  搜索页面  | https://:hostname/:lang/standard/search#:searchString |
+| Favourite Page  最爱页面  | https://:hostname/:lang/standard/favourites |
+| Live Centre 直播中心  | https://:hostname/:lang/standard/live |
+| Overview Page  概述页面  | https://:hostname/:lang/standard/live/overview |
+| Multiview Page  多视图页面  | https://:hostname/:lang/standard/live/multiview |
+| Esport View Home Page  电竞界面 主页  | https://:hostname/:lang/standard/esports-hub/home |
+| Esport View Highlight  电竞界面 精选   | https://:hostname/:lang/standard/esports-hub/highlights |
+| Esport View Live  电竞界面 滚球  | https://:hostname/:lang/standard/esports-hub/live |
+| Esport View Games  电竞界面 游戏  | https://:hostname/:lang/standard/esports-hub/games |
+| Esport View Leagues  电竞界面 联赛 | https://:hostname/:lang/standard/esports-hub/leagues |
+| Esport View Future Page  电竞界面 优胜冠军页面  | https://:hostname/:lang/standard/esports-hub/futures |
+| Esport View Game Detail  电竞界面 游戏详情  | https://:hostname/:lang/standard/esports-hub/games/:gameCode |
+| Esport View Game Live  电竞界面 游戏直播  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/live |
+| Esport View Game Leagues  电竞界面 游戏联赛  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/leagues |
+| Esport View Game League Detail  电竞界面 游戏联赛详情  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/:leagueCode |
+| Esport View Game Event Detail  电竞界面 游戏比赛详情  | https://:hostname/:lang/standard/esports-hub/games/:gameCode/:leagueCode/:eventName/:eventId |
+| Esport View Search  电竞界面 搜索 | https://:hostname/:lang/standard/esports-hub/search |
+| Esport View Favourites  电竞界面 最爱  | https://:hostname/:lang/standard/esports-hub/favourites |
+| Esport View Favourites Participant  电竞界面 最爱 参加者  | https://:hostname/:lang/standard/esports-hub/favourites/:sportCode#:name |
+| Esport View Multiview  电竞界面 多视图 | https://:hostname/:lang/standard/esports-hub/live/multiview |
 
 
 ## 4. Screens and Workflows 截图和工作流程 <a name="4-screens-and-workflows"></a>
