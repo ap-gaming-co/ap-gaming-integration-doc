@@ -113,7 +113,7 @@ Gets the leagues for the requested sport.
 **GET Request GET请求** <br/>
         `/sline/leagues`
 
- *Parameters 参数*
+*Parameters 参数*
 
  | Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
 | --- | --- | --- |
@@ -121,4 +121,60 @@ Gets the leagues for the requested sport.
 | `gameIds` | Array of integers <int32> | A comma separated list of Game Ids for e-sports games. <br/>If none supplied, all esports games are returned. <br/>Ignored for all other sports. <br/>电竞游戏的游戏ID列表，以逗号分隔 <br/>如果未提供逗号，则返回所有电竞游戏 <br/>对于其他体育项目，此参数将被忽略 |
 | `hasOfferings`  | boolean | To retrieve ONLY leagues with odds available <br/>仅获取具有可用赔率的联赛 |
 | `locale`  | String | Return language for data. <br/>返回数据的语言设置 |
+
+**Response 响应**
+
+Returns Array of leagues. 返回联赛的数组
+
+*League Data 联赛数据*
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `id`  | integer<int32> | Unique Id of the league联赛ID |
+| `name` | String | League name联赛名称 |
+| `hasOfferings` | boolean | Whether the league currently has events or specials. <br/>获取有提供赛事盘口或者特别盘口的联赛 |
+| `leagueSpecialsCount` | integer<int32> | Indicates how many specials are in the given league. <br/>列明联赛里有多少个特别盘口 |
+| `eventSpecialsCount` | integer<int32> | Indicates how many game specials are in the given league. <br/>列明联赛里有多少个特别赛事盘口 |
+| `eventCount` | integer<int32> | Indicates how many events are in the given league. <br/>列明联赛里有多少个赛事 |
+
+*Sample 示例*
+
+```js
+{
+	“leagues”: [{
+		“id”: 123,
+		“name”: “CS:GO – Liga Talents”,
+		“homeTeamType”: “Team1”,
+		“hasOfferings”: true,
+		“leagueSpecialsCount”: 1,
+		“eventSpecialsCount”: 4,
+		“eventCount”: 4
+   }, {
+		“id”: 123,
+		“name”: “CS:GO – Liga Talents”,
+		“homeTeamType”: “Team1”,
+		“hasOfferings”: true,
+		“leagueSpecialsCount”: 2,
+		“eventSpecialsCount”: 0,
+		“eventCount”: 6
+   }]
+}
+```
+
+**Esports Leagues 电竞联赛**
+
+For eSports, the League name is taken from the **name** field. The name field shows the game type and the league as in the example below:
+
+            CS:GO - ESL Challenger League North America
+
+The format is always {game} – {league}
+
+在我司的电竞，联赛名称是从 **name** 字段里获取。 name 字段将会以以下方式呈现：
+
+            CS:GO - ESL Challenger League North America
+
+格式始终为 {游戏} - {联赛}。
+
+
+
 
