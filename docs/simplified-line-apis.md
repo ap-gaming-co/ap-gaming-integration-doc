@@ -47,3 +47,26 @@ Without this facility enabled, the system will not be able to access any of the 
 客户端必须能够访问已启用的电竞界面。默认是关闭的。
 
 如果未启用此功能，系统将无法访问本文档中列出的任何端点。
+
+# 2. Application Functionality 应用功能 <a name="2-application-functionality"></a>
+
+The website has a facility built in that allows logged in users to add bet recommendations.
+
+These recommendations detail specific bets on an individual line on a particular game.
+
+Users must be able to select the game that they want to recommend and then identify the particular line and the side on which to bet.
+
+网站内置了允许已登录用户添加投注推荐的功能。
+
+这些推荐详细说明了特定游戏中个别盘口的具体投注。
+
+用户必须能够选择他们想要推荐的游戏，然后确定特定盘口和投注选择。
+
+## 2.1. Get Game Types (Esports Only)  获取游戏类型（仅适用于电竞）<a name="21-get-game-types"></a>
+
+The game types are only required for e-sports. 
+
+仅适用于电竞的游戏类型
+
+**GET Request  Get 请求**
+
