@@ -281,6 +281,7 @@ Returns standard lines. 返回一般盘口。
 | `awayLogo`  | String(URL) | Away team logo. 客队标识<br/>Only for Esports. 仅适用于电竞 |
 | `line`  | Array of objects (EventLine) | Contains a list of lines. 赛事讯息 |
 
+
 *EventLine Data 盘口数据*
 
 | Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
@@ -365,6 +366,7 @@ Returns special lines.　 返回特殊盘口。
 | `awayLogo`  | String(URL) | Away team logo. 客队标识<br/>Only for Esports. 仅适用于电竞 |
 | `specials`  | Array of objects (Specials) | Contains a list of special lines.　特殊盘口讯息 |
 
+
 *Specials Data　特殊盘口数据*
 
 | Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
@@ -377,6 +379,7 @@ Returns special lines.　 返回特殊盘口。
 | `cutoff`  | String<date-time> | Betting cutoff date 投注截止日期 |
 | `units`  | String | Measurement. Applicable to SPREAD and OVER_UNDER. <br/>单位。适用于让分和大小盘。 |
 | `contestants`  | Array of objects (Contestants) | Contains a list of contestants. <br/>参赛者讯息 |
+
 
 *Contestants Data  参赛者数据*
 
@@ -419,3 +422,19 @@ Returns special lines.　 返回特殊盘口。
 }
 ```
 
+## 2.6. Event Post Message 赛事发布消息 <a name="26-event-post-message"></a>
+
+New post message to allow users who are not logged in to the B2B site, to make their selection(s) and be taken to the correct page and with their selections added to the Bet Slip.
+
+允许未登录到 B2B 网站的用户进行选择，并将其选择添加到投注单中并跳转到正确的页面。
+
+**Process 步骤**
+
+1.	Player makes a selection on a banner, the B2B site needs to store the selection information and open the login popup.
+玩家在登入游戏前进行选择，B2B 网站需要存储选择信息并打开登录弹窗。
+
+2.	In the login process, the B2B client must call loginV2 API with eventId parameter.
+在登录过程中，B2B 客户端必须使用 eventId 参数调用 loginV2 API。
+
+3.	After successful login, B2B site (frontend) sends the selection infoformation (from #1) to Iframe via postMessage, that selection will be available in the Bet Slip.
+成功登录后，B2B 网站（前端）通过 postMessage 将选择信息（来自步骤 #1）发送到 iframe，该选择将在投注单中可用。
