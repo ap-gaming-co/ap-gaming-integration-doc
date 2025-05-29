@@ -68,7 +68,7 @@ The game types are only required for e-sports.
 
 仅适用于电竞的游戏类型
 
-**GET Request  Get 请求** <br/>
+**GET Request Get 请求** <br/>
         `/sline/games`
 
 *Parameters 参数*
@@ -103,3 +103,22 @@ Returns Array of games. 返回游戏数组
    	}]
 }
 ```
+
+## 2.2. Get Leagues 获取联赛 <a name="22-get-leagues"></a>
+
+Gets the leagues for the requested sport. 
+
+获取所请求体育项目的联赛。
+
+**GET Request GET请求** <br/>
+        `/sline/leagues`
+
+ *Parameters 参数*
+
+ | Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `sportId` <br/>**required** <br/>**必需**  | integer<int32> | Sport id for which the leagues are requested. <br/>请求特定联赛中的体育项目ID |
+| `gameIds` | Array of integers <int32> | A comma separated list of Game Ids for e-sports games. <br/>If none supplied, all esports games are returned. <br/>Ignored for all other sports. <br/>电竞游戏的游戏ID列表，以逗号分隔 <br/>如果未提供逗号，则返回所有电竞游戏 <br/>对于其他体育项目，此参数将被忽略 |
+| `hasOfferings`  | boolean | To retrieve ONLY leagues with odds available <br/>仅获取具有可用赔率的联赛 |
+| `locale`  | String | Return language for data. <br/>返回数据的语言设置 |
+
