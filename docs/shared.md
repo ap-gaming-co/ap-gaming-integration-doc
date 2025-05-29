@@ -2457,9 +2457,9 @@ namespace ChangeStatusForDepositWithdraw
 ```
 ### 3.15. FR010 – Deep Link 深层链接 <a name="315-fr010-deep-link-content"></a>
 
-Open your Staging iFrame
+Open your iFrame
 
-打开一个测试环境Iframe
+打开一Iframe
 
 In the iFrame Euro view, paste the following into the console
 
