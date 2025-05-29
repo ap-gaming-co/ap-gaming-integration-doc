@@ -68,14 +68,38 @@ The game types are only required for e-sports.
 
 仅适用于电竞的游戏类型
 
-**GET Request  Get 请求**
+**GET Request  Get 请求** <br/>
         `/sline/games`
 
-**Parameters 参数**
+*Parameters 参数*
 
 | Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
 | --- | --- | --- |
-| `hasOfferings`  | boolean | To retrieve ONLY games with odds available <br/>仅获取具有可用赔率的游戏|
+| `hasOfferings`  | boolean | To retrieve ONLY games with odds available <br/>仅获取具有可用赔率的游戏 |
 | `locale` | String | Return language for data. <br/>返回数据的语言设置 |
 
 
+**Response 响应**
+
+Returns Array of games. 返回游戏数组
+
+*Game Data  游戏数据*
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `id`  | integer<int32> | Unique Id of the game游戏ID |
+| `name` | String | Game name游戏名称 |
+
+*Sample 示例*
+
+```js
+{
+	“games”: [{
+		“id”: 123,
+		“name”: “CS:GO”
+	   }, {
+		“id”: 124,
+		“name”: “DOTA2”
+   }]
+}
+```
