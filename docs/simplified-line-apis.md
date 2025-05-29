@@ -430,11 +430,50 @@ New post message to allow users who are not logged in to the B2B site, to make t
 
 **Process 步骤**
 
-1.	Player makes a selection on a banner, the B2B site needs to store the selection information and open the login popup.
+1.	Player makes a selection on a banner, the B2B site needs to store the selection information and open the login popup.<br/>
 玩家在登入游戏前进行选择，B2B 网站需要存储选择信息并打开登录弹窗。
 
-2.	In the login process, the B2B client must call loginV2 API with eventId parameter.
+2.	In the login process, the B2B client must call loginV2 API with eventId parameter.<br/>
 在登录过程中，B2B 客户端必须使用 eventId 参数调用 loginV2 API。
 
-3.	After successful login, B2B site (frontend) sends the selection infoformation (from #1) to Iframe via postMessage, that selection will be available in the Bet Slip.
-成功登录后，B2B 网站（前端）通过 postMessage 将选择信息（来自步骤 #1）发送到 iframe，该选择将在投注单中可用。
+3.	After successful login, B2B site (frontend) sends the selection infoformation (from #1) to Iframe via postMessage, that selection will be available in the Bet Slip.<br/>成功登录后，B2B 网站（前端）通过 postMessage 将选择信息（来自步骤 #1）发送到 iframe，该选择将在投注单中可用。
+
+
+*PostMessage Payload   postMessage 负载*
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `msgCode`  | String | Value will be “selectionInfo”<br/>值将为 "selectionInfo"  |
+| `msgData`  | Array of Message Data | Message data<br/>讯息数据 |
+
+
+*Message Data　讯息数据*
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `eventId`  | integer<int64> | Event ID 赛事ID  |
+| `period`  | integer<int32> | Period number.　期间代码 |
+| `betType`  | String | Enum　值  |
+| `team`  | String | “HOME” or “AWAY” “主队”或“客队” |
+| `altLineId`  | integer<int64> | Alternative Line ID　备用盘口ID  |
+| `hdp`  | number <double> | Home team handicap.　主队让分盘<br/>Only populated for Spread.　仅适用于让分盘 |
+
+*Sample 示例*
+
+```js
+{
+	“msgCode”: “selectionInfo”,
+	“msgData”: [{
+		“eventId”: 12346781,
+		“period”: 0,
+		“betType”: “SPREAD”,
+		“team”: “AWAY”,
+		“altLineId”: 12346789,
+		“hdp”: “0.5”
+   	}
+      ]
+}
+```
+
+## 2.7. Bet Selection　投注选项 <a name="27-bet-selection"></a>
+
