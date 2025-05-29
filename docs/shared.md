@@ -2459,7 +2459,7 @@ namespace ChangeStatusForDepositWithdraw
 
 Open your iFrame
 
-打开一Iframe
+打开Iframe
 
 In the iFrame Euro view, paste the following into the console
 
