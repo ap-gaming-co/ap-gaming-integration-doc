@@ -100,6 +100,6 @@ Returns Array of games. 返回游戏数组
 	   }, {
 		“id”: 124,
 		“name”: “DOTA2”
-   }]
+   	}]
 }
 ```
