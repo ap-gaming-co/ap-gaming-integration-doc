@@ -73,7 +73,7 @@ The game types are only required for e-sports.
 
 **Parameters 参数**
 
-| Parameter <br/>参数 | Data Type 数据类型 | Notes 说明 |
+| Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
 | --- | --- | --- |
 | `hasOfferings`  | boolean | To retrieve ONLY games with odds available <br/>仅获取具有可用赔率的游戏|
 | `locale` | String | Return language for data. <br/>返回数据的语言设置 |
