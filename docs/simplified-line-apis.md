@@ -289,17 +289,7 @@ Returns standard lines. 返回一般盘口。
 | `altLineId`  | integer<int64> | Only populated if this is an alternate line. <br/>让分盘里的替代盘口 |
 | `periodNumber`  | integer<int32> | Period number. 期间代码 |
 | `points`  | number <double> | Populated for “TOTAL_POINTS”, “HOME_TEAM_TOTAL_POINTS”, “AWAY_TEAM_TOTAL_POINTS”<br/>适用于 “TOTAL_POINTS”、“HOME_TEAM_TOTAL_POINTS”，“AWAY_TEAM_TOTAL_POINTS” |
-
-| `eventId`  | integer<int32> | Requested event id. 赛事ID |
-| `eventDateFm`  | String<date-time> | Event date赛事日期 |
-| `eventName`  | String | Event Name赛事名称 |
-| `home`  | String | Home team. 主队名称 |
-| `homeLogo`  | String(URL) | Home team logo. 主队标识<br/>Only for Esports. 仅适用于电竞 |
-| `away`  | String | Away team. 客队名称 |
-| `awayLogo`  | String(URL) | Away team logo. 客队标识<br/>Only for Esports. 仅适用于电竞 |
-| `line`  | Array of objects (EventLine) | Contains a list of lines. 赛事讯息 |
-
-
-
-
+| `hdp`  | number <double> | Team handicap. 队伍让分盘<br/>Populated for “SPREAD’  适用于“让分盘’ |
+| `betType`  | String | Enum value 值<br/>“SPREAD’, “MONEYLINE”, “TOTAL_POINTS”, “HOME_TEAM_TOTAL_POINTS”, “AWAY_TEAM_TOTAL_POINTS” |
+| `cutoff`  | String<date-time> | Betting cutoff date 投注截止日期 |
 
