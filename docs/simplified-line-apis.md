@@ -62,6 +62,7 @@ Users must be able to select the game that they want to recommend and then ident
 
 用户必须能够选择他们想要推荐的游戏，然后确定特定盘口和投注选择。
 
+
 ## 2.1. Get Game Types (Esports Only)  获取游戏类型（仅适用于电竞）<a name="21-get-game-types"></a>
 
 The game types are only required for e-sports. 
@@ -103,6 +104,7 @@ Returns Array of games. 返回游戏数组
    	}]
 }
 ```
+
 
 ## 2.2. Get Leagues 获取联赛 <a name="22-get-leagues"></a>
 
@@ -175,6 +177,7 @@ The format is always {game} – {league}
 
 格式始终为 {游戏} - {联赛}。
 
+
 ## 2.3. Get Fixtures 获取赛事 <a name="23-get-fixtures"></a>
 
 Gets the fixtures for the requested league. 
@@ -241,6 +244,7 @@ If a fixture has regular events and specials, the fixture will only return once.
    }]
 }
 ```
+
 
 ## 2.4. Get Lines 获取盘口 <a name="24-get-lines"></a>
 
@@ -326,6 +330,7 @@ Returns standard lines. 返回一般盘口。
    }]
 }
 ```
+
 
 ## 2.5. Get Special Lines 获取特殊盘口 <a name="25-get-special-lines"></a>
 
@@ -422,6 +427,7 @@ Returns special lines.　 返回特殊盘口。
 }
 ```
 
+
 ## 2.6. Event Post Message 赛事发布消息 <a name="26-event-post-message"></a>
 
 New post message to allow users who are not logged in to the B2B site, to make their selection(s) and be taken to the correct page and with their selections added to the Bet Slip.
@@ -475,6 +481,7 @@ New post message to allow users who are not logged in to the B2B site, to make t
 }
 ```
 
+
 ## 2.7. Bet Selection　投注选项 <a name="27-bet-selection"></a>
 
 On selection of the bet, the system must save the details of the bet as part of the recommendation.
@@ -521,4 +528,67 @@ Fields that must be stored for all special bets:　 对于所有特殊投注，�
 •	LineId　盘口ID<br/>
 •	SpecialId 特殊盘口ID<br/>
 •	contestantId  参赛者ID<br/>
- 
+
+
+## 2.8. Login and Bet Placement Screen　登录和投注下单页面 <a name="28-login-and-bet-placement-screen"></a>
+
+After selecting the desired recommendations, the user must then submit the selections.
+
+If the user is NOT logged in to the White Label website, they must be asked to log in (as per standard practice).
+
+在选择推荐选项后，用户必须提交该选项。
+
+如果用户没有登录到白牌网站，则必须要求其登录（按照标准流程）。
+
+If the user is logged in to the White Label website, the site must make a call to the Login API (as per standard practice), then the user can be redirected to the bet placement screen.
+
+To show the bet placement screen, the system must get the current odds for the game using the data saved in the bet selection.
+
+如果用户已经登录到白牌网站，则网站必须调用Login API（按照标准流程），然后将用户重定向到投注下单页面。
+
+为显示投注下单页面，系统必须使用保存在投注选项中的数据以获取赛事的当前赔率。
+
+
+## 2.9. Error Responses　错误响应 <a name="29-error-responses"></a>
+
+A successful response will return a response code of 200 OK. 
+
+成功的响应将返回状态码 200 OK。
+
+Unsuccessful responses are listed below:  
+
+以下是不成功的响应：
+
+
+**400 Bad Request**
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `code`  | string | Identifier representing the type of error that occurred.<br/>错误代码  |
+| `message`  | string | Description of the error.<br/>描述错误  |
+
+
+**401 Unauthorized**
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `code`  | string | Identifier representing the type of error that occurred.<br/>错误代码  |
+| `message`  | string | Description of the error.<br/>描述错误  |
+
+
+**403 Forbidden**
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `code`  | string | Identifier representing the type of error that occurred.<br/>错误代码  |
+| `message`  | string | Description of the error.<br/>描述错误  |
+
+
+**500 Internal Server Error**
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `ref`  | string | Unique reference.<br/>唯一参考值  |
+| `code`  | string | Identifier representing the type of error that occurred.<br/>错误代码  |
+| `message`  | string | Description of the error.<br/>描述错误  |
+
