@@ -242,7 +242,7 @@ If a fixture has regular events and specials, the fixture will only return once.
 }
 ```
 
-## 2.3. Get Lines 获取盘口 <a name="24-get-lines"></a>
+## 2.4. Get Lines 获取盘口 <a name="24-get-lines"></a>
 
 Gets the standard lines for the requested event. 
 
@@ -292,4 +292,130 @@ Returns standard lines. 返回一般盘口。
 | `hdp`  | number <double> | Team handicap. 队伍让分盘<br/>Populated for “SPREAD’  适用于“让分盘’ |
 | `betType`  | String | Enum value 值<br/>“SPREAD’, “MONEYLINE”, “TOTAL_POINTS”, “HOME_TEAM_TOTAL_POINTS”, “AWAY_TEAM_TOTAL_POINTS” |
 | `cutoff`  | String<date-time> | Betting cutoff date 投注截止日期 |
+
+*Sample 示例*
+
+```js
+{
+	“sportId”: 12,
+	“leagueId”: 134567,
+	“eventId”: 13456784,
+“eventDateFm”: “2022-07-01T15:30:00Z”,
+      “eventName”: "Dream Team vs Burning Code",
+      “home”: “Dream Team”,
+      "homeLogo": null,
+      “away”: “Burning Code”,
+      "awayLogo": null,
+	“line”: [{
+		“id”: 12346781,
+		“altLineId”: 12346789
+		“periodNumber”: 0,
+		“points”: null,
+		“hdp”: null,
+		“betType”: “MONEYLINE”,
+		“cutoff”: “2022-07-01T17:30:00Z”
+   }, {
+		“id”: 12346783,
+		“altLineId”: 12346791
+		“periodNumber”: 0,
+		“points”: null,
+		“hdp”: -1,
+		“betType”: “SPREAD”,
+		“cutoff”: “2022-07-01T17:30:00Z”
+   }]
+}
+```
+
+## 2.5. Get Special Lines 获取特殊盘口 <a name="25-get-special-lines"></a>
+
+Gets the special lines for the requested event. 
+
+获取指定赛事的特殊盘口
+
+**GET Request GET请求** <br/>
+        `/sline/special-lines`
+
+*Parameters 参数*
+
+| Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `sportId` <br/>**required** <br/>**必需**  | integer<int32> | Sport id for which the fixtures are requested. <br/>体育ID |
+| `leagueId` <br/>**required** <br/>**必需**  | integer<int32> | The league id for which the fixtures are requested. <br/>联赛ID |
+| `eventId` <br/>**required** <br/>**必需**  | integer<int32> | The event id for which the fixtures are requested. <br/>赛事ID |
+| `locale`  | String | Return language for data. <br/>返回数据的语言设置 |
+
+**Response　响应**
+
+Returns a list of unique lines.　 返回唯一盘口的列表。
+
+Returns special lines.　 返回特殊盘口。
+
+*Line Data　盘口数据*
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `sportId`  | integer<int32> | Requested sport Id.　体育ID |
+| `leagueId`  | integer<int32> | Requested league id. 联赛ID |
+| `eventId`  | integer<int32> | Requested event id.　赛事ID |
+| `eventDateFm`  | String<date-time> | Event date　赛事日期 |
+| `eventName`  | String | Event Name　赛事名称 |
+| `home`  | String | Home team. 主队名称 |
+| `homeLogo`  | String(URL) | Home team logo. 主队标识<br/>Only for Esports. 仅适用于电竞 |
+| `away`  | String | Away team. 客队名称 |
+| `awayLogo`  | String(URL) | Away team logo. 客队标识<br/>Only for Esports. 仅适用于电竞 |
+| `specials`  | Array of objects (Specials) | Contains a list of special lines.　特殊盘口讯息 |
+
+*Specials Data　特殊盘口数据*
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `Id`  | integer<int64> | Special Id.　特殊盘口ID |
+| `name`  | String | Special name  特殊盘口名称 |
+| `category`  | String | Special category  特殊盘口类别 |
+| `periodNumber`  | integer<int32> | Period number.  期间代码 |
+| `betType`  | String | Enum value 值<br/>“MULTI_WAY_HEAD_TO_HEAD”, “SPREAD”, “OVER_UNDER” |
+| `cutoff`  | String<date-time> | Betting cutoff date 投注截止日期 |
+| `units`  | String | Measurement. Applicable to SPREAD and OVER_UNDER. <br/>单位。适用于让分和大小盘。 |
+| `contestants`  | Array of objects (Contestants) | Contains a list of contestants. <br/>参赛者讯息 |
+
+*Contestants Data  参赛者数据*
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `Id`  | integer<int64> | Contestant Id. 参赛者ID |
+| `name`  | String | Contestant name 参赛者名称 |
+| `contestantLineId`  | Integer<int64> | Contestant Line Id 参赛者盘口ID |
+| `hdp`  | number <double> | Team handicap队伍让分盘<br/>Populated for “SPREAD” and “OVER_UNDER” 适用于让分和大小盘 |
+
+*Sample 示例*
+
+```js
+{
+      “sportId”: 12,
+      “leagueId”: 134567,
+      “eventId”: 13456784,
+      “eventDateFm”: “2022-07-01T15:30:00Z”,
+      “eventName”: "Dream Team vs Burning Code",
+      “home”: “Dream Team”,
+      "homeLogo": null,
+      “away”: “Burning Code”,
+      "awayLogo": null,
+	“specials”: [{
+		“id”: 12346781,
+		“name”: “Correct Score”,
+		“category”: “Teams”,
+		“periodNumber”: 0,
+		“betType”: “MULTI_WAY_HEAD_TO_HEAD”,
+		“cutoff”: “2022-07-01T17:30:00Z”,
+		“units”: “”,
+		“contestants”: [{
+			“id”: 1456789745,
+			“name”: “Dream Team 0 Burning Code 3”
+			},{
+			“id”: 1456789746,
+			“name”: “Dream Team 1 Burning Code 3”
+			}]
+	}]
+}
+```
 
