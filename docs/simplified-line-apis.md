@@ -115,7 +115,7 @@ Gets the leagues for the requested sport.
 
 *Parameters 参数*
 
- | Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
 | --- | --- | --- |
 | `sportId` <br/>**required** <br/>**必需**  | integer<int32> | Sport id for which the leagues are requested. <br/>请求特定联赛中的体育项目ID |
 | `gameIds` | Array of integers <int32> | A comma separated list of Game Ids for e-sports games. <br/>If none supplied, all esports games are returned. <br/>Ignored for all other sports. <br/>电竞游戏的游戏ID列表，以逗号分隔 <br/>如果未提供逗号，则返回所有电竞游戏 <br/>对于其他体育项目，此参数将被忽略 |
@@ -175,6 +175,70 @@ The format is always {game} – {league}
 
 格式始终为 {游戏} - {联赛}。
 
+## 2.3. Get Fixtures 获取赛事 <a name="23-get-fixtures"></a>
 
+Gets the fixtures for the requested league. 
 
+获取游戏开盘日期、时间，以及主队与客队讯息
+
+**GET Request GET请求** <br/>
+        `/sline/fixtures`
+
+*Parameters 参数*
+
+| Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `sportId` <br/>**required** <br/>**必需**  | integer<int32> | Sport id for which the fixtures are requested. <br/>所请求赛事的体育项目ID |
+| `leagueId` <br/>**required** <br/>**必需**  | integer<int32> | The league id for which the fixtures are requested. <br/>所请求赛事的联赛ID |
+| `locale`  | String | Return language for data. <br/>返回数据的语言设置 |
+
+**Response 响应**
+
+Returns a list of unique fixtures.
+
+If a fixture has regular events and specials, the fixture will only return once.
+
+返回唯一赛事的列表
+
+如果一个赛事具有常规盘口和特殊盘口，该赛事只会返回一次
+
+*Fixture Data  赛事数据* 
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `sportId`  | integer<int32> | Requested sport Id.<br/>体育ID |
+| `leagueId`  | integer<int32> | Requested league id.<br/>联赛ID |
+| `event`  | Array of objects (EventFixture) | Contains a list of events.<br/>赛事ID |
+
+*EventFixture Data  赛事数据* 
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `eventId`  | integer<int32> | Event Id. 赛事ID |
+| `starts`  | String<date-time> | Game date time. 比赛日期时间 |
+| `home`  | String | Home team. 主队名称 |
+| `away`  | String | Away team. 客队名称 |
+| `lines`  | integer<int32> | Indicates how many lines are in the given event.<br/>列明给定赛事的盘口数 |
+
+*Sample 示例*
+
+```js
+{
+	“sportId”: 12,
+	“leagueId”: 134567,
+	“event”: [{
+		“eventId”: 12346781,
+		“starts”: “2022-07-01T15:30:00Z”,
+		“home”: “Dream Team”,
+		“away”: “Burning Code”,
+		“lines”: 12,
+   }, {
+		“eventId”: 12346782,
+		“starts”: “2022-07-01T15:30:00Z”,
+		“home”: “Detonation FocusMe”,
+		“away”: “Crest Act”,
+		“lines”: 0,
+   }]
+}
+```
 
