@@ -242,3 +242,64 @@ If a fixture has regular events and specials, the fixture will only return once.
 }
 ```
 
+## 2.3. Get Lines 获取盘口 <a name="24-get-lines"></a>
+
+Gets the standard lines for the requested event. 
+
+获取所请求赛事的一般盘口
+
+**GET Request GET请求** <br/>
+        `/sline/lines`
+
+*Parameters 参数*
+
+| Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `sportId` <br/>**required** <br/>**必需**  | integer<int32> | Sport id for which the fixtures are requested. <br/>体育ID |
+| `leagueId` <br/>**required** <br/>**必需**  | integer<int32> | The league id for which the fixtures are requested. <br/>联赛ID |
+| `eventId` <br/>**required** <br/>**必需**  | integer<int32> | The event id for which the fixtures are requested. <br/>赛事ID |
+| `locale`  | String | Return language for data. <br/>返回数据的语言设置 |
+
+**Response 响应**
+
+Returns a list of unique lines. 返回唯一盘口的列表。
+
+Returns standard lines. 返回一般盘口。
+
+*Line Data 盘口数据*
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `sportId`  | integer<int32> | Requested sport Id. 体育ID |
+| `leagueId`  | integer<int32> | Requested league id. 联赛ID |
+| `eventId`  | integer<int32> | Requested event id. 赛事ID |
+| `eventDateFm`  | String<date-time> | Event date赛事日期 |
+| `eventName`  | String | Event Name赛事名称 |
+| `home`  | String | Home team. 主队名称 |
+| `homeLogo`  | String(URL) | Home team logo. 主队标识<br/>Only for Esports. 仅适用于电竞 |
+| `away`  | String | Away team. 客队名称 |
+| `awayLogo`  | String(URL) | Away team logo. 客队标识<br/>Only for Esports. 仅适用于电竞 |
+| `line`  | Array of objects (EventLine) | Contains a list of lines. 赛事讯息 |
+
+*EventLine Data 盘口数据*
+
+| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| --- | --- | --- |
+| `Id`  | integer<int64> | Line Id. 盘口ID |
+| `altLineId`  | integer<int64> | Only populated if this is an alternate line. <br/>让分盘里的替代盘口 |
+| `periodNumber`  | integer<int32> | Period number. 期间代码 |
+| `points`  | number <double> | Populated for “TOTAL_POINTS”, “HOME_TEAM_TOTAL_POINTS”, “AWAY_TEAM_TOTAL_POINTS”<br/>适用于 “TOTAL_POINTS”、“HOME_TEAM_TOTAL_POINTS”，“AWAY_TEAM_TOTAL_POINTS” |
+
+| `eventId`  | integer<int32> | Requested event id. 赛事ID |
+| `eventDateFm`  | String<date-time> | Event date赛事日期 |
+| `eventName`  | String | Event Name赛事名称 |
+| `home`  | String | Home team. 主队名称 |
+| `homeLogo`  | String(URL) | Home team logo. 主队标识<br/>Only for Esports. 仅适用于电竞 |
+| `away`  | String | Away team. 客队名称 |
+| `awayLogo`  | String(URL) | Away team logo. 客队标识<br/>Only for Esports. 仅适用于电竞 |
+| `line`  | Array of objects (EventLine) | Contains a list of lines. 赛事讯息 |
+
+
+
+
+
