@@ -485,12 +485,12 @@ On selection of the bet, the system must save the details of the bet as part of 
 
 Fields that must be stored for all standard bets:　 对于所有一般投注，必须存储以下字段：
 
-•	SportId　（体育ID）
-•	EventId　（赛事ID）
-•	PeriodNumber （期间代码）
-•	BetType （投注类型）
-•	LineId （盘口ID）
-•	AltLineId （备用盘口ID）
+•	SportId　（体育ID）<br/>
+•	EventId　（赛事ID）<br/>
+•	PeriodNumber （期间代码）<br/>
+•	BetType （投注类型）<br/>
+•	LineId （盘口ID）<br/>
+•	AltLineId （备用盘口ID）<br/>
 
 Other fields are required depending on the bet type.　 其他字段取决于投注类型而有所不同。
 
@@ -498,27 +498,27 @@ Other fields are required depending on the bet type.　 其他字段取决于投
 
 Fields that are required for Spread bet type:　 对于让分投注类型，需要以下字段：
 
-•	Team (Whether TEAM1 OR TEAM2 was selected)　（选择TEAM1还是TEAM2）
-•	Handicap (Amount of handicap)　（让分）
+•	Team (Whether TEAM1 OR TEAM2 was selected)　（选择TEAM1还是TEAM2）<br/>
+•	Handicap (Amount of handicap)　（让分）<br/>
 
 *Moneyline　输赢盘*
 
 •	Team (Whether TEAM1, TEAM2, DRAW was selected)　（选择TEAM1、TEAM2还是“和”）
-Totals　总分盘
-•	Side (Whether Over or Under was selected)　 （选择Over还是Under）
-•	Handicap (Amount of handicap)　 （让分）
+Totals　总分盘<br/>
+•	Side (Whether Over or Under was selected)　 （选择Over还是Under）<br/>
+•	Handicap (Amount of handicap)　 （让分）<br/>
 
 *Team Total　球队总分盘*
 
-•	Choice (Whether Home or Away was selected)　 （选择主队还是客队）
-•	Choice (Whether Over or Under was selected)　 （选择Over还是Under）
-•	Handicap (Amount of handicap)　 （让分）
+•	Choice (Whether Home or Away was selected)　 （选择主队还是客队）<br/>
+•	Choice (Whether Over or Under was selected)　 （选择Over还是Under）<br/>
+•	Handicap (Amount of handicap)　 （让分）<br/>
 
 **Special Bets　特殊投注**
 
 Fields that must be stored for all special bets:　 对于所有特殊投注，必须存储以下字段：
 
-•	LineId　盘口ID
-•	SpecialId 特殊盘口ID
-•	contestantId  参赛者ID
+•	LineId　盘口ID<br/>
+•	SpecialId 特殊盘口ID<br/>
+•	contestantId  参赛者ID<br/>
  
