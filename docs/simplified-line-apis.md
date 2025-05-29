@@ -15,19 +15,18 @@
         - [2.7.	Bet Selection　投注选项](#27-bet-selection)
         - [2.8.	Login and Bet Placement Screen　登录和投注下单页面](#28-login-and-bet-placement-screen)
         - [2.9.	Error Responses　错误响应](#29-error-responses)
-  
-# API Integration API 集成
 
-## 1. Purpose  目的 <a name="1-purpose"></a>
+# 1. Project Summary 项目概要 <a name="1-project-summary"></a>
 
-The I-White-label 3rd Party integration API allows B2B customers to integrate the sportsbook website into B2B customer’s website. B2B customer’s users will be able to access and place bets in the sportsbook system from B2B customer’s website without requiring the user to register in the sportsbook website.
+## 1.1. Objectives 目标 <a name="11-objectives"></a>
 
-If you are unsure of which integration method to use, please contact us using 24/7 Customer Support in the Skype Channel.
+To provide the necessary interfaces to enable sharing bets functionality.
 
-I-外包合作第三方对接API能使B2B客户将体育对接到B2B客户的网站，B2B客户的用户在不需要在体育平台网站注册用户的情况上能够从B2B客户的网站拜访并在体育博彩系统进行投注。
+Currently, this functionality is not available for White Label integration with our APIs. This means that WL users are not able to recommend our lines and odds.
 
-如您不确定使用哪种集成方式，还请在skype群组联系24/7 客服团队。
+旨在提供必要的接口以实现共享投注功能。
 
+目前，该功能不适用于对接我方API的白牌用户。这意味着白牌用户将无法推荐我们的盘口和赔率。
 
 ## 2. Background 背景 <a name="2-background"></a>
 
