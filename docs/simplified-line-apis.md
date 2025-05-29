@@ -477,3 +477,48 @@ New post message to allow users who are not logged in to the B2B site, to make t
 
 ## 2.7. Bet Selection　投注选项 <a name="27-bet-selection"></a>
 
+On selection of the bet, the system must save the details of the bet as part of the recommendation.
+
+在选择投注时，作为推荐的一部分，系统必须将投注的详细信息保存。
+
+**Straight Bets　直接投注**
+
+Fields that must be stored for all standard bets:　 对于所有一般投注，必须存储以下字段：
+
+•	SportId　（体育ID）
+•	EventId　（赛事ID）
+•	PeriodNumber （期间代码）
+•	BetType （投注类型）
+•	LineId （盘口ID）
+•	AltLineId （备用盘口ID）
+
+Other fields are required depending on the bet type.　 其他字段取决于投注类型而有所不同。
+
+*Spread　让分盘*
+
+Fields that are required for Spread bet type:　 对于让分投注类型，需要以下字段：
+
+•	Team (Whether TEAM1 OR TEAM2 was selected)　（选择TEAM1还是TEAM2）
+•	Handicap (Amount of handicap)　（让分）
+
+*Moneyline　输赢盘*
+
+•	Team (Whether TEAM1, TEAM2, DRAW was selected)　（选择TEAM1、TEAM2还是“和”）
+Totals　总分盘
+•	Side (Whether Over or Under was selected)　 （选择Over还是Under）
+•	Handicap (Amount of handicap)　 （让分）
+
+*Team Total　球队总分盘*
+
+•	Choice (Whether Home or Away was selected)　 （选择主队还是客队）
+•	Choice (Whether Over or Under was selected)　 （选择Over还是Under）
+•	Handicap (Amount of handicap)　 （让分）
+
+**Special Bets　特殊投注**
+
+Fields that must be stored for all special bets:　 对于所有特殊投注，必须存储以下字段：
+
+•	LineId　盘口ID
+•	SpecialId 特殊盘口ID
+•	contestantId  参赛者ID
+ 
