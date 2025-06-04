@@ -88,7 +88,7 @@ Returns Array of games. 返回游戏数组
 
 | Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
 | --- | --- | --- |
-| `id`  | integer<int32> | Unique Id of the game游戏ID |
+| `id`  | `integer<int32>` | Unique Id of the game游戏ID |
 | `name` | String | Game name游戏名称 |
 
 *Sample 示例*
