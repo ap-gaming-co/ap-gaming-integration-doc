@@ -286,7 +286,7 @@ B2B网站（前端）将通过postMessage将选项信息发送到AP Gaming iFram
 
 ### 2.8. Bet Selection 投注选项 <a name="28-bet-selection"></a>
 
-We have these type of Bet Selection to send from B2B site to Pinnacle Iframe via postMessage, the msgCode must be "selectionInfo"
+We have these type of Bet Selection to send from B2B site to Iframe via postMessage, the msgCode must be "selectionInfo"
 
 **1 – Spread Selection** 1 - 让分盘选项
 
@@ -424,8 +424,8 @@ Implementation as suggested below: 请按照以下建议实施:
 
 To use that function, the steps would be: 使用该功能，步骤如下：
 1. When player makes a selection on a banner, the B2B site needs to store that selection info and open the login popup 当玩家在横幅上做出选择时，B2B 网站需要存储该选择信息并打开登录弹出窗口
-2. In the login process, B2B needs to call Pinnacle loginV2 API with eventId parameter (Event ID can be obtained by the Get Hot Event API, after log in successfully, players will be redirected to the corresponding event page ). 在登录过程中，B2B需要调用loginV2接口并传入eventId参数（Event ID可以通过获取热门赛事API获取，登录成功后玩家会跳转到对应赛事页面）。
-3. After login successfully, B2B site (frontend) sends the selection info (from #1) to Pinnacle Iframe via postMessage (we introduced in the 2.8 section above), that selection will be available in the betslip. 登录成功后，B2B 网站（前端）通过 postMessage（我们在上面的 2.8 部分中介绍过）将选择信息（来自 #1）发送到Iframe，该选择将在投注单中可用。
+2. In the login process, B2B needs to call loginV2 API with eventId parameter (Event ID can be obtained by the Get Hot Event API, after log in successfully, players will be redirected to the corresponding event page ). 在登录过程中，B2B需要调用loginV2接口并传入eventId参数（Event ID可以通过获取热门赛事API获取，登录成功后玩家会跳转到对应赛事页面）。
+3. After login successfully, B2B site (frontend) sends the selection info (from #1) to Iframe via postMessage (we introduced in the 2.8 section above), that selection will be available in the betslip. 登录成功后，B2B 网站（前端）通过 postMessage（我们在上面的 2.8 部分中介绍过）将选择信息（来自 #1）发送到Iframe，该选择将在投注单中可用。
 
 
 ### 2.10. Error Responses 错误响应 <a name="210-error-response"></a>
