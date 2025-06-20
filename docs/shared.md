@@ -1197,7 +1197,7 @@ We also provide a wager feed to Push wager changes to B2B customer servers (see 
 | `product` | Query | String (required 必需项) | SB | Product Sport Book 产品: 体育 |
 | `userCode` | Query | String (required 必需项) |  | This is the user code / loginID of the player. E.g: PA10000000 此为玩家登录名/用户名，例如PA10000000 |
 | `settle` | Query | Boolean(optional 非必需项) | true/false(Default: false) 默认: false | If true, wagers of status included: SETTLED, CANCELLED Else also included: OPEN, PENDING  如TRUE, 那么注单状态包括： 已结算，已取消 其他还包括：等待中，注单未结算 |
-| `filterBy` | Query | String (optional 非必需项) | event_date/wager_date (Default: event_date) 默认: event_date | If settle (above) equals FALSE date range is based on filterBy‘s value otherwise it is based on settlement date 如果settle返回FAlSE, 日期会按照filterBy的数值，否则按照注单结算日期 |
+| `filterBy` | Query | String (optional 非必需项) | event_date/wager_date (Default: event_date) 默认: event_date | If settle (above) equals FALSE date range is based on filterBy‘s value otherwise it is based on settlement date 如果settle返回FALSE, 日期会按照filterBy的数值，否则按照注单结算日期 |
 | `locale` | Query | String(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
 
 *Sample code (java) - See HttpUtils class at Appendix*
@@ -2681,9 +2681,9 @@ Expectation result is that there is an URL response in console
 
 预期结果是在控制台中出现一个响应的 URL
 
-B2B client need to add the listender to the postMessage and store the URL value.
+B2B client need to add the listener to the postMessage and store the URL value.
 
-B2B 客户需要在 postMessage 中添加 listender 并存储 URL 值。
+B2B 客户需要在 postMessage 中添加 listener 并存储 URL 值。
 
 Here is the list of deeplink URLs that are used in New Euro View:
 
