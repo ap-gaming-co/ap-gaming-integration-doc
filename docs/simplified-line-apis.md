@@ -280,9 +280,7 @@ Returns standard lines. 返回一般盘口。
 | `eventDateFm`  | `String<date-time>` | Event date赛事日期 |
 | `eventName`  | `String` | Event Name赛事名称 |
 | `home`  | `String` | Home team. 主队名称 |
-| `homeLogo`  | `String(URL)` | Home team logo. 主队标识<br/>Only for Esports. 仅适用于电竞 |
 | `away`  | `String` | Away team. 客队名称 |
-| `awayLogo`  | `String(URL)` | Away team logo. 客队标识<br/>Only for Esports. 仅适用于电竞 |
 | `line`  | Array of objects (EventLine) | Contains a list of lines. 赛事讯息 |
 
 
@@ -302,16 +300,14 @@ Returns standard lines. 返回一般盘口。
 
 ```js
 {
-	“sportId”: 12,
-	“leagueId”: 134567,
-	“eventId”: 13456784,
-“eventDateFm”: “2022-07-01T15:30:00Z”,
-      “eventName”: "Dream Team vs Burning Code",
-      “home”: “Dream Team”,
-      "homeLogo": null,
-      “away”: “Burning Code”,
-      "awayLogo": null,
-	“line”: [{
+     “sportId”: 12,
+     “leagueId”: 134567,
+     “eventId”: 13456784,
+     “eventDateFm”: “2022-07-01T15:30:00Z”,
+     “eventName”: "Dream Team vs Burning Code",
+     “home”: “Dream Team”,
+     “away”: “Burning Code”,
+     “line”: [{
 		“id”: 12346781,
 		“altLineId”: 12346789
 		“periodNumber”: 0,
@@ -366,9 +362,7 @@ Returns special lines.　 返回特殊盘口。
 | `eventDateFm`  | `String<date-time>` | Event date　赛事日期 |
 | `eventName`  | `String` | Event Name　赛事名称 |
 | `home`  | `String` | Home team. 主队名称 |
-| `homeLogo`  | `String(URL)` | Home team logo. 主队标识<br/>Only for Esports. 仅适用于电竞 |
 | `away`  | `String` | Away team. 客队名称 |
-| `awayLogo`  | `String(URL)` | Away team logo. 客队标识<br/>Only for Esports. 仅适用于电竞 |
 | `specials`  | Array of objects (Specials) | Contains a list of special lines.　特殊盘口讯息 |
 
 
@@ -405,10 +399,8 @@ Returns special lines.　 返回特殊盘口。
       “eventDateFm”: “2022-07-01T15:30:00Z”,
       “eventName”: "Dream Team vs Burning Code",
       “home”: “Dream Team”,
-      "homeLogo": null,
       “away”: “Burning Code”,
-      "awayLogo": null,
-	“specials”: [{
+      “specials”: [{
 		“id”: 12346781,
 		“name”: “Correct Score”,
 		“category”: “Teams”,
