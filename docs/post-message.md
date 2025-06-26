@@ -499,13 +499,13 @@ Fields that must be stored for all special bets:　 对于所有特殊投注，�
 
 After selecting the desired recommendations, the user must then submit the selections.
 
-If the user is NOT logged in to the White Label website, they must be asked to log in (as per standard practice).
+If the user is NOT logged in to the B2B website, they must be asked to log in (as per standard practice).
 
 在选择推荐选项后，用户必须提交该选项。
 
 如果用户没有登录到白牌网站，则必须要求其登录（按照标准流程）。
 
-If the user is logged in to the White Label website, the site must make a call to the Login API (as per standard practice), then the user can be redirected to the bet placement screen.
+If the user is logged in to the B2B website, the site must make a call to the Login API (as per standard practice), then the user can be redirected to the bet placement screen.
 
 To show the bet placement screen, the system must get the current odds for the game using the data saved in the bet selection.
 
