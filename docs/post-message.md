@@ -8,7 +8,7 @@
         - [1.4.	Get Lines 获取盘口](#14-get-lines)
         - [1.5.	Get Special Lines 获取特殊盘口](#15-get-special-lines)
         - [1.6.	Event Post Message 赛事发布消息](#16-event-post-message)
-        - [1.7.	Bet Selection　投注选项](#17-bet-selection)
+        - [1.7.	Bet Selection 投注选项](#17-bet-selection)
         - [1.8.	Login and Bet Placement Screen　登录和投注下单页面](#18-login-and-bet-placement-screen)
         - [1.9.	Error Responses　错误响应](#19-error-responses)
 
@@ -447,52 +447,131 @@ New post message to allow users who are not logged in to the B2B site, to make t
 ```
 
 
-## 1.7. Bet Selection　投注选项 <a name="17-bet-selection"></a>
+## 1.7. Bet Selection 投注选项 <a name="17-bet-selection"></a>
 
-On selection of the bet, the system must save the details of the bet as part of the recommendation.
+We have these type of Bet Selection to send from B2B site to Iframe via postMessage, the msgCode must be "selectionInfo"
 
-在选择投注时，作为推荐的一部分，系统必须将投注的详细信息保存。
+**1 – Spread Selection** 1 - 让分盘选项
 
-**Straight Bets　直接投注**
+```js
+{
+  "msgCode": "selectionInfo",
+  "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "SPREAD",
+    "team": "HOME",
+    "altLineId": 0,
+    "hdp": 0.25,
+  }]
+}
+```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (SPREAD) |
+| `team` | String (HOME , AWAY)  |
+| `altLineId` | Number |
+| `hdp` | Number |
 
-Fields that must be stored for all standard bets:　 对于所有一般投注，必须存储以下字段：
+**2 – Moneyline Selection** - 输赢盘选项
 
-•	SportId　（体育ID）<br/>
-•	EventId　（赛事ID）<br/>
-•	PeriodNumber （期间代码）<br/>
-•	BetType （投注类型）<br/>
-•	LineId （盘口ID）<br/>
-•	AltLineId （备用盘口ID）<br/>
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "MONEYLINE",
+    "team": "HOME",
+    "altLineId": 0,
+    "hdp": 0.25,
+  }]
+}
+```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (MONEYLINE) |
+| `team` | String (HOME , AWAY)  |
+| `altLineId` | Number |
+| `hdp` | Number |
 
-Other fields are required depending on the bet type.　 其他字段取决于投注类型而有所不同。
+**3 – Total Points Selection** - 总分投注盘选项
 
-*Spread　让分盘*
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "TOTAL_POINTS",
+    "altLineId": 0,
+    "points": 3.0,
+    "side": "OVER",
+  }]
+}
+```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (TOTAL_POINTS) |
+| `altLineId` | Number  |
+| `points` | Number |
+| `side` | String (OVER , UNDER) |
 
-Fields that are required for Spread bet type:　 对于让分投注类型，需要以下字段：
+**4 – Team Total Points Selection** - 球队总分盘选项
 
-•	Team (Whether TEAM1 OR TEAM2 was selected)　（选择TEAM1还是TEAM2）<br/>
-•	Handicap (Amount of handicap)　（让分）<br/>
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "TEAM_TOTAL_POINTS",
+    "altLineId": 0,
+    "points": 3.0,
+    "team": "HOME",
+    "side": "OVER",
+  }]
+}
+```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (TEAM_TOTAL_POINTS) |
+| `altLineId` | Number  |
+| `points` | Number |
+| `team` | String (HOME , AWAY) |
+| `side` | String (OVER , UNDER) |
 
-*Moneyline　输赢盘*
+**5 – Outright selection**
 
-•	Team (Whether TEAM1, TEAM2, DRAW was selected)　（选择TEAM1、TEAM2还是“和”）
-Totals　总分盘<br/>
-•	Side (Whether Over or Under was selected)　 （选择Over还是Under）<br/>
-•	Handicap (Amount of handicap)　 （让分）<br/>
-
-*Team Total　球队总分盘*
-
-•	Choice (Whether Home or Away was selected)　 （选择主队还是客队）<br/>
-•	Choice (Whether Over or Under was selected)　 （选择Over还是Under）<br/>
-•	Handicap (Amount of handicap)　 （让分）<br/>
-
-**Special Bets　特殊投注**
-
-Fields that must be stored for all special bets:　 对于所有特殊投注，必须存储以下字段：
-
-•	LineId　盘口ID<br/>
-•	SpecialId 特殊盘口ID<br/>
-•	contestantId  参赛者ID<br/>
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "OUTRIGHT",
+    "hdp": 3.5,
+    "contestantLineId": 1563789224,
+    "altLineId": 0,
+  }]
+}
+```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (OUTRIGHT) |
+| `hdp` | Number  |
+| `contestantLineId` | Number |
+| `altLineId` | Number |
 
 
 ## 1.8. Login and Bet Placement Screen　登录和投注下单页面 <a name="18-login-and-bet-placement-screen"></a>
