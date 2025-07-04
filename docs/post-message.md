@@ -1,54 +1,19 @@
 
 # Table Contents 目录
 - [Table Contents 目录](#table-contents)
-    - [1. Project Summary 项目概要](#1-project-summary)
-        - [1.1. Objectives 目标](#11-objectives)
-        - [1.2. Project Scope 项目框架](#12-project-scope)
-        - [1.3. Prerequisites 前提条件](#13-prerequisites)
-    - [2. Application Functionality 应用功能](#2-application-functionality)
-        - [2.1.	Get Game Types (Esports Only)  获取游戏类型（仅适用于电竞）](#21-get-game-types)
-        - [2.2.	Get Leagues 获取联赛](#22-get-leagues)
-        - [2.3.	Get Fixtures 获取赛事](#23-get-fixtures)
-        - [2.4.	Get Lines 获取盘口](#24-get-lines)
-        - [2.5.	Get Special Lines 获取特殊盘口](#25-get-special-lines)
-        - [2.6.	Event Post Message 赛事发布消息](#26-event-post-message)
-        - [2.7.	Bet Selection　投注选项](#27-bet-selection)
-        - [2.8.	Login and Bet Placement Screen　登录和投注下单页面](#28-login-and-bet-placement-screen)
-        - [2.9.	Error Responses　错误响应](#29-error-responses)
+    - [1. Application Functionality 应用功能](#1-application-functionality)
+        - [1.1.	Get Game Types (Esports Only)  获取游戏类型（仅适用于电竞）](#11-get-game-types)
+        - [1.2.	Get Leagues 获取联赛](#12-get-leagues)
+        - [1.3.	Get Fixtures 获取赛事](#13-get-fixtures)
+        - [1.4.	Get Lines 获取盘口](#14-get-lines)
+        - [1.5.	Get Special Lines 获取特殊盘口](#15-get-special-lines)
+        - [1.6.	Event Post Message 赛事发布消息](#16-event-post-message)
+        - [1.7.	Bet Selection 投注选项](#17-bet-selection)
+        - [1.8.	Login and Bet Placement Screen　登录和投注下单页面](#18-login-and-bet-placement-screen)
+        - [1.9.	Error Responses　错误响应](#19-error-responses)
 
-# 1. Project Summary 项目概要 <a name="1-project-summary"></a>
 
-## 1.1. Objectives 目标 <a name="11-objectives"></a>
-
-To provide the necessary interfaces to enable sharing bets functionality.
-
-Currently, this functionality is not available for White Label integration with our APIs. This means that WL users are not able to recommend our lines and odds.
-
-旨在提供必要的接口以实现共享投注功能。
-
-目前，该功能不适用于对接我方API的白牌用户。这意味着白牌用户将无法推荐我们的盘口和赔率。
-
-## 1.2. Project Scope 项目框架 <a name="12-project-scope"></a>
-
-This project will define the necessary interfaces to ensure that all required functionality is available to allow users to recommend and place bets.
-
-The user interface for this functionality is outside the scope of this project.
-
-该项目将定义必要的接口，以确保所有所需功能可用来允许用户推荐和投注。
-
-此功能的用户界面不在此项目的范围之内。
-
-## 1.3. Prerequisites 前提条件 <a name="13-prerequisites"></a>
-
-The client must have the ability to access eSports enabled. This is disabled by default.
-
-Without this facility enabled, the system will not be able to access any of the endpoints listed in this document.
-
-客户端必须能够访问已启用的电竞界面。默认是关闭的。
-
-如果未启用此功能，系统将无法访问本文档中列出的任何端点。
-
-# 2. Application Functionality 应用功能 <a name="2-application-functionality"></a>
+# 1. Application Functionality 应用功能 <a name="1-application-functionality"></a>
 
 The website has a facility built in that allows logged in users to add bet recommendations.
 
@@ -63,7 +28,7 @@ Users must be able to select the game that they want to recommend and then ident
 用户必须能够选择他们想要推荐的游戏，然后确定特定盘口和投注选择。
 
 
-## 2.1. Get Game Types (Esports Only)  获取游戏类型（仅适用于电竞）<a name="21-get-game-types"></a>
+## 1.1. Get Game Types (Esports Only)  获取游戏类型（仅适用于电竞）<a name="11-get-game-types"></a>
 
 The game types are only required for e-sports. 
 
@@ -106,7 +71,7 @@ Returns Array of games. 返回游戏数组
 ```
 
 
-## 2.2. Get Leagues 获取联赛 <a name="22-get-leagues"></a>
+## 1.2. Get Leagues 获取联赛 <a name="12-get-leagues"></a>
 
 Gets the leagues for the requested sport. 
 
@@ -178,7 +143,7 @@ The format is always {game} – {league}
 格式始终为 {游戏} - {联赛}。
 
 
-## 2.3. Get Fixtures 获取赛事 <a name="23-get-fixtures"></a>
+## 1.3. Get Fixtures 获取赛事 <a name="13-get-fixtures"></a>
 
 Gets the fixtures for the requested league. 
 
@@ -246,7 +211,7 @@ If a fixture has regular events and specials, the fixture will only return once.
 ```
 
 
-## 2.4. Get Lines 获取盘口 <a name="24-get-lines"></a>
+## 1.4. Get Lines 获取盘口 <a name="14-get-lines"></a>
 
 Gets the standard lines for the requested event. 
 
@@ -332,7 +297,7 @@ Returns standard lines. 返回一般盘口。
 ```
 
 
-## 2.5. Get Special Lines 获取特殊盘口 <a name="25-get-special-lines"></a>
+## 1.5. Get Special Lines 获取特殊盘口 <a name="15-get-special-lines"></a>
 
 Gets the special lines for the requested event. 
 
@@ -428,7 +393,7 @@ Returns special lines.　 返回特殊盘口。
 ```
 
 
-## 2.6. Event Post Message 赛事发布消息 <a name="26-event-post-message"></a>
+## 1.6. Event Post Message 赛事发布消息 <a name="16-event-post-message"></a>
 
 New post message to allow users who are not logged in to the B2B site, to make their selection(s) and be taken to the correct page and with their selections added to the Bet Slip.
 
@@ -482,65 +447,144 @@ New post message to allow users who are not logged in to the B2B site, to make t
 ```
 
 
-## 2.7. Bet Selection　投注选项 <a name="27-bet-selection"></a>
+## 1.7. Bet Selection 投注选项 <a name="17-bet-selection"></a>
 
-On selection of the bet, the system must save the details of the bet as part of the recommendation.
+We have these type of Bet Selection to send from B2B site to Iframe via postMessage, the msgCode must be "selectionInfo"
 
-在选择投注时，作为推荐的一部分，系统必须将投注的详细信息保存。
+**1 – Spread Selection** 1 - 让分盘选项
 
-**Straight Bets　直接投注**
+```js
+{
+  "msgCode": "selectionInfo",
+  "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "SPREAD",
+    "team": "HOME",
+    "altLineId": 0,
+    "hdp": 0.25,
+  }]
+}
+```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (SPREAD) |
+| `team` | String (HOME , AWAY)  |
+| `altLineId` | Number |
+| `hdp` | Number |
 
-Fields that must be stored for all standard bets:　 对于所有一般投注，必须存储以下字段：
+**2 – Moneyline Selection** - 输赢盘选项
 
-•	SportId　（体育ID）<br/>
-•	EventId　（赛事ID）<br/>
-•	PeriodNumber （期间代码）<br/>
-•	BetType （投注类型）<br/>
-•	LineId （盘口ID）<br/>
-•	AltLineId （备用盘口ID）<br/>
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "MONEYLINE",
+    "team": "HOME",
+    "altLineId": 0,
+    "hdp": 0.25,
+  }]
+}
+```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (MONEYLINE) |
+| `team` | String (HOME , AWAY)  |
+| `altLineId` | Number |
+| `hdp` | Number |
 
-Other fields are required depending on the bet type.　 其他字段取决于投注类型而有所不同。
+**3 – Total Points Selection** - 总分投注盘选项
 
-*Spread　让分盘*
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "TOTAL_POINTS",
+    "altLineId": 0,
+    "points": 3.0,
+    "side": "OVER",
+  }]
+}
+```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (TOTAL_POINTS) |
+| `altLineId` | Number  |
+| `points` | Number |
+| `side` | String (OVER , UNDER) |
 
-Fields that are required for Spread bet type:　 对于让分投注类型，需要以下字段：
+**4 – Team Total Points Selection** - 球队总分盘选项
 
-•	Team (Whether TEAM1 OR TEAM2 was selected)　（选择TEAM1还是TEAM2）<br/>
-•	Handicap (Amount of handicap)　（让分）<br/>
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "TEAM_TOTAL_POINTS",
+    "altLineId": 0,
+    "points": 3.0,
+    "team": "HOME",
+    "side": "OVER",
+  }]
+}
+```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (TEAM_TOTAL_POINTS) |
+| `altLineId` | Number  |
+| `points` | Number |
+| `team` | String (HOME , AWAY) |
+| `side` | String (OVER , UNDER) |
 
-*Moneyline　输赢盘*
+**5 – Outright selection**
 
-•	Team (Whether TEAM1, TEAM2, DRAW was selected)　（选择TEAM1、TEAM2还是“和”）
-Totals　总分盘<br/>
-•	Side (Whether Over or Under was selected)　 （选择Over还是Under）<br/>
-•	Handicap (Amount of handicap)　 （让分）<br/>
+```js
+{
+ "msgCode": "selectionInfo",
+ "msgData": [{
+    "eventId": 1554532082,
+    "period": 0,
+    "betType": "OUTRIGHT",
+    "hdp": 3.5,
+    "contestantLineId": 1563789224,
+    "altLineId": 0,
+  }]
+}
+```
+| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| --- | --- |
+| `eventId` | Number |
+| `period` | Number |
+| `betType` | String (OUTRIGHT) |
+| `hdp` | Number  |
+| `contestantLineId` | Number |
+| `altLineId` | Number |
 
-*Team Total　球队总分盘*
 
-•	Choice (Whether Home or Away was selected)　 （选择主队还是客队）<br/>
-•	Choice (Whether Over or Under was selected)　 （选择Over还是Under）<br/>
-•	Handicap (Amount of handicap)　 （让分）<br/>
-
-**Special Bets　特殊投注**
-
-Fields that must be stored for all special bets:　 对于所有特殊投注，必须存储以下字段：
-
-•	LineId　盘口ID<br/>
-•	SpecialId 特殊盘口ID<br/>
-•	contestantId  参赛者ID<br/>
-
-
-## 2.8. Login and Bet Placement Screen　登录和投注下单页面 <a name="28-login-and-bet-placement-screen"></a>
+## 1.8. Login and Bet Placement Screen　登录和投注下单页面 <a name="18-login-and-bet-placement-screen"></a>
 
 After selecting the desired recommendations, the user must then submit the selections.
 
-If the user is NOT logged in to the White Label website, they must be asked to log in (as per standard practice).
+If the user is NOT logged in to the B2B website, they must be asked to log in (as per standard practice).
 
 在选择推荐选项后，用户必须提交该选项。
 
 如果用户没有登录到白牌网站，则必须要求其登录（按照标准流程）。
 
-If the user is logged in to the White Label website, the site must make a call to the Login API (as per standard practice), then the user can be redirected to the bet placement screen.
+If the user is logged in to the B2B website, the site must make a call to the Login API (as per standard practice), then the user can be redirected to the bet placement screen.
 
 To show the bet placement screen, the system must get the current odds for the game using the data saved in the bet selection.
 
@@ -549,7 +593,7 @@ To show the bet placement screen, the system must get the current odds for the g
 为显示投注下单页面，系统必须使用保存在投注选项中的数据以获取赛事的当前赔率。
 
 
-## 2.9. Error Responses　错误响应 <a name="29-error-responses"></a>
+## 1.9. Error Responses　错误响应 <a name="19-error-responses"></a>
 
 A successful response will return a response code of 200 OK. 
 
