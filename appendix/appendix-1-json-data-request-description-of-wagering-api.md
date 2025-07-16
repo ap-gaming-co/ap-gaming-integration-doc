@@ -24,10 +24,10 @@ This section will describe the meaning of each object along with sample values.
 | Name <br/>名称 | This is the action type. It corresponds to the wager status. Note: In JSON Post data, the value may be uppercase or lowercase. <br/> 这是动作类型。它对应注单状态。 注：在JSON Post 数据中，值可能是大写或小写|`BETTED`<br/>`ACCEPTED`<br/>`SETTLED`<br/>`ROLLBACKED`<br/>`CANCELLED`<br/>`REJECTED`<br/>`UNSETTLED` |
 | WagerInfo <br/>注单信息 | This is the wager information that player placed bet. It is a JSON object whose properties depend action type.  此为玩家投注时的注单信息。它是JSON对象, 属性由action的种类而决定。 |  |
 | Transaction<br/>交易 | The Operator uses this transaction object to debit/credit the balance of the wallet. 运营商用transaction 对象来增/减钱包里的余额。 |  |
-| PlayerInfo | This is the information of the player that placed the bet. |  |
-| ManualWager | Manual wager indicator. Its type is Boolean. | true |
+| PlayerInfo<br/>玩家信息 | This is the information of the player that placed the bet.<br/>此为下注玩家的信息 |  |
+| ManualWager<br/>手动注单 | Manual wager indicator. Its type is Boolean.<br/>手动注单指针， 它的类型是Boolean| true |
 
-*Wager Information Object (WagerInfo)*
+*Wager Information Object (WagerInfo) 注单信息对象（注单信息）*
 
 <table>
  <tr>
@@ -906,7 +906,7 @@ This section will describe the meaning of each object along with sample values.
   <th rowspan="2">Name 名称</th> 
   <th rowspan="2">Description 说明</th> 
   <th colspan="4">Action Type 投注动作</th>
-  <th colspan="3">Wager Type</th>
+  <th colspan="3">Wager Type 注单类型</th>
   <th rowspan="2">Values 值</th>
  </tr>
  <tr>
