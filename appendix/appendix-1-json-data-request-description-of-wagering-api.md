@@ -12,11 +12,11 @@ This section will describe the meaning of each object along with sample values.
  
 | Name 名称 | Description 说明 | Values 值 |
 | --- | --- | --- | 
-| Timestamp 时间戳 | Action time stamp | 2023-11-24T05:24:08 |
-| Signature 签名 | Request signature | fHLuKC27EQUsbK8iXhS2/Wr5+Tw2x/hA5Xl1bGdpU13W0ZYbduwgGcY5ItO1541IrwH6eiD9M4Pnm3ae4Uq34w== |
-| Actions 动作 | Action Object |  |
+| Timestamp 时间戳 | Action time stamp 动作的时间戳 | 2023-11-24T05:24:08 |
+| Signature 签名 | Request signature 请求签名 | fHLuKC27EQUsbK8iXhS2/Wr5+Tw2x/hA5Xl1bGdpU13W0ZYbduwgGcY5ItO1541IrwH6eiD9M4Pnm3ae4Uq34w== |
+| Actions 动作 | Action Object 动作对象 |  |
 
-*Action Object (Actions)*
+*Action Object (Actions) 动作对象（动作）*
  
 | Name 名称 | Description 说明 | Values 值 |
 | --- | --- | --- | 
