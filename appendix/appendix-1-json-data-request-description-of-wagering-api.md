@@ -34,7 +34,7 @@ This section will describe the meaning of each object along with sample values.
   <th rowspan="2">Name 名称</th> 
   <th rowspan="2">Description 说明</th> 
   <th colspan="4">Action Type 投注动作</th>
-  <th colspan="3">Wager Type</th>
+  <th colspan="3">Wager Type 注单类型</th>
   <th rowspan="2">Values 值</th>
  </tr>
  <tr>
