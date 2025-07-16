@@ -323,8 +323,8 @@ This section will describe the meaning of each object along with sample values.
   <td>D. Yamai</td>
  </tr>
  <tr>
-  <td>Selection</td>
-  <td>Chosen team. Its type is String.</td>
+  <td>Selection 选项</td>
+  <td>Chosen team. Its type is String. 选择的队伍。 类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -335,8 +335,8 @@ This section will describe the meaning of each object along with sample values.
   <td>Michael Mmoh</td>
  </tr>
  <tr>
-  <td>ParentEventName</td>
-  <td>Name of event in wager that player bet. Its type is String.</td>
+  <td>ParentEventName 父事件名称</td>
+  <td>Name of event in wager that player bet. Its type is String. 玩家下注注单中的比赛名称。类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -347,8 +347,8 @@ This section will describe the meaning of each object along with sample values.
   <td>Kanga-vs-Gravitas</td>
  </tr>
  <tr>
-  <td>PlayerIPAddress</td>
-  <td>IP address of the bettor. Its type is String.</td>
+  <td>PlayerIPAddress 玩家IP地址</td>
+  <td>IP address of the bettor. Its type is String. 下注的IP地址。 类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>-</td>
   <td>-</td>
@@ -359,8 +359,8 @@ This section will describe the meaning of each object along with sample values.
   <td>175.176.58.233</td>
  </tr>
  <tr>
-  <td>Scores.Period</td>
-  <td>Match period. Its type is Integer.</td>
+  <td>Scores.Period 比分.时期</td>
+  <td>Match period. Its type is Integer. 比赛时期。 类型是整数型。</td>
   <td>-</td>
   <td>-</td>
   <td>:heavy_check_mark:</td>
@@ -371,8 +371,8 @@ This section will describe the meaning of each object along with sample values.
   <td>0</td>
  </tr>
  <tr>
-  <td>Scores.Score</td>
-  <td>Score at time of wager placement. Its type is String.</td>
+  <td>Scores.Score 比分.比分</td>
+  <td>Score at time of wager placement. Its type is String. 注单下注时的比分。类型是字符串。</td>
   <td>-</td>
   <td>-</td>
   <td>:heavy_check_mark:</td>
@@ -384,7 +384,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>ProfitAndLoss 输赢</td>
-  <td>Profit and Loss of wager after settlement. Its type is Decimal.</td>
+  <td>Profit and Loss of wager after settlement. Its type is Decimal. 结算后的投注盈亏。 类型是小数类型。</td>
   <td>-</td>
   <td>-</td>
   <td>:heavy_check_mark:</td>
@@ -407,8 +407,8 @@ This section will describe the meaning of each object along with sample values.
   <td>WIN</br>LOSE</br>DRAW</td>
  </tr>
  <tr>
-  <td>Period</td>
-  <td>Match period. Its type is Integer.</td>
+  <td>Period 状态</td>
+  <td>Match period. Its type is Integer. 比赛状态。类型是整数值。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -419,8 +419,8 @@ This section will describe the meaning of each object along with sample values.
   <td>0</td>
  </tr>
  <tr>
-  <td>SettlementTime</td>
-  <td>Date and time of wager settlement. Its type is String.</td>
+  <td>SettlementTime 结算时间</td>
+  <td>Date and time of wager settlement. Its type is String. 注单结算的日期和时间。类型是字符串。</td>
   <td>-</td>
   <td>-</td>
   <td>:heavy_check_mark:</td>
@@ -431,8 +431,8 @@ This section will describe the meaning of each object along with sample values.
   <td>2019-05-14 06:00:00</td>
  </tr>
  <tr>
-  <td>ResettlementTime</td>
-  <td>Date and time of wager resettlement. Its type is String.</td>
+  <td>ResettlementTime 重新结算时间</td>
+  <td>Date and time of wager resettlement. Its type is String. 注单重新结算的日期和时间。类型是字符串。</td>
   <td>-</td>
   <td>-</td>
   <td>:white_check_mark:</td>
@@ -455,8 +455,8 @@ This section will describe the meaning of each object along with sample values.
   <td>725462707</td>
  </tr>
  <tr>
-  <td>WagerNum</td>
-  <td>Number of bets generated. Its type is Integer.</td>
+  <td>WagerNum 注单数量</td>
+  <td>Number of bets generated. Its type is Integer. 投注产生的注单数量。类型是整数型。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -468,7 +468,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>RoundRobinOptions 轮询过关选择</td>
-  <td>Round Robin Type of parlay wager.<br/>Note: value is string array.</td>
+  <td>Round Robin Type of parlay wager.<br/>Note: value is string array. 混合过关注单中的轮询过关。 注单：值是字符串数组。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -479,8 +479,8 @@ This section will describe the meaning of each object along with sample values.
   <td>["Parlay", ...]</td>
  </tr>
  <tr>
-  <td>Description</td>
-  <td>Manual wager description. Its type is String.</td>
+  <td>Description 描述</td>
+  <td>Manual wager description. Its type is String. 手动投注说明。 类型是字符串。</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
@@ -491,8 +491,8 @@ This section will describe the meaning of each object along with sample values.
   <td>Baseball - MLB<br/>Minnesota Twins vs Chicago White Sox - Over 8.5 @ -128 for Game</td>
  </tr>
  <tr>
-  <td>Legs.LegId</td>
-  <td>ID of the leg. Its type is String.</td>
+  <td>Legs.LegId 选项.选项ID</td>
+  <td>ID of the leg. Its type is String. 选项的ID。 类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -503,8 +503,8 @@ This section will describe the meaning of each object along with sample values.
   <td>dd501a83-d913-95f5-2cd7-15d3151d2672</td>
  </tr>
  <tr>
-  <td>Legs.SportId 注单运动类型ID</td>
-  <td>ID of the sport in a leg. Its type is Integer.</td>
+  <td>Legs.SportId 选项运动类型ID</td>
+  <td>ID of the sport in a leg. Its type is Integer. 选项中运动的ID。 类型是整数型。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -515,8 +515,8 @@ This section will describe the meaning of each object along with sample values.
   <td>29</td>
  </tr>
  <tr>
-  <td>Legs.Sport 注单的运动类型</td>
-  <td>Name of the sport in a leg. Its type is String. Refer to 1.4.</td>
+  <td>Legs.Sport 选项的运动类型</td>
+  <td>Name of the sport in a leg. Its type is String. Refer to Data format - 1. 选项中的运动名称。类型是字符串。参考Data format - 1. Sports 体育项目。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -527,8 +527,8 @@ This section will describe the meaning of each object along with sample values.
   <td>Soccer</td>
  </tr>
  <tr>
-  <td>Legs.SportGroup 注单的运动所属组</td>
-  <td>ID of the sport group in a leg. Its type is Integer.</td>
+  <td>Legs.SportGroup 选项的运动所属组</td>
+  <td>ID of the sport group in a leg. Its type is Integer. 选项中的运动所属组的ID。 类型是整数型。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -539,8 +539,8 @@ This section will describe the meaning of each object along with sample values.
   <td>0</td>
  </tr>
  <tr>
-  <td>Legs.LeagueId 注单联赛ID</td>
-  <td>ID of the league in a leg. Its type is Long.</td>
+  <td>Legs.LeagueId 选项联赛ID</td>
+  <td>ID of the league in a leg. Its type is Long. 选项中联赛的ID，类型是Long。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -551,8 +551,8 @@ This section will describe the meaning of each object along with sample values.
   <td>1544875</td>
  </tr>
  <tr>
-  <td>Legs.League 注单联赛名</td>
-  <td>Name of the league in a leg. Its type is String.</td>
+  <td>Legs.League 选项联赛名</td>
+  <td>Name of the league in a leg. Its type is String. 选项中联赛的名称。类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -563,8 +563,8 @@ This section will describe the meaning of each object along with sample values.
   <td>Finland - Ykkonen</td>
  </tr>
  <tr>
-  <td>Legs.BetType 注单投注类型</td>
-  <td>Type of bet in a leg. Its type is Integer.</td>
+  <td>Legs.BetType 选项投注类型</td>
+  <td>Type of bet in a leg. Its type is Integer. 选项中的注单类型。类型是整数型。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -575,8 +575,8 @@ This section will describe the meaning of each object along with sample values.
   <td>1</td>
  </tr>
  <tr>
-  <td>Legs.EventId</td>
-  <td>ID of event in leg that player bet. Its type is Long.</td>
+  <td>Legs.EventId 选项.赛事ID</td>
+  <td>ID of event in leg that player bet. Its type is Long. 玩家下注注单中选项的赛事ID。 类型是Long。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -587,8 +587,8 @@ This section will describe the meaning of each object along with sample values.
   <td>1582132612</td>
  </tr>
  <tr>
-  <td>Legs.EventDateFm</td>
-  <td>Event date. Its type is String.</td>
+  <td>Legs.EventDateFm 选项.赛事日期</td>
+  <td>Event date. Its type is String. 赛事日期。类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -599,8 +599,8 @@ This section will describe the meaning of each object along with sample values.
   <td>2023-11-22 06:15:29</td>
  </tr>
  <tr>
-  <td>Legs.SelectionType</td>
-  <td>Type of selection. Its type is Integer</td>
+  <td>Legs.SelectionType 选项.选项类型</td>
+  <td>Type of selection. Its type is Integer. 注单类型。类型是整数型。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -611,8 +611,8 @@ This section will describe the meaning of each object along with sample values.
   <td>1</td>
  </tr>
  <tr>
-  <td>Legs.InplayScore 注单滚球比分</td>
-  <td>Score of the event in a leg when it is inplay. Its type is String.</td>
+  <td>Legs.InplayScore 选项滚球比分</td>
+  <td>Score of the event in a leg when it is inplay. Its type is String. 选项中滚球盘的赛事比分。类型是字符串。</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
@@ -623,8 +623,8 @@ This section will describe the meaning of each object along with sample values.
   <td>2-0</td>
  </tr>
  <tr>
-  <td>Legs.InPlay 注单滚球</td>
-  <td>Whether the event of a leg is inplay or not. Its type is Boolean. 标明该注单是否在滚球时下注。</td>
+  <td>Legs.InPlay 选项滚球</td>
+  <td>Whether the event of a leg is inplay or not. Its type is Boolean. 标明该注单是否在滚球时下注。类型是Boolean。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -635,8 +635,8 @@ This section will describe the meaning of each object along with sample values.
   <td>true</td>
  </tr>
  <tr>
-  <td>Legs.Odds 注单赔率</td>
-  <td>Odds value of a leg. Its type is Decimal.</td>
+  <td>Legs.Odds 选项赔率</td>
+  <td>Odds value of a leg. Its type is Decimal. 选项中的赔率值。类型为小数类型。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -647,8 +647,8 @@ This section will describe the meaning of each object along with sample values.
   <td>7.660</td>
  </tr>
  <tr>
-  <td>Legs.Handicap 注单让球</td>
-  <td>Handicap of event in a leg. Its type is Decimal.</td>
+  <td>Legs.Handicap 选项让球</td>
+  <td>Handicap of event in a leg. Its type is Decimal. 选项中的赛事让分数额。类型为小数类型。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -659,8 +659,8 @@ This section will describe the meaning of each object along with sample values.
   <td>0.00</td>
  </tr>
  <tr>
-  <td>Legs.Period 注单投注比赛区间</td>
-  <td>Period of event in a leg. Its type is Integer.</td>
+  <td>Legs.Period 选项投注比赛区间</td>
+  <td>Period of event in a leg. Its type is Integer. 选项中的比赛区间。类型是整数值。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -671,8 +671,8 @@ This section will describe the meaning of each object along with sample values.
   <td>0</td>
  </tr>
  <tr>
-  <td>Legs.LegStatus</td>
-  <td>Status of the leg. Its type is String.</td>
+  <td>Legs.LegStatus 选项.选项状态</td>
+  <td>Status of the leg. Its type is String. 选项状态。类型是字符串。</td>
   <td>-</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -683,8 +683,8 @@ This section will describe the meaning of each object along with sample values.
   <td>WON</td>
  </tr>
  <tr>
-  <td>Legs.TeamType 注单队伍类型</td>
-  <td>Team Type of event in a leg. Its type is Integer.</td>
+  <td>Legs.TeamType 选项队伍类型</td>
+  <td>Team Type of event in a leg. Its type is Integer. 选项中赛事队伍类型。类型是整数值。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -695,8 +695,8 @@ This section will describe the meaning of each object along with sample values.
   <td>0</td>
  </tr>
  <tr>
-  <td>Legs.Point 注单分值</td>
-  <td>Points on a bet. Its type is Decimal.</td>
+  <td>Legs.Point 选项.分数</td>
+  <td>Points on a bet. Its type is Decimal. 选项的分数。类型是小数类型。</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
@@ -707,8 +707,8 @@ This section will describe the meaning of each object along with sample values.
   <td>1.004</td>
  </tr>
  <tr>
-  <td>Legs.EventName 注单赛事名</td>
-  <td>Name of Event in a leg. It type is String.</td>
+  <td>Legs.EventName 选项赛事名</td>
+  <td>Name of Event in a leg. It type is String. 选项中赛事名称。类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -719,8 +719,8 @@ This section will describe the meaning of each object along with sample values.
   <td>TPS Turku-vs-Ac Kajaani</td>
  </tr>
  <tr>
-  <td>Legs.HomePitcher 注单主队投手</td>
-  <td>Only used for baseball. Its type is String.<br/>Note: If value is NULL, it may not exist in the JSON data.</td>
+  <td>Legs.HomePitcher 选项.主队投手</td>
+  <td>Only used for baseball. Its type is String.<br/>Note: If value is NULL, it may not exist in the JSON data. 仅适用于棒球。类型是字符串。注：如果值是NULL， 可能不会出现在JSON 数据。</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
@@ -731,8 +731,8 @@ This section will describe the meaning of each object along with sample values.
   <td>R. Messenger</td>
  </tr>
  <tr>
-  <td>Legs.AwayPitcher 注单客队投手</td>
-  <td>Only used for baseball. Its type is String.<br/>Note: If value is NULL, it may not exist in the JSON data.</td>
+  <td>Legs.AwayPitcher 选项.客队投手</td>
+  <td>Only used for baseball. Its type is String.<br/>Note: If value is NULL, it may not exist in the JSON data. 仅适用于棒球。类型是字符串。注：如果值是NULL， 可能不会出现在JSON 数据。</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
@@ -743,8 +743,8 @@ This section will describe the meaning of each object along with sample values.
   <td>D. Yamai</td>
  </tr>
  <tr>
-  <td>Legs.HomePitcherName 注单主队投手名</td>
-  <td>Only used for baseball. Its type is String.<br/>Note: If value is NULL, it may not exist in the JSON data.</td>
+  <td>Legs.HomePitcherName 选项.主队投手名</td>
+  <td>Only used for baseball. Its type is String.<br/>Note: If value is NULL, it may not exist in the JSON data. 仅适用于棒球。类型是字符串。注：如果值是NULL， 可能不会出现在JSON 数据。</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
@@ -755,8 +755,8 @@ This section will describe the meaning of each object along with sample values.
   <td>R. Messenger</td>
  </tr>
  <tr>
-  <td>Legs.AwayPitcherName 注单客队投手名</td>
-  <td>Only used for baseball. Its type is String.<br/>Note: If value is NULL, it may not exist in the JSON data.</td>
+  <td>Legs.AwayPitcherName 选项.客队投手名</td>
+  <td>Only used for baseball. Its type is String.<br/>Note: If value is NULL, it may not exist in the JSON data. 仅适用于棒球。类型是字符串。注：如果值是NULL， 可能不会出现在JSON 数据。</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
@@ -767,8 +767,8 @@ This section will describe the meaning of each object along with sample values.
   <td>D. Yamai</td>
  </tr>
  <tr>
-  <td>Legs.Type</td>
-  <td>Wager type of the leg. Its type is String.</td>
+  <td>Legs.Type 选项类型</td>
+  <td>Wager type of the leg. Its type is String. 选项中注单类型。类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -779,8 +779,8 @@ This section will describe the meaning of each object along with sample values.
   <td>College 2 - 6 Team</td>
  </tr>
  <tr>
-  <td>Legs.Selection</td>
-  <td>Chosen team. Its type is String.</td>
+  <td>Legs.Selection 选项.选项</td>
+  <td>Chosen team. Its type is String. 选择的队伍。类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -791,8 +791,8 @@ This section will describe the meaning of each object along with sample values.
   <td>Brasil de Pelotas</td>
  </tr>
  <tr>
-  <td>Legs.Scores.Period</td>
-  <td>Match period. Its type is Integer.</td>
+  <td>Legs.Scores.Period 选项.比分.时期</td>
+  <td>Match period. Its type is Integer. 比赛时期。类型是整数型。</td>
   <td>-</td>
   <td>-</td>
   <td>:white_check_mark:</td>
@@ -803,8 +803,8 @@ This section will describe the meaning of each object along with sample values.
   <td>0</td>
  </tr>
  <tr>
-  <td>Legs.Scores.Score</td>
-  <td>Score for the period. Its type is String.</td>
+  <td>Legs.Scores.Score 选项.比分</td>
+  <td>Score for the period. Its type is String. 比赛时期的比分。类型是字符串。</td>
   <td>-</td>
   <td>-</td>
   <td>:white_check_mark:</td>
@@ -816,14 +816,14 @@ This section will describe the meaning of each object along with sample values.
  </tr>
 </table>
 
-*Transaction Object (Transaction)*
+*Transaction Object (Transaction) 交易对象（交易）*
 
 <table>
  <tr>
   <th rowspan="2">Name 名称</th> 
   <th rowspan="2">Description 说明</th> 
   <th colspan="4">Action Type 投注动作</th>
-  <th colspan="3">Wager Type</th>
+  <th colspan="3">Wager Type 注单类型</th>
   <th rowspan="2">Values 值</th>
  </tr>
  <tr>
@@ -836,8 +836,8 @@ This section will describe the meaning of each object along with sample values.
   <th>Teaser 变让分过关</th>
  </tr>
  <tr>
-  <td>TransactionId</td>
-  <td>ID of transaction in betting platform. Its type is Long.</td>
+  <td>TransactionId 交易ID</td>
+  <td>ID of transaction in betting platform. Its type is Long. 下注平台的交易ID。类型是Long。</td>
   <td>:heavy_check_mark:</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
@@ -848,8 +848,8 @@ This section will describe the meaning of each object along with sample values.
   <td>18488162</td>
  </tr>
  <tr>
-  <td>ReferTransactionId</td>
-  <td>TransactionId of the previous BETTED action. Its type is Long.</td>
+  <td>ReferTransactionId 参考交易ID</td>
+  <td>TransactionId of the previous BETTED action. Its type is Long. 此前“已下注操作”的交易ID。类型是Long。</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -860,8 +860,8 @@ This section will describe the meaning of each object along with sample values.
   <td>18586167</td>
  </tr>
  <tr>
-  <td>TransactionType</td>
-  <td>Type of transaction. Its type is String.</td>
+  <td>TransactionType 交易类型</td>
+  <td>Type of transaction. Its type is String. 交易类型。类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
@@ -872,8 +872,8 @@ This section will describe the meaning of each object along with sample values.
   <td>CREDIT</td>
  </tr>
  <tr>
-  <td>TransactionDate</td>
-  <td>Transaction date. Its type is String.</td>
+  <td>TransactionDate 交易日期</td>
+  <td>Transaction date. Its type is String. 交易日期。类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
@@ -884,8 +884,8 @@ This section will describe the meaning of each object along with sample values.
   <td>2019-05-04T03:32:47</td>
  </tr>
   <tr>
-  <td>Amount</td>
-  <td>Transaction amount. Its type is Decimal</td>
+  <td>Amount 金额</td>
+  <td>Transaction amount. Its type is Decimal. 交易金额。类型是小数类型。</td>
   <td>:heavy_check_mark:</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
@@ -899,14 +899,14 @@ This section will describe the meaning of each object along with sample values.
 </table>
 
 
-*Player Information Object (PlayerInfo)*
+*Player Information Object (PlayerInfo) 玩家信息对象（玩家信息）*
 
 <table>
  <tr>
   <th rowspan="2">Name 名称</th> 
   <th rowspan="2">Description 说明</th> 
   <th colspan="4">Action Type 投注动作</th>
-  <th colspan="3">Wager Type</th>
+  <th colspan="3">Wager Type 注单类型</th>
   <th rowspan="2">Values 值</th>
  </tr>
  <tr>
@@ -919,8 +919,8 @@ This section will describe the meaning of each object along with sample values.
   <th>Teaser 变让分过关</th>
  </tr>
  <tr>
-  <td>LoginId</td>
-  <td>Login ID of the player. Its type is String.</td>
+  <td>LoginId 登录ID</td>
+  <td>Login ID of the player. Its type is String. 玩家的登录ID。　类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -931,8 +931,8 @@ This section will describe the meaning of each object along with sample values.
   <td>MPvZSDqM1685576929</td>
  </tr>
  <tr>
-  <td>UserCode</td>
-  <td>Usercode of the player. Its type is String.</td>
+  <td>UserCode 用户代码</td>
+  <td>Usercode of the player. Its type is String. 玩家的用户代码。类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -946,6 +946,6 @@ This section will describe the meaning of each object along with sample values.
 </table>
 
 
-:heavy_check_mark: 	: The property is always present in JSON data.</br>
-:white_check_mark: 	: The property is present in JSON data only if its value is not NULL.</br>
-\-	: The property is not applicable in the corresponding context.
+:heavy_check_mark: 	: The property is always present in JSON data. 该属性始终存在于 JSON 数据中。</br>
+:white_check_mark: 	: The property is present in JSON data only if its value is not NULL. 仅当该属性值不为 NULL 时，该属性才会出现在 JSON 数据中。</br>
+\-	: The property is not applicable in the corresponding context. 该属性不适用在相应的文本中。
