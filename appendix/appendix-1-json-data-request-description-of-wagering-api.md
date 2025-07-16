@@ -48,7 +48,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>WagerId 注单ID</td>
-  <td>ID of wager in betting platform. Its type is Long.</td>
+  <td>ID of wager in betting platform. Its type is Long.<br/>为下注平台内的注单ID， 类型是Long.</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -60,7 +60,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>Type 注单种类</td>
-  <td>Type of wager.  Its type is String.</td>
+  <td>Type of wager.  Its type is String.<br/>注单类型，类型是字符串.</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
