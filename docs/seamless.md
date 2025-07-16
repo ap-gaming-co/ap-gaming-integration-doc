@@ -210,7 +210,7 @@ Sequence Interaction 序列交互
     <td>+ available balance<br/>余额增加</td>
     <td>+ available balance<br/>余额增加</td>
     <td>+ available balance<br/>余额增加</td>
-    <td>+/- available balance<br/>余额增减 取决于注单结果</td>
+    <td>- available balance<br/>余额减少</td>
   <tr>
   </tr>
 </table>
