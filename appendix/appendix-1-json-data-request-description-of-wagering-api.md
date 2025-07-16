@@ -8,7 +8,7 @@ This section will describe the meaning of each object along with sample values.
 
 这个章节会介绍每个对象的意思以及它们可能的值。
 
-*Root Object*
+*Root Object 根对象*
  
 | Name 名称 | Description 说明 | Values 值 |
 | --- | --- | --- | 
