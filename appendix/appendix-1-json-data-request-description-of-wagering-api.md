@@ -8,13 +8,13 @@ This section will describe the meaning of each object along with sample values.
 
 这个章节会介绍每个对象的意思以及它们可能的值。
 
-*Root Object*
+*Root Object 根对象* 
  
 | Name 名称 | Description 说明 | Values 值 |
 | --- | --- | --- | 
-| Timestamp | Action time stamp | 2023-11-24T05:24:08 |
-| Signature | Request signature | fHLuKC27EQUsbK8iXhS2/Wr5+Tw2x/hA5Xl1bGdpU13W0ZYbduwgGcY5ItO1541IrwH6eiD9M4Pnm3ae4Uq34w== |
-| Actions | Action Object |  |
+| Timestamp<br/>时间戳 | Action time stamp<br/>动作的时间戳 | 2023-11-24T05:24:08 |
+| Signature<br/>签名 | Request signature<br/>请求签名 | fHLuKC27EQUsbK8iXhS2/Wr5+Tw2x/hA5Xl1bGdpU13W0ZYbduwgGcY5ItO1541IrwH6eiD9M4Pnm3ae4Uq34w== |
+| Actions<br/>动作 | Action Object<br/>动作对象 |  |
 
 *Action Object (Actions)*
  
