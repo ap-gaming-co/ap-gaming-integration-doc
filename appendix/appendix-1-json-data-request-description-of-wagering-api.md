@@ -84,7 +84,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>Odds 赔率</td>
-  <td>Value of odds that player betted. Its type is Decimal.</td>
+  <td>Value of odds that player betted. Its type is Decimal.<br/>玩家下注时的赔率值。 类型为数字（小数）</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -96,7 +96,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>OddsFormat 赔率格式</td>
-  <td>Format of odds that player betted. Its type is Integer. Refer to 1.7.</td>
+  <td>Format of odds that player betted. Its type is Integer. Refer to Data format-4<br/>玩家下注时的赔率格式。 类型为整数型。 参考Data format - 4</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -131,8 +131,8 @@ This section will describe the meaning of each object along with sample values.
   <td>11.000</td>
  </tr>
  <tr>
-  <td>Stake</td>
-  <td>Stake amount. Its type is Decimal.</td>
+  <td>Stake 注金</td>
+  <td>Stake amount. Its type is Decimal.注金金额。 类型为数字（小数）。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
