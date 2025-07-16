@@ -144,7 +144,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>EventId 赛事ID</td>
-  <td>ID of event in wager that player bet. Its type is Long.</td>
+  <td>ID of event in wager that player bet. Its type is Long. 玩家下注注单中的赛事ID。 类型是Long。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -156,7 +156,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>EventName 赛事名称</td>
-  <td>Name of event in wager that player bet. Its type is String.</td>
+  <td>Name of event in wager that player bet. Its type is String. 玩家下注注单中的赛事名称。 类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -167,8 +167,8 @@ This section will describe the meaning of each object along with sample values.
   <td>CA Independiente de La Chorrera-vs-CD Universitario Chorrillo</td>
  </tr>
  <tr>
-  <td>EventDateFm</td>
-  <td>Event date. Its type is String.</td>
+  <td>EventDateFm 赛事日期</td>
+  <td>Event date. Its type is String. 赛事日期。类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -180,7 +180,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>LeagueId 联赛ID</td>
-  <td>League ID of event. Its type is Long.</td>
+  <td>League ID of event. Its type is Long. 赛事的联赛ID。类型是Long。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -191,8 +191,8 @@ This section will describe the meaning of each object along with sample values.
   <td>10573</td>
  </tr>
  <tr>
-  <td>LeagueName</td>
-  <td>Name of the league. Its type is String.</td>
+  <td>LeagueName 联赛名称</td>
+  <td>Name of the league. Its type is String. 联赛名称。 类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -203,8 +203,8 @@ This section will describe the meaning of each object along with sample values.
   <td>ATP Challenger Yokohama - R16</td>
  </tr>
  <tr>
-  <td>SportId</td>
-  <td>ID of the sport. Its type is Integer.</td>
+  <td>SportId 运动ID</td>
+  <td>ID of the sport. Its type is Integer. 运动ID。　类型是整数型。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
