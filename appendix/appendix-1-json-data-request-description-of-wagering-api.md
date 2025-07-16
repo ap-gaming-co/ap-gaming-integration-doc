@@ -72,7 +72,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>BetType 投注种类</td>
-  <td>Type of bet. It relates to wager type. Its type is Integer.<br/>Bet type: <br/>6 – parlay<br/>7 – teaser<br/>other - single.</td>
+  <td>Type of bet. It relates to wager type. Its type is Integer.<br/>Bet type: <br/>6 – parlay<br/>7 – teaser<br/>other - single.投注类型。和注单类型有关。类型是整数型。<br/>投注类型： <br/>6- 混合过关， <br/>7-变让分过关， <br/>其他-单一注单。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
