@@ -20,7 +20,7 @@ This section will describe the meaning of each object along with sample values.
  
 | Name 名称 | Description 说明 | Values 值 |
 | --- | --- | --- | 
-| Id | ID of the action. It is unique in the betting platform.  动作的ID，此ID是独一无二的。| `124434343` |
+| Id ID | ID of the action. It is unique in the betting platform.  动作的ID，此ID是独一无二的。| `124434343` |
 | Name <br/>名称 | This is the action type. It corresponds to the wager status. Note: In JSON Post data, the value may be uppercase or lowercase. 这是动作类型。它对应注单状态。 注：在JSON Post 数据中，值可能是大写或小写 |`BETTED`<br/>`ACCEPTED`<br/>`SETTLED`<br/>`ROLLBACKED`<br/>`CANCELLED`<br/>`REJECTED`<br/>`UNSETTLED` |
 | WagerInfo <br/>注单信息 | This is the wager information that player placed bet. It is a JSON object whose properties depend action type.  此为玩家投注时的注单信息。它是JSON对象, 属性由action的种类而决定。 |  |
 | Transaction<br/>交易 | The Operator uses this transaction object to debit/credit the balance of the wallet. 运营商用transaction 对象来增/减钱包里的余额。 |  |
