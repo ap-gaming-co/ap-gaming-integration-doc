@@ -216,7 +216,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>Sport 运动</td>
-  <td>Name of Sport. Its type is String. Refer to 1.4.<br/>Note: The value may be uppercase or lowercase. </td>
+  <td>Name of Sport. Its type is String. Refer to Data format - 1.<br/>Note: The value may be uppercase or lowercase. 运动名称。类型是字符串。参考Data format - 1  Sports 体育项目　注：值可能是大写或小写 </td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -228,7 +228,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>Inplay 滚球</td>
-  <td>Whether the bet was placed inplay. Its type is Boolean</td>
+  <td>Whether the bet was placed inplay. Its type is Boolean 注单是否下注在滚球盘。　类型是Boolean </td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -240,7 +240,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>InPlayScore 滚球比分</td>
-  <td>For inplay bets, the score at the time of placing the bet. Its type is String.</td>
+  <td>For inplay bets, the score at the time of placing the bet. Its type is String. 滚球注单中下注时的实时比分。类型是字符串。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -252,7 +252,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>Handicap 让分盘</td>
-  <td>Handicap amount. Its type is Decimal</td>
+  <td>Handicap amount. Its type is Decimal 让分的数额。类型是数字（小数）。</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -264,7 +264,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>SelectionType 投注选项</td>
-  <td>Its type is String.</td>
+  <td>Its type is String. 类型是字符串</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
   <td>:heavy_check_mark:</td>
@@ -276,7 +276,7 @@ This section will describe the meaning of each object along with sample values.
  </tr>
  <tr>
   <td>HomePitcher 棒球主队投球手</td>
-  <td>Only used for baseball. Its type is String. <br/>Note: If value is NULL, it may not exist in the JSON data.</td>
+  <td>Only used for baseball. Its type is String. <br/>Note: If value is NULL, it may not exist in the JSON data. 仅适用于棒球。类型是字符串。注：如果值是NULL， 可能不会出现在JSON 数据。</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
   <td>:white_check_mark:</td>
