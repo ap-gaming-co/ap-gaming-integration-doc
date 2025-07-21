@@ -501,7 +501,7 @@ This service is used to create a new user and generate a URL that will allow the
 | --- | --- | --- | --- | --- |
 | `userCode` | Header | String <br/>(required 必需项) | | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String<br/> (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 | |
-| `loginId`  | Query | String <br/>(required 必需项)  | If loginId does not exist in the system, it will validate and create a new player based on this loginId.<br/>如果系统中不存在此loginId，则会根据该loginId进行验证并创建新的用户。<br/>Validation Rule for loginId: Must be between 6 and 50 alphanumeric characters.<br/>LoginId 的验证规则：必须介于 6 到 50 个字母数字字符之间。| This is the user code / loginID of the player. 此为玩家登录名/用户名，例如 |
+| `loginId`  | Query | String <br/>(required 必需项)  | If loginId does not exist in the system, it will validate and create a new player based on this loginId.<br/>如果系统中不存在此loginId，则会根据该loginId进行验证并创建新的用户。<br/>Validation Rule for loginId: Must be between 6 and 50 characters. Must be alphanumeric or dash (-).<br/>LoginId 的验证规则：必须为 6 到 50 个字符之间。必须是字母、数字或连字符（-）。| This is the user code / loginID of the player. 此为玩家登录名/用户名，例如 |
 | `locale` | Query | String <br/>(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言。| See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
 | `sport` | Query | String <br/>(optional 非必需项) | A list of supported sports is available in the Data-format.<br/>**Notes:**<br/>If you only want to show only e-sports in the iFrame, you must contact us to enable the setting and the sport parameter must be "e-sports".<br/>若您想在iframe中只显示电子竞技，需与我们联系以启用设置，并且需将sport参数设置为”e-sports” | See Sport in the Data-format. 详见数据格式中的体育项目。|
 | `oddsFormat` | Query | String<br/>(optional 非必需项) | A list of supported oddsFormats is available in the Data-format. 支持的数据格式列表请参阅 oddsFormats数据格式。 | See Odds Format in the Data-format. 详见数据格式中的赔率格式。|
@@ -640,7 +640,7 @@ This service is used to sign up a player.
 | `userCode` | Header | String<br/> (required 必需项)  |  | This is the agent code obtained in step 2. E.g: `CO1AP1`. 此为在第二步骤获取的代理编号，例如，`CO1AP1` |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `agentCode` | Query | String<br/>  (optional 非必需项) |  | The downline agent code that the newly-created player will belong to. If no agent code is provided, the player will be created direct under agent code calling the API. E.g: `CO1AP100` 新建玩家账户所属的代理编号。如果没有提供代理编号，那么玩家用户会直接创建在调用此API的代理账户之下，例如：`CO1AP100` |
-| `loginId` | Query | String<br/> (optional 非必需项) | If entered, the system will validate the loginId and respond with an error if it already exists in the system. <br/>输入用户名后，系统会创建用户，若用户名已存在则返回错误 | Validation Rule for loginId: Must be between 6 and 50 alphanumeric characters. <br/>LoginId 的验证规则：必须介于 6 到 50 个字母数字字符之间。|
+| `loginId` | Query | String<br/> (optional 非必需项) | If entered, the system will validate the loginId and respond with an error if it already exists in the system. <br/>输入用户名后，系统会创建用户，若用户名已存在则返回错误 | Validation Rule for loginId: Must be between 6 and 50 characters. Must be alphanumeric or dash (-). <br/>LoginId 的验证规则：必须为 6 到 50 个字符之间。必须是字母、数字或连字符（-）。|
 
 *Sample code (java) - See HttpUtils class at Appendix*
 *示例代码（HttpU– 请参阅附录里的 HttpUtils class*
