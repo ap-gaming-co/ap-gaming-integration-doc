@@ -1,6 +1,6 @@
 
 # Table Contents
-- [Table Contents 目录](#table-contents)
+- [Table Contents](#table-contents)
     - [1. Application Functionality](#1-application-functionality)
         - [1.1.	Get Game Types (Esports Only)](#11-get-game-types)
         - [1.2.	Get Leagues](#12-get-leagues)
@@ -370,39 +370,33 @@ Returns special lines.
 
 New post message to allow users who are not logged in to the B2B site, to make their selection(s) and be taken to the correct page and with their selections added to the Bet Slip.
 
-允许未登录到 B2B 网站的用户进行选择，并将其选择添加到投注单中并跳转到正确的页面。
-
-**Process 步骤**
+**Process**
 
 1.	Player makes a selection on a banner, the B2B site needs to store the selection information and open the login popup.<br/>
-玩家在登入游戏前进行选择，B2B 网站需要存储选择信息并打开登录弹窗。
-
 2.	In the login process, the B2B client must call loginV2 API with eventId parameter.<br/>
-在登录过程中，B2B 客户端必须使用 eventId 参数调用 loginV2 API。
-
-3.	After successful login, B2B site (frontend) sends the selection infoformation (from #1) to Iframe via postMessage, that selection will be available in the Bet Slip.<br/>成功登录后，B2B 网站（前端）通过 postMessage 将选择信息（来自步骤 #1）发送到 iframe，该选择将在投注单中可用。
+3.	After successful login, B2B site (frontend) sends the selection infoformation (from #1) to Iframe via postMessage, that selection will be available in the Bet Slip.
 
 
-*PostMessage Payload   postMessage 负载*
+*PostMessage Payload   postMessag*
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `msgCode`  | `String` | Value will be “selectionInfo”<br/>值将为 "selectionInfo"  |
-| `msgData`  | Array of Message Data | Message data<br/>讯息数据 |
+| `msgCode`  | `String` | Value will be “selectionInfo” |
+| `msgData`  | Array of Message Data | Message data|
 
 
 *Message Data　讯息数据*
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `eventId`  | `integer<int64>` | Event ID 赛事ID  |
-| `period`  | `integer<int32>` | Period number.　期间代码 |
-| `betType`  | `String` | Enum　值  |
-| `team`  | `String` | “HOME” or “AWAY” “主队”或“客队” |
-| `altLineId`  | `integer<int64>` | Alternative Line ID　备用盘口ID  |
-| `hdp`  | `number <double>` | Home team handicap.　主队让分盘<br/>Only populated for Spread.　仅适用于让分盘 |
+| `eventId`  | `integer<int64>` | Event ID  |
+| `period`  | `integer<int32>` | Period number. |
+| `betType`  | `String` | Enum  |
+| `team`  | `String` | “HOME” or “AWAY”  |
+| `altLineId`  | `integer<int64>` | Alternative Line ID  |
+| `hdp`  | `number <double>` | Home team handicap.　Only populated for Spread. |
 
-*Sample 示例*
+*Sample*
 
 ```js
 {
@@ -420,11 +414,11 @@ New post message to allow users who are not logged in to the B2B site, to make t
 ```
 
 
-## 1.7. Bet Selection 投注选项 <a name="17-bet-selection"></a>
+## 1.7. Bet Selection <a name="17-bet-selection"></a>
 
 We have these type of Bet Selection to send from B2B site to Iframe via postMessage, the msgCode must be "selectionInfo"
 
-**1 – Spread Selection** 1 - 让分盘选项
+**1 – Spread Selection**
 
 ```js
 {
@@ -439,7 +433,7 @@ We have these type of Bet Selection to send from B2B site to Iframe via postMess
   }]
 }
 ```
-| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| Field Name | Data Type |
 | --- | --- |
 | `eventId` | Number |
 | `period` | Number |
@@ -448,8 +442,7 @@ We have these type of Bet Selection to send from B2B site to Iframe via postMess
 | `altLineId` | Number |
 | `hdp` | Number |
 
-**2 – Moneyline Selection** - 输赢盘选项
-
+**2 – Moneyline Selection**
 ```js
 {
  "msgCode": "selectionInfo",
@@ -463,7 +456,7 @@ We have these type of Bet Selection to send from B2B site to Iframe via postMess
   }]
 }
 ```
-| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| Field Name | Data Type|
 | --- | --- |
 | `eventId` | Number |
 | `period` | Number |
@@ -472,7 +465,7 @@ We have these type of Bet Selection to send from B2B site to Iframe via postMess
 | `altLineId` | Number |
 | `hdp` | Number |
 
-**3 – Total Points Selection** - 总分投注盘选项
+**3 – Total Points Selection**
 
 ```js
 {
@@ -487,7 +480,7 @@ We have these type of Bet Selection to send from B2B site to Iframe via postMess
   }]
 }
 ```
-| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| Field Name | Data Type |
 | --- | --- |
 | `eventId` | Number |
 | `period` | Number |
@@ -496,7 +489,7 @@ We have these type of Bet Selection to send from B2B site to Iframe via postMess
 | `points` | Number |
 | `side` | String (OVER , UNDER) |
 
-**4 – Team Total Points Selection** - 球队总分盘选项
+**4 – Team Total Points Selection**
 
 ```js
 {
@@ -512,7 +505,7 @@ We have these type of Bet Selection to send from B2B site to Iframe via postMess
   }]
 }
 ```
-| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| Field Name | Data Type |
 | --- | --- |
 | `eventId` | Number |
 | `period` | Number |
@@ -537,7 +530,7 @@ We have these type of Bet Selection to send from B2B site to Iframe via postMess
   }]
 }
 ```
-| Field Name <br/> 字段名称  | Data Type <br/> 数据类型 |
+| Field Name | Data Type |
 | --- | --- |
 | `eventId` | Number |
 | `period` | Number |
@@ -547,65 +540,53 @@ We have these type of Bet Selection to send from B2B site to Iframe via postMess
 | `altLineId` | Number |
 
 
-## 1.8. Login and Bet Placement Screen　登录和投注下单页面 <a name="18-login-and-bet-placement-screen"></a>
+## 1.8. Login and Bet Placement Screen　<a name="18-login-and-bet-placement-screen"></a>
 
 After selecting the desired recommendations, the user must then submit the selections.
 
 If the user is NOT logged in to the B2B website, they must be asked to log in (as per standard practice).
 
-在选择推荐选项后，用户必须提交该选项。
-
-如果用户没有登录到白牌网站，则必须要求其登录（按照标准流程）。
-
 If the user is logged in to the B2B website, the site must make a call to the Login API (as per standard practice), then the user can be redirected to the bet placement screen.
 
 To show the bet placement screen, the system must get the current odds for the game using the data saved in the bet selection.
 
-如果用户已经登录到白牌网站，则网站必须调用Login API（按照标准流程），然后将用户重定向到投注下单页面。
 
-为显示投注下单页面，系统必须使用保存在投注选项中的数据以获取赛事的当前赔率。
-
-
-## 1.9. Error Responses　错误响应 <a name="19-error-responses"></a>
+## 1.9. Error Responses <a name="19-error-responses"></a>
 
 A successful response will return a response code of 200 OK. 
 
-成功的响应将返回状态码 200 OK。
-
 Unsuccessful responses are listed below:  
-
-以下是不成功的响应：
 
 
 **400 Bad Request**
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `code`  | `string` | Identifier representing the type of error that occurred.<br/>错误代码  |
-| `message`  | `string` | Description of the error.<br/>描述错误  |
+| `code`  | `string` | Identifier representing the type of error that occurred.|
+| `message`  | `string` | Description of the error.|
 
 
 **401 Unauthorized**
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `code`  | `string` | Identifier representing the type of error that occurred.<br/>错误代码  |
-| `message`  | `string` | Description of the error.<br/>描述错误  |
+| `code`  | `string` | Identifier representing the type of error that occurred. |
+| `message`  | `string` | Description of the error.|
 
 
 **403 Forbidden**
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes|
 | --- | --- | --- |
-| `code`  | `string` | Identifier representing the type of error that occurred.<br/>错误代码  |
-| `message`  | `string` | Description of the error.<br/>描述错误  |
+| `code`  | `string` | Identifier representing the type of error that occurred.|
+| `message`  | `string` | Description of the error. |
 
 
 **500 Internal Server Error**
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `ref`  | `string` | Unique reference.<br/>唯一参考值  |
-| `code`  | `string` | Identifier representing the type of error that occurred.<br/>错误代码  |
-| `message`  | `string` | Description of the error.<br/>描述错误  |
+| `ref`  | `string` | Unique reference. |
+| `code`  | `string` | Identifier representing the type of error that occurred. |
+| `message`  | `string` | Description of the error. |
 
