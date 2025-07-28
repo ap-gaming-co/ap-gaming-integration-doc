@@ -1,19 +1,19 @@
 
-# Table Contents 目录
+# Table Contents
 - [Table Contents 目录](#table-contents)
-    - [1. Application Functionality 应用功能](#1-application-functionality)
-        - [1.1.	Get Game Types (Esports Only)  获取游戏类型（仅适用于电竞）](#11-get-game-types)
-        - [1.2.	Get Leagues 获取联赛](#12-get-leagues)
-        - [1.3.	Get Fixtures 获取赛事](#13-get-fixtures)
-        - [1.4.	Get Lines 获取盘口](#14-get-lines)
-        - [1.5.	Get Special Lines 获取特殊盘口](#15-get-special-lines)
-        - [1.6.	Event Post Message 赛事发布消息](#16-event-post-message)
-        - [1.7.	Bet Selection 投注选项](#17-bet-selection)
-        - [1.8.	Login and Bet Placement Screen　登录和投注下单页面](#18-login-and-bet-placement-screen)
-        - [1.9.	Error Responses　错误响应](#19-error-responses)
+    - [1. Application Functionality](#1-application-functionality)
+        - [1.1.	Get Game Types (Esports Only)](#11-get-game-types)
+        - [1.2.	Get Leagues](#12-get-leagues)
+        - [1.3.	Get Fixtures](#13-get-fixtures)
+        - [1.4.	Get Lines](#14-get-lines)
+        - [1.5.	Get Special Lines](#15-get-special-lines)
+        - [1.6.	Event Post Message](#16-event-post-message)
+        - [1.7.	Bet Selection](#17-bet-selection)
+        - [1.8.	Login and Bet Placement Screen](#18-login-and-bet-placement-screen)
+        - [1.9.	Error Responses](#19-error-responses)
 
 
-# 1. Application Functionality 应用功能 <a name="1-application-functionality"></a>
+# 1. Application Functionality <a name="1-application-functionality"></a>
 
 The website has a facility built in that allows logged in users to add bet recommendations.
 
