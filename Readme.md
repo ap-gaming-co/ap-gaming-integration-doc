@@ -26,7 +26,7 @@ I-White-label 第三方集成API允许B2B客户将体育博彩网站集成到B2B
   </thead>
   <tbody>
     <tr>
-      <td><a href="#">[Data Format](/docs/data-format.md)</a></td>
+      <td>[Data Format](/docs/data-format.md)</td>
       <td><a href="#">Data Format 数据格式</a></td>
       <td><a href="#">Data Format</a></td>
       <td><a href="#">Data Format 数据格式</a></td>
