@@ -51,7 +51,7 @@ All requests from the Sportsbook Platform to Operator Wallet API have basic info
 | Parameter | Type | E.g. Value | Description |
 | --- | --- | --- | --- |
 | `Timestamp` | `Date` | 2018-01-15T15:20:14 |  |
-| `Signature` | `String` |  | The signature was generated from [Authentication](/docs/shared.md#21-authentication-api-requirements)
+| `Signature` | `String` |  | The signature was generated from [Authentication](/docs/shared-en.md#21-authentication-api-requirements)
 
 ### 1.2.2. Common Response Data Format
 
@@ -1313,9 +1313,9 @@ When a bet needs to be resettled due to an incorrect result or any other reason 
 
 ## 2.3. Appendix
 
-### 2.3.1. [JSON Data Request Description of Wagering API](./../appendix/appendix-1-json-data-request-description-of-wagering-api.md)
+### 2.3.1. [JSON Data Request Description of Wagering API](./../appendix/appendix-1-json-data-request-description-of-wagering-api-en.md)
 
-### 2.3.2. [JSON Data Response Description of Wagering API](./../appendix/appendix-2-json-data-response-description-of-wagering-api.md)
+### 2.3.2. [JSON Data Response Description of Wagering API](./../appendix/appendix-2-json-data-response-description-of-wagering-api-en.md)
 
 ### 2.3.3. Action Types
 
