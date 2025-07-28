@@ -11,6 +11,42 @@ I-White-label 第三方集成API允许B2B客户将体育博彩网站集成到B2B
 我们共提供两种集成方法，然而，在两种方法中会有共同的端点。
 为了能够更全面的了解集成，请查看以下与您选择的集成方法相关的文件：
 
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr>
+      <th colspan="2">White Label Integration</th>
+      <th colspan="2">Seamless Wallet Integration</th>
+    </tr>
+    <tr>
+      <th>English Only</th>
+      <th>English &amp; Chinese</th>
+      <th>English Only</th>
+      <th>English &amp; Chinese</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#">Data Format</a></td>
+      <td><a href="#">Data Format 数据格式</a></td>
+      <td><a href="#">Data Format</a></td>
+      <td><a href="#">Data Format 数据格式</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">Shared Endpoints</a></td>
+      <td><a href="#">Shared Endpoints 共享端点</a></td>
+      <td><a href="#">Shared Endpoints</a></td>
+      <td><a href="#">Shared Endpoints 共享端点</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">Transfer Wallet</a></td>
+      <td><a href="#">Transfer Wallet 转账钱包</a></td>
+      <td><a href="#">Seamless Wallet</a></td>
+      <td><a href="#">Seamless Wallet 单一钱包</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 | White Label Integration | Seamless Wallet Integration |
 | --- | --- |
