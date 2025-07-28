@@ -51,7 +51,7 @@ All requests from the Sportsbook Platform to Operator Wallet API have basic info
 | Parameter | Type | E.g. Value | Description |
 | --- | --- | --- | --- |
 | `Timestamp` | `Date` | 2018-01-15T15:20:14 |  |
-| `Signature` | `String` |  | The signature was generated from [Authentication](/docs/shared-en.md#21-authentication-api-requirements)
+| `Signature` | `String` |  | The signature was generated from [Authentication](/docs/shared-en.md)
 
 ### 1.2.2. Common Response Data Format
 
