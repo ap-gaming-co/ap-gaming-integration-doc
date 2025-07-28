@@ -27,28 +27,28 @@ I-White-label 第三方集成API允许B2B客户将体育博彩网站集成到B2B
   </thead>
   <tbody>
     <tr>
-      <td><a href="/docs/data-format.md">Data Format</a></td>
-      <td><a href="/docs/data-format-en.md">Data Format 数据格式</a></td>
-      <td><a href="/docs/data-format.md">Data Format</a></td>
-      <td><a href="/docs/data-format-en.md">Data Format 数据格式</a></td>
+      <td><a href="/docs/data-format-en.md">Data Format</a></td>
+      <td><a href="/docs/data-format.md">Data Format 数据格式</a></td>
+      <td><a href="/docs/data-format-en.md">Data Format</a></td>
+      <td><a href="/docs/data-format.md">Data Format 数据格式</a></td>
     </tr>
     <tr>
-      <td><a href="/docs/shared.md">Shared Endpoints</a></td>
-      <td><a href="/docs/shared-en.md">Shared Endpoints 共享端点</a></td>
-      <td><a href="/docs/shared.md">Shared Endpoints</a></td>
-      <td><a href="/docs/shared-en.md">Shared Endpoints 共享端点</a></td>
+      <td><a href="/docs/shared-en.md">Shared Endpoints</a></td>
+      <td><a href="/docs/shared.md">Shared Endpoints 共享端点</a></td>
+      <td><a href="/docs/shared-en.md">Shared Endpoints</a></td>
+      <td><a href="/docs/shared.md">Shared Endpoints 共享端点</a></td>
     </tr>
     <tr>
-      <td><a href="/docs/seamless.md">Transfer Wallet</a></td>
-      <td><a href="/docs/seamless-en.md">Transfer Wallet 转账钱包</a></td>
-      <td><a href="/docs/seamless.md">Seamless Wallet</a></td>
-      <td><a href="/docs/seamless-en.md">Seamless Wallet 无缝钱包</a></td>
+      <td><a href="/docs/seamless-en.md">Transfer Wallet</a></td>
+      <td><a href="/docs/seamless.md">Transfer Wallet 转账钱包</a></td>
+      <td><a href="/docs/seamless-en.md">Seamless Wallet</a></td>
+      <td><a href="/docs/seamless.md">Seamless Wallet 无缝钱包</a></td>
     </tr>
     <tr>
-      <td><a href="/docs/post-message.md">Post Message</a></td>
       <td><a href="/docs/post-message-en.md">Post Message</a></td>
       <td><a href="/docs/post-message.md">Post Message</a></td>
       <td><a href="/docs/post-message-en.md">Post Message</a></td>
+      <td><a href="/docs/post-message.md">Post Message</a></td>
     </tr>
   </tbody>
 </table>
