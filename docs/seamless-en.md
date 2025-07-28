@@ -38,7 +38,7 @@ The SB Seamless Wallet API has been designed using a lightweight REST style web 
 ## 1.2. Data Format
 ### 1.2.1. Common Data Format
 
-All requests from the Sportsbook Platform to Operator Wallet API have basic information in POST request data (except [Ping API](#21-ping-%E5%91%BD%E4%BB%A4). Please refer to API definition).
+All requests from the Sportsbook Platform to Operator Wallet API have basic information in POST request data (except [Ping API](#21-ping). Please refer to API definition).
 
 ```json
 {
