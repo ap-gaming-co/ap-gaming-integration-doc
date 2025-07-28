@@ -21,42 +21,35 @@ These recommendations detail specific bets on an individual line on a particular
 
 Users must be able to select the game that they want to recommend and then identify the particular line and the side on which to bet.
 
-网站内置了允许已登录用户添加投注推荐的功能。
 
-这些推荐详细说明了特定游戏中个别盘口的具体投注。
-
-用户必须能够选择他们想要推荐的游戏，然后确定特定盘口和投注选择。
-
-
-## 1.1. Get Game Types (Esports Only)  获取游戏类型（仅适用于电竞）<a name="11-get-game-types"></a>
+## 1.1. Get Game Types (Esports Only) <a name="11-get-game-types"></a>
 
 The game types are only required for e-sports. 
 
-仅适用于电竞的游戏类型
 
-**GET Request Get 请求** <br/>
+**GET Request Get** <br/>
         `/sline/games`
 
-*Parameters 参数*
+*Parameters*
 
-| Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Parameter | Data Type | Notes |
 | --- | --- | --- |
-| `hasOfferings`  | `boolean` | To retrieve ONLY games with odds available <br/>仅获取具有可用赔率的游戏 |
-| `locale` | `String` | Return language for data. <br/>返回数据的语言设置 |
+| `hasOfferings`  | `boolean` | To retrieve ONLY games with odds available |
+| `locale` | `String` | Return language for data. |
 
 
-**Response 响应**
+**Response**
 
-Returns Array of games. 返回游戏数组
+Returns Array of games.
 
-*Game Data  游戏数据*
+*Game Data*
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `id`  | `integer<int32>` | Unique Id of the game游戏ID |
-| `name` | `String` | Game name游戏名称 |
+| `id`  | `integer<int32>` | Unique Id of the game |
+| `name` | `String` | Game name |
 
-*Sample 示例*
+*Sample*
 
 ```js
 {
@@ -71,40 +64,38 @@ Returns Array of games. 返回游戏数组
 ```
 
 
-## 1.2. Get Leagues 获取联赛 <a name="12-get-leagues"></a>
+## 1.2. Get Leagues <a name="12-get-leagues"></a>
 
 Gets the leagues for the requested sport. 
 
-获取所请求体育项目的联赛。
-
-**GET Request GET请求** <br/>
+**GET Request GET** <br/>
         `/sline/leagues`
 
-*Parameters 参数*
+*Parameters*
 
-| Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Parameter | Data Type | Notes |
 | --- | --- | --- |
-| `sportId` <br/>**required** <br/>**必需**  | `integer<int32>` | Sport id for which the leagues are requested. <br/>请求特定联赛中的体育项目ID |
-| `gameIds` | Array of integers <int32> | A comma separated list of Game Ids for e-sports games. <br/>If none supplied, all esports games are returned. <br/>Ignored for all other sports. <br/>电竞游戏的游戏ID列表，以逗号分隔 <br/>如果未提供逗号，则返回所有电竞游戏 <br/>对于其他体育项目，此参数将被忽略 |
-| `hasOfferings`  | `boolean` | To retrieve ONLY leagues with odds available <br/>仅获取具有可用赔率的联赛 |
-| `locale`  | `String` | Return language for data. <br/>返回数据的语言设置 |
+| `sportId` <br/>**required**  | `integer<int32>` | Sport id for which the leagues are requested. |
+| `gameIds` | Array of integers <int32> | A comma separated list of Game Ids for e-sports games. <br/>If none supplied, all esports games are returned. <br/>Ignored for all other sports. |
+| `hasOfferings`  | `boolean` | To retrieve ONLY leagues with odds available |
+| `locale`  | `String` | Return language for data. |
 
-**Response 响应**
+**Response**
 
-Returns Array of leagues. 返回联赛的数组
+Returns Array of leagues.
 
-*League Data 联赛数据*
+*League Data*
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `id`  | `integer<int32>` | Unique Id of the league联赛ID |
-| `name` | `String` | League name联赛名称 |
-| `hasOfferings` | `boolean` | Whether the league currently has events or specials. <br/>获取有提供赛事盘口或者特别盘口的联赛 |
-| `leagueSpecialsCount` | `integer<int32>` | Indicates how many specials are in the given league. <br/>列明联赛里有多少个特别盘口 |
-| `eventSpecialsCount` | `integer<int32>` | Indicates how many game specials are in the given league. <br/>列明联赛里有多少个特别赛事盘口 |
-| `eventCount` | `integer<int32>` | Indicates how many events are in the given league. <br/>列明联赛里有多少个赛事 |
+| `id`  | `integer<int32>` | Unique Id of the league |
+| `name` | `String` | League name |
+| `hasOfferings` | `boolean` | Whether the league currently has events or specials. |
+| `leagueSpecialsCount` | `integer<int32>` | Indicates how many specials are in the given league. |
+| `eventSpecialsCount` | `integer<int32>` | Indicates how many game specials are in the given league. |
+| `eventCount` | `integer<int32>` | Indicates how many events are in the given league. |
 
-*Sample 示例*
+*Sample*
 
 ```js
 {
@@ -128,7 +119,7 @@ Returns Array of leagues. 返回联赛的数组
 }
 ```
 
-**Esports Leagues 电竞联赛**
+**Esports Leagues**
 
 For eSports, the League name is taken from the **name** field. The name field shows the game type and the league as in the example below:
 
@@ -136,59 +127,52 @@ For eSports, the League name is taken from the **name** field. The name field sh
 
 The format is always {game} – {league}
 
-在我司的电竞，联赛名称是从 **name** 字段里获取。 name 字段将会以以下方式呈现：
 
             CS:GO - ESL Challenger League North America
 
-格式始终为 {游戏} - {联赛}。
 
-
-## 1.3. Get Fixtures 获取赛事 <a name="13-get-fixtures"></a>
+## 1.3. Get Fixtures <a name="13-get-fixtures"></a>
 
 Gets the fixtures for the requested league. 
 
-获取游戏开盘日期、时间，以及主队与客队讯息
 
-**GET Request GET请求** <br/>
+**GET Request GET** <br/>
         `/sline/fixtures`
 
-*Parameters 参数*
+*Parameters*
 
-| Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Parameter | Data Type | Notes |
 | --- | --- | --- |
-| `sportId` <br/>**required** <br/>**必需**  | `integer<int32>` | Sport id for which the fixtures are requested. <br/>所请求赛事的体育项目ID |
-| `leagueId` <br/>**required** <br/>**必需**  | `integer<int32>` | The league id for which the fixtures are requested. <br/>所请求赛事的联赛ID |
-| `locale`  | `String` | Return language for data. <br/>返回数据的语言设置 |
+| `sportId` <br/>**required** | `integer<int32>` | Sport id for which the fixtures are requested. |
+| `leagueId` <br/>**required**  | `integer<int32>` | The league id for which the fixtures are requested. |
+| `locale`  | `String` | Return language for data.  |
 
-**Response 响应**
+**Response**
 
 Returns a list of unique fixtures.
 
 If a fixture has regular events and specials, the fixture will only return once.
 
-返回唯一赛事的列表
 
-如果一个赛事具有常规盘口和特殊盘口，该赛事只会返回一次
+*Fixture Data* 
 
-*Fixture Data  赛事数据* 
-
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `sportId`  | `integer<int32>` | Requested sport Id.<br/>体育ID |
-| `leagueId`  | `integer<int32>` | Requested league id.<br/>联赛ID |
-| `event`  | Array of objects (EventFixture) | Contains a list of events.<br/>赛事ID |
+| `sportId`  | `integer<int32>` | Requested sport Id. |
+| `leagueId`  | `integer<int32>` | Requested league id. |
+| `event`  | Array of objects (EventFixture) | Contains a list of events. |
 
-*EventFixture Data  赛事数据* 
+*EventFixture Data* 
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `eventId`  | `integer<int32>` | Event Id. 赛事ID |
-| `starts`  | `String<date-time>` | Game date time. 比赛日期时间 |
-| `home`  | `String` | Home team. 主队名称 |
-| `away`  | `String` | Away team. 客队名称 |
-| `lines`  | `integer<int32>` | Indicates how many lines are in the given event.<br/>列明给定赛事的盘口数 |
+| `eventId`  | `integer<int32>` | Event Id. |
+| `starts`  | `String<date-time>` | Game date time. |
+| `home`  | `String` | Home team. |
+| `away`  | `String` | Away team. |
+| `lines`  | `integer<int32>` | Indicates how many lines are in the given event. |
 
-*Sample 示例*
+*Sample*
 
 ```js
 {
@@ -211,57 +195,56 @@ If a fixture has regular events and specials, the fixture will only return once.
 ```
 
 
-## 1.4. Get Lines 获取盘口 <a name="14-get-lines"></a>
+## 1.4. Get Lines <a name="14-get-lines"></a>
 
 Gets the standard lines for the requested event. 
 
-获取所请求赛事的一般盘口
 
-**GET Request GET请求** <br/>
+**GET Request GET** <br/>
         `/sline/lines`
 
-*Parameters 参数*
+*Parameters*
 
-| Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Parameter | Data Type | Notes |
 | --- | --- | --- |
-| `sportId` <br/>**required** <br/>**必需**  | `integer<int32>` | Sport id for which the fixtures are requested. <br/>体育ID |
-| `leagueId` <br/>**required** <br/>**必需**  | `integer<int32>` | The league id for which the fixtures are requested. <br/>联赛ID |
-| `eventId` <br/>**required** <br/>**必需**  | `integer<int32>` | The event id for which the fixtures are requested. <br/>赛事ID |
-| `locale`  | `String` | Return language for data. <br/>返回数据的语言设置 |
+| `sportId` <br/>**required** | `integer<int32>` | Sport id for which the fixtures are requested. |
+| `leagueId` <br/>**required** | `integer<int32>` | The league id for which the fixtures are requested. |
+| `eventId` <br/>**required** | `integer<int32>` | The event id for which the fixtures are requested. |
+| `locale`  | `String` | Return language for data. |
 
-**Response 响应**
+**Response**
 
-Returns a list of unique lines. 返回唯一盘口的列表。
+Returns a list of unique lines.
 
-Returns standard lines. 返回一般盘口。
+Returns standard lines.
 
-*Line Data 盘口数据*
+*Line Data*
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `sportId`  | `integer<int32>` | Requested sport Id. 体育ID |
-| `leagueId`  | `integer<int32>` | Requested league id. 联赛ID |
-| `eventId`  | `integer<int32>` | Requested event id. 赛事ID |
-| `eventDateFm`  | `String<date-time>` | Event date赛事日期 |
-| `eventName`  | `String` | Event Name赛事名称 |
-| `home`  | `String` | Home team. 主队名称 |
-| `away`  | `String` | Away team. 客队名称 |
-| `line`  | Array of objects (EventLine) | Contains a list of lines. 赛事讯息 |
+| `sportId`  | `integer<int32>` | Requested sport Id. |
+| `leagueId`  | `integer<int32>` | Requested league id. |
+| `eventId`  | `integer<int32>` | Requested event id. |
+| `eventDateFm`  | `String<date-time>` | Event date |
+| `eventName`  | `String` | Event Name |
+| `home`  | `String` | Home team. |
+| `away`  | `String` | Away team. |
+| `line`  | Array of objects (EventLine) | Contains a list of lines. |
 
 
-*EventLine Data 盘口数据*
+*EventLine Data*
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `Id`  | `integer<int64>` | Line Id. 盘口ID |
-| `altLineId`  | `integer<int64>` | Only populated if this is an alternate line. <br/>让分盘里的替代盘口 |
-| `periodNumber`  | `integer<int32>` | Period number. 期间代码 |
-| `points`  | `number <double>` | Populated for “TOTAL_POINTS”, “HOME_TEAM_TOTAL_POINTS”, “AWAY_TEAM_TOTAL_POINTS”<br/>适用于 “TOTAL_POINTS”、“HOME_TEAM_TOTAL_POINTS”，“AWAY_TEAM_TOTAL_POINTS” |
-| `hdp`  | `number <double>` | Team handicap. 队伍让分盘<br/>Populated for “SPREAD’  适用于“让分盘’ |
-| `betType`  | `String` | Enum value 值<br/>“SPREAD’, “MONEYLINE”, “TOTAL_POINTS”, “HOME_TEAM_TOTAL_POINTS”, “AWAY_TEAM_TOTAL_POINTS” |
-| `cutoff`  | `String<date-time>` | Betting cutoff date 投注截止日期 |
+| `Id`  | `integer<int64>` | Line Id. |
+| `altLineId`  | `integer<int64>` | Only populated if this is an alternate line. |
+| `periodNumber`  | `integer<int32>` | Period number. |
+| `points`  | `number <double>` | Populated for “TOTAL_POINTS”, “HOME_TEAM_TOTAL_POINTS”, “AWAY_TEAM_TOTAL_POINTS” |
+| `hdp`  | `number <double>` | Team handicap.<br/>Populated for “SPREAD’ |
+| `betType`  | `String` | Enum value<br/>“SPREAD’, “MONEYLINE”, “TOTAL_POINTS”, “HOME_TEAM_TOTAL_POINTS”, “AWAY_TEAM_TOTAL_POINTS” |
+| `cutoff`  | `String<date-time>` | Betting cutoff date |
 
-*Sample 示例*
+*Sample*
 
 ```js
 {
@@ -293,68 +276,66 @@ Returns standard lines. 返回一般盘口。
 ```
 
 
-## 1.5. Get Special Lines 获取特殊盘口 <a name="15-get-special-lines"></a>
+## 1.5. Get Special Lines <a name="15-get-special-lines"></a>
 
 Gets the special lines for the requested event. 
 
-获取指定赛事的特殊盘口
-
-**GET Request GET请求** <br/>
+**GET Request GET** <br/>
         `/sline/special-lines`
 
-*Parameters 参数*
+*Parameters*
 
-| Parameter <br/>参数 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Parameter | Data Type | Notes |
 | --- | --- | --- |
-| `sportId` <br/>**required** <br/>**必需**  | `integer<int32>` | Sport id for which the fixtures are requested. <br/>体育ID |
-| `leagueId` <br/>**required** <br/>**必需**  | `integer<int32>` | The league id for which the fixtures are requested. <br/>联赛ID |
-| `eventId` <br/>**required** <br/>**必需**  | `integer<int32>` | The event id for which the fixtures are requested. <br/>赛事ID |
-| `locale`  | `String` | Return language for data. <br/>返回数据的语言设置 |
+| `sportId` <br/>**required**  | `integer<int32>` | Sport id for which the fixtures are requested. |
+| `leagueId` <br/>**required**  | `integer<int32>` | The league id for which the fixtures are requested. |
+| `eventId` <br/>**required**  | `integer<int32>` | The event id for which the fixtures are requested. |
+| `locale`  | `String` | Return language for data. |
 
-**Response　响应**
+**Response**
 
-Returns a list of unique lines.　 返回唯一盘口的列表。
+Returns a list of unique lines.
 
-Returns special lines.　 返回特殊盘口。
+Returns special lines.
 
-*Line Data　盘口数据*
+*Line Data*
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `sportId`  | `integer<int32>` | Requested sport Id.　体育ID |
-| `leagueId`  | `integer<int32>` | Requested league id. 联赛ID |
-| `eventId`  | `integer<int32>` | Requested event id.　赛事ID |
-| `eventDateFm`  | `String<date-time>` | Event date　赛事日期 |
-| `eventName`  | `String` | Event Name　赛事名称 |
-| `home`  | `String` | Home team. 主队名称 |
-| `away`  | `String` | Away team. 客队名称 |
-| `specials`  | Array of objects (Specials) | Contains a list of special lines.　特殊盘口讯息 |
+| `sportId`  | `integer<int32>` | Requested sport Id. |
+| `leagueId`  | `integer<int32>` | Requested league id. |
+| `eventId`  | `integer<int32>` | Requested event id. |
+| `eventDateFm`  | `String<date-time>` | Event date |
+| `eventName`  | `String` | Event Name |
+| `home`  | `String` | Home team. |
+| `away`  | `String` | Away team. |
+| `specials`  | Array of objects (Specials) | Contains a list of special lines. |
 
 
-*Specials Data　特殊盘口数据*
+*Specials Data*
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `Id`  | `integer<int64>` | Special Id.　特殊盘口ID |
-| `name`  | `String` | Special name  特殊盘口名称 |
-| `category`  | `String` | Special category  特殊盘口类别 |
-| `periodNumber`  | `integer<int32>` | Period number.  期间代码 |
-| `betType`  | `String` | Enum value 值<br/>“MULTI_WAY_HEAD_TO_HEAD”, “SPREAD”, “OVER_UNDER” |
-| `cutoff`  | `String<date-time>` | Betting cutoff date 投注截止日期 |
-| `units`  | `String` | Measurement. Applicable to SPREAD and OVER_UNDER. <br/>单位。适用于让分和大小盘。 |
-| `contestants`  | Array of objects (Contestants) | Contains a list of contestants. <br/>参赛者讯息 |
+| `Id`  | `integer<int64>` | Special Id. |
+| `name`  | `String` | Special name |
+| `category`  | `String` | Special category  |
+| `periodNumber`  | `integer<int32>` | Period number. |
+| `betType`  | `String` | Enum value<br/>“MULTI_WAY_HEAD_TO_HEAD”, “SPREAD”, “OVER_UNDER” |
+| `cutoff`  | `String<date-time>` | Betting cutoff date |
+| `units`  | `String` | Measurement. Applicable to SPREAD and OVER_UNDER. |
+| `contestants`  | Array of objects (Contestants) | Contains a list of contestants. |
 
 
-*Contestants Data  参赛者数据*
+*Contestants Data*
 
-| Field <br/>字段 | Data Type <br/>数据类型 | Notes <br/>说明 |
+| Field | Data Type | Notes |
 | --- | --- | --- |
-| `Id`  | `integer<int64>` | Contestant Id. 参赛者ID |
-| `name`  | `String` | Contestant name 参赛者名称 |
-| `contestantLineId`  | `Integer<int64>` | Contestant Line Id 参赛者盘口ID |
-| `hdp`  | `number <double>` | Team handicap队伍让分盘<br/>Populated for “SPREAD” and “OVER_UNDER” 适用于让分和大小盘 |
+| `Id`  | `integer<int64>` | Contestant Id. |
+| `name`  | `String` | Contestant name |
+| `contestantLineId`  | `Integer<int64>` | Contestant Line Id |
+| `hdp`  | `number <double>` | Team handicap<br/>Populated for “SPREAD” and “OVER_UNDER” |
 
-*Sample 示例*
+*Sample*
 
 ```js
 {
@@ -385,7 +366,7 @@ Returns special lines.　 返回特殊盘口。
 ```
 
 
-## 1.6. Event Post Message 赛事发布消息 <a name="16-event-post-message"></a>
+## 1.6. Event Post Message <a name="16-event-post-message"></a>
 
 New post message to allow users who are not logged in to the B2B site, to make their selection(s) and be taken to the correct page and with their selections added to the Bet Slip.
 
