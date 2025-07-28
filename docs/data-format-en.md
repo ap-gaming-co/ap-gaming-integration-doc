@@ -2,174 +2,171 @@
 # Data Format
 
 - [Data Format](#data-format)
-    - [1. Sports 体育项目](#1-sports-%E4%BD%93%E8%82%B2%E9%A1%B9%E7%9B%AE)
-    - [2. Wager Type 注单类型](#2-wager-type-%E6%B3%A8%E5%8D%95%E7%B1%BB%E5%9E%8B)
-    - [3. Bet Type 投注类型](#3-bet-type-%E6%8A%95%E6%B3%A8%E7%B1%BB%E5%9E%8B)
-    - [4. Odds Format 赔率格式](#4-odds-format-%E8%B5%94%E7%8E%87%E6%A0%BC%E5%BC%8F)
-    - [5. Date Time 时区与时间格式](#5-date-time-%E6%97%B6%E5%8C%BA%E4%B8%8E%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F)
-    - [6. Errors Table 错误表格](#6-errors-table-%E9%94%99%E8%AF%AF%E8%A1%A8%E6%A0%BC)
-    - [7. Event Status 赛事状态](#7-event-status-%E8%B5%9B%E4%BA%8B%E7%8A%B6%E6%80%81)
-    - [8. Languages 语言](#8-languages-%E8%AF%AD%E8%A8%80)
-    - [9. Selection Type 选择类型](#9-selection-type-%E9%80%89%E6%8B%A9%E7%B1%BB%E5%9E%8B)
-    - [10. Wager Result 注单结果](#10-wager-result-%E6%B3%A8%E5%8D%95%E7%BB%93%E6%9E%9C)
-    - [11. Wager Status 注单状态](#11-wager-status-%E6%B3%A8%E5%8D%95%E7%8A%B6%E6%80%81)
-    - [12. Period Status 期间状态](#12-period-status-%E6%9C%9F%E9%97%B4%E7%8A%B6%E6%80%81)
-    - [13. User Status 用户状态](#13-user-status-%E7%94%A8%E6%88%B7%E7%8A%B6%E6%80%81)
-    - [14. Leg Status Result 选项结果](#14-leg-status-result-%E9%80%89%E9%A1%B9%E7%BB%93%E6%9E%9C)
-    - [15. Non-login currency display 未登录币种显示](#15-non-login-currency-display-%E6%9C%AA%E7%99%BB%E5%BD%95%E5%B8%81%E7%A7%8D%E6%98%BE%E7%A4%BA)
-    - [16. Bet Status Partial Result 投注半\/全数结算状态](#16-bet-status-partial-result-%E6%8A%95%E6%B3%A8%E5%8D%8A%E5%85%A8%E6%95%B0%E7%BB%93%E7%AE%97%E7%8A%B6%E6%80%81)
+    - [1. Sports](#1-sports)
+    - [2. Wager Type](#2-wager-type)
+    - [3. Bet Type](#3-bet-type)
+    - [4. Odds Format](#4-odds-format)
+    - [5. Date Time](#5-date-time)
+    - [6. Errors Table](#6-errors-table)
+    - [7. Event Status](#7-event-status)
+    - [8. Languages](#8-languages)
+    - [9. Selection Type](#9-selection-type)
+    - [10. Wager Result](#10-wager-result)
+    - [11. Wager Status](#11-wager-status)
+    - [12. Period Status](#12-period-status)
+    - [13. User Status](#13-user-status)
+    - [14. Leg Status Result](#14-leg-status-result)
+    - [15. Non-login currency display](#15-non-login-currency-display)
+    - [16. Bet Status Partial Result](#16-bet-status-partial-result)
 
 
-## 1. Sports 体育项目
+## 1. Sports
 
-| Id 编号 | Code 代码 |
+| Id | Code |
 | --- | --- |
-| 1 | Badminton 羽毛球 |
-| 2 | Bandy 班迪球
-| 3 | Baseball 棒球
-| 4 | Basketball 篮球
-| 5 | Beach Volleyball 沙滩排球
-| 6 | Boxing 拳击
-| 7 | Chess 国际象棋
-| 8 | Cricket 板球
-| 9 | Curling 冰壶
-| 10 | Darts 飞镖 |
-| 11 | Darts (Legs) 飞镖（局） |
-| 12 | E-Sports 电子竞技 |
-| 13 | Field Hockey 曲棍球 |
-| 14 | Floorball 地板球 |
-| 15 | Football 橄榄球 |
-| 16 | Futsal 室内足球 |
-| 17 | Golf 高尔夫 |
-| 18 | Handball 手球 |
-| 19 | Hockey 冰球 | 
-| 20 | Horse Racing Specials 赛马特殊投注 |
-| 21 | Lacrosse 网棍球 | 
-| 22 | Mixed Martial Arts 综合格斗 |
-| 23 | Other Sports 其它体育节目 |
-| 24 | Politics 政治 |
-| 26 | Rugby League 联盟式橄榄球 |
-| 27 | Rugby Union 联合式橄榄球 |
-| 28 | Snooker 斯诺克 |
-| 29 | Soccer 足球 |
-| 30 | Softball 垒球 |
-| 31 | Squash 壁球 |
-| 32 | Table Tennis 乒乓球 |
-| 33 | Tennis 网球 |
-| 34 | Volleyball 排球 |
-| 35 | Volleyball (Points) 排球（得分） |
-| 36 | Water Polo 水球 |
-| 37 | Padel Tennis 板网球 |
-| 39 | Aussie Rules 澳洲足球 |
-| 40 | Alpine Skiing 高山滑雪 |
-| 41 | Biathlon 冬季两项 |
-| 42 | Ski Jumping 跳台滑雪 |
-| 43 | Cross Country 越野滑雪 |
-| 44 | Formula 1 一级方程式赛车 |
-| 45 | Cycling 自行车 |
-| 46 | Bobsleigh 有舵雪橇 |
-| 47 | Figure Skating 花样滑冰 |
-| 48 | Freestyle Skiing 自由式滑雪 |
-| 49 | Luge 无舵雪橇 |
-| 50 | Nordic Combined 北欧两项 |
-| 51 | Short Track 短道速滑 |
-| 52 | Skeleton 俯式冰橇 |
-| 53 | Snow Boarding 单板滑雪 |
-| 54 | Speed Skating 速度滑冰 |
-| 55 | Olympics 奥林匹克 |
-| 56 | Athletics 田径 |
-| 57 | CrossFit 混合健身 |
-| 58 | Entertainment 娱乐 |
-| 59 | Archery 射箭 |
-| 60 | Drone Racing 无人机竞速 |
-| 61 | MLB Series Prices MLB世界大奖赛 |
-| 62 | Poker 扑克 |
-| 63 | Motorsport 赛车运动 |
-| 64 | Simulated Games 模拟比赛 |
-| 65 | Sumo 相扑 |
-| 66 | Slap Fighting 巴掌格斗 |
+| 1 | Badminton |
+| 2 | Bandy
+| 3 | Baseball
+| 4 | Basketball
+| 5 | Beach Volleyball
+| 6 | Boxing
+| 7 | Chess
+| 8 | Cricket
+| 9 | Curling
+| 10 | Darts |
+| 11 | Darts (Legs) |
+| 12 | E-Sports |
+| 13 | Field Hockey |
+| 14 | Floorball |
+| 15 | Football |
+| 16 | Futsal |
+| 17 | Golf |
+| 18 | Handball |
+| 19 | Hockey | 
+| 20 | Horse Racing Specials |
+| 21 | Lacrosse | 
+| 22 | Mixed Martial Arts |
+| 23 | Other Sports |
+| 24 | Politics |
+| 26 | Rugby League |
+| 27 | Rugby Union |
+| 28 | Snooker |
+| 29 | Soccer |
+| 30 | Softball |
+| 31 | Squash |
+| 32 | Table Tennis |
+| 33 | Tennis |
+| 34 | Volleyball |
+| 35 | Volleyball (Points) |
+| 36 | Water Polo |
+| 37 | Padel Tennis |
+| 39 | Aussie Rules |
+| 40 | Alpine Skiing |
+| 41 | Biathlon |
+| 42 | Ski Jumping |
+| 43 | Cross Country |
+| 44 | Formula 1 |
+| 45 | Cycling |
+| 46 | Bobsleigh |
+| 47 | Figure Skating |
+| 48 | Freestyle Skiing |
+| 49 | Luge |
+| 50 | Nordic Combined |
+| 51 | Short Track |
+| 52 | Skeleton |
+| 53 | Snow Boarding |
+| 54 | Speed Skating |
+| 55 | Olympics |
+| 56 | Athletics |
+| 57 | CrossFit |
+| 58 | Entertainment |
+| 59 | Archery |
+| 60 | Drone Racing |
+| 61 | MLB Series Prices |
+| 62 | Poker |
+| 63 | Motorsport |
+| 64 | Simulated Games |
+| 65 | Sumo |
+| 66 | Slap Fighting |
 
-## 2. Wager Type 注单类型
+## 2. Wager Type
 
-| Id 编号 | Code 代码 | Description 描述 |
+| Id | Code | Description |
 | --- | --- | --- |
-| 1 | `single` | Wager type is Single 单一注单 |
-| 2 | `parlay` | Wager type is Parlay 混合过关 |
-| 3 | `teaser` | Wager type is Teaser 变让分过关 |
+| 1 | `single` | Wager type is Single |
+| 2 | `parlay` | Wager type is Parlay |
+| 3 | `teaser` | Wager type is Teaser |
 
-## 3. Bet Type 投注类型
+## 3. Bet Type
 
-| Code  代码 | Name 名称 | Description 描述 | 
+| Code  | Name | Description | 
 | ---  | ---  | ---  |
-| 1 | `ML_1X2` |  1x2独赢盘| 
-| 2 | `HDP` |  Handicap 让球盘| 
-| 3 | `OU` |  Over Under大小盘| 
-| 4 | `HOME_TOTALS` | 主队_总得分| 
-| 5 | `AWAY_TOTALS` |  客队_总得分| 
-| 6 | `MIX_PARLAY` | 混合过关| 
-| 7 | ``TEASER`` | 变让分过关盘| 
-| 8 | `MANUAL_PLAY` | 人工注單| 
-| 97 | `OE` | Odd Even 单双| 
-| 99 | `SPECIAL`/`OUTRIGHT` | 特别投注/优胜冠军| 
+| 1 | `ML_1X2` |  1x2| 
+| 2 | `HDP` |  Handicap| 
+| 3 | `OU` |  Over Under| 
+| 4 | `HOME_TOTALS` | | 
+| 5 | `AWAY_TOTALS` | | 
+| 6 | `MIX_PARLAY` | | 
+| 7 | ``TEASER`` | | 
+| 8 | `MANUAL_PLAY` | | 
+| 97 | `OE` | Odd Even| 
+| 99 | `SPECIAL`/`OUTRIGHT` | | 
 
-## 4. Odds Format 赔率格式
+## 4. Odds Format
 
-| Code 代码 | Name 名称  | Description 描述 |
+| Code | Name  | Description |
 | --- | ---  | ---   |
-| 0 | `AM` 美式盘 | American odds format 美式盘格式 |
-| 1 | `EU` 欧洲盘 | Euro odds format欧洲盘格式 |
-| 2 | `HK` 香港盘 | Hong Kong odds format 香港盘格式 |
-| 3 | `ID` 印尼盘 | Indo odds format 印尼盘格式 |
-| 4 | `MY` 马来盘 | Malay odds format 马来盘格式 |
+| 0 | `AM` | American odds format |
+| 1 | `EU` | Euro odds format |
+| 2 | `HK` | Hong Kong odds format |
+| 3 | `ID` | Indo odds format |
+| 4 | `MY` | Malay odds format |
 
-## 5. Date Time 时区与时间格式
+## 5. Date Time 
 
 All dates will be in **GMT-4** except Timestamp. 
 Date Time format: `yyyy-MM-ddTHH:mm:ss`
 E.g. `2018-12-20T04:05:06`
 
-除时间戳以外，所有数据时区为**GMT-4** 
-时间格式：年-月-日T小时：分钟：秒钟 例：`2018-12-20T04:05:06`
+## 6. Errors Table
 
-## 6. Errors Table 错误表格
-
-| Code 代码 | Message 信息 |  Description  描述 |
+| Code | Message |  Description  |
 | --- | ---  |  ---   |
-| 103 | Your player's account has been < status >.您用户的账号已经被 <状态> |  |
-| 104 | Member not exist in system. 系统没有这个用户 |  |
-| 105 | The user creation failed. 创建用户失败 |  |
-| 106 | User locked by multiplelogin failures. 登录失败过多导致账户被锁 |  |
-| 107 | Agent doesn’t have key stored in the system. 代理系统未储存密钥 |  |
-| 108 | Agent code is invalid. Please contact partner to get agent code. 代理码无效。请联系合作伙伴获取代理码 |  |
-| 109 | You are not allowed to create player under agent code who is not directly downline. 您无法创建不属于在该代理线下的玩家 |  |
-| 110 | Agent does not exist in system. 该代理账户不存在系统内 |  |
-| 111 | Login ID already exists in system. 该登入名已被使用 |  |
-| 112 | Login ID is not valid. 登入名无效 |  |
-| 113 | User's brand does not support login. 客户品牌不支持登陆 |  |
-| 114 | Cannot change status when user is Closed or Suspended by Company. 若用户的账号被上线关闭或暂停使用，无法更改状态 |  |
-| 115 | User account hasn't exist in system. 用户账号在系统里不存在 |  |
-| 116 | You could not create more downline because you reached the maximum limitation. 您不能创建下线，因你已经达到最高上限 |  |
-| 305 | Player has no permission create key store. 玩家不被许可创建密钥存储 |  |
-| 306 | Invalid parameters. You will have information in message of error. 参数无效，您会收到错误信息。 |  |
-| 307 | Account Balance do not exist in system. 账户余额不存在系统内。 |  |
-| 308 | Your amount should be a positive number 您的金额应该是一个正数 |  |
-| 309 | Your balance is not enough. 您的余额不足。 |  |
-| 310 | Your balance exceeded credit limit. 您的余额超过了信用额度 |  |
-| 311 | Amount value should be two decimal places. 金额值应该是小数点后两位。 |  |
-| 401 | The token is invalid. It’s possible the token is wrong or that it has expired. 令牌无效，令牌错误或者已过期。 |  |
-| 403 | The code for this token has not yet been generatedThe token for this brand is still not generated. 这个品牌的代码还没有产生。这个品牌的令牌还没有产生。 |  |
-| 405 | Your wallet does not exist in system. 您的钱包在系统不存在。 |  |
-| 406 | Your wallet is inactive. 您的钱包未激活 |  |
-| 407 | Invalid product. 产品无效。 |  |
-| 423 | Your account is . Please contact your upline for help. 您的帐户是<状态>。请联系您的上线寻求帮助。 | When the agentCodes are INACTIVE/SUSPENDED and CLOSED, it will display the errorCode 423. 当代理码未激活，停用和关闭时，系统会显示错误码423。 |
+| 103 | Your player's account has been < status >. |  |
+| 104 | Member not exist in system. |  |
+| 105 | The user creation failed. |  |
+| 106 | User locked by multiplelogin failures. |  |
+| 107 | Agent doesn’t have key stored in the system. |  |
+| 108 | Agent code is invalid. Please contact partner to get agent code. |  |
+| 109 | You are not allowed to create player under agent code who is not directly downline. |  |
+| 110 | Agent does not exist in system. |  |
+| 111 | Login ID already exists in system. |  |
+| 112 | Login ID is not valid. |  |
+| 113 | User's brand does not support login. |  |
+| 114 | Cannot change status when user is Closed or Suspended by Company. |  |
+| 115 | User account hasn't exist in system. |  |
+| 116 | You could not create more downline because you reached the maximum limitation. |  |
+| 305 | Player has no permission create key store. |  |
+| 306 | Invalid parameters. You will have information in message of error. |  |
+| 307 | Account Balance do not exist in system. |  |
+| 308 | Your amount should be a positive number |  |
+| 309 | Your balance is not enough. |  |
+| 310 | Your balance exceeded credit limit. |  |
+| 311 | Amount value should be two decimal places. |  |
+| 401 | The token is invalid. It’s possible the token is wrong or that it has expired. |  |
+| 403 | The code for this token has not yet been generatedThe token for this brand is still not generated. |  |
+| 405 | Your wallet does not exist in system. |  |
+| 406 | Your wallet is inactive. |  |
+| 407 | Invalid product. |  |
+| 423 | Your account is . Please contact your upline for help. | When the agentCodes are INACTIVE/SUSPENDED and CLOSED, it will display the errorCode 423.  |
 
-## 7. Event Status 赛事状态
+## 7. Event Status
 
-| No | Code 代码 | Description 描述 |
+| No | Code | Description |
 | --- | --- | --- |
-| 1 | `OPEN` | Event is open for bet placement. <br/>赛事投注已开放 |
-| 2 | `CLOSE` | Event is closed. Players cannot place a bet. <br/>赛事投注已关闭，玩家不能下注 |
-| 3 | `SETTLED` | Event is done. Wagers is going to be settled. <br/>赛事已结束，注单将被结算 |
+| 1 | `OPEN` | Event is open for bet placement. |
+| 2 | `CLOSE` | Event is closed. Players cannot place a bet. |
+| 3 | `SETTLED` | Event is done. Wagers is going to be settled. |
 
 ## 8. Languages 语言
 
