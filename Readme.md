@@ -11,6 +11,7 @@ I-White-label 第三方集成API允许B2B客户将体育博彩网站集成到B2B
 我们共提供两种集成方法，然而，在两种方法中会有共同的端点。
 为了能够更全面的了解集成，请查看以下与您选择的集成方法相关的文件：
 
+
 <table border="1" cellspacing="0" cellpadding="8">
   <thead>
     <tr>
