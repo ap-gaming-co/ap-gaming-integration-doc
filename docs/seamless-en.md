@@ -1,50 +1,44 @@
 # Table Contents 目录
 
-- [Table Contents 目录](#table-contents-%E7%9B%AE%E5%BD%95)
-- [1. Seamless Wallet Overview 单一钱包概要](#1-seamless-wallet-overview-%E5%8D%95%E4%B8%80%E9%92%B1%E5%8C%85%E6%A6%82%E8%A6%81)
-    - [1.1. Architecture Overview 架构概述](#11-architecture-overview-%E6%9E%B6%E6%9E%84%E6%A6%82%E8%BF%B0)
-    - [1.2. Data Format 数据格式](#12-data-format-%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F)
-        - [1.2.1. Common Data Format 通用数据格式](#121-common-data-format-%E9%80%9A%E7%94%A8%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F)
-        - [1.2.2. Common Response Data Format 通用响应数据格式](#122-common-response-data-format-%E9%80%9A%E7%94%A8%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F)
-- [2. Operator Wallet API Methods 运营商钱包的API方法](#2-operator-wallet-api-methods-%E8%BF%90%E8%90%A5%E5%95%86%E9%92%B1%E5%8C%85%E7%9A%84api%E6%96%B9%E6%B3%95)
-    - [2.1. Ping 命令](#21-ping-%E5%91%BD%E4%BB%A4)
-        - [2.1.1. Request Format 请求格式](#211-request-format-%E8%AF%B7%E6%B1%82%E6%A0%BC%E5%BC%8F)
-        - [2.1.2. Response Format 响应格式](#212-response-format-%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F)
-        - [2.1.3. Possible Error Code 可能出现的错误代码](#213-possible-error-code-%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81)
-    - [2.2. Seamless Wagering 无缝下注](#22-seamless-wagering-%E6%97%A0%E7%BC%9D%E4%B8%8B%E6%B3%A8)
-        - [2.2.1. BETTED Action 已下注](#221-betted-action-%E5%B7%B2%E4%B8%8B%E6%B3%A8)
-        - [2.2.2. ACCEPTED Action 已接受](#222-accepted-action-%E5%B7%B2%E6%8E%A5%E5%8F%97)
-        - [2.2.3. SETTLED Action 已结算](#223-settled-action-%E5%B7%B2%E7%BB%93%E7%AE%97)
-        - [2.2.4. REJECTED Action 已被拒](#224-rejected-action-%E5%B7%B2%E8%A2%AB%E6%8B%92)
-        - [2.2.5. CANCELLED Action 已取消](#225-cancelled-action-%E5%B7%B2%E5%8F%96%E6%B6%88)
-        - [2.2.6. ROLLBACKED Actions 已返回](#226-rollbacked-actions-%E5%B7%B2%E8%BF%94%E5%9B%9E)
-        - [2.2.7. UNSETTLED Action 取消结算](#227-unsettled-action-%E5%8F%96%E6%B6%88%E7%BB%93%E7%AE%97)
-    - [2.3. Appendix 附录](#23-appendix-%E9%99%84%E5%BD%95)
-        - [2.3.1. JSON Data Request Description of Wagering API 投注API的JSON数据请求描述](#231-json-data-request-description-of-wagering-api-%E6%8A%95%E6%B3%A8API%E7%9A%84JSON%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82%E6%8F%8F%E8%BF%B0)
-        - [2.3.2. JSON Data Response Description of Wagering API 投注API的JSON数据回应描述](#232-json-data-response-description-of-wagering-api-%E6%8A%95%E6%B3%A8API%E7%9A%84JSON%E6%95%B0%E6%8D%AE%E5%9B%9E%E5%BA%94%E6%8F%8F%E8%BF%B0)
-        - [2.3.3. Action Types 操作类型](#233-action-types-%E6%93%8D%E4%BD%9C%E7%B1%BB%E5%9E%8B)
-        - [2.3.4. Transaction Status 交易状态](#234-transaction-status-%E4%BA%A4%E6%98%93%E7%8A%B6%E6%80%81)
-        - [2.3.5. Error Response Code 响应错误代码](#235-error-response-code-%E5%93%8D%E5%BA%94%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81)
-        - [2.3.6. Action Response Code 操作响应代码](#236-action-response-code-%E6%93%8D%E4%BD%9C%E5%93%8D%E5%BA%94%E4%BB%A3%E7%A0%81)
+- [Table Contents](#table-contents-%E7%9B%AE%E5%BD%95)
+- [1. Seamless Wallet Overview](#1-seamless-wallet-overview)
+    - [1.1. Architecture Overview](#11-architecture-overview)
+    - [1.2. Data Format](#12-data-format)
+        - [1.2.1. Common Data Format](#121-common-data-format)
+        - [1.2.2. Common Response Data Format](#122-common-response-data-format)
+- [2. Operator Wallet API Methods](#2-operator-wallet-api-methods)
+    - [2.1. Ping](#21-ping)
+        - [2.1.1. Request Format](#211-request-format)
+        - [2.1.2. Response Format](#212-response-format)
+        - [2.1.3. Possible Error Code](#213-possible-error-code)
+    - [2.2. Seamless Wagering](#22-seamless-wagering)
+        - [2.2.1. BETTED Action](#221-betted-action)
+        - [2.2.2. ACCEPTED Action](#222-accepted-action)
+        - [2.2.3. SETTLED Action](#223-settled-action)
+        - [2.2.4. REJECTED Action](#224-rejected-action)
+        - [2.2.5. CANCELLED Action](#225-cancelled-action)
+        - [2.2.6. ROLLBACKED Actions](#226-rollbacked-actions)
+        - [2.2.7. UNSETTLED Action](#227-unsettled-action)
+    - [2.3. Appendix](#23-appendix)
+        - [2.3.1. JSON Data Request Description of Wagering API](#231-json-data-request-description-of-wagering-api)
+        - [2.3.2. JSON Data Response Description of Wagering API](#232-json-data-response-description-of-wagering-api)
+        - [2.3.3. Action Types](#233-action-types)
+        - [2.3.4. Transaction Status](#234-transaction-status)
+        - [2.3.5. Error Response Code](#235-error-response-code)
+        - [2.3.6. Action Response Code](#236-action-response-code)
           
-# 1. Seamless Wallet Overview 单一钱包概要
+# 1. Seamless Wallet Overview
 
 The Sportsbook Platform needs to communicate with the Operator Wallet for the purposes of seamlessly debiting and crediting funds from the Operator Wallet when bets are placed and settled.
 
-当注单生成和结算时，体育平台需要与运营商的钱包通讯以达到从运营商钱包里无缝存取相关款项的目的。
-
-## 1.1. Architecture Overview 架构概述
+## 1.1. Architecture Overview
 
 The SB Seamless Wallet API has been designed using a lightweight REST style web service. All requests/responses use JSON format to transfer. Thus, the header of a request/response must have a parameter `ContentType: application/json`.
 
-单一钱包API的设计使用了轻量REST的架构风格来提供网络服务。所有请求和响应都以JSON的格式传输，因此每一项请求和响应的的报头都会有一个`ContentType: application/json`. 的参数 。
-
-## 1.2. Data Format 数据格式
-### 1.2.1. Common Data Format 通用数据格式
+## 1.2. Data Format
+### 1.2.1. Common Data Format
 
 All requests from the Sportsbook Platform to Operator Wallet API have basic information in POST request data (except [Ping API](#21-ping-%E5%91%BD%E4%BB%A4). Please refer to API definition).
-
-从体育平台到运营商钱包API的所有请求在POST请求数据里都有基本信息(除了Ping API, 请参照API定义)。
 
 ```json
 {
@@ -54,14 +48,14 @@ All requests from the Sportsbook Platform to Operator Wallet API have basic info
         +FSu23MZhy+ppH02fe3kDnB5CgMw=="
 }
 ```
-| Parameter 参数 | Type 类型 | E.g. Value 设置值 | Description 描述 |
+| Parameter | Type | E.g. Value | Description |
 | --- | --- | --- | --- |
 | `Timestamp` | `Date` | 2018-01-15T15:20:14 |  |
-| `Signature` | `String` |  | The signature was generated from [Authentication](/docs/shared.md#21-authentication-api-requirements) <br>此签名由认证生成|
+| `Signature` | `String` |  | The signature was generated from [Authentication](/docs/shared.md#21-authentication-api-requirements)
 
-### 1.2.2. Common Response Data Format 通用响应数据格式
+### 1.2.2. Common Response Data Format
 
-Data format for most requests. 大多数请求的数据格式
+Data format for most requests.
 
 ```json
 {
@@ -74,36 +68,28 @@ Data format for most requests. 大多数请求的数据格式
 ```
 
 
-# 2. Operator Wallet API Methods 运营商钱包的API方法
+# 2. Operator Wallet API Methods
 
 The Operator Wallet API includes the following API methods:
 
-运营商钱包的API包括以下API方法：
-
-## 2.1. Ping 命令
+## 2.1. Ping
 
 This method is used to query the Operator Wallet API to determine if the API is available. If no response is received e.g. Timeout, the Operator Wallet API will also be assumed to be unavailable.
 
-此方法被用来查询运营商钱包的API是否可被调取。如果没有响应，例如超时，运营商钱包的API将会被假定为无法调取。
+### 2.1.1. Request Format
 
-### 2.1.1. Request Format 请求格式
-
-**Endpoint 端点**
+**Endpoint**
 
 The request will be sent to following URI:
-
-请求将被传至以下URI
 
 ```yml
 URI: /ping
 Method: POST
 ```
 
-**POST Parameters POST参数**
+**POST Parameters**
 
 The API method will send post JSON in the following format:
-
-API方法将按以下格式传送 post JSON
 
 ```js
 {    
@@ -111,11 +97,9 @@ API方法将按以下格式传送 post JSON
 }
 ```
 
-### 2.1.2. Response Format 响应格式
+### 2.1.2. Response Format
 
 The API will return JSON in the following format:
-
-API将按以下格式返回JSON
 
 ```js
 {
@@ -127,136 +111,121 @@ API将按以下格式返回JSON
 }
 ```
 
-### 2.1.3. Possible Error Code 可能出现的错误代码
+### 2.1.3. Possible Error Code
 
-| Code 代码 | Reason 原因 |
+| Code | Reason |
 | --- | --- |
-| 0 | Success 成功 |
-| -1 | Unknown Error 未知错误An unknown error has occurred during the API call.在调取API过程中出现未知错误 |
-| -6 | API Authentication failed API认证失败This error will be returned if the Signature is invalid or not found.如果签名失效或不存在，此错误将会被返回 |
+| 0 | Success |
+| -1 | Unknown Error unknown error has occurred during the API call.|
+| -6 | API Authentication failed This error will be returned if the Signature is invalid or not found.|
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 
 
-## 2.2. Seamless Wagering 无缝下注
+## 2.2. Seamless Wagering
 
 Seamless Wagering methods help to update the balance in the Operator wallet's account in real time. This action occurs when a player places a bet, a bet is accepted, settled, or rejected. These are processes that affect the balance in the Operator wallet.
-
-无缝下注的方法将有助于实时更新运营商钱包里的账户余额。这项操作将在玩家下注、注单被接受、被结算，被取消等时候发生，这些都是会影响运营商钱包余额的步骤。
 
 ```yml
 URI: /{agentcode}/wagering/usercode/{usercode}/request/{requestid}
 Method: POST
 ```
 
-| Parameter 参数 | E.g. Value 设置值 | Description 描述 |
+| Parameter | E.g. Value | Description |
 | --- | --- | --- |
-| `agentcode` | `AG001` | Agent code is provided by Sportsbook Platform. 体育平台提供的代理号 |
-| `usercode` | `PIN00115` | User Code is created in Create Player API. 呼叫创建用户API生成的用户名 |
-| `requestid` | `81347c9e-280d-40d6-8349-29dca7ea6bdc` | Request Id is unique in the betting platform. It is formatted based on UUID (8-4-4-4-12).Request ID在投注系统里是独一无二的。其格式是按照UUID (8-4-4-4-12) |
+| `agentcode` | `AG001` | Agent code is provided by Sportsbook Platform. |
+| `usercode` | `PIN00115` | User Code is created in Create Player API. |
+| `requestid` | `81347c9e-280d-40d6-8349-29dca7ea6bdc` | Request Id is unique in the betting platform. It is formatted based on UUID (8-4-4-4-12).|
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 
 There are 7 Action Types for a wager: `BETTED`, `ACCEPTED`, `REJECTED`, `SETTLED`, `CANCELLED`, `ROLLBACKED` and `UNSETTLED`.
 
-我们的每个注单会有7种操作类型，即：已下注、已接受、已被拒、已结算、已取消、已返回以及取消结算。
-
-Sequence Interaction 序列交互
+Sequence Interaction
 
 ![Sequence Interaction](./../res/figure-1-sequence-interaction-english-chinese.png?raw=true)
  
 *Figure 1 – The sequence shows the interaction between the Operator and the Sportbook Platform.* <br>
-*图 1 – 该序列显示了运营商和体育平台之间的交互。*
-
-**Bet Placement Process 下注处理步骤**:
+**Bet Placement Process**:
 
 <table>
   <tr style="background-color:#e0dcdc;">
-    <th rowspan="2">Actions 动作</th>
-    <th colspan="4">Bet Placement Process 下注过程</th>
-    <th colspan="3">Settlement Process 结算过程</th>
+    <th rowspan="2">Actions</th>
+    <th colspan="4">Bet Placement Process</th>
+    <th colspan="3">Settlement Process</th>
   </tr>
   <tr style="background-color:#e0dcdc;">
-    <td>BETTED 已下注</td>
-    <td>ACCEPTED 已接受</td>
-    <td>ROLLBACKED 已返回</td>
-    <td>REJECTED 已被拒</td>
-    <td>SETTLED 已结算</td>
-    <td>CANCELLED 已取消</td>
-    <td>UNSETTLED 未结算</td>
+    <td>BETTED</td>
+    <td>ACCEPTED</td>
+    <td>ROLLBACKED</td>
+    <td>REJECTED</td>
+    <td>SETTLED</td>
+    <td>CANCELLED</td>
+    <td>UNSETTLED</td>
   </tr>
-    <td>Description 描述</td>
-    <td>Player is placing a bet<br/>玩家正在下注</td>
-    <td>Bet has been accepted<br/>注单已被接受</td>
-    <td>Error occurred when placing bet<br/>下注时出现错误</td>
-    <td>Live bet has been rejected<br/>即时注单被拒绝</td>
-    <td>Bet has been settled<br/>注单已结算</td>
-    <td>Bet has been cancelled<br/>注单已被取消</td>
-    <td>Bet has been unsettled and to be resettled<br/>注单未结算，将被重新结算</td>
+    <td>Description</td>
+    <td>Player is placing a bet</td>
+    <td>Bet has been accepted<</td>
+    <td>Error occurred when placing</td>
+    <td>Live bet has been rejected<</td>
+    <td>Bet has been settled</td>
+    <td>Bet has been cancelled</td>
+    <td>Bet has been unsettled and to be resettled</td>
   <tr>
   </tr>
-    <td>Wager Status 注单状态</td>
-    <td>PENDING 待确认</td>
-    <td>OPEN 开放</td>
-    <td>ERROR (wager will be deleted)<br/>报错（注单将被删除）</td>
-    <td>CANCELLED (Rejected)<br/>注单取消（被拒绝）</td>
-    <td>SETTLED 已结算</td>
-    <td>CANCELLED (Void)<br/>已取消（注单无效）</td>
-    <td>OPEN 开放</td>
+    <td>Wager Status</td>
+    <td>PENDING</td>
+    <td>OPEN</td>
+    <td>ERROR (wager will be deleted)</td>
+    <td>CANCELLED (Rejected)</td>
+    <td>SETTLED</td>
+    <td>CANCELLED (Void)</td>
+    <td>OPEN</td>
   <tr>
   </tr>
-    <td>Affect Balance 影响余额</td>
-    <td>- available balance<br/>余额减少</td>
-    <td>+ available balance (see note 1)<br/>余额增加</td>
-    <td>+ available balance<br/>余额增加</td>
-    <td>+ available balance<br/>余额增加</td>
-    <td>+ available balance<br/>余额增加</td>
-    <td>+ available balance<br/>余额增加</td>
-    <td>- available balance<br/>余额减少</td>
+    <td>Affect Balance</td>
+    <td>- available balance</td>
+    <td>+ available balance (see note 1)</td>
+    <td>+ available balance</td>
+    <td>+ available balance</td>
+    <td>+ available balance</td>
+    <td>+ available balance</td>
+    <td>- available balance</td>
   <tr>
   </tr>
 </table>
 
 Note 1: If the bet was accepted with better odds and the player chose Stake as “To Win” amount, the difference must be credited back to the player account. See ACCEPTED Action section.
 
-注1：如果投注以更好的赔率被接受，并且玩家选择本金为"获胜"金额，则差额必须退回玩家帐户。 请参阅"已接受"部分。
 
 ![Wager State Diagram](../res/wager-state-diagram-english-chinese.png?raw=true)
 
-**Unsettled Action 取消结算** 
+**Unsettled Action** 
 
 A bet may be **Unsettled** when the outcome of the bet needs to be changed.<br/>
-当注单结果需要改变时，投注可能处于取消结算状态。 
 
 A bet can only be Unsettled after it has been **Settled** or **Cancelled**.<br/>
-注单仅有在已结算或已取消后才能回到'取消结算'状态 。 
 
-**Handling Settled and Unsettled Actions 根据已结算和取消结算的处理**
+**Handling Settled and Unsettled Actions**
  
 The action to take will depend on the current status of the bet, the status in the action, and the action ID. Refer to the table below:<br/>
-要采取的步骤将取决于注单的当前状态、操作的状态以及操作ID。参考下表：
-
-| Status Received<br/>已收到状态 | Current Status<br/>当前状态 | Received Action ID is Higher<br/>收到的Action ID较大 | Action To Take<br/>采取的行动 |
+| Status Received<br/> | Current Status<br/> | Received Action ID is Higher<br/>Action ID | Action To Take<br/>|
 | --- | --- | --- | --- |
-| SETTLED 已结算 | ACCEPTED 已接受 | Yes 是 | Settle the bet 结算注单 |
-| SETTLED 已结算 | UNSETTLED 未结算 | No 否 | Ignore action 可忽略 |
-| SETTLED 已结算 | UNSETTLED 未结算 | Yes 是 | Settle the bet 结算注单 |
-| SETTLED 已结算 | SETTLED 已结算 | No 否 | Ignore action 可忽略 |
-| SETTLED 已结算 | SETTLED 已结算 | Yes 是 | Unsettle the bet, then settle the bet 取消结算後结算注单 |
-| UNSETTLED 未结算 | SETTLED 已结算 | No 否 | Ignore action 可忽略 |
-| UNSETTLED 未结算 | SETTLED 已结算 | Yes 是 | Unsettle the bet 取消结算 |
-| UNSETTLED 未结算 | UNSETTLED 未结算 | No 否 | Ignore action 可忽略 |
-| UNSETTLED 未结算 | UNSETTLED 未结算 | Yes 是 | Ignore action 可忽略 |
+| SETTLED  | ACCEPTED | Yes | Settle the bet |
+| SETTLED | UNSETTLED | No  | Ignore action  |
+| SETTLED | UNSETTLED | Yes | Settle the bet |
+| SETTLED | SETTLED | No | Ignore action |
+| SETTLED | SETTLED | Yes | Unsettle the bet, then settle the bet |
+| UNSETTLED | SETTLED | No | Ignore action |
+| UNSETTLED | SETTLED | Yes | Unsettle the bet |
+| UNSETTLED | UNSETTLED | No | Ignore action |
+| UNSETTLED | UNSETTLED | Yes | Ignore action |
 
-### 2.2.1. BETTED Action 已下注
+### 2.2.1. BETTED Action
 
 When a player is placing a bet in the player site, the Sportsbook Platform sends **BETTED** action with wager information to the Operator to deduct funds from the player’s balance and to store the wager. The available Balance response is the balance after performing a transaction.
 
-当玩家在网站下注，体育平台将执行已下注的操作并将注单信息一起发送给运营商以扣除玩家的相应金额并保存注单。响应的可用余额为交易完成之后的余额。
-
 If the response received from the BETTED action is invalid or incomplete, the Sportsbook Platform will send a ROLLBACKED action as we cannot be certain that the wager information was successfully processed by the Operator.
 
-如果从投注操作收到的响应无效或不完整，体育平台将发送投注的返回操作，因为我们无法确定运营商是否成功处理了投注信息。
-
-**Single Wager Type: POST Data for Request 单一注单：请求的POST数据**
+**Single Wager Type: POST Data for Request**
 
 ```js
 {
@@ -306,46 +275,34 @@ If the response received from the BETTED action is invalid or incomplete, the Sp
 }
 ```
 
-**Parlay & Teaser Wager Type: POST Data for Request 混合过关&变让分过关：请求的POST数据**
+**Parlay & Teaser Wager Type: POST Data for Request**
 
 A Round Robin bet is an easy way to wager multiple parlays with a single bet. They make it easy for bettors to place parlay wagers that consist of 3-8 lines. A parlay without Round Robin can consist of up to 10 lines and 2-6 teams for a teaser. Bettors can cover their bases and wager all possible combinations by using a Round Robin and bet many parlays at once. The downside to these wagers is that gamblers bet too many legs or use too many selections in their parlay combinations. You can find round robin bets at just about every online sportsbook, but they are not often used by most sports gamblers.
 
-轮询过关投注(Round Robin投注)是一种简单快捷地在同一次投注里投注多个过关注单的玩法。玩家可以同时选择多个过关组合选项，并在同一时间下注在3-8个赔率的排列组合上。过关（Parlay）投注：玩家可以选择2-10个赔率进行过关投注，而变让分过关盘（Teaser投注）可以在2-6支队伍上的排列组合中进行投注。玩家可以使用轮询过关投注一次性投注多张过关注单来覆盖以他们选择的赔率为基础的所有可能的组合，这些注单的缺点是玩家在过关组合中会产生过多的选项。您几乎可以在所有线上体育博彩中看到轮询投注，但是大多数玩家不会经常使用该功能。
-
 Operators receive request BETTED action when the player places a bet. A Round Robin will be presented through RoundRobinOptions. Its value can be `Single`, `Parlay` (not a round robin. It is only normal parlay wager), `TwoLegRoundRobin`, `ThreeLegRoundRobin`, `FourLegRoundRobin`, `FiveLegRoundRobin`, `SixLegRoundRobin`, `SixLegRoundRobin`, `SevenLegRoundRobin`, `EightLegRoundRobin`.
-
-当玩家投注轮询过关(Round Robin bet)时，运营商会收到BETTED 的请求。轮询过关会通过RoundRobinOptions来展示。它的值可以是`Single`, `Parlay` (此种属于普通过关注单，非轮询过关), `TwoLegRoundRobin`, `ThreeLegRoundRobin`, `FourLegRoundRobin`, `FiveLegRoundRobin`, `SixLegRoundRobin`, `SixLegRoundRobin`, `SevenLegRoundRobin`, `EightLegRoundRobin`.
 
 The example table shows a combination of picks (events/legs) and round robin options:
 
-我们将投注选项（赛事/投注项）以及轮询投注的选择列表示例如下：
-
 *Table 1 - Combination of picks (events/legs) and round robin options*
 
-| Picks <br/>(events/legs/bets)<br/>投注选择 <br/>（赛事/投注项） | Ways<br/>投注方法 | Number of Bets <br/>投注单数 |
+| Picks <br/>(events/legs/bets)  | Ways<br/>| Number of Bets |
 | --- | --- | --- |
-| 3 | 2 - TwoLegRoundRobin<br>2-两个选项的轮询过关投注 | 3 |
-| 4 | 2 - TwoLegRoundRobin<br>2-两个选项的轮询过关投注 | 6 |
-| 4 | 3 - ThreeLegRoundRobin<br>3-三个选项的轮询过关投注 | 4 |
+| 3 | 2 - TwoLegRoundRobin| 3 |
+| 4 | 2 - TwoLegRoundRobin< | 6 |
+| 4 | 3 - ThreeLegRoundRobin | 4 |
 | … | … | … |
 | … | … | … |
-| 8 | 2 - TwoLegRoundRobin<br>2-两个选项的轮询过关投注 | 28 |
-| 8 | 3 - ThreeLegRoundRobin<br>3-三个选项的轮询过关投注 | 56 |
-| 8 | 4 - FourLegRoundRobin<br>4-四个选项的轮询过关投注 | 70 |
-| 8 | 5 - FiveLegRoundRobin<br>5-五个选项的轮询过关投注 | 56 |
-| 8 | 6 - SixLegRoundRobin<br>6-六个选项的轮询过关投注 | 28 |
+| 8 | 2 - TwoLegRoundRobin | 28 |
+| 8 | 3 - ThreeLegRoundRobin | 56 |
+| 8 | 4 - FourLegRoundRobin | 70 |
+| 8 | 5 - FiveLegRoundRobin | 56 |
+| 8 | 6 - SixLegRoundRobin | 28 |
 
 We send to operators 1 `BETTED` action when a player places a bet with a Round Robin Parlay. The wager in this action is *master wager*. Then we send 3 `ACCEPTED` action if player bet in 3 events (games, matches) and `RoundRobinOptions` is `TwoLegRoundRobin` (assuming that the player’s bet was accepted). Other actions are also the same (`ACCEPTED` action). The `WagerMasterId` property will used to group all wagers together.
 
-当运营商1的玩家投注在轮询过关时，我们会发送 `BETTED` 讯息。该讯息中的注单为这个轮询过关投注里的总注单 *master wager*. 随后，如果玩家在这次投注中是投注在了三场赛事上，我们会发送3个 `ACCEPTED` 讯息以及`RoundRobinOptions` is `TwoLegRoundRobin` (前提是玩家的投注被接受了). 其他的投注也同样会发送 `ACCEPTED` 讯息. `WagerMasterId` 属性用于将此轮询过关里的所有注单组在一。.
-
 Events of WagerInfo for Parlay / Teaser Wager will be presented in a list containing event names.
 
-混合过关和变让分过关的注单赛事信息Events of WagerInfo将会以包含赛事名称的列表形式呈现。 
-
 In `BETTED` action, we send the number of bets that will be generated using the `WagerNum` property in JSON request. When the bet is accepted, we will send the number of `ACCEPTED` actions equal to number in the `WagerNum` property. The same will happen for the next action type.
-
-在已下注中，我们将发送於 JSON 请求中 `WagerNum` 生成的投注数量。 当投注被接受时，我们将发送等于 `WagerNum` 中数字的 `ACCEPTED` 数量。 下一个操作类型也以此類推。
 
 ```js
 {
@@ -448,7 +405,7 @@ In `BETTED` action, we send the number of bets that will be generated using the 
 }
 ```
 
-**Manual Wager Type: POST Data for Request 手动投注类型：发布请求数据**
+**Manual Wager Type: POST Data for Request**
 
 ```js
 {
@@ -489,8 +446,6 @@ In `BETTED` action, we send the number of bets that will be generated using the 
 ```
 **Response Data for Single, Parlay and Teaser, Manual cases.**
 
-**单人、过关和预告、手动案例的响应数据**
-
 ```js
 {
     "Result": {
@@ -508,19 +463,13 @@ In `BETTED` action, we send the number of bets that will be generated using the 
 }
 ```
 
-### 2.2.2. ACCEPTED Action 已接受
+### 2.2.2. ACCEPTED Action
 
 The Sportsbook Platform will call to the Operator to notify them that the bet was **ACCEPTED**. The Operator must update the status of wager to **OPEN** and adjust the balance if needed (in the case of better odds accepted).
 
-体育平台将会通知运营商注单已接受。运营商需要更新注单状态至开放OPEN，并在有需要的时候调整余额（以防接受了更佳的赔率）。
-
 **POST data for Request**
 
-**请求的POST 数据**
-
 *No Adjustment for Single Wager: Request data.*
-
-*无需调整余额的单一注单：请求数据*
 
 ```js
 {
@@ -563,11 +512,9 @@ The Sportsbook Platform will call to the Operator to notify them that the bet wa
 }
 ```
 
-**Response Data 响应数据**
+**Response Data**
 
 Response data when accepting bet with no balance adjustment.
-
-在无需调整余额的情况下，接受注单时的响应数据
 
 ```js
 {
@@ -589,8 +536,6 @@ Response data when accepting bet with no balance adjustment.
 ```
 
 *Has Adjustment for Single Wager: Request data in case of better odds accepted and player chose to WIN option to place bet.*
-
-*需要调整余额的单一注单：在接受更佳赔率以及玩家在下注时选择了独赢选项时的请求数据*
 
 ```js
 {
@@ -636,11 +581,9 @@ Response data when accepting bet with no balance adjustment.
 }
 ```
 
-**Response Data 响应数据**
+**Response Data**
 
 Response data when accepting a bet with balance adjustment.
-
-当接受需要调整余额的注单时的响应数据
 
 ```js
 {
@@ -660,8 +603,6 @@ Response data when accepting a bet with balance adjustment.
 ```
 
 *No Adjustment for Parlay/ Teaser Wager: Request data.*
-
-*无需调整余额的混合过关/变让分过关注单的请求数据*
 
 ```js
 {
@@ -730,11 +671,7 @@ Response data when accepting a bet with balance adjustment.
 
 **Response Data**
 
-**响应数据**
-
 Response data when accepting bet with no balance adjustment.
-
-当接受无需调整余额的注单时的响应数据
 
 ```js
 {
@@ -753,8 +690,6 @@ Response data when accepting bet with no balance adjustment.
 ```
 
 *Has Adjustment for Parlay/ Teaser Wager: Request data in case of better odds accepted and player chose to Win option to place bet.*
-
-*需要调整余额的混合过关/变让分过关注单：在接受更佳赔率以及玩家在下注时选择了独赢选项时的请求数据*
 
 ```js
 {
@@ -829,11 +764,7 @@ Response data when accepting bet with no balance adjustment.
 
 **Response Data**
 
-**响应数据**
-
 Response data when accepting a bet with balance adjustment.
-
-当接受需要调整余额的注单时的响应数据
 
 ```js
 {
@@ -853,8 +784,6 @@ Response data when accepting a bet with balance adjustment.
 ```
 
 *Manual Wager Type: Request data.*
-
-*手动投注类型：请求数据。*
 
 ```js
 {
@@ -887,11 +816,9 @@ Response data when accepting a bet with balance adjustment.
 }
 ```
 
-**Response Data 响应数据**
+**Response Data**
 
 Response data when accepting bet.
-
-接受投注时的响应数据。
 
 ```js
 {
@@ -911,19 +838,13 @@ Response data when accepting bet.
 }
 ```
 
-### 2.2.3. SETTLED Action 已结算
+### 2.2.3. SETTLED Action
 
 The Sportsbook Platform will call to the Operator when a bet is **SETTLED**. The Operator wallet must update the player’s wallet balance based on the Amount that the Sportsbook Platform sent in **SETTLED** action.
 
-体育平台将会通知运营商注单已结算。运营商钱包需要根据体育平台在执行已结算的步骤时向其提供的Amount金额来更新玩家的钱包余额。
-
 Note: In SETTLED action, request data may have a Transaction or not. If there is a Transaction in the request wager is **WIN**, **WIN HALF** or **LOSE HALF**.
 
-注：在已结算的步骤中，请求数据不一定有Transaction （交易）。如果请求中有Transaction （交易）信息，注单结果为赢，半赢或者半输。
-
 **Single Wager Type: Request Data**
-
-**单一注单：请求数据**
 
 ```js
 {
@@ -979,8 +900,6 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 
 **Response Data**
 
-**响应数据**
-
 ```js
 {
     "Result": {
@@ -1000,8 +919,6 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 ```
 
 **Parlay/ Teaser Type: Request Data**
-
-**混合过关/变让分过关：请求数据**
 
 ```js
 {
@@ -1080,9 +997,6 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 ```
 
 **Response Data**
-
-**响应数据**
-
 ```js
 {
     "Result": {
@@ -1101,8 +1015,6 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 }
 ```
 **Manual Wager Type: Request Data**
-
-**手动投注类型：请求数据**
 
 ```js
 {
@@ -1148,8 +1060,6 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 
 **Response Data**
 
-**响应数据**
-
 ```js
 {
   "Result": {
@@ -1168,13 +1078,11 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
   "Timestamp": "2021-07-02T16:52:08"
 }
 ```
-### 2.2.4. REJECTED Action 已被拒
+### 2.2.4. REJECTED Action
 
 The Sportsbook Platform will call to the Operator wallet to notify that the wager was **REJECTED**. The Operator wallet needs to update the status of the wager to **REJECTED** and credit the player’s wallet balance based on the Amount in the transaction sent in data request.
 
-体育平台将会通知运营商钱包注单已被拒。运营商钱包需要更新注单状态至REJECTED（已被拒）并根据数据请求里的交易金额返还至玩家的钱包。
-
-**POST data for Request 发出数据请求**
+**POST data for Request**
 
 ```js
 {
@@ -1201,7 +1109,7 @@ The Sportsbook Platform will call to the Operator wallet to notify that the wage
 }
 ```
 
-**Response Data 响应数据**
+**Response Data**
 
 ```js
 {
@@ -1220,13 +1128,11 @@ The Sportsbook Platform will call to the Operator wallet to notify that the wage
 }
 ```
 
-### 2.2.5. CANCELLED Action 已取消
+### 2.2.5. CANCELLED Action
 
 When the bet is cancelled, the Sportsbook Platform will call the Operator with the **CANCELLED** type of transaction to refund the bet amount.
 
-当注单被取消，体育平台会通知运营商：cancelled交易已取消以返还投注金额。
-
-**POST data for Request 发出数据请求**
+**POST data for Request**
 
 ```js
 {
@@ -1253,7 +1159,7 @@ When the bet is cancelled, the Sportsbook Platform will call the Operator with t
 }
 ```
 
-**Response Data 响应数据**
+**Response Data**
 
 ```js
 {
@@ -1273,19 +1179,14 @@ When the bet is cancelled, the Sportsbook Platform will call the Operator with t
 }
 ```
 
-### 2.2.6. ROLLBACKED Actions 已返回
+### 2.2.6. ROLLBACKED Actions
 
 If a response is not received from the server, a timeout (499), gateway error (502, 504), or an invalid response is received, on sending a BETTED action, a ROLLBACKED action will be sent for the wager. The Operator must rollback the wager using the WagerId and refund the Amount that Sportsbook Platform sent in betted action using the TransactionId. If the Transaction and Wager are not found in Operator side, no adjustment is to be made.
 
-如果未从服务器收到完整响应，而收到超时 (499)、网关错误 (502、504) 或收到无效响应，则在发送投注操作时，将发送投注的返回操作。运营商必须使用 WagerId 返回投注，并根据TransactionId 来退还体育平台投注操作中发送的金额。 如果运营商端没有找到交易和投注，则无需进行调整。
-
 *Note: The rollback action will be sent when there is a problem during the bet placement process. Request includes wager information and transaction type of “rollbacked”. This request has only 1 action and does not include other actions.*
-
-*注：在下注过程中出现问题时，将发送"已返回"请求"。该请求包含下注信息和"已返回"的交易类型。 该请求只有1个动作，不会和其他交易类型一起发送。*
 
 In the Transaction of Rollback action, we send a ReferTransactionId property. This refers to TransactionId of the previous BETTED action. The ROLLBACKED action helps to identify transactions from the BETTED action. Sometimes the Operator will get this action but no previous BETTED action (e.g. there may be a problem sending BETTED actions over the network). Please ignore it and respond as a success with ResponseCode is 0 as data.
 
-在"已返回”请求的交易中，我们发送的 ReferTransactionId指向的是之前 “已下注” 请求的 TransactionId。 "已返回”请求操作有助于识别来自 “已下注”请求中的交易。 有时运营商会收到此 "已返回”请求，但没有与之对应的的 “已下注”请求（比如，发送 “已下注”请求可能存在网络问题）。 请忽略并发送ResponseCode 为 0 的数据作为成功响应。
 
 ```js
 {
@@ -1314,7 +1215,7 @@ In the Transaction of Rollback action, we send a ReferTransactionId property. Th
 }
 ```
 
-**Response Data 响应数据**
+**Response Data**
 
 ```js
 {
@@ -1333,17 +1234,13 @@ In the Transaction of Rollback action, we send a ReferTransactionId property. Th
 }
 ```
 
-### 2.2.7. UNSETTLED Action 取消结算
+### 2.2.7. UNSETTLED Action
 
 When a bet needs to be resettled due to an incorrect result or any other reason that may cause the resettlement in Sportsbook Platform. The Sportsbook Platform will send UNSETTLED action to reverse the previous settle operation. The Operator must refund the lost amount or take back the win amount and change wager status back to OPEN.
 
-当注单因错误结果或者其他原因需要在体育平台重新结算，体育平台会执行取消结算的步骤以返回之前的结算。运营商需要返还或扣除玩家可能的输赢金额并将注单状态改为OPEN。
-
 *Note: The action following an Unsettled action is either Cancelled or Settled. In this request data, we usually call the Operator in 2 actions: `UNSETTLED` then `CANCELLED`/`SETTLED`.*
 
-*注：未结算之后的步骤为已取消或者已结算。在这项请求数据中，我们通常调取运营商钱包2个步骤：取消结算以及已取消/已结算。*
-
-**Request Data 请求数据**
+**Request Data**
 
 ```js
 {
@@ -1388,7 +1285,7 @@ When a bet needs to be resettled due to an incorrect result or any other reason 
 }
 ```
 
-**Response Data 响应数据**
+**Response Data**
 
 ```js
 {
@@ -1414,56 +1311,56 @@ When a bet needs to be resettled due to an incorrect result or any other reason 
 }
 ```
 
-## 2.3. Appendix 附录
+## 2.3. Appendix
 
-### 2.3.1. [JSON Data Request Description of Wagering API 投注API的JSON数据请求描述](./../appendix/appendix-1-json-data-request-description-of-wagering-api.md)
+### 2.3.1. [JSON Data Request Description of Wagering API](./../appendix/appendix-1-json-data-request-description-of-wagering-api.md)
 
-### 2.3.2. [JSON Data Response Description of Wagering API 投注API的JSON数据回应描述](./../appendix/appendix-2-json-data-response-description-of-wagering-api.md)
+### 2.3.2. [JSON Data Response Description of Wagering API](./../appendix/appendix-2-json-data-response-description-of-wagering-api.md)
 
-### 2.3.3. Action Types 操作类型
+### 2.3.3. Action Types
 
-| No 编号 | Code 代码 | Description 描述 |
+| No  | Code | Description |
 | --- | --- | --- |
-| 1 | `BETTED` | Player places bet and the Sportsbook Platform creates a wager. <br/>玩家下注且在体育平台创建了相应注单 |
-| 2 | `ACCEPTED` | A wager was accepted by the Sportsbook Platform. <br/>注单被体育平台接受 |
-| 3 | `REJECTED` | A wager was not accepted by the Sportsbook Platform. <br/>注单没有被体育平台接受 |
-| 4 | `SETTLED` | A wager was settled by the Sportsbook Platform. <br/>注单在体育平台已结算 |
-| 5 | `CANCELLED` | A wager was cancelled by the Sportsbook Platform. <br/>注单被体育平台取消 |
-| 6 | `ROLLBACKED` | Rollback is used when an unknown error or timeout occurred. <br/>注单因未知错误或超时而被返回 |
-| 7 | `UNSETTLED` | Unsettled action happens when a wager needs to be settled or cancelled; however, the wager was previously settled. <br/>取消结算状态：注单需要结算或取消但注单曾被结算过 |
+| 1 | `BETTED` | Player places bet and the Sportsbook Platform creates a wager. |
+| 2 | `ACCEPTED` | A wager was accepted by the Sportsbook Platform.  |
+| 3 | `REJECTED` | A wager was not accepted by the Sportsbook Platform.  |
+| 4 | `SETTLED` | A wager was settled by the Sportsbook Platform. |
+| 5 | `CANCELLED` | A wager was cancelled by the Sportsbook Platform. |
+| 6 | `ROLLBACKED` | Rollback is used when an unknown error or timeout occurred. |
+| 7 | `UNSETTLED` | Unsettled action happens when a wager needs to be settled or cancelled; however, the wager was previously settled.|
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 
-### 2.3.4. Transaction Status 交易状态
+### 2.3.4. Transaction Status
 
-| No 编号 | Code 代码 | Description 描述 |
+| No | Code | Description |
 | --- | :---: | --- |
-| 1 | `pending` | The transaction is being processed in the Operator’s wallet. <br/>交易正在运营商钱包里进行 |
-| 2 | `completed` | The transaction has been successfully processed in the Operator’s wallet. <br/>交易已在运营商钱包里成功受理 |
-| 3 | `failed` | The transaction failed processing in the Operator's wallet. <br/>交易在运营商钱包里未受理成功 |
+| 1 | `pending` | The transaction is being processed in the Operator’s wallet.|
+| 2 | `completed` | The transaction has been successfully processed in the Operator’s wallet.|
+| 3 | `failed` | The transaction failed processing in the Operator's wallet.|
 
-### 2.3.5. Error Response Code 响应错误代码
+### 2.3.5. Error Response Code
 
-| Code 代码 | Message 信息 | Description 描述 |
+| Code | Message | Description |
 | --- | --- | --- |
-| 0 | Success | The API call has successfully been completed without any errors.<br/>成功调取API,未出现任何错误 |
-| -1 | Unknown Error | An unknown error has occurred during the API call.<br/>在调取API时出现未知错误 |
-| -3 | Session Not Found | The session token was not found in the Operator Wallet or the session token has expired. <br/>会话令牌未在运营商钱包或者会话令牌已过期失效 |
-| -4 | Account Frozen | The account has been suspended/frozen by the Operator Wallet.<br/>账户被运营商钱包中止或冻结 |
-| -5 | Account Not Found | The account was not found in the Operator Wallet.<br/>账户在运营商钱包里不存在 |
-| -6 | API Authenticated Failed | This error will be returned if the Signature is invalid or not found.<br/>无效或不存在的签名 |
+| 0 | Success | The API call has successfully been completed without any errors.|
+| -1 | Unknown Error | An unknown error has occurred during the API call.|
+| -3 | Session Not Found | The session token was not found in the Operator Wallet or the session token has expired. |
+| -4 | Account Frozen | The account has been suspended/frozen by the Operator Wallet. |
+| -5 | Account Not Found | The account was not found in the Operator Wallet.|
+| -6 | API Authenticated Failed | This error will be returned if the Signature is invalid or not found.
 
-### 2.3.6. Action Response Code 操作响应代码
+### 2.3.6. Action Response Code
 
-| Code 代码 | Message 信息 | Description 描述 |
+| Code | Message | Description |
 | --- | --- | --- |
-| 0 | Success | The API call has successfully been completed without any errors.<br/>成功调取API,未出现任何错误 |
-| -1 | Unknown Error | An unknown error has occurred during the execution of the transaction.<br/>在执行交易过程中出现未知错误 |
-| -2 | Insufficient Fund | The B2B Wallet has insufficient Player funds to complete the debit.<br/>在B2B钱包里，玩家资金不足以支付账款 |
-| -7 | Transaction Not Complete | The debit/credit transaction has not been completed in the Operator Wallet.<br/>添加或扣除款项交易未在运营商钱包里完成 |
-| -8 | Transaction Not Found | The debit/credit transaction cannot be found in the B2B Wallet.<br/>添加或扣除款项交易在B2B钱包里不存在 |
-| -9 | Currency Mismatch | The B2B Wallet Currency Code does not match the Currency Code of Sportsbook Platform Account.<br/><b>Please ignore it. This error code is deprecated from documentation version 1.0.21 (curent version) or later.</b><br/>B2B钱包币种代码与体育平台账户币种代码不一致 |
-| -10 | Stake Limit | The bet has exceeded the individual stake limit set for the Player of Sportsbook Platform.<br/>注单金额超过玩家在体育平台的单个玩家下注限额 |
-| -11 | Wager Limit | The bet will exceed the wager limit set for the Player of Sportsbook Platform.<br/>注单金额将超过玩家在体育平台的下注限额 |
-| -12 | Loss Limit | The bet will exceed the loss limit set for the Player of Sportsbook Platform.<br/>注单金额将超过玩家在体育平台的损失限额 |
+| 0 | Success | The API call has successfully been completed without any errors.|
+| -1 | Unknown Error | An unknown error has occurred during the execution of the transaction.|
+| -2 | Insufficient Fund | The B2B Wallet has insufficient Player funds to complete the debit.|
+| -7 | Transaction Not Complete | The debit/credit transaction has not been completed in the Operator Wallet.|
+| -8 | Transaction Not Found | The debit/credit transaction cannot be found in the B2B Wallet.|
+| -9 | Currency Mismatch | The B2B Wallet Currency Code does not match the Currency Code of Sportsbook Platform Account.<br/><b>Please ignore it. This error code is deprecated from documentation version 1.0.21 (curent version) or later.|
+| -10 | Stake Limit | The bet has exceeded the individual stake limit set for the Player of Sportsbook Platform.|
+| -11 | Wager Limit | The bet will exceed the wager limit set for the Player of Sportsbook Platform. |
+| -12 | Loss Limit | The bet will exceed the loss limit set for the Player of Sportsbook Platform.|
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 
