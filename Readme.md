@@ -27,30 +27,27 @@ I-White-label 第三方集成API允许B2B客户将体育博彩网站集成到B2B
   <tbody>
     <tr>
       <td><a href="/docs/data-format.md">Data Format</a></td>
-      <td><a href="#">Data Format 数据格式</a></td>
-      <td><a href="#">Data Format</a></td>
-      <td><a href="#">Data Format 数据格式</a></td>
+      <td><a href="/docs/data-format.md">Data Format 数据格式</a></td>
+      <td><a href="/docs/data-format.md">Data Format</a></td>
+      <td><a href="/docs/data-format.md">Data Format 数据格式</a></td>
     </tr>
     <tr>
-      <td><a href="#">Shared Endpoints</a></td>
-      <td><a href="#">Shared Endpoints 共享端点</a></td>
-      <td><a href="#">Shared Endpoints</a></td>
-      <td><a href="#">Shared Endpoints 共享端点</a></td>
+      <td><a href="/docs/shared.md">Shared Endpoints</a></td>
+      <td><a href="/docs/shared.md">Shared Endpoints 共享端点</a></td>
+      <td><a href="/docs/shared.md">Shared Endpoints</a></td>
+      <td><a href="/docs/shared.md">Shared Endpoints 共享端点</a></td>
     </tr>
     <tr>
-      <td><a href="#">Transfer Wallet</a></td>
-      <td><a href="#">Transfer Wallet 转账钱包</a></td>
-      <td><a href="#">Seamless Wallet</a></td>
-      <td><a href="#">Seamless Wallet 单一钱包</a></td>
+      <td><a href="/docs/seamless.md">Transfer Wallet</a></td>
+      <td><a href="/docs/seamless.md">Transfer Wallet 转账钱包</a></td>
+      <td><a href="/docs/seamless.md">Seamless Wallet</a></td>
+      <td><a href="/docs/seamless.md">Seamless Wallet 单一钱包</a></td>
+    </tr>
+    <tr>
+      <td><a href="/docs/post-message.md">Post Message</a></td>
+      <td><a href="/docs/post-message.md">Post Message</a></td>
+      <td><a href="/docs/post-message.md">Post Message</a></td>
+      <td><a href="/docs/post-message.md">Post Message</a></td>
     </tr>
   </tbody>
 </table>
-
-
-
-| White Label Integration | Seamless Wallet Integration |
-| --- | --- |
-| [Data Format](/docs/data-format.md) | [Data Format](/docs/data-format.md) |
-| [Shared Endpoints](/docs/shared.md) | [Shared Endpoints](/docs/shared.md) |
-| [Transfer Wallet](/docs/transfer.md) | [Seamless Wallet](/docs/seamless.md) |
-| [Post Message](/docs/post-message.md) | [Post Message](/docs/post-message.md) |
