@@ -1593,8 +1593,6 @@ userCode  != null (specific user code or login id)
 
 userCode = CO1AP100
 userCode = PA10000000
-```
-
 *Sample code (Java)*
 
 ```java
