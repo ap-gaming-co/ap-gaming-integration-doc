@@ -385,7 +385,7 @@ New post message to allow users who are not logged in to the B2B site, to make t
 | `msgData`  | Array of Message Data | Message data|
 
 
-*Message Data　讯息数据*
+*Message Data*
 
 | Field | Data Type | Notes |
 | --- | --- | --- |
