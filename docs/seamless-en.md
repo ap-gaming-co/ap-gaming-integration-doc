@@ -1,4 +1,4 @@
-# Table Contents 目录
+# Table Contents
 
 - [Table Contents](#table-contents-%E7%9B%AE%E5%BD%95)
 - [1. Seamless Wallet Overview](#1-seamless-wallet-overview)
@@ -141,7 +141,7 @@ There are 7 Action Types for a wager: `BETTED`, `ACCEPTED`, `REJECTED`, `SETTLED
 
 Sequence Interaction
 
-![Sequence Interaction](./../res/figure-1-sequence-interaction-english-chinese.png?raw=true)
+![Sequence Interaction](./../res/figure-1-sequence-interaction-english.png?raw=true)
  
 *Figure 1 – The sequence shows the interaction between the Operator and the Sportbook Platform.* <br>
 **Bet Placement Process**:
@@ -196,7 +196,7 @@ Sequence Interaction
 Note 1: If the bet was accepted with better odds and the player chose Stake as “To Win” amount, the difference must be credited back to the player account. See ACCEPTED Action section.
 
 
-![Wager State Diagram](../res/wager-state-diagram-english-chinese.png?raw=true)
+![Wager State Diagram](../res/wager-state-diagram-english.png?raw=true)
 
 **Unsettled Action** 
 
