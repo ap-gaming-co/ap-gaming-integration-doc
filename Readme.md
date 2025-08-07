@@ -39,8 +39,8 @@ I-White-label 第三方集成API允许B2B客户将体育博彩网站集成到B2B
       <td><a href="/docs/shared.md">Shared Endpoints 共享端点</a></td>
     </tr>
     <tr>
-      <td><a href="/docs/seamless-en.md">Transfer Wallet</a></td>
-      <td><a href="/docs/seamless.md">Transfer Wallet 转账钱包</a></td>
+      <td><a href="/docs/transfer-en.md">Transfer Wallet</a></td>
+      <td><a href="/docs/transfer.md">Transfer Wallet 转账钱包</a></td>
       <td><a href="/docs/seamless-en.md">Seamless Wallet</a></td>
       <td><a href="/docs/seamless.md">Seamless Wallet 无缝钱包</a></td>
     </tr>
