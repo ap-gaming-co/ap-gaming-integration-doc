@@ -1,42 +1,41 @@
 
-# Table Contents 目录
-- [Table Contents 目录](#table-contents)
-- [Transfer Wallet 转账钱包](#transfer-wallet)
-    - [1. API Functions API 功能](#1-api-functions)
-        - [1.1. FP005 – Deposit 存款](#11-fp005-deposit)
-        - [1.2.	FP006 – Withdraw 提款](#12-fp006-withdraw)
-        - [1.3. FR007 – Transactions 交易](#13-fr007-transactions)
-        - [1.4. FR008 – Check Status for Deposit/Withdraw 查询存取款状态](#14-fr008-check-status-for-deposit-withdraw)
+# Table Contents
+- [Table Contents](#table-contents)
+- [Transfer Wallet](#transfer-wallet)
+    - [1. API Functions API](#1-api-functions)
+        - [1.1. FP005 – Deposit](#11-fp005-deposit)
+        - [1.2.	FP006 – Withdraw](#12-fp006-withdraw)
+        - [1.3. FR007 – Transactions](#13-fr007-transactions)
+        - [1.4. FR008 – Check Status for Deposit/Withdraw](#14-fr008-check-status-for-deposit-withdraw)
   
-# Transfer Wallet 转账钱包 <a name="transfer-wallet"></a>
+# Transfer Wallet<a name="transfer-wallet"></a>
 
-## 1. API Functions API 功能 <a name="1-api-functions"></a>
+## 1. API Functions API<a name="1-api-functions"></a>
 
-### 1.1. FP005 – Deposit 存款 <a name="11-fp005-deposit"></a>
+### 1.1. FP005 – Deposit<a name="11-fp005-deposit"></a>
 
-Deposit for player. 用户存款
+Deposit for player.
 
-**Endpoint 端点:**
+**Endpoint:**
 
-| Name 名称 | Value 设置值 | Description 描述 |
+| Name | Value | Description |
 | ---  | ---  | ---  |
 | URL  | `/player/deposit`  |   |
-| Method  | `GET`/`POST` | For POST method, it is recommended to send parameters as a  JSON object in the request body.<br> 对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。  |
+| Method  | `GET`/`POST` | For POST method, it is recommended to send parameters as a  JSON object in the request body. |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| | |
 
-**Parameters 参数:**
+**Parameters:**
 
-| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name | Type | Value | Validation | Description |
 | ---  | --- | ---  | ---  | ---  |
-| `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
-| `token` |   Header   | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
-| `userCode`  |   Query   | String (required 必需项)   |   | This is the user code / loginID of the player. E.g: `PA10000000` 此为玩家登录名/用户名，例如`PA10000000` |
-| `amount`  |   Query   | Decimal(10, 2) (required 必需项)  | Value  > 0 <br> 设置值>0 |   |
-| `transactionId` |   Query   | String(50) (optional 非必需项) | Value > 0 <br> 设置值>0 | The transactionId can be used to check a transaction’s status. It is a unique ID. 用于检查交易状态的交易ID |
+| `userCode`  | Header | String (required)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. |
+| `token` |   Header   | String (required) | Token is available for 15 minutes after creation. |
+| `userCode`  |   Query   | String (required)   | This is the user code / loginID of the player. E.g: `PA10000000`|
+| `amount`  |   Query   | Decimal (10, 2) (required)  | Value  > 0 |
+| `transactionId` |   Query   | String (50) (optional) | Value > 0 | The transactionId can be used to check a transaction’s status. It is a unique ID. |
 ||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
 
 Sample code (java) - See HttpUtils class at Appendix
-示例代码（java）– 请参阅附录里的 HttpUtils class
 
 ```java
 import java.io.IOException;  
@@ -58,7 +57,7 @@ private static void deposit() throws IOException {
 }
 ```
 
-*Sample code (C#) 示例代码（C#）*
+*Sample code (C#)*
 
 ```csharp
 using System;  
@@ -89,10 +88,9 @@ namespace Deposit
 }  
 ```
 
-**Response 反应:**
+**Response:**
 
 Successful response will return JSON format. <br>
-成功响应数据将返回JSON格式
 
 ```js
 {   
@@ -103,32 +101,30 @@ Successful response will return JSON format. <br>
 }
 ```
 
-### 1.2. FP006 – Withdraw 提款 <a name="12-fp006-withdraw"></a>
+### 1.2. FP006 – Withdraw <a name="12-fp006-withdraw"></a>
 
 Withdraw for player.<br>
-用户提款
 
-**Endpoint 端点:**
+**Endpoint:**
 
-| Name 名称 | Value 设置值 | Description 描述 |
+| Name | Value | Description |
 | ---  | ---  | ---   |
 | URL  | `/player/withdraw`  |   |
-| Method  | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. <br> 对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。 |
+| Method  | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body.|
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| | |
 
 
-**Parameters 参数:**
+**Parameters:**
 
-| Name 名称 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name | Value | Validation | Description |
 | ---  | ---  | ---  | ---  |
-| userCode  | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
-| token | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
-| userCode  | String (required必需项) |  | This is the user code / loginID of the player. E.g: PA10000000 此为玩家登录名/用户名，例如PA10000000 |
-| amount  | Decimal(10, 2) (required必需项)  | Value > 0 <br> 设置值>0 |   |
-| transactionId | String(50) (optional非必需项) | Value > 0<br> 设置值>0 | The transactionId can be used to check a transaction’s status. It is a unique ID. 用于检查交易状态的交易ID |
+| userCode  | String (required)  | This is the agent code obtained in step 2. E.g: CO1AP1. |
+| token | String (required) | Token is available for 15 minutes after creation. |
+| userCode  | String (required) | This is the user code / loginID of the player. E.g: PA10000000 |
+| amount  | Decimal (10, 2) (required) | Value > 0 |
+| transactionId | String (50) (optional) | Value > 0 | The transactionId can be used to check a transaction’s status. It is a unique ID. |
 
 *Sample code (java) - See HttpUtils class at Appendix*
-*示例代码（java）– 请参阅附录里的 HttpUtils class*
 
 ```java
 import java.io.IOException;  
@@ -150,7 +146,7 @@ private static void withdraw() throws IOException {
 }  
 ```
 
-*Sample code (C#)  示例代码（C#）*
+*Sample code (C#)*
 
 ```csharp
 using System;  
@@ -181,10 +177,9 @@ namespace Withdraw
 }  
 ```
 
-**Response 反应:**
+**Response:**
 
 Successful response will return JSON format.<br>
-成功响应数据将返回JSON格式
 
 ```js 
 {   
@@ -195,36 +190,34 @@ Successful response will return JSON format.<br>
 }        
 ```
 
-### 1.3. FR007 – Transactions 交易 <a name="13-fr007-transactions"></a>
+### 1.3. FR007 – Transactions <a name="13-fr007-transactions"></a>
 
 This service will return Deposit/Withdrawal transactions made by players.<br>
-这项服务将获得玩家在B2B Agent里做出的存取款交易
 
-**Endpoint 端点:**
+**Endpoint:**
 
-| Name 名称 | Value 设置值 | Description 描述 |
+| Name | Value | Description |
 | --- | ---  | ---   |
 | URL  | `/report/transactions` |   |
 | Method  | `GET` | |
  
-**Parameters 参数:**
+**Parameters:**
 
-| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name | Type | Value | Validation | Description |
 | ---  | --- | ---  | ---  | ---  |
-| `userCode`  | Header | String (required 必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 这是在 Step 2里获取的agent code,例如：CO1AP1 |
-| `token` | Header | String (required必需项) | Token is available for 15 minutes after creation. Token令牌在创建之后的15分钟内有效 |  |
-| `dateFrom` | Query | Date (optional 非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建时间格式年-月-日-时-分-秒 GMT-4 | Example例如: 2016-10-15 23:59:59   |
-| `dateTo`  | Query | Date (optional 非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4创建时间格式年-月-日-时-分-秒 GMT-4 | Example例如: 2016-10-16 23:59:59   |
-| `transferType` | Query | String(optional 非必需项) | ALL DEPOSIT WITHDRAWAL 所有存取款 (default默认: ALL) | Indicates the transfer type to return. 注明转账类型来获取 |
-| `userCode` | Query | String (optional 非必需项)  |  | This is the user code / loginID of the player. E.g: PA10000000. 这是玩家的用户名/登录名 |
+| `userCode`  | Header | String (required) | This is the agent code obtained in step 2. E.g: CO1AP1. |
+| `token` | Header | String (required) | Token is available for 15 minutes after creation. |
+| `dateFrom` | Query | Date (optional) | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 | Example: 2016-10-15 23:59:59   |
+| `dateTo`  | Query | Date (optional)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 | Example: 2016-10-16 23:59:59   |
+| `transferType` | Query | String (optional) | ALL DEPOSIT WITHDRAWAL (default: ALL) | Indicates the transfer type to return. |
+| `userCode` | Query | String (optional) | This is the user code / loginID of the player. E.g: PA10000000.|
 ||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
 
-**Note 注意:**
+**Note:**
 
-No date range specified如没有设定时间范围: System will return all transactions to the present time. 系统将回应直至当前的所有交易
+No date range specified: System will return all transactions to the present time.
 
 *Sample code (java) - See HttpUtils class at Appendix*
-*示例代码（java）– 请参阅附录里的 HttpUtils class*
 
 ```java
 import java.io.IOException;  
@@ -245,7 +238,7 @@ private static void getAnnouncements() throws IOException {
 }  
 ```
 
-*Sample code (C#)  示例代码（C#）*
+*Sample code (C#)*
 
 ```csharp
 using System;  
@@ -275,7 +268,7 @@ namespace Transactions
 }  
 ```
 
-**Response OK 返回OK:**
+**Response OK:**
 
 ```js
 [  
@@ -309,30 +302,28 @@ namespace Transactions
 ] 
 ```
 
-### 1.4. FR008 – Check Status for Deposit/Withdraw 查询存取款状态 <a name="14-fr008-check-status-for-deposit-withdraw"></a>
+### 1.4. FR008 – Check Status for Deposit/Withdraw <a name="14-fr008-check-status-for-deposit-withdraw"></a>
 
 This service will return the status of a Deposit/Withdrawal transaction made by players.<br>
-这项服务将获得玩家在B2B Agent里的存取款交易状态
 
-**Endpoint 端点:**
+**Endpoint:**
 
-| Name 名称 | Value 设置值 | Description 描述 |
+| Name | Value | Description |
 | ---  | ---  | ---   |
 | URL  | `/player/depositwithdraw/status` |   |
-| Method  | `GET`, `POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. <br> 对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。 |
+| Method  | `GET`, `POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|||
 
-**Parameters 参数:**
+**Parameters:**
 
-| Name 名称 | Type 类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| Name | Type | Value | Validation | Description |
 | ---  | ---  | ---  | ---  | ---  |
-| `userCode`  | Header  | String<br/> (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 这是在 Step 2里获取的agent code,例如：CO1AP1 |
-| `token` | Header  | String <br/> (required必需项) | Token is available for 15 minutes after creation. Token令牌在创建之后的15分钟内有效 |  |
-| `transactionId` | Query  | String(50)<br/>(required必需项)  | Value > 0 <br> 设置值>0| Deposit/withdrawal transactionId您在调取存取款数据时发送的交易ID Example例如: 12345678 |
+| `userCode`  | Header  | String<br/> (required)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. |
+| `token` | Header  | String <br/> (required) | Token is available for 15 minutes after creation. |
+| `transactionId` | Query  | String(50)<br/>(required)  | Value > 0 | Deposit/withdrawal transactionId Example: 12345678 |
 ||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|||
 
 *Sample code (java) - See HttpUtils class at Appendix*
-*示例代码（java）– 请参阅附录里的 HttpUtils class*
 
 ```java
 import java.io.IOException;  
@@ -353,7 +344,7 @@ private static void getStatus() throws IOException {
 }  
 ```
 
-*Sample code (C#) 示例代码（C#）*
+*Sample code (C#)*
 
 ```csharp
 using System;  
@@ -383,7 +374,7 @@ namespace ChangeStatusForDepositWithdraw
 }  
 ```
 
-**Response OK 回应OK:**
+**Response OK:**
 
 ```js
 {  
