@@ -924,8 +924,6 @@ This service returns all wagers for a player.
 
 We also provide a wager feed to Push wager changes to B2B customer servers (see FR004).
 
-Wager: (translation.md)
-
 **Endpoint**
 
 | Name | Value | Description  |
@@ -1408,8 +1406,6 @@ namespace Wagers
 
 This service returns all wagers for a player (this function works as FR001 and will replace it in the future).
 
-Wager: (translation.md)
-
 **Endpoint:**
 
 | Name | Value  | Description  |
@@ -1448,7 +1444,7 @@ URL example: http://apidomain.com/b2b/report/all-wagers?wagerIds=6862955,6862947
 
 The response result is the same as with FR001 except that the result may contain data for more than one “userCode”.
 
-Wager: (translation.md)
+Please refer to below section
 
 ```js
 [  
@@ -1590,9 +1586,6 @@ userCode  != null (specific user code or login id)
 
 **For example:** <br/>
 **userCode** = `CO1AP100` - This is user code of **Agent**<br/>**userCode** = `PA10000000` - This is user code of **Player**
-
-userCode = CO1AP100
-userCode = PA10000000
 
 *Sample code (Java)*
 
@@ -1804,7 +1797,7 @@ Request URL: url_any Request Method: POST Request Payload: (see defined message 
 Feed_wager_data model: (this model is the same as the model in FR002 except with the addition of an id field.
 
 
-Wager: (translation.md)
+Please refer to below section
 
 ```js
 {  
