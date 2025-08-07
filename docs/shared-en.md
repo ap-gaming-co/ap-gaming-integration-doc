@@ -1444,7 +1444,7 @@ URL example: http://apidomain.com/b2b/report/all-wagers?wagerIds=6862955,6862947
 
 The response result is the same as with FR001 except that the result may contain data for more than one “userCode”.
 
-Please refer to below section
+Please refer to
 
 ```js
 [  
@@ -1797,7 +1797,7 @@ Request URL: url_any Request Method: POST Request Payload: (see defined message 
 Feed_wager_data model: (this model is the same as the model in FR002 except with the addition of an id field.
 
 
-Please refer to below section
+Please refer to
 
 ```js
 {  
