@@ -492,7 +492,7 @@ This service is used to create a new user and generate a URL that will allow the
 | Name <br/>名称 | Value 设置值 | Description 描述 |
 | --- | --- | --- |
 | URL | `/player/loginV2 ` | |
-| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. 对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。|
+| Method | `GET`/`POST` | For POST method, it is recommended to send loginID as a request parameter in the URL and other parameters as a JSON object in the request body. 对于 POST 方法，建议将 loginID 作为请求参数附加在 URL 中，而其他参数则以 JSON 对象的形式放在请求体（request body）中进行传输。|
 
 **Parameters 参数**
 
