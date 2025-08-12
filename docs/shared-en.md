@@ -268,7 +268,6 @@ This service is used to generate a URL without the player needing to login.
 | `userCode` | String<br/>(required) | | This is the user code / loginID of the player. E.g: *PA10000000* |
 | `locale` | String <br/>(optional) | Supported locales based on brand’s available languages. | See Locale (Language) in the Data-format. |
 | `oddsFormat` | String <br/>(optional) | A list of supported oddsFormats is available in the Data-format | See Odds Format in the Data-format |
-| `desktopView` | Boolean <br/>(optional) | `true`/`false` *(Default: false)*  Only applicable to Asian view | If true then desktop view be used when their players use mobile device Otherwise, the appropriate view will be displayed based on the device (desktop or mobile). |
 | `view` | String <br/>(optional) | Default: COMPACT | Once the parameter is set, this view would be the default view in the iFrame.|
 
 *Format URL login*
@@ -481,7 +480,6 @@ This service is used to create a new user and generate a URL that will allow the
 | `locale` | Query | String <br/>(optional) | Supported locales based on brand’s available languages.| See Locale (Language) in the Data-format.|
 | `sport` | Query | String <br/>(optional) | A list of supported sports is available in the Data-format.<br/>**Notes:**<br/>If you only want to show only e-sports in the iFrame, you must contact us to enable the setting and the sport parameter must be "e-sports".<br/> | See Sport in the Data-format. |
 | `oddsFormat` | Query | String<br/>(optional) | A list of supported oddsFormats is available in the Data-format. | See Odds Format in the Data-format. |
-| `desktopView` | Query | Boolean<br/>(optional) | `true`/`false` *(Default: false)* Only applicable to Asian view. | If true, then desktop view will be used when the players use a mobile device. Otherwise, the appropriate view will be displayed based on the device (desktop or mobile). |
 | `view` | Query | String<br/>(optional) | Default: COMPACT <br/>：COMPACT | See View in the Data-format. <br/>Once the parameter is set, the view will be the default view in the iFrame.|
 | `eventId` | Query | Number<br/>(optional) | Event ID can be obtained by the Get Hot Event API. event Id | Players will be redirected to the corresponding event page.|
 | `parentUrl` | Query | String <br/>(optional) | Client's domain which will be used for live streaming in all views. | This parameter is supported in all views.|
