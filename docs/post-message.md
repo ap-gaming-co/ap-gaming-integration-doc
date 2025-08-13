@@ -187,6 +187,7 @@ If a fixture has regular events and specials, the fixture will only return once.
 | `home`  | `String` | Home team. 主队名称 |
 | `away`  | `String` | Away team. 客队名称 |
 | `lines`  | `integer<int32>` | Indicates how many lines are in the given event.<br/>列明给定赛事的盘口数 |
+| `inPlay`  | `boolean` | Indicates whether the event is currently live (in-play) or pregame. <br/>注明该市场是赛中盘口还是赛前盘口。|
 
 *Sample 示例*
 
@@ -200,12 +201,14 @@ If a fixture has regular events and specials, the fixture will only return once.
 		“home”: “Dream Team”,
 		“away”: “Burning Code”,
 		“lines”: 12,
+		“inPlay”: true 
    }, {
 		“eventId”: 12346782,
 		“starts”: “2022-07-01T15:30:00Z”,
 		“home”: “Detonation FocusMe”,
 		“away”: “Crest Act”,
 		“lines”: 0,
+		“inPlay”: false 
    }]
 }
 ```
