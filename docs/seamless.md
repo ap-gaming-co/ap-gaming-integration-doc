@@ -161,7 +161,7 @@ There are 7 Action Types for a wager: `BETTED`, `ACCEPTED`, `REJECTED`, `SETTLED
 
 Sequence Interaction 序列交互
 
-![Sequence Interaction](./../res/figure-1-sequence-interaction-english-chinese.png?raw=true)
+![Sequence Interaction](./../res/sequence_interaction_enzh.png?raw=true)
  
 *Figure 1 – The sequence shows the interaction between the Operator and the Sportbook Platform.* <br>
 *图 1 – 该序列显示了运营商和体育平台之间的交互。*
