@@ -62,10 +62,10 @@ Returns Array of games. 返回游戏数组
 {
 	“games”: [{
 		“id”: 123,
-		“name”: “CS:GO”
+		“name”: "CS:GO"
 	   }, {
 		“id”: 124,
-		“name”: “DOTA2”
+		“name”: "DOTA2"
    	}]
 }
 ```
