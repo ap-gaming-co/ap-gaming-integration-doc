@@ -110,16 +110,16 @@ Returns Array of leagues. 返回联赛的数组
 {
 	“leagues”: [{
 		“id”: 123,
-		“name”: “CS:GO – Liga Talents”,
-		“homeTeamType”: “Team1”,
+		“name”: "CS:GO – Liga Talents",
+		“homeTeamType”: "Team1",
 		“hasOfferings”: true,
 		“leagueSpecialsCount”: 1,
 		“eventSpecialsCount”: 4,
 		“eventCount”: 4
    }, {
 		“id”: 123,
-		“name”: “CS:GO – Liga Talents”,
-		“homeTeamType”: “Team1”,
+		“name”: "CS:GO – Liga Talents",
+		“homeTeamType”: "Team1",
 		“hasOfferings”: true,
 		“leagueSpecialsCount”: 2,
 		“eventSpecialsCount”: 0,
