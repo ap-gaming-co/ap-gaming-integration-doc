@@ -171,6 +171,7 @@ If a fixture has regular events and specials, the fixture will only return once.
 | `home`  | `String` | Home team. |
 | `away`  | `String` | Away team. |
 | `lines`  | `integer<int32>` | Indicates how many lines are in the given event. |
+| `inPlay`  | `boolean` | Indicates whether the event is currently live (in-play) or pregame. |
 
 *Sample*
 
@@ -184,12 +185,14 @@ If a fixture has regular events and specials, the fixture will only return once.
 		"home": "Dream Team",
 		"away": "Burning Code",
 		"lines": 12,
+		"inPlay": true 
    }, {
 		"eventId": 12346782,
 		"starts": "2022-07-01T15:30:00Z",
 		"home": "Detonation FocusMe",
 		"away": "Crest Act",
 		"lines": 0,
+		"inPlay": false
    }]
 }
 ```
