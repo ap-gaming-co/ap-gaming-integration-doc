@@ -53,12 +53,12 @@ Returns Array of games.
 
 ```js
 {
-	“games”: [{
-		“id”: 123,
-		“name”: “CS:GO”
+	"games": [{
+		"id": 123,
+		"name": "CS:GO"
 	   }, {
-		“id”: 124,
-		“name”: “DOTA2”
+		"id": 124,
+		"name": "DOTA2"
    	}]
 }
 ```
@@ -99,22 +99,22 @@ Returns Array of leagues.
 
 ```js
 {
-	“leagues”: [{
-		“id”: 123,
-		“name”: “CS:GO – Liga Talents”,
-		“homeTeamType”: “Team1”,
-		“hasOfferings”: true,
-		“leagueSpecialsCount”: 1,
-		“eventSpecialsCount”: 4,
-		“eventCount”: 4
+	"leagues": [{
+		"id": 123,
+		"name": "CS:GO – Liga Talents",
+		"homeTeamType": "Team1",
+		"hasOfferings": true,
+		"leagueSpecialsCount": 1,
+		"eventSpecialsCount": 4,
+		"eventCount": 4
    }, {
-		“id”: 123,
-		“name”: “CS:GO – Liga Talents”,
-		“homeTeamType”: “Team1”,
-		“hasOfferings”: true,
-		“leagueSpecialsCount”: 2,
-		“eventSpecialsCount”: 0,
-		“eventCount”: 6
+		"id": 123,
+		"name": "CS:GO – Liga Talents",
+		"homeTeamType": "Team1",
+		"hasOfferings": true,
+		"leagueSpecialsCount": 2,
+		"eventSpecialsCount": 0,
+		"eventCount": 6
    }]
 }
 ```
@@ -178,22 +178,22 @@ If a fixture has regular events and specials, the fixture will only return once.
 
 ```js
 {
-	“sportId”: 12,
-	“leagueId”: 134567,
-	“event”: [{
-		“eventId”: 12346781,
-		“starts”: “2022-07-01T15:30:00Z”,
-		“home”: “Dream Team”,
-		“away”: “Burning Code”,
-		“lines”: 12,
-		“inPlay”: true 
+	"sportId": 12,
+	"leagueId": 134567,
+	"event": [{
+		"eventId": 12346781,
+		"starts": "2022-07-01T15:30:00Z",
+		"home": "Dream Team",
+		"away": "Burning Code",
+		"lines": 12,
+		"inPlay": true 
    }, {
-		“eventId”: 12346782,
-		“starts”: “2022-07-01T15:30:00Z”,
-		“home”: “Detonation FocusMe”,
-		“away”: “Crest Act”,
-		“lines”: 0,
-		“inPlay”: false 
+		"eventId": 12346782,
+		"starts": "2022-07-01T15:30:00Z",
+		"home": "Detonation FocusMe",
+		"away": "Crest Act",
+		"lines": 0,
+		"inPlay": false
    }]
 }
 ```
@@ -252,29 +252,29 @@ Returns standard lines.
 
 ```js
 {
-	“sportId”: 12,
-	“leagueId”: 134567,
-	“eventId”: 13456784,
-        “eventDateFm”: “2022-07-01T15:30:00Z”,
-        “eventName”: "Dream Team vs Burning Code",
-        “home”: “Dream Team”,
-        “away”: “Burning Code”,
-	“line”: [{
-		“id”: 12346781,
-		“altLineId”: 12346789
-		“periodNumber”: 0,
-		“points”: null,
-		“hdp”: null,
-		“betType”: “MONEYLINE”,
-		“cutoff”: “2022-07-01T17:30:00Z”
+	"sportId": 12,
+	"leagueId": 134567,
+	"eventId": 13456784,
+        "eventDateFm": "2022-07-01T15:30:00Z",
+        "eventName": "Dream Team vs Burning Code",
+        "home": "Dream Team",
+        "away": "Burning Code",
+	"line": [{
+		"id": 12346781,
+		"altLineId": 12346789
+		"periodNumber": 0,
+		"points": null,
+		"hdp": null,
+		"betType": "MONEYLINE",
+		"cutoff": "2022-07-01T17:30:00Z"
         }, {
-		“id”: 12346783,
-		“altLineId”: 12346791
-		“periodNumber”: 0,
-		“points”: null,
-		“hdp”: -1,
-		“betType”: “SPREAD”,
-		“cutoff”: “2022-07-01T17:30:00Z”
+		"id": 12346783,
+		"altLineId": 12346791
+		"periodNumber": 0,
+		"points": null,
+		"hdp": -1,
+		"betType": "SPREAD",
+		"cutoff": "2022-07-01T17:30:00Z"
    }]
 }
 ```
@@ -343,27 +343,27 @@ Returns special lines.
 
 ```js
 {
-      “sportId”: 12,
-      “leagueId”: 134567,
-      “eventId”: 13456784,
-      “eventDateFm”: “2022-07-01T15:30:00Z”,
-      “eventName”: "Dream Team vs Burning Code",
-      “home”: “Dream Team”,
-      “away”: “Burning Code”,
-      “specials”: [{
-		“id”: 12346781,
-		“name”: “Correct Score”,
-		“category”: “Teams”,
-		“periodNumber”: 0,
-		“betType”: “MULTI_WAY_HEAD_TO_HEAD”,
-		“cutoff”: “2022-07-01T17:30:00Z”,
-		“units”: “”,
-		“contestants”: [{
-			“id”: 1456789745,
-			“name”: “Dream Team 0 Burning Code 3”
+      "sportId": 12,
+      "leagueId": 134567,
+      "eventId": 13456784,
+      "eventDateFm": "2022-07-01T15:30:00Z",
+      "eventName": "Dream Team vs Burning Code",
+      "home": "Dream Team",
+      "away": "Burning Code",
+      "specials": [{
+		"id": 12346781,
+		"name": "Correct Score",
+		"category": "Teams",
+		"periodNumber": 0,
+		"betType": "MULTI_WAY_HEAD_TO_HEAD",
+		"cutoff": "2022-07-01T17:30:00Z",
+		"units": "",
+		"contestants": [{
+			"id": 1456789745,
+			"name": "Dream Team 0 Burning Code 3"
 			},{
-			“id”: 1456789746,
-			“name”: “Dream Team 1 Burning Code 3”
+			"id": 1456789746,
+			"name": "Dream Team 1 Burning Code 3"
 			}]
 	}]
 }
@@ -404,14 +404,14 @@ New post message to allow users who are not logged in to the B2B site, to make t
 
 ```js
 {
-	“msgCode”: “selectionInfo”,
-	“msgData”: [{
-		“eventId”: 12346781,
-		“period”: 0,
-		“betType”: “SPREAD”,
-		“team”: “AWAY”,
-		“altLineId”: 12346789,
-		“hdp”: “0.5”
+	"msgCode": "selectionInfo",
+	"msgData": [{
+		"eventId": 12346781,
+		"period": 0,
+		"betType": "SPREAD",
+		"team": "AWAY",
+		"altLineId": 12346789,
+		"hdp": "0.5"
    	}
       ]
 }
