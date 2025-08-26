@@ -93,7 +93,9 @@ Example: 100 IDR in system mean 100,000 IDR <br/>
 
 ### 2.3. Date and Time 日期时间 <a name="23-date-and-time"></a>
 
-All dates will be in GMT-4 except `Timestamp`. 除时间戳Timestamp以外，所有日期均为GMT-4.
+All dates will be in GMT-4 except `Timestamp`. 除时间戳Timestamp以外，所有日期均为GMT-4。
+
+Simplified lines endpoints are at GMT+0. 精简盘口端点使用 GMT+0。
 
 Date format: yyyy-MM-dd 日期格式：年-月-日
 
