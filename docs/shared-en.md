@@ -89,6 +89,8 @@ Example: 100 IDR in system mean 100,000 IDR <br/>
 
 All dates will be in GMT-4 except `Timestamp`. 
 
+Simplified lines endpoints are at GMT+0. 
+
 Date format: yyyy-MM-dd
 
 Date Time format: yyyy-MM-dd HH:mm:ss. For example: 2017-04-01 07:00:00
