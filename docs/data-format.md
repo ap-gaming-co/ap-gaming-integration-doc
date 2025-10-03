@@ -623,6 +623,7 @@ E.g. `2018-12-20T04:05:06`
 | 6 | Soccer足球 | Penalty Shootout点球决胜 | 
 | 7 | Soccer足球 | 1st Ten Shootout Pen前10个点球 | 
 | 8 | Soccer足球 | To Qualify晋级 |
+| 39 | Soccer足球 | To Win Final赢得决赛 |
 | 0 | Softball垒球 | Game赛事 | 
 | 1 | Softball垒球 | 1st Half上半场 | 
 | 2 | Softball垒球 | 2st Half下半场 | 
