@@ -620,6 +620,7 @@ E.g. `2018-12-20T04:05:06`
 | 6 | Soccer | Penalty Shootout | 
 | 7 | Soccer | 1st Ten Shootout Pen | 
 | 8 | Soccer | To Qualify |
+| 39 | Soccer | To Win Final |
 | 0 | Softball | Game | 
 | 1 | Softball | 1st Half | 
 | 2 | Softball | 2st Half | 
