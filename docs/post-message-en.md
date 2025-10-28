@@ -181,14 +181,14 @@ If a fixture has regular events and specials, the fixture will only return once.
 	"leagueId": 134567,
 	"event": [{
 		"eventId": 12346781,
-		"starts": "2022-07-01T15:30:00Z",
+		"starts": "2022-07-01 15:30:00.000",
 		"home": "Dream Team",
 		"away": "Burning Code",
 		"lines": 12,
 		"inPlay": true 
    }, {
 		"eventId": 12346782,
-		"starts": "2022-07-01T15:30:00Z",
+		"starts": "2022-07-01 15:30:00.000",
 		"home": "Detonation FocusMe",
 		"away": "Crest Act",
 		"lines": 0,
