@@ -254,7 +254,7 @@ Returns standard lines.
 	"sportId": 12,
 	"leagueId": 134567,
 	"eventId": 13456784,
-        "eventDateFm": "2022-07-01T15:30:00Z",
+        "eventDateFm": "2022-07-01 15:30:00.000",
         "eventName": "Dream Team vs Burning Code",
         "home": "Dream Team",
         "away": "Burning Code",
@@ -265,7 +265,7 @@ Returns standard lines.
 		"points": null,
 		"hdp": null,
 		"betType": "MONEYLINE",
-		"cutoff": "2022-07-01T17:30:00Z"
+		"cutoff": "2022-07-01 17:30:00.000"
         }, {
 		"id": 12346783,
 		"altLineId": 12346791
@@ -273,7 +273,7 @@ Returns standard lines.
 		"points": null,
 		"hdp": -1,
 		"betType": "SPREAD",
-		"cutoff": "2022-07-01T17:30:00Z"
+		"cutoff": "2022-07-01 17:30:00.000"
    }]
 }
 ```
@@ -345,7 +345,7 @@ Returns special lines.
       "sportId": 12,
       "leagueId": 134567,
       "eventId": 13456784,
-      "eventDateFm": "2022-07-01T15:30:00Z",
+      "eventDateFm": "2022-07-01 15:30:00.000",
       "eventName": "Dream Team vs Burning Code",
       "home": "Dream Team",
       "away": "Burning Code",
@@ -355,7 +355,7 @@ Returns special lines.
 		"category": "Teams",
 		"periodNumber": 0,
 		"betType": "MULTI_WAY_HEAD_TO_HEAD",
-		"cutoff": "2022-07-01T17:30:00Z",
+		"cutoff": "2022-07-01 17:30:00.000",
 		"units": "",
 		"contestants": [{
 			"id": 1456789745,
