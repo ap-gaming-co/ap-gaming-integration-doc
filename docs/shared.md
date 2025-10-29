@@ -2425,7 +2425,7 @@ namespace ChangeStatusForDepositWithdraw
                     "id": 1000605833,  
                     "home": "Djurgardens IF",  
                     "away": "Malmo FF",  
-                    "starts": "2019-07-14T15:30:00Z",  
+                    "starts": "2019-07-14 15:30:00",  
                     "spreads": [{  
                             "hdp": 0,  
                             "home": -116,  
