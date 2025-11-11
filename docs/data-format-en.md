@@ -88,6 +88,7 @@
 | 64 | Simulated Games |
 | 65 | Sumo |
 | 66 | Slap Fighting |
+| 67 | Pickleball |
 
 ## 2. Wager Type
 
