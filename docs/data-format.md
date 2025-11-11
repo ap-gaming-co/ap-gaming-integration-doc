@@ -88,6 +88,7 @@
 | 64 | Simulated Games 模拟比赛 |
 | 65 | Sumo 相扑 |
 | 66 | Slap Fighting 巴掌格斗 |
+| 67 | Pickleball 匹克球 |
 
 ## 2. Wager Type 注单类型
 
