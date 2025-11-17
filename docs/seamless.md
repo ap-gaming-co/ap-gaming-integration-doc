@@ -235,7 +235,7 @@ If more than one action applies to a bet, the actions must be processed in order
 如果一张注单适用多个操作，则必须按顺序处理这些操作，首先处理Action ID较低的操作。如果无法按顺序处理，请根据投注的当前状态和已收到状态，按照以下操作说明进行操作。
 
 The action to take will depend on the current status of the bet, the status in the action, and the action ID. Refer to the table below:<br/>
-要采取的步骤将取决于注单的当前状态、操作的状态以及操作ID。参考下表：
+要采取的步骤将取决于注单的当前状态、操作的状态以及Action ID。参考下表：
 
 | Status Received<br/>已收到状态 | Current Status<br/>当前状态 | Received Action ID is Higher<br/>收到的Action ID较大 | Action To Take<br/>采取的行动 |
 | --- | --- | --- | --- |
