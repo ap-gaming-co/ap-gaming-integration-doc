@@ -466,7 +466,7 @@ We have these type of Bet Selection to send from B2B site to Iframe via postMess
 | `eventId` | Number |
 | `period` | Number |
 | `betType` | String (SPREAD) |
-| `team` | String (HOME , AWAY, DRAW)  |
+| `team` | String (HOME , AWAY)  |
 | `altLineId` | Number |
 | `hdp` | Number |
 
