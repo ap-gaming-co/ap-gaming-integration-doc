@@ -231,10 +231,13 @@ A bet can only be Unsettled after it has been **Settled** or **Cancelled**.<br/>
 
 **Handling Settled and Unsettled Actions 根据已结算和取消结算的处理**
  
+If more than one action applies to a bet, the actions must be processed in order, with the lower action ID first. If this cannot be  done, please follow the instructions below on the action to take, taking into account the current and received properties of the bet.
+如果一张注单适用多个操作，则必须按顺序处理这些操作，首先处理操作ID较低的操作。如果无法按顺序处理，请根据投注的当前状态和已收到状态，按照以下操作说明进行操作。
+
 The action to take will depend on the current status of the bet, the status in the action, and the action ID. Refer to the table below:<br/>
 要采取的步骤将取决于注单的当前状态、操作的状态以及操作ID。参考下表：
 
-| Status Received<br/>已收到状态 | Current Status<br/>当前状态 | Received Action ID is Higher<br/>收到的Action ID较大 | Action To Take<br/>采取的行动 |
+| Status Received<br/>已收到状态 | Current Status<br/>当前状态 | Received Action ID is Higher<br/>收到的操作 ID较大 | Action To Take<br/>采取的行动 |
 | --- | --- | --- | --- |
 | SETTLED 已结算 | ACCEPTED 已接受 | Yes 是 | Settle the bet 结算注单 |
 | SETTLED 已结算 | UNSETTLED 未结算 | No 否 | Ignore action 可忽略 |
