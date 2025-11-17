@@ -205,6 +205,8 @@ A bet may be **Unsettled** when the outcome of the bet needs to be changed.<br/>
 A bet can only be Unsettled after it has been **Settled** or **Cancelled**.<br/>
 
 **Handling Settled and Unsettled Actions**
+
+If more than one action applies to a bet, the actions must be processed in order, with the lower action ID first. If this cannot be  done, please follow the instructions below on the action to take, taking into account the current and received properties of the bet.<br/>
  
 The action to take will depend on the current status of the bet, the status in the action, and the action ID. Refer to the table below:<br/>
 | Status Received<br/> | Current Status<br/> | Received Action ID is Higher<br/>Action ID | Action To Take<br/>|
