@@ -265,12 +265,12 @@ This service is used to generate a URL without the player needing to login.
 
 **Parameters**
 
-| Name <br/>| Value <br/> | Validation | Description |
-| --- | --- | --- | --- |
-| `userCode` | String<br/>(required) | | This is the user code / loginID of the player. E.g: *PA10000000* |
-| `locale` | String <br/>(optional) | Supported locales based on brand’s available languages. | See Locale (Language) in the Data-format. |
-| `oddsFormat` | String <br/>(optional) | A list of supported oddsFormats is available in the Data-format | See Odds Format in the Data-format |
-| `view` | String <br/>(optional) | Default: COMPACT | Once the parameter is set, this view would be the default view in the iFrame.|
+| Name <br/> | Type <br/> | Value | Validation | Description |
+| --- | --- | --- | --- | --- |
+| `userCode` | Query | String<br/>(required) | | This is the user code / loginID of the player. E.g: *PA10000000* |
+| `locale` | Query | String <br/>(optional) | Supported locales based on brand’s available languages. | See Locale (Language) in the Data-format. |
+| `oddsFormat` | Query | String <br/>(optional) | A list of supported oddsFormats is available in the Data-format | See Odds Format in the Data-format |
+| `view` | Query | String <br/>(optional) | Default: COMPACT | Once the parameter is set, this view would be the default view in the iFrame.|
 
 *Format URL login*
 
