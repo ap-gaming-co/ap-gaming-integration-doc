@@ -288,7 +288,8 @@ Endpoint 端点
 | Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
 | --- | --- | --- | --- | --- |
 | `userCode` | Query | String<br/>(required 必需项) | | This is the user code / loginID of the player. E.g: *PA10000000* 此为玩家登录名/用户名，例如*PA10000000* |
-| `locale` | Query | String <br/>(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 | See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）。|
+| `locale` | Query | String <br/>(optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言是基于品牌可用的语言 | See Locale (Language) in the <a href="https://github.com/ap-gaming-co/ap-gaming-integration-doc/blob/main/docs/data-format.md" target="_blank">data-format page</a>.
+ 详见数据格式中的区域代码（语言）。|
 | `oddsFormat` | Query | String <br/>(optional 非必需项) | A list of supported oddsFormats is available in the Data-format. 支持的数据格式列表请参阅 oddsFormats数据格式。 | See Odds Format in the Data-format. 详见数据格式中的赔率格式。|
 | `view` | Query | String <br/>(optional 非必需项) | Default: COMPACT 默认：COMPACT（新亚洲界面） | Once the parameter is set, this view would be the default view in the iFrame. 该参数可设置并更改默认界面 |
 
