@@ -2547,9 +2547,8 @@ This section shows basic workflows for each of the API functions.
 ### 5.1. View 界面 <a name="51-view"></a>
 | View Code 界面代码 | Description 描述 |
 | --- | ---  |
-| ASIA | Asia View 亚洲界面 |
 | EURO | Europe View 欧洲界面 |
-| ESPORTS-HUB | Esports View AP 电竞 |
+| ESPORTS-HUB | Esports View AP 电竞界面 |
 | COMPACT | New Asian View 新亚洲界面 |
 
 ### 5.2. Game Name 游戏名称 <a name="52-gamename"></a>
