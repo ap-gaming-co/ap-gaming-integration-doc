@@ -2416,7 +2416,6 @@ This section shows basic workflows for each of the API functions.
 ### 5.1. View <a name="51-view"></a>
 | View Code | Description |
 | --- | ---  |
-| ASIA | Asia View|
 | EURO | Europe View |
 | ESPORTS-HUB | Esports View AP|
 | COMPACT | New Asian View|
