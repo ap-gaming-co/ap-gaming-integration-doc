@@ -89,6 +89,7 @@
 | 65 | Sumo |
 | 66 | Slap Fighting |
 | 67 | Pickleball |
+| 68 | Ski Mountaineering |
 
 ## 2. Wager Type
 
