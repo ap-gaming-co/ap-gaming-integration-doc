@@ -89,6 +89,7 @@
 | 65 | Sumo 相扑 |
 | 66 | Slap Fighting 巴掌格斗 |
 | 67 | Pickleball 匹克球 |
+| 68 | Ski Mountaineering 滑雪登山 |
 
 ## 2. Wager Type 注单类型
 
