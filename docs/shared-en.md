@@ -2444,7 +2444,7 @@ The service is using pagination which is to split the results into smaller pages
 (2):	
 When filterBy is settle_date, the system will only query data by date (not time) but dateFrom and dateTo must still use yyyy-MM-dd HH:00:00 format.
 
-URL example: http://apidomain.com/b2b/report/all-wagers?wagerIds=6862955,6862947
+URL example: http://apidomain.com/b2b/report/all-wagers-v2?wagerIds=6862955,6862947
 
 **Response OK**
 
