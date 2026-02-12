@@ -2567,7 +2567,8 @@ The service is using pagination which is to split the results into smaller pages
 | `fromRecord` | Query | Int(optional 非必需项)) | The starting wager index from which the API should return results (Default: 0). API 应从哪个注单索引开始返回结果（默认值：0）。 |  Example: `200` |
 | `pageSize` | Query | Int(optional 非必需项)) | The number of wagers per page (Default: 1000). 每页显示的投注数量（默认值：1000） |  Example: `1000` Rule: pageSize <= 1000 例如： 1000：页面尺寸 <= 1000|
 
-**Note:**
+**Note 注意:**
+
 (1):
 1. WITHOUT date range:
 	a. System shall return all wagers from last 24 hours. 
@@ -2575,16 +2576,25 @@ The service is using pagination which is to split the results into smaller pages
 	a. If `userCode` = null, valid date range will be up to 24 hours.
 	b. If `userCode` != null, valid date range will be up to 168 hours (7 days).
 
+(1):
+1. 如未输入日期范围：
+   a. 系统应返回过去24小时内的全部注单。
+2. 如果输入了日期范围:
+   a. 如果 userCode = null, 有效日期范围最高为24小时。
+   b. 如果 userCode != null, 有效日期范围最高为168小时(7 天).
+
 (2):	
-When filterBy is settle_date, the system will only query data by date (not time) but dateFrom and dateTo must still use yyyy-MM-dd HH:00:00 format.
+When filterBy is settle_date, the system will only query data by date (not time) but dateFrom and dateTo must still use yyyy-MM-dd HH:00:00 format. 
+在filterBy是settle_date的情况下，系统只按日期格式查询数据，但dateFrom和dateTo仍然使用yyyy-MM-dd HH:00:00的格式。
 
 URL example: http://apidomain.com/b2b/report/all-wagers-v2?wagerIds=6862955,6862947
+URL 示例: http://apidomain.com/b2b/report/all-wagers-v2?wagerIds=6862955,6862947
 
-**Response OK**
+**Response OK 返回OK**
 
-The response result is the same as with FR001 except that the result may contain data for more than one “userCode”.
+The response result is the same as with FR001 except that the result may contain data for more than one “userCode”. 响应结果与 FR001 相同，只是结果可能包含多个“userCode”的数据。
 
-Please refer to
+Please refer to 请参考以下
 
 ```js
 [  
