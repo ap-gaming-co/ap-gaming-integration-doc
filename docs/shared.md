@@ -2585,16 +2585,22 @@ The service is using pagination which is to split the results into smaller pages
 
 (2):	
 When filterBy is settle_date, the system will only query data by date (not time) but dateFrom and dateTo must still use yyyy-MM-dd HH:00:00 format. 
+
 在filterBy是settle_date的情况下，系统只按日期格式查询数据，但dateFrom和dateTo仍然使用yyyy-MM-dd HH:00:00的格式。
 
 URL example: http://apidomain.com/b2b/report/all-wagers-v2?wagerIds=6862955,6862947
+
 URL 示例: http://apidomain.com/b2b/report/all-wagers-v2?wagerIds=6862955,6862947
 
 **Response OK 返回OK**
 
-The response result is the same as with FR001 except that the result may contain data for more than one “userCode”. 响应结果与 FR001 相同，只是结果可能包含多个“userCode”的数据。
+The response result is the same as with FR001 except that the result may contain data for more than one “userCode”. 
 
-Please refer to 请参考以下
+响应结果与 FR001 相同，只是结果可能包含多个“userCode”的数据。
+
+Please refer to 
+
+请参考以下
 
 ```js
 [  
