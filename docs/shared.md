@@ -26,7 +26,7 @@
         - [3.13. FR006 – Announcement 公告](#313-fr006-announcement)
         - [3.14. FR009 – Get Hot Event 获取热门赛事](#314-fr009-get-hot-event)
         - [3.15. FR010 – Deep link 深层链接 ](#315-fr010-deep-link-content)
-        - [3.16. FR011 – All Wagers V2](#316-fr011-all-wagers-v2)
+        - [3.16. FR011 – All Wagers V2 所有投注V2](#316-fr011-all-wagers-v2)
     - [4. Screens and Workflows 截图和工作流程](#4-screens-and-workflows)
     - [5. Appendix 附录](#5-appendix)
         - [5.1. View 界面](#51-view)
@@ -2534,33 +2534,38 @@ Here is the list of deeplink URLs that are used in New Euro View:
 | Esport View Favourites Participant  电竞界面 最爱 参加者  | https://:hostname/:lang/standard/esports-hub/favourites/:sportCode#:name |
 | Esport View Multiview  电竞界面 多视图 | https://:hostname/:lang/standard/esports-hub/live/multiview |
 
-### 3.16. FR011 – All Wagers V2 <a name="316-fr011-all-wagers-v2"></a>
+### 3.16. FR011 – All Wagers V2 所有投注V2 <a name="316-fr011-all-wagers-v2"></a>
 
 This service returns all wagers for a player (this function works as FR002 and will replace it in the future).
+
+获取你用户所有的投注 （此功能与 FR002 相同，并将在未来取代 FR002）。
+
 The service is using pagination which is to split the results into smaller pages
 
-**Endpoint:**
+该服务采用分页机制，用来将结果拆分为较小的页面进行展示。
 
-| Name | Value  | Description  |
+**Endpoint 端点:**
+
+| Name 名称 | Value 设置值 | Description 描述 |
 | ---  | ---  | ---   |
 | URL  | `/report/all-wagers-v2`  |   |
 | Method  | `GET`  |   |
 
-**Parameters:**
+**Parameters 参数:**
 
-| Name | Type <br/> | Value | Validation | Description |
+| Name 名称 | Type 类型 <br/> | Value 设置值 | Validation 验证 | Description 描述 |
 | ---  | ---  | --- | ---  | ---  |
-| `userCode`  | Header | String (required)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. |
-| `token` | Header | String(required) | Token is available for 15 minutes after creation. |  |
-| `dateFrom` | Query | Date (optional)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-15 23:59:59  |
-| `dateTo (1)` | Query | Date (optional)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours  |
-| `userCode` | Query | String (optional) |  | This is the user code / loginID of the player. E.g: PA10000000. |
-| `settle` | Query | Int (optional) | 1: settled 1: <br/>0: unsettled 0: <br/>-1: all (both settled and unsettled) (Default: -1) | 1 = wager status: SETTLED or CANCELLED <br/>0 = wager status includes: OPEN or PENDING <br/>-1 = All wager status values |
-| `filterBy (2)` | Query | String(optional) | event_date wager_date settle_date update_date (Default: wager_date): wager_date |
-| `locale` | Query | String (optional) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format.|
-| `wagerIds` | Query | String(optional) | A comma-separated list of wagerIDs to be returned. |  Example: `6862955`,`6862947` |
-| `fromRecord` | Query | Int(optional) | The starting wager index from which the API should return results (Default: 0). |  Example: `200` |
-| `pageSize` | Query | Int(optional) | The number of wagers per page (Default: 1000). |  Example: `1000` Rule: pageSize <= 1000|
+| `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
+| `token` | Header | String(required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
+| `dateFrom` | Query | Date (optional 非必需项))  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-15 23:59:59 例如: 2016-10-15 23:59:59 |
+| `dateTo (1)` | Query | Date (optional 非必需项))  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours 例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
+| `userCode` | Query | String (optional 非必需项)) |  | This is the user code / loginID of the player. E.g: PA10000000. 玩家用户名/登录名 |
+| `settle` | Query | Int (optional 非必需项)) | 1: settled 1: 1: 已结算 <br/>0: unsettled 0: 0: 未结算 <br/>-1: all (both settled and unsettled) (Default: -1) -1: 所有（包含已结算和未结算）（默认：-1） | 1 = wager status: SETTLED or CANCELLED 1 = 注单状态：已结算或已取消 <br/>0 = wager status includes: OPEN or PENDING  0 = 注单状态包括：等待中 或者 注单未结算 <br/>-1 = All wager status values -1 = 所有注单状态值。 |
+| `filterBy (2)` | Query | String(optional 非必需项)) | event_date 比赛日期, wager_date 注单日期, settle_date 结算日期, update_date 更新日期 (Default 默认: wager_date 注单日期) |
+| `locale` | Query | String (optional 非必需项)) | Supported locales based on brand’s available languages. 支持的语言将根据该品牌的可用语言而定。 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）|
+| `wagerIds` | Query | String(optional 非必需项)) | A comma-separated list of wagerIDs to be returned. 用逗号分隔的注单ID列表将会被返回 |  Example: `6862955`,`6862947` |
+| `fromRecord` | Query | Int(optional 非必需项)) | The starting wager index from which the API should return results (Default: 0). API 应从哪个注单索引开始返回结果（默认值：0）。 |  Example: `200` |
+| `pageSize` | Query | Int(optional 非必需项)) | The number of wagers per page (Default: 1000). 每页显示的投注数量（默认值：1000） |  Example: `1000` Rule: pageSize <= 1000 例如： 1000：页面尺寸 <= 1000|
 
 **Note:**
 (1):
