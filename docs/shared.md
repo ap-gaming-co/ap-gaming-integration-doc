@@ -2576,7 +2576,6 @@ The service is using pagination which is to split the results into smaller pages
 	a. If `userCode` = null, valid date range will be up to 24 hours.
 	b. If `userCode` != null, valid date range will be up to 168 hours (7 days).
 
-(1):
 1. 如未输入日期范围：
    a. 系统应返回过去24小时内的全部注单。
 2. 如果输入了日期范围:
@@ -2586,9 +2585,9 @@ The service is using pagination which is to split the results into smaller pages
 (2):	
 When filterBy is settle_date, the system will only query data by date (not time) but dateFrom and dateTo must still use yyyy-MM-dd HH:00:00 format. 
 
-在filterBy是settle_date的情况下，系统只按日期格式查询数据，但dateFrom和dateTo仍然使用yyyy-MM-dd HH:00:00的格式。
-
 URL example: http://apidomain.com/b2b/report/all-wagers-v2?wagerIds=6862955,6862947
+
+在filterBy是settle_date的情况下，系统只按日期格式查询数据，但dateFrom和dateTo仍然使用yyyy-MM-dd HH:00:00的格式。
 
 URL 示例: http://apidomain.com/b2b/report/all-wagers-v2?wagerIds=6862955,6862947
 
