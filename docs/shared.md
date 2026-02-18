@@ -2561,11 +2561,11 @@ The service is using pagination which is to split the results into smaller pages
 | `dateTo (1)` | Query | Date (optional 非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours 例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
 | `userCode` | Query | String (optional 非必需项) |  | This is the user code / loginID of the player. E.g: PA10000000. 玩家用户名/登录名 |
 | `settle` | Query | Int (optional 非必需项) | 1: settled 1: 1: 已结算 <br/>0: unsettled 0: 0: 未结算 <br/>-1: all (both settled and unsettled) (Default: -1) -1: 所有（包含已结算和未结算）（默认：-1） | 1 = wager status: SETTLED or CANCELLED 1 = 注单状态：已结算或已取消 <br/>0 = wager status includes: OPEN or PENDING  0 = 注单状态包括：等待中 或者 注单未结算 <br/>-1 = All wager status values -1 = 所有注单状态值。 |
-| `filterBy (2)` | Query | String(optional 非必需项) | event_date 比赛日期, wager_date 注单日期, settle_date 结算日期, update_date 更新日期 (Default 默认: wager_date 注单日期) |
+| `filterBy (2)` | Query | String (optional 非必需项) | event_date 比赛日期, wager_date 注单日期, settle_date 结算日期, update_date 更新日期 (Default 默认: wager_date 注单日期) |
 | `locale` | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言将根据该品牌的可用语言而定。 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）|
-| `wagerIds` | Query | String(optional 非必需项) | A comma-separated list of wagerIDs to be returned. 用逗号分隔的注单ID列表将会被返回 |  Example: `6862955`,`6862947` |
-| `fromRecord` | Query | Int(optional 非必需项) | The starting wager index from which the API should return results (Default: 0). API 应从哪个注单索引开始返回结果（默认值：0）。 |  Example: `200` |
-| `pageSize` | Query | Int(optional 非必需项) | The number of wagers per page (Default: 1000). 每页显示的投注数量（默认值：1000） |  Example: `1000` Rule: pageSize <= 1000 例如： 1000：页面尺寸 <= 1000|
+| `wagerIds` | Query | String (optional 非必需项) | A comma-separated list of wagerIDs to be returned. 用逗号分隔的注单ID列表将会被返回 |  Example: `6862955`,`6862947` |
+| `fromRecord` | Query | Int (optional 非必需项) | The starting wager index from which the API should return results (Default: 0). API 应从哪个注单索引开始返回结果（默认值：0）。 |  Example: `200` |
+| `pageSize` | Query | Int (optional 非必需项) | The number of wagers per page (Default: 1000). 每页显示的投注数量（默认值：1000） |  Example: `1000` Rule: pageSize <= 1000 例如： 1000：页面尺寸 <= 1000|
 
 **Note 注意:**
 
