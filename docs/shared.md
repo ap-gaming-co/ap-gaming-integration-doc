@@ -2564,8 +2564,7 @@ The service is using pagination which is to split the results into smaller pages
 | `filterBy (2)` | Query | String (optional 非必需项) | event_date 比赛日期, wager_date 注单日期, settle_date 结算日期, update_date 更新日期 (Default 默认: wager_date 注单日期) |
 | `locale` | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言将根据该品牌的可用语言而定。 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）|
 | `wagerIds` | Query | String (optional 非必需项) | A comma-separated list of wagerIDs to be returned. 用逗号分隔的注单ID列表将会被返回 |  Example: `6862955`,`6862947` |
-| `fromRecord` | Query | Int (optional 非必需项) | The starting wager index from which the API should return results (Default: 0). API 应从哪个注单索引开始返回结果（默认值：0）。 |  Example: `200` |
-| `pageSize` | Query | Int (optional 非必需项) | The number of wagers per page (Default: 1000). 每页显示的投注数量（默认值：1000） |  Example: `1000` Rule: pageSize <= 1000 例如： 1000：页面尺寸 <= 1000|
+| `fromRecord` | Query | Int (optional 非必需项) | The starting wager index from which the API should return results (Default: 0). API 应从哪个注单索引开始返回结果（默认值：0）。 |  Example 1: If fromRecord =0, the response would start from the first wager <br/>Example 2: If fromRecord=1000, the response would start from wager 1001 <br/> 示例 1：如果 fromRecord = 0，响应将从第一笔投注开始。<br/> 示例 2：如果 fromRecord = 1000，响应将从第 1001 笔投注开始。|
 
 **Note 注意:**
 
