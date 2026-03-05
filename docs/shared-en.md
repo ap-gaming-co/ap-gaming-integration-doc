@@ -2434,17 +2434,16 @@ The service is using pagination which is to split the results into smaller pages
 
 **Note:**
 
-(1): 1. WITHOUT date range:
-    	a. System shall return all wagers from last 24 hours. 
-     2. Specific date range:
-    	a. If `userCode` = null, valid date range will be up to 24 hours.
-    	b. If `userCode` != null, valid date range will be up to 168 hours (7 days).
-     3.  The API will always return maximum 1000 wagers per each call.
+(1): 
+1. WITHOUT date range: a. System shall return all wagers from last 24 hours.
+2. Specific date range: <br/> a. If `userCode` = null, valid date range will be up to 24 hours. <br/> b. If `userCode` != null, valid date range will be up to 168 hours (7 days).
+3.  The API will always return maximum 1000 wagers per each call.
 
 Example: To retrieve all wager data for user code X, assuming there are 2,500 wagers, three calls are required:
-	1. First call: retrieves the first 1000 wagers (page 1), with indexes from 0 to 999.
-	2. Second call: retrieves the next 1000 wagers (page 2), with indexes from 1000 to 1999.
-	3. Third call: retrieves wagers with indexes from 2000 to 2999 (page 3). However, since the total number of wagers is 2,500, only the remaining 500 wagers (indexes 2000 to 2499) are returned in this response.
+
+1. First call: retrieves the first 1000 wagers (page 1), with indexes from 0 to 999.
+2. Second call: retrieves the next 1000 wagers (page 2), with indexes from 1000 to 1999.
+3. Third call: retrieves wagers with indexes from 2000 to 2999 (page 3). However, since the total number of wagers is 2,500, only the remaining 500 wagers (indexes 2000 to 2499) are returned in this response.
 
 Queries should continue until a response returns no records or the number of records returned is less than 1000, indicating that all available data has been retrieved.
 
