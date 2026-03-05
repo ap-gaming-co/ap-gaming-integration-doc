@@ -2430,8 +2430,8 @@ The service is using pagination which is to split the results into smaller pages
 | `filterBy (2)` | Query | String(optional) | event_date wager_date settle_date update_date (Default: wager_date): wager_date |
 | `locale` | Query | String (optional) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format.|
 | `wagerIds` | Query | String(optional) | A comma-separated list of wagerIDs to be returned. |  Example: `6862955`,`6862947` |
-| `fromRecord` | Query | Int(optional) | The starting wager index from which the API should return results (Default: 0). |  Example: `200` |
-| `pageSize` | Query | Int(optional) | The number of wagers per page (Default: 1000). |  Example: `1000` Rule: pageSize <= 1000|
+| `fromRecord` | Query | Int(optional) | The starting wager index from which the API should return results (Default: 0). |  Example 1: If fromRecord =0, the response would start from the first wager
+Example 2: If fromRecord=1000, the response would start from wager 1001 |
 
 **Note:**
 (1):
@@ -2440,6 +2440,16 @@ The service is using pagination which is to split the results into smaller pages
 2. Specific date range:
 	a. If `userCode` = null, valid date range will be up to 24 hours.
 	b. If `userCode` != null, valid date range will be up to 168 hours (7 days).
+3.  The API will always return maximum 1000 wagers per each call.
+
+Example: To retrieve all wager data for user code X, assuming there are 2,500 wagers, three calls are required:
+
+1. First call: retrieves the first 1000 wagers (page 1), with indexes from 0 to 999.
+2. Second call: retrieves the next 1000 wagers (page 2), with indexes from 1000 to 1999.
+3. Third call: retrieves wagers with indexes from 2000 to 2999 (page 3). However, since the total number of wagers is 2,500, only the remaining 500 wagers (indexes 2000 to 2499) are returned in this response.
+
+Queries should continue until a response returns no records or the number of records returned is less than 1000, indicating that all available data has been retrieved.
+
 
 (2):	
 When filterBy is settle_date, the system will only query data by date (not time) but dateFrom and dateTo must still use yyyy-MM-dd HH:00:00 format.
