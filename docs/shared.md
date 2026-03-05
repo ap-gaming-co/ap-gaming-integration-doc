@@ -2581,8 +2581,6 @@ Example: To retrieve all wager data for user code X, assuming there are 2,500 wa
 
 Queries should continue until a response returns no records or the number of records returned is less than 1000, indicating that all available data has been retrieved.
 
-
-(1):
 1. 如未输入日期范围：a. 系统应返回过去24小时内的全部注单。
 2. 如果输入了日期范围: <br/> a. 如果 userCode = null, 有效日期范围最高为24小时。<br/> b. 如果 userCode != null, 有效日期范围最高为168小时(7 天).
 3. 每次 API 调用最多返回 1000 笔投注记录。
@@ -2594,6 +2592,7 @@ Queries should continue until a response returns no records or the number of rec
 3. 第三次调用：获取索引范围为 2000 至 2999 的投注（第 3 页）。但由于投注总数为 2,500 笔，因此本次响应仅返回剩余的 500 笔投注（索引 2000 至 2499）。
 
 请持续调用接口，直至返回记录数为 0 或少于 1000 条，表示数据已全部获取完成。
+
 
 (2):	
 When filterBy is settle_date, the system will only query data by date (not time) but dateFrom and dateTo must still use yyyy-MM-dd HH:00:00 format. 
