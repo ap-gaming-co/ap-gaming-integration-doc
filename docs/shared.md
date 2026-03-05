@@ -2568,19 +2568,34 @@ The service is using pagination which is to split the results into smaller pages
 
 **Note 注意:**
 
-(1):
-1. WITHOUT date range:
-	a. System shall return all wagers from last 24 hours. 
-2. Specific date range:
-	a. If `userCode` = null, valid date range will be up to 24 hours.
-	b. If `userCode` != null, valid date range will be up to 168 hours (7 days).
+(1): 
+1. WITHOUT date range: a. System shall return all wagers from last 24 hours.
+2. Specific date range: <br/> a. If `userCode` = null, valid date range will be up to 24 hours. <br/> b. If `userCode` != null, valid date range will be up to 168 hours (7 days).
+3. The API will always return maximum 1000 wagers per each call.
+
+Example: To retrieve all wager data for user code X, assuming there are 2,500 wagers, three calls are required:
+
+1. First call: retrieves the first 1000 wagers (page 1), with indexes from 0 to 999.
+2. Second call: retrieves the next 1000 wagers (page 2), with indexes from 1000 to 1999.
+3. Third call: retrieves wagers with indexes from 2000 to 2999 (page 3). However, since the total number of wagers is 2,500, only the remaining 500 wagers (indexes 2000 to 2499) are returned in this response.
+
+Queries should continue until a response returns no records or the number of records returned is less than 1000, indicating that all available data has been retrieved.
+
+例如：若需获取用户代码 X 的全部投注数据，假设共有 2,500 笔投注，则需要调用三次：
+
+1. 第一次调用：获取前 1000 笔投注（第 1 页），索引范围为 0 至 999。
+
+2. 第二次调用：获取接下来的 1000 笔投注（第 2 页），索引范围为 1000 至 1999。
+
+3. 第三次调用：获取索引范围为 2000 至 2999 的投注（第 3 页）。但由于投注总数为 2,500 笔，因此本次响应仅返回剩余的 500 笔投注（索引 2000 至 2499）。
+
+请持续调用接口，直至返回记录数为 0 或少于 1000 条，表示数据已全部获取完成。
+
 
 (1):
-1. 如未输入日期范围：
-   a. 系统应返回过去24小时内的全部注单。
-2. 如果输入了日期范围:
-   a. 如果 userCode = null, 有效日期范围最高为24小时。
-   b. 如果 userCode != null, 有效日期范围最高为168小时(7 天).
+1. 如未输入日期范围：a. 系统应返回过去24小时内的全部注单。
+2. 如果输入了日期范围: <br/> a. 如果 userCode = null, 有效日期范围最高为24小时。<br/> b. 如果 userCode != null, 有效日期范围最高为168小时(7 天).
+3. 每次 API 调用最多返回 1000 笔投注记录。
 
 (2):	
 When filterBy is settle_date, the system will only query data by date (not time) but dateFrom and dateTo must still use yyyy-MM-dd HH:00:00 format. 
