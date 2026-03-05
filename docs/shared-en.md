@@ -2430,7 +2430,7 @@ The service is using pagination which is to split the results into smaller pages
 | `filterBy (2)` | Query | String(optional) | event_date wager_date settle_date update_date (Default: wager_date): wager_date |
 | `locale` | Query | String (optional) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format.|
 | `wagerIds` | Query | String(optional) | A comma-separated list of wagerIDs to be returned. |  Example: `6862955`,`6862947` |
-| `fromRecord` | Query | Int(optional) | The starting wager index from which the API should return results (Default: 0). |  Example 1: If fromRecord =0, the response would start from the first wager. Example 2: If fromRecord=1000, the response would start from wager 1001 |
+| `fromRecord` | Query | Int(optional) | The starting wager index from which the API should return results (Default: 0). |  Example 1: If fromRecord =0, the response would start from the first wager <br/>Example 2: If fromRecord=1000, the response would start from wager 1001 |
 
 **Note:**
 (1):
