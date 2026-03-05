@@ -2433,6 +2433,7 @@ The service is using pagination which is to split the results into smaller pages
 | `fromRecord` | Query | Int(optional) | The starting wager index from which the API should return results (Default: 0). |  Example 1: If fromRecord =0, the response would start from the first wager <br/>Example 2: If fromRecord=1000, the response would start from wager 1001 |
 
 **Note:**
+
 (1):
 1. WITHOUT date range:
 	a. System shall return all wagers from last 24 hours. 
