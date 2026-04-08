@@ -350,6 +350,7 @@ In `BETTED` action, we send the number of bets that will be generated using the 
 
 在已下注中，我们将发送於 JSON 请求中 `WagerNum` 生成的投注数量。 当投注被接受时，我们将发送等于 `WagerNum` 中数字的 `ACCEPTED` 数量。 下一个操作类型也以此類推。
 
+*Parlay*
 ```js
 {
     "Timestamp": "2022-07-15T09:50:14",
@@ -448,6 +449,89 @@ In `BETTED` action, we send the number of bets that will be generated using the 
             }
         }
     ]
+}
+```
+
+*Teaser*
+```js
+{
+  "Timestamp": "2026-03-09T03:03:23",
+  "Signature": "guLBgsi9qMAYHra2U1SIjVpyzGLACXtm/uJ3Q1ssfZZRvK0UBkKssy0fW7yTlqMdUlPc1sllYkMsG2InC/xhvQ==",
+  "Actions": [
+    {
+      "Id": 15560892635807547,
+      "Name": "BETTED",
+      "Transaction": {
+        "TransactionId": 15560893247112,
+        "TransactionType": "DEBIT",
+        "TransactionDate": "2026-03-09T03:03:23",
+        "Amount": 1.00
+      },
+      "PlayerInfo": {
+        "LoginId": "1MU0000003",
+        "UserCode": "1MU0000003"
+      },
+      "WagerInfo": {
+        "WagerId": 2206450842,
+        "Type": "TEASER",
+        "BetType": 7,
+        "SportId": 4,
+        "Sport": "Basketball",
+        "Odds": 1.000,
+        "OddsFormat": 2,
+        "ToWin": 1.000,
+        "ToRisk": 1.000,
+        "Stake": 1.000,
+        "PlayerIPAddress": "172.21.8.35",
+        "Legs": [
+          {
+            "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
+            "SportId": 4,
+            "Sport": "Basketball",
+            "SportGroup": 1,
+            "League": "NBA",
+            "BetType": 2,
+            "LeagueId": 487,
+            "EventId": 1625292952,
+            "EventDateFm": "2026-03-09 19:10:00",
+            "SelectionType": 0,
+            "InplayScore": null,
+            "InPlay": false,
+            "Odds": 0.000,
+            "Handicap": -6.50,
+            "Period": 0,
+            "TeamType": 1,
+            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
+            "Point": 4.5000000,
+            "Type": "NBA, College and WNBA 2 - 6 Team",
+            "Selection": "Cleveland Cavaliers"
+          },
+          {
+            "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
+            "SportId": 4,
+            "Sport": "Basketball",
+            "SportGroup": 1,
+            "League": "NBA",
+            "BetType": 3,
+            "LeagueId": 487,
+            "EventId": 1625292952,
+            "EventDateFm": "2026-03-09 19:10:00",
+            "SelectionType": 4,
+            "InplayScore": null,
+            "InPlay": false,
+            "Odds": 0.000,
+            "Handicap": 233.50,
+            "Period": 0,
+            "TeamType": 1,
+            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
+            "Point": 6.5000000,
+            "Type": "NBA, College and WNBA 2 - 6 Team",
+            "Selection": "Under"
+          }
+        ]
+      }
+    }
+  ]
 }
 ```
 
