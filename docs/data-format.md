@@ -18,6 +18,7 @@
     - [14. Leg Status Result 选项结果](#14-leg-status-result-%E9%80%89%E9%A1%B9%E7%BB%93%E6%9E%9C)
     - [15. Non-login currency display 未登录币种显示](#15-non-login-currency-display-%E6%9C%AA%E7%99%BB%E5%BD%95%E5%B8%81%E7%A7%8D%E6%98%BE%E7%A4%BA)
     - [16. Bet Status Partial Result 投注半\/全数结算状态](#16-bet-status-partial-result-%E6%8A%95%E6%B3%A8%E5%8D%8A%E5%85%A8%E6%95%B0%E7%BB%93%E7%AE%97%E7%8A%B6%E6%80%81)
+    - [17. Cancellation Status 取消状态]
 
 
 ## 1. Sports 体育项目
@@ -237,7 +238,7 @@ E.g. `2018-12-20T04:05:06`
 | `PENDING`  | Wager is pending<br/>注单未结算 |  |
 | `OPEN`  | Wager is opening<br/>等待中 |  |
 | `SETTLED`  | Wager was settled<br/>注单已结算 |  |
-| `CANCELLED`  | Wager was cancelled <br/>注单被取消 |  |
+| `CANCELLED`  | Wager was cancelled <br/>注单被取消 | See Cancellation Status for details 详细信息可在取消状态中查看 |
 
 ## 12. Period Status 期间状态
 
@@ -986,4 +987,17 @@ Note: Without this parameter, the default non-login currency would be CNY. <br/>
 | --- | --- |
 | 0 | Half 半数结算 | 
 | 1 | Full 全数结算 | 
+
+## 17. Cancellation Status 取消状态
+
+| Code 代码 | Description 描述 |
+| --- | --- |
+| REFUNDED | Wager Refunded 注单已退款 | 
+| REJECTED | Live Wager was rejected 滾球注单被拒绝 | 
+| CANCELLED | Wager was cancelled 注单被取消 | 
+| VOID | Wager was voided 注单无效 | 
+
+
+
+
 
