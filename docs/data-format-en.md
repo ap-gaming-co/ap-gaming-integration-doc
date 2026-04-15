@@ -18,6 +18,7 @@
     - [14. Leg Status Result](#14-leg-status-result)
     - [15. Non-login currency display](#15-non-login-currency-display)
     - [16. Bet Status Partial Result](#16-bet-status-partial-result)
+    - [17. Cancellation Status](#17-cancellation-status-%E5%8F%96%E6%B6%88%E7%8A%B6%E6%80%81)
 
 
 ## 1. Sports
@@ -234,7 +235,7 @@ E.g. `2018-12-20T04:05:06`
 | `PENDING`  | Wager is pending |  |
 | `OPEN`  | Wager is opening |  |
 | `SETTLED`  | Wager was settled |  |
-| `CANCELLED`  | Wager was cancelled |  |
+| `CANCELLED`  | Wager was cancelled | See Cancellation Status for details |
 
 ## 12. Period Status
 
@@ -980,3 +981,11 @@ Note: Without this parameter, the default non-login currency would be CNY. <br/>
 | 0 | Half | 
 | 1 | Full | 
 
+## 17. Cancellation Status
+
+| Code | Description |
+| --- | --- |
+| REFUNDED | Wager Refunded | 
+| REJECTED | Live Wager was rejected | 
+| CANCELLED | Wager was cancelled | 
+| VOID | Wager was voided | 
