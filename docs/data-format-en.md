@@ -18,7 +18,7 @@
     - [14. Leg Status Result](#14-leg-status-result)
     - [15. Non-login currency display](#15-non-login-currency-display)
     - [16. Bet Status Partial Result](#16-bet-status-partial-result)
-    - [17. Cancellation Status](#17-cancellation-status-%E5%8F%96%E6%B6%88%E7%8A%B6%E6%80%81)
+    - [17. Cancellation Status](#17-cancellation-status)
 
 
 ## 1. Sports
