@@ -164,7 +164,7 @@ E.g. `2018-12-20T04:05:06`
 | 405 | Your wallet does not exist in system. 您的钱包在系统不存在。 |  |
 | 406 | Your wallet is inactive. 您的钱包未激活 |  |
 | 407 | Invalid product. 产品无效。 |  |
-| 423 | Your account is . Please contact your upline for help. 您的帐户是<状态>。请联系您的上线寻求帮助。 | When the agentCodes are INACTIVE/SUSPENDED and CLOSED, it will display the errorCode 423. 当代理码未激活，停用和关闭时，系统会显示错误码423。 |
+| 423 | Your account is . Please contact your upline for help. 您的帐户是<状态>。请联系您的上线寻求帮助。 | When the agentCodes are INACTIVE and CLOSED, it will display the errorCode 423. 当代理码未激活和关闭时，系统会显示错误码423。 |
 
 ## 7. Event Status 赛事状态
 
@@ -950,7 +950,6 @@ E.g. `2018-12-20T04:05:06`
 | --- | --- | --- |
 | `ACTIVE` | User is active <br/>用户账号已激活 | ‘ACTIVE’ player CAN log in and place bet on Member site. <br/>"激活"状态的玩家可以在会员网站上登录和下注。 | 
 | `INACTIVE` | User is inactive <br/>用户账号未激活 | ‘INACTIVE’ player CANNOT log in on Member site. <br/>"未激活"状态的玩家不可以在会员网站上登录。 | 
-| `SUSPENDED` | User is suspended by direct agent. <br/>用户被上线代理暂停 | ‘SUSPENDED’ player CAN log in on Member site, but CANNOT place bet. <br/>"暂停"状态的玩家可以在会员网站上登录，但不可以下注。 | 
 | `SUSPENDED_BY_COMPANY` | User is suspended by ‘Company’ agent. <br/>用户被公司级代理暂停使用 | ‘SUSPENDED_BY_COMPANY’ player CAN log in on Member site, but CANNOT place bet. <br/>"用户被公司暂停使用"状态的玩家可以在会员网站上登录，但不可以下注。 | 
 | `CLOSED` | User is closed by administrator <br/>用户账号被管理员关闭 | ‘CLOSED’ player CANNOT log in on Member site. <br/>"关闭"状态的玩家不可以在会员网站上登录。 | 
 | `INACTIVE_BY_COMPANY` | User is inactive by company <br/>用户被公司级代理注销 | ‘INACTIVE_BY_COMPANY’ player CANNOT log in on Member site. <br/> 已被公司级代理注销的用户不可以在会员网站上登录。| 
