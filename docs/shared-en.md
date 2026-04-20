@@ -851,11 +851,10 @@ This service updates the status for a player.
 | `userCode`  | Header | String  (required)  |  | This is agent code that you get at step 2. E.g: CO1AP1 |
 | `token` | Header | String (required) | Token is available for 15 minutes after creation. |  |
 | `userCode` | Query | String (required)  |  | This is the user code / loginID of the player. E.g: PA10000000. |
-| `status` | Query | String (required)  | `ACTIVE`, `INACTIVE`, `SUSPENDED` | See User Status in the Data-format. |
+| `status` | Query | String (required)  | `ACTIVE`, `INACTIVE` | See User Status in the Data-format. |
 
 **Note:**
 -	`INACTIVE` player CANNOT login on Member site
--	`SUSPENDED` player CAN login on Member site, but CANNOT place bet
 
 *Sample code (java) - See HttpUtils class at Appendix*
 
