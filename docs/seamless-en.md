@@ -44,8 +44,7 @@ All requests from the Sportsbook Platform to Operator Wallet API have basic info
 {
     // other property of POST data.
     "Timestamp": "2018-01-15T15:20:14",
-    "Signature": "aTFzUoIUD7Tpclf9XQ/+kuyEkNRJCUMK12XgQoVmhKuy6HGle5pj1sdZJJ\
-        +FSu23MZhy+ppH02fe3kDnB5CgMw=="
+    "Signature": "aTFzUoIUD7Tpclf9XQ/+kuyEkNRJCUMK12XgQoVmhKuy6HGle5pj1sdZJJ\+FSu23MZhy+ppH02fe3kDnB5CgMw=="
 }
 ```
 | Parameter | Type | E.g. Value | Description |
@@ -238,15 +237,15 @@ If the response received from the BETTED action is invalid or incomplete, the Sp
             "Id": 1923899,
             "Name": "BETTED",
             "PlayerInfo": {
-		"LoginId": "MPvZSDqM1685576929",
-		"UserCode": "PXM130000D"
-            },
-            "Transaction": {
-                "TransactionId": 1177217,
-                "TransactionType": "DEBIT",
-                "TransactionDate": "2022-06-14T07:32:16",
-                "Amount": 100
-            },
+				"LoginId": "MPvZSDqM1685576929",
+				"UserCode": "PXM130000D"
+			},
+			"Transaction": {
+				"TransactionId": 1177217,
+        		"TransactionType": "DEBIT",
+        		"TransactionDate": "2022-06-14T07:32:16",
+        		"Amount": 100
+			},
             "WagerInfo": {
                 "WagerId": 46739150,
                 "Type": "SINGLE",
@@ -270,7 +269,7 @@ If the response received from the BETTED action is invalid or incomplete, the Sp
                 "SelectionType": "10",
                 "LeagueName": "League of Legends - LCO",
                 "ParentEventName": "Kanga-vs-Gravitas",
-		"PlayerIPAddress": "10.10.12.8"
+				"PlayerIPAddress": "10.10.12.8"
             }
         }
     ]
@@ -315,8 +314,8 @@ In `BETTED` action, we send the number of bets that will be generated using the 
             "Id": 1929876,
             "Name": "BETTED",
             "PlayerInfo": {
-		"LoginId": "MPvZSDqM1685576929",
-		"UserCode": "PXM130000D"
+				"LoginId": "MPvZSDqM1685576929",
+				"UserCode": "PXM130000D"
             },
             "Transaction": {
                 "TransactionId": 1180518,
@@ -333,10 +332,10 @@ In `BETTED` action, we send the number of bets that will be generated using the 
                 "ToWin": "230.770",
                 "ToRisk": "33.000",
                 "Stake": "33.000",
-		"PlayerIPAddress": "10.10.12.8",
+				"PlayerIPAddress": "10.10.12.8",
                 "Legs": [
                     {
-			"LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
+						"LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
                         "SportId": 29,
                         "Sport": "Soccer",
                         "SportGroup": 0,
@@ -356,7 +355,7 @@ In `BETTED` action, we send the number of bets that will be generated using the 
                         "Selection": "Draw"
                     },
                     {
-			"LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
+						"LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
                         "SportId": 29,
                         "Sport": "Soccer",
                         "SportGroup": 0,
@@ -376,7 +375,7 @@ In `BETTED` action, we send the number of bets that will be generated using the 
                         "Selection": "Konyaspor Club"
                     },
                     {
-			"LegId": "b0bbbc91-a8f8-4b37-b439-149060fcaa16",
+						"LegId": "b0bbbc91-a8f8-4b37-b439-149060fcaa16",
                         "SportId": 29,
                         "Sport": "Soccer",
                         "SportGroup": 0,
@@ -436,11 +435,11 @@ In `BETTED` action, we send the number of bets that will be generated using the 
         "OddsFormat": 1,
         "ToWin": "5195307.000",
         "ToRisk": "642586.000",
-	"Stake": "642586.000",
+		"Stake": "642586.000",
         "Period": 0,
         "Description": "Baseball - MLB\nMinnesota Twins vs Chicago White Sox - Over 8.5 @ -128 for Game\nArizona Diamondbacks vs St. Louis Cardinals - Over 8.5 @ -123 for Game\n\nBaseball - Korea Professional Baseball\nDoosan Bears vs Hanwha Eagles - Doosan Bears @ -162 for Game\nG2 Samsung Lions vs G2 SSG Landers - Over 8.5 @ -135 for Game\n\nOld ticket : Ref No: 00000000 / 11111111\nMember id : ABCXYZ",
-	"PlayerIPAddress": "10.10.12.8",
-	"OriginalWagerId": 725462706
+		"PlayerIPAddress": "10.10.12.8",
+		"OriginalWagerId": 725462706
       }
     }
   ]
@@ -453,12 +452,14 @@ In `BETTED` action, we send the number of bets that will be generated using the 
     "Result": {
         "UserCode": "S013000002",
         "AvailableBalance": 156.09999999999985,
-        "Actions": [{
-            "Id": 15560892634072091,
-            "TransactionId": 15560892277229,
-            "WagerId": 725462707,
-            "ResponseCode": 0 // Refer to Action Response Code
-        }]
+        "Actions": [
+			{
+            	"Id": 15560892634072091,
+            	"TransactionId": 15560892277229,
+            	"WagerId": 725462707,
+            	"ResponseCode": 0 // Refer to Action Response Code
+        	}
+		]
     },
     "ErrorCode": 0,
     "Timestamp": "2019-05-14T19:32:57"
@@ -475,42 +476,43 @@ The Sportsbook Platform will call to the Operator to notify them that the bet wa
 
 ```js
 {
-  "Timestamp": "2024-03-22T04:41:14",
-  "Signature": "6rC+ptbJmJQJ6Cn/X5p95dvnq/yOR7pWvalM7acs/hlCRryXBW7uy/tDcqbuVJFMEe4Qt8XkKQ7syvPPHpNcqA==",
-  "Actions": [
-    {
-      "Id": 15560892635790863,
-      "Name": "ACCEPTED",
-      "PlayerInfo": {
-        "LoginId": "Test.ABCD.1000475355",
-        "UserCode": "P1L0000001"
-      },
-      "WagerInfo": {
-        "WagerId": 2200510331,
-        "Type": "single",
-        "BetType": 1,
-        "Sport": "Soccer",
-        "Odds": 210.000,
-        "OddsFormat": 0,
-        "ToWin": 44.100,
-        "ToRisk": 21.000,
-        "Stake": 21.000,
-        "Period": 0,
-        "EventId": 1587781217,
-        "EventName": "Everton-vs-Liverpool",
-        "EventDateFm": "2024-03-24 09:00:00",
-        "LeagueId": 8713,
-        "LeagueName": "England - Women Super League",
-        "SportId": 29,
-        "Inplay": false,
-        "InPlayScore": "",
-        "Handicap": 0.00,
-        "SelectionType": "HOME",
-        "Selection": "Everton",
-        "ParentEventName": null
-      }
-    }
-  ]
+	"Timestamp": "2024-03-22T04:41:14",
+	"Signature": "6rC+ptbJmJQJ6Cn/X5p95dvnq/yOR7pWvalM7acs/hlCRryXBW7uy/tDcqbuVJFMEe4Qt8XkKQ7syvPPHpNcqA==",
+	"Actions": [
+    	{
+      		"Id": 15560892635790863,
+      		"Name": "ACCEPTED",
+      		"PlayerInfo": {
+				"LoginId": "Test.ABCD.1000475355",
+        		"UserCode": "P1L0000001"
+      		},
+      		"WagerInfo":
+				{
+        			"WagerId": 2200510331,
+        			"Type": "single",
+        			"BetType": 1,
+        			"Sport": "Soccer",
+        			"Odds": 210.000,
+        			"OddsFormat": 0,
+        			"ToWin": 44.100,
+        			"ToRisk": 21.000,
+        			"Stake": 21.000,
+        			"Period": 0,
+        			"EventId": 1587781217,
+        			"EventName": "Everton-vs-Liverpool",
+        			"EventDateFm": "2024-03-24 09:00:00",
+        			"LeagueId": 8713,
+        			"LeagueName": "England - Women Super League",
+        			"SportId": 29,
+        			"Inplay": false,
+        			"InPlayScore": "",
+        			"Handicap": 0.00,
+        			"SelectionType": "HOME",
+        			"Selection": "Everton",
+        			"ParentEventName": null
+			}
+    	}
+	]
 }
 ```
 
@@ -520,17 +522,17 @@ Response data when accepting bet with no balance adjustment.
 
 ```js
 {
-  "Result": {
-    "UserCode": "P1L0000001",
-    "AvailableBalance": 13471.05,
-    "Actions": [
-      {
-        "Id": 15560892635790863,
-        "TransactionId": null,
-        "WagerId": 2200510331,
-        "ResponseCode": 0
-      }
-    ]
+	"Result": {
+		"UserCode": "P1L0000001",
+    	"AvailableBalance": 13471.05,
+    	"Actions": [
+			{
+        		"Id": 15560892635790863,
+        		"TransactionId": null,
+        		"WagerId": 2200510331,
+        		"ResponseCode": 0
+			}
+		]
   },
   "ErrorCode": 0,
   "Timestamp": "2024-03-22T00:41:14"
@@ -541,46 +543,47 @@ Response data when accepting bet with no balance adjustment.
 
 ```js
 {
-{
     "Timestamp": "2019-05-03T04:18:27",
-    "Signature": "w2QdXVixBhwuogVDouo08WaKrx5EzE6pNerQkaRMhHZ2ljQZ1u5gZzE\
-        +/9H2FMiRJlvZz/QB0F4QlsXd4StmRA==",
-    "Actions": [{
-        "Id": 15560892634070383,
-        "Name": "ACCEPTED",
-    	"PlayerInfo": {
-            "LoginId": "MPvZSDqM1685576929",
-            "UserCode": "PXM130000D"
-    	},
-        "Transaction": {
-            "TransactionId": 15560892276043,
-            "TransactionType": "CREDIT",
-            "TransactionDate": "2019-05-03T08:18:26",
-            "Amount": 2     // Amount need adjust
-        },
-        "WagerInfo": {
-            "WagerId": 725417673,
-            "Type": "single",
-            "BetType": 3,
-            "Sport": "Soccer",
-            "Odds": 1.909,
-            "OddsFormat": 1,
-            "ToWin": 20.000,
-            "ToRisk": 22.000,
-            "Period": 0,
-            "EventId": 984812269,
-            "EventName": "Oeste Itapolis-vs-Cuiaba",
-            "LeagueId": 1835,
-            "LeagueName": "Brazil - Serie B",
- 	    "ParentEventName": null,
-            "Inplay": false,
-            "InPlayScore": "",
-            "Handicap": 2.00,
-            "SelectionType": "UNDER",
-            "Selection": "Cuiaba"
-        }
-    }]
+    "Signature": "w2QdXVixBhwuogVDouo08WaKrx5EzE6pNerQkaRMhHZ2ljQZ1u5gZzE\+/9H2FMiRJlvZz/QB0F4QlsXd4StmRA==",
+    "Actions": [
+		{
+        	"Id": 15560892634070383,
+        	"Name": "ACCEPTED",
+    		"PlayerInfo": {
+            	"LoginId": "MPvZSDqM1685576929",
+            	"UserCode": "PXM130000D"
+    		},
+        	"Transaction": {
+            	"TransactionId": 15560892276043,
+            	"TransactionType": "CREDIT",
+            	"TransactionDate": "2019-05-03T08:18:26",
+            	"Amount": 2     // Amount to adjust
+        	},
+        	"WagerInfo": {
+            	"WagerId": 725417673,
+            	"Type": "single",
+            	"BetType": 3,
+            	"Sport": "Soccer",
+            	"Odds": 1.909,
+            	"OddsFormat": 1,
+            	"ToWin": 20.000,
+            	"ToRisk": 22.000,
+            	"Period": 0,
+            	"EventId": 984812269,
+            	"EventName": "Oeste Itapolis-vs-Cuiaba",
+            	"LeagueId": 1835,
+            	"LeagueName": "Brazil - Serie B",
+ 	    		"ParentEventName": null,
+            	"Inplay": false,
+            	"InPlayScore": "",
+            	"Handicap": 2.00,
+            	"SelectionType": "UNDER",
+            	"Selection": "Cuiaba"
+        	}
+    	}
+	]
 }
+
 ```
 
 **Response Data**
@@ -592,12 +595,14 @@ Response data when accepting a bet with balance adjustment.
     "Result": {
         "UserCode": "SU1070000H",
         "AvailableBalance": 172.71500000000003,
-        "Actions": [{
-            "Id": 15560892634070383,
-        "TransactionId": 15560892276043,
-            "WagerId": 724816652,
-            "ResponseCode": 0 // Refer to Action Response Code
-        }]
+        "Actions": [
+			{
+            	"Id": 15560892634070383,
+	       		"TransactionId": 15560892276043,
+    	        "WagerId": 724816652,
+        	    "ResponseCode": 0 // Refer to Action Response Code
+        	}
+		]
     },
     "ErrorCode": 0,
     "Timestamp": "2019-05-03T00:18:27"
@@ -609,65 +614,67 @@ Response data when accepting a bet with balance adjustment.
 ```js
 {
     "Timestamp": "2019-05-14T06:42:37",
-    "Signature": "pybnPupUEeQs3JpavwTUfsbMl7ux82vwlhigjbsT0ICBw77bYE9ULDWK7cw3bQSRx0qE\
-        +VLGegK6UvO/fkUNlA==",
-    "Actions": [{
-        "Id": 15560892634071858,
-        "Name": "ACCEPTED",
-    	"PlayerInfo": {
-            "LoginId": "MPvZSDqM1685576929",
-            "UserCode": "PXM130000D"
-    	},
-        "WagerInfo": {
-            "WagerId": 725428677,
-            "Type": "parlay",
-            "BetType": 6,
-            "Odds": 3.324,
-            "OddsFormat": 2,
-            "ToWin": 39.890,
-            "ToRisk": 12.000,
-            "Legs": [{
-                    "LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
-                    "SportId": 29,
-                    "Sport": "Soccer",
-                    "SportGroup": 0,
-                    "LeagueId": 154545454,
-                    "League": "Brazil - Serie B",
-                    "BetType": 1,
-                    "SelectionType": 2,
-                    "Selection": "DRAW",
-                    "InplayScore": null,
-                    "InPlay": false,
-                    "Odds": 2.920,
-                    "Handicap": 0.00,
-                    "Period": 0,
-                    "LegStatus": "ACCEPTED",
-                    "TeamType": 0,
-                    "EventName": "Oeste Itapolis-vs-Cuiaba"
-                },
-                {
-		    "LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
-                    "SportId": 29,
-                    "Sport": "Soccer",
-                    "SportGroup": 0,
-                    "LeagueId": 154545455,
-                    "League": "Brazil - Serie B",
-                    "BetType": 3,
-                    "SelectionType": 3,
-                    "Selection": "Brasil de Pelotas",
-                    "InplayScore": null,
-                    "InPlay": false,
-                    "Odds": 0.480,
-                    "Handicap": 1.50,
-                    "Period": 0,
-                    "LegStatus": "ACCEPTED",
-                    "TeamType": 0,
-                    "EventName": "Figueirense-vs-Brasil de Pelotas"
-                }
-            ],
-            "WagerMasterId": 725428677
-        }
-    }]
+    "Signature": "pybnPupUEeQs3JpavwTUfsbMl7ux82vwlhigjbsT0ICBw77bYE9ULDWK7cw3bQSRx0qE\+VLGegK6UvO/fkUNlA==",
+    "Actions": [
+		{
+        	"Id": 15560892634071858,
+        	"Name": "ACCEPTED",
+    		"PlayerInfo": {
+            	"LoginId": "MPvZSDqM1685576929",
+            	"UserCode": "PXM130000D"
+    		},
+        	"WagerInfo": {
+            	"WagerId": 725428677,
+            	"Type": "parlay",
+            	"BetType": 6,
+            	"Odds": 3.324,
+            	"OddsFormat": 2,
+            	"ToWin": 39.890,
+            	"ToRisk": 12.000,
+            	"Legs": [
+					{
+                    	"LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
+                    	"SportId": 29,
+                    	"Sport": "Soccer",
+                    	"SportGroup": 0,
+                    	"LeagueId": 154545454,
+                    	"League": "Brazil - Serie B",
+	                    "BetType": 1,
+	                    "SelectionType": 2,
+	                    "Selection": "DRAW",
+	                    "InplayScore": null,
+	                    "InPlay": false,
+	                    "Odds": 2.920,
+	                    "Handicap": 0.00,
+	                    "Period": 0,
+	                    "LegStatus": "ACCEPTED",
+	                    "TeamType": 0,
+	                    "EventName": "Oeste Itapolis-vs-Cuiaba"
+                	},
+                	{
+			    		"LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
+	                    "SportId": 29,
+	                    "Sport": "Soccer",
+	                    "SportGroup": 0,
+	                    "LeagueId": 154545455,
+	                    "League": "Brazil - Serie B",
+	                    "BetType": 3,
+	                    "SelectionType": 3,
+	                    "Selection": "Brasil de Pelotas",
+	                    "InplayScore": null,
+	                    "InPlay": false,
+	                    "Odds": 0.480,
+	                    "Handicap": 1.50,
+	                    "Period": 0,
+	                    "LegStatus": "ACCEPTED",
+	                    "TeamType": 0,
+	                    "EventName": "Figueirense-vs-Brasil de Pelotas"
+                	}
+				],
+            	"WagerMasterId": 725428677
+        	}
+    	}
+	]
 }
 ```
 
@@ -680,11 +687,13 @@ Response data when accepting bet with no balance adjustment.
     "Result": {
         "UserCode": "S013000000",
         "AvailableBalance": 92693.40000000004,
-        "Actions": [{
-            "Id": 15560892634071858,
-            "WagerId": 725428677,
-            "ResponseCode": 0 // Refer to Action Response Code
-        }]
+        "Actions": [
+			{
+            	"Id": 15560892634071858,
+            	"WagerId": 725428677,
+            	"ResponseCode": 0 // Refer to Action Response Code
+        	}
+		]
     },
     "ErrorCode": 0,
     "Timestamp": "2019-05-14T02:42:37"
@@ -696,71 +705,73 @@ Response data when accepting bet with no balance adjustment.
 ```js
 {
     "Timestamp": "2019-05-14T06:42:37",
-    "Signature": "pybnPupUEeQs3JpavwTUfsbMl7ux82vwlhigjbsT0ICBw77bYE9ULDWK7cw3bQSRx0qE\
-        +VLGegK6UvO/fkUNlA==",
-    "Actions": [{
-        "Id": 15560892634071858,
-        "Name": "ACCEPTED",
-    	"PlayerInfo": {
-            "LoginId": "MPvZSDqM1685576929",
-            "UserCode": "PXM130000D"
-    	},
-        "Transaction": {
-            "TransactionId": 15560892276043,
-            "TransactionType": "CREDIT",
-            "TransactionDate": "2019-05-03T08:18:26",
-            "Amount": 2.00 // Amount need adjust
-        },
-        "WagerInfo": {
-            "WagerId": 725428677,
-            "Type": "parlay",
-            "BetType": 6,
-            "Odds": 3.324,
-            "OddsFormat": 2,
-            "ToWin": 39.890,
-            "ToRisk": 12.000,
-            "Legs": [{
-		    "LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
-                    "SportId": 29,
-                    "Sport": "Soccer",
-                    "SportGroup": 0,
-                    "LeagueId": 154545454,
-                    "League": "Brazil - Serie B",
-                    "BetType": 1,
-                    "SelectionType": 2,
-                    "Selection": "Cuiaba",
-                    "InplayScore": null,
-                    "InPlay": false,
-                    "Odds": 2.920,
-                    "Handicap": 0.00,
-                    "Period": 0,
-                    "LegStatus": "ACCEPTED",
-                    "TeamType": 0,
-                    "EventName": "Oeste Itapolis-vs-Cuiaba"
-                },
-                {
-		    "LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
-                    "SportId": 29,
-                    "Sport": "Soccer",
-                    "SportGroup": 0,
-                    "LeagueId": 154545455,
-                    "League": "Brazil - Serie B",
-                    "BetType": 3,
-                    "SelectionType": 3,
-                    "Selection": "Figueirense",
-                    "InplayScore": null,
-                    "InPlay": false,
-                    "Odds": 0.480,
-                    "Handicap": 1.50,
-                    "Period": 0,
-                    "LegStatus": "ACCEPTED",
-                    "TeamType": 0,
-                    "EventName": "Figueirense-vs-Brasil de Pelotas"
-                }
-            ],
-            "WagerMasterId": 725428677
-        }
-    }]
+    "Signature": "pybnPupUEeQs3JpavwTUfsbMl7ux82vwlhigjbsT0ICBw77bYE9ULDWK7cw3bQSRx0qE\+VLGegK6UvO/fkUNlA==",
+    "Actions": [
+		{
+        	"Id": 15560892634071858,
+        	"Name": "ACCEPTED",
+    		"PlayerInfo": {
+            	"LoginId": "MPvZSDqM1685576929",
+            	"UserCode": "PXM130000D"
+    		},
+	        "Transaction": {
+	            "TransactionId": 15560892276043,
+	            "TransactionType": "CREDIT",
+	            "TransactionDate": "2019-05-03T08:18:26",
+	            "Amount": 2.00 // Amount to adjust
+	        },
+	        "WagerInfo": {
+	            "WagerId": 725428677,
+	            "Type": "parlay",
+	            "BetType": 6,
+	            "Odds": 3.324,
+	            "OddsFormat": 2,
+	            "ToWin": 39.890,
+	            "ToRisk": 12.000,
+	            "Legs": [
+					{
+			    		"LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
+	                    "SportId": 29,
+	                    "Sport": "Soccer",
+	                    "SportGroup": 0,
+	                    "LeagueId": 154545454,
+	                    "League": "Brazil - Serie B",
+	                    "BetType": 1,
+	                    "SelectionType": 2,
+	                    "Selection": "Cuiaba",
+	                    "InplayScore": null,
+	                    "InPlay": false,
+	                    "Odds": 2.920,
+	                    "Handicap": 0.00,
+	                    "Period": 0,
+	                    "LegStatus": "ACCEPTED",
+	                    "TeamType": 0,
+	                    "EventName": "Oeste Itapolis-vs-Cuiaba"
+                	},
+                	{
+			    		"LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
+	                    "SportId": 29,
+	                    "Sport": "Soccer",
+	                    "SportGroup": 0,
+	                    "LeagueId": 154545455,
+	                    "League": "Brazil - Serie B",
+	                    "BetType": 3,
+	                    "SelectionType": 3,
+	                    "Selection": "Figueirense",
+	                    "InplayScore": null,
+	                    "InPlay": false,
+	                    "Odds": 0.480,
+	                    "Handicap": 1.50,
+	                    "Period": 0,
+	                    "LegStatus": "ACCEPTED",
+	                    "TeamType": 0,
+	                    "EventName": "Figueirense-vs-Brasil de Pelotas"
+                	}
+            	],
+            	"WagerMasterId": 725428677
+        	}
+    	}
+	]
 }
 ```
 
@@ -773,12 +784,14 @@ Response data when accepting a bet with balance adjustment.
     "Result": {
         "UserCode": "S013000000",
         "AvailableBalance": 92693.40000000004,
-        "Actions": [{
-            "Id": 15560892634071858,
-            "TransactionId": 15560892276043,
-            "WagerId": 725428677,
-            "ResponseCode": 0 // Refer to Action Response Code
-        }]
+        "Actions": [
+			{
+	            "Id": 15560892634071858,
+	            "TransactionId": 15560892276043,
+	            "WagerId": 725428677,
+	            "ResponseCode": 0 // Refer to Action Response Code
+        	}
+		]
     },
     "ErrorCode": 0,
     "Timestamp": "2019-05-14T02:42:37"
@@ -789,32 +802,31 @@ Response data when accepting a bet with balance adjustment.
 
 ```js
 {
-  "Timestamp": "2021-07-02T12:51:31",
-  "Signature": "pybnPupUEeQs3JpavwTUfsbMl7ux82vwlhigjbsT0ICBw77bYE9ULDWK7cw3bQSRx0qE\
-        +VLGegK6UvO/fkUNlA==",
-  "Actions": [
-    {
-      "Id": 15560892634071824,
-      "Name": "ACCEPTED",
-       "PlayerInfo": {
-           "LoginId": "MPvZSDqM1685576929",
-           "UserCode": "PXM130000D"
-      },
-      "WagerInfo": {
-        "WagerId": 725428677,
-	"Type": "single",
-        "BetType": 8,
-        "Odds": 9.084,
-        "OddsFormat": 1,
-        "ToWin": "5195307.000",
-        "ToRisk": "642586.000",
-	"Stake": "642586.000",
-        "Period": 0,
-        "Description": "Baseball - MLB\nMinnesota Twins vs Chicago White Sox - Over 8.5 @ -128 for Game\nArizona Diamondbacks vs St. Louis Cardinals - Over 8.5 @ -123 for Game\n\nBaseball - Korea Professional Baseball\nDoosan Bears vs Hanwha Eagles - Doosan Bears @ -162 for Game\nG2 Samsung Lions vs G2 SSG Landers - Over 8.5 @ -135 for Game\n\nOld ticket : Ref No: 00000000 / 00000000\nMember id : ABC XYZ",
-	"OriginalWagerId": 725428676
-      }
-    }
-  ]
+	"Timestamp": "2021-07-02T12:51:31",
+	"Signature": "pybnPupUEeQs3JpavwTUfsbMl7ux82vwlhigjbsT0ICBw77bYE9ULDWK7cw3bQSRx0qE\+VLGegK6UvO/fkUNlA==",
+	"Actions": [
+		{
+      		"Id": 15560892634071824,
+      		"Name": "ACCEPTED",
+			"PlayerInfo": {
+				"LoginId": "MPvZSDqM1685576929",
+				"UserCode": "PXM130000D"
+			},
+			"WagerInfo": {
+	        	"WagerId": 725428677,
+				"Type": "single",
+	        	"BetType": 8,
+	        	"Odds": 9.084,
+	        	"OddsFormat": 1,
+	        	"ToWin": "5195307.000",
+	        	"ToRisk": "642586.000",
+				"Stake": "642586.000",
+	        	"Period": 0,
+	        	"Description": "Baseball - MLB\nMinnesota Twins vs Chicago White Sox - Over 8.5 @ -128 for Game\nArizona Diamondbacks vs St. Louis Cardinals - Over 8.5 @ -123 for Game\n\nBaseball - Korea Professional Baseball\nDoosan Bears vs Hanwha Eagles - Doosan Bears @ -162 for Game\nG2 Samsung Lions vs G2 SSG Landers - Over 8.5 @ -135 for Game\n\nOld ticket : Ref No: 00000000 / 00000000\nMember id : ABC XYZ",
+				"OriginalWagerId": 725428676
+	      	}
+		}
+	]
 }
 ```
 
@@ -851,52 +863,53 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 ```js
 {
     "Timestamp": "2019-05-14T04:19:40",
-    "Signature": "HolXboM6LNFzni/Bh8FRJw4AqpdwmtcqrGagPDECNlxx3RuFisBLc2M8cySyJmnChSwwEPMko\
-        87sUaEkcfjn4Q==",
-    "Actions": [{
-        "Id": 15560892634071798,
-        "Name": "SETTLED",
-    	"PlayerInfo": {
-            "LoginId": "MPvZSDqM1685576929",
-            "UserCode": "PXM130000D"
-    	},
-        "Transaction": {
-            "TransactionId": 15560892277038,
-            "TransactionType": "CREDIT",
-            "TransactionDate": "2019-05-14T04:00:00",
-            "Amount": 14.840
-        },
-        "WagerInfo": {
-            "WagerId": 725361010,
-            "Type": "single",
-            "BetType": 1,
-            "Sport": "Baseball",
-            "Odds": 2.120,
-            "OddsFormat": 1,
-            "ToWin": 7.840,
-            "ToRisk": 7.000,
-            "Period": 0,
-            "SettlementTime": "2019-05-14 06:00:00",
-            "ResettlementTime": "2019-05-14 07:00:00",
-            "PartialStatus": 1,
-            "EventId": 985845048,
-            "EventName": "Yokohama Bay Stars-vs-Chunichi Dragons",
-            "LeagueId": 187703,
-            "LeagueName": "Nippon Professional Baseball",
-	    "ParentEventName": null,
-            "Inplay": false,
-            "InPlayScore": "",
-            "Handicap": 0.00,
-            "SelectionType": "HOME",
-            "Selection": "Yokohama Bay Stars",
-            "HomePitcher": "Y. Ono",
-            "AwayPitcher": "K. Azuma",
-            "HomePitcherName": "Y. Ono",
-            "AwayPitcherName": "K. Azuma",
-            "ProfitAndLoss": 7.840,
-            "Outcome": "WIN"    
-        }
-    }]
+    "Signature": "HolXboM6LNFzni/Bh8FRJw4AqpdwmtcqrGagPDECNlxx3RuFisBLc2M8cySyJmnChSwwEPMko\87sUaEkcfjn4Q==",
+    "Actions": [
+		{
+	        "Id": 15560892634071798,
+	        "Name": "SETTLED",
+	    	"PlayerInfo": {
+	            "LoginId": "MPvZSDqM1685576929",
+	            "UserCode": "PXM130000D"
+	    	},
+	        "Transaction": {
+	            "TransactionId": 15560892277038,
+	            "TransactionType": "CREDIT",
+	            "TransactionDate": "2019-05-14T04:00:00",
+	            "Amount": 14.840
+	        },
+	        "WagerInfo": {
+	            "WagerId": 725361010,
+	            "Type": "single",
+	            "BetType": 1,
+	            "Sport": "Baseball",
+	            "Odds": 2.120,
+	            "OddsFormat": 1,
+	            "ToWin": 7.840,
+	            "ToRisk": 7.000,
+	            "Period": 0,
+	            "SettlementTime": "2019-05-14 06:00:00",
+	            "ResettlementTime": "2019-05-14 07:00:00",
+	            "PartialStatus": 1,
+	            "EventId": 985845048,
+	            "EventName": "Yokohama Bay Stars-vs-Chunichi Dragons",
+	            "LeagueId": 187703,
+	            "LeagueName": "Nippon Professional Baseball",
+		    	"ParentEventName": null,
+	            "Inplay": false,
+	            "InPlayScore": "",
+	            "Handicap": 0.00,
+	            "SelectionType": "HOME",
+	            "Selection": "Yokohama Bay Stars",
+	            "HomePitcher": "Y. Ono",
+	            "AwayPitcher": "K. Azuma",
+	            "HomePitcherName": "Y. Ono",
+	            "AwayPitcherName": "K. Azuma",
+	            "ProfitAndLoss": 7.840,
+	            "Outcome": "WIN"    
+	        }
+    	}
+	]
 }
 ```
 
@@ -908,12 +921,14 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
         "UserCode": "PIN00115", // (String)
         // (Money) Balance after perform transaction
         "AvailableBalance": 1.02,
-        "Actions": [{
-            "Id": 15560892634071798,
-            "WagerId": 725361010, // (Long)
-            "TransactionId": 15560892277038, // (Long)    
-            "ResponseCode": 0 // Refer to Action Response Code
-        }]
+        "Actions": [
+			{
+	            "Id": 15560892634071798,
+	            "WagerId": 725361010, // (Long)
+	            "TransactionId": 15560892277038, // (Long)    
+	            "ResponseCode": 0 // Refer to Action Response Code
+        	}
+		]
     },
     "ErrorCode": 0, // Refer to Request Error Code
     "Timestamp": "2018-01-15T15:20:14" // (Date)
@@ -925,76 +940,78 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 ```js
 {
     "Timestamp": "2019-05-21T11:59:57",
-    "Signature": "9qOierMPv8iqy0fFsNO84sXxp4WJtDkGQYw13gLJzj1LSwvG6zmM6yhRb3h88ZTHVyK6cRADh1K\
-        NuxeNh4CxqQ==",
-    "Actions": [{
-        "Id": 15560892634075535,
-        "Name": "SETTLED",
-    	"PlayerInfo": {
-            "LoginId": "MPvZSDqM1685576929",
-            "UserCode": "PXM130000D"
-    	},
-        "Transaction": {
-            "TransactionId": 15560892277038,
-            "TransactionType": "CREDIT",
-            "TransactionDate": "2019-05-14T04:00:00",
-            "Amount": 50.000
-        },
-        "WagerInfo": {
-            "WagerId": 725755355,
-            "Type": "parlay",
-            "BetType": 6,
-            "Odds": 209.000,
-            "OddsFormat": 0,
-            "ToWin": 209.000,
-            "ToRisk": 100.000,
-            "ProfitAndLoss": -50.000,
-            "Outcome": "LOSE",
-            "SettlementTime": "2019-05-14 06:00:00",
-            "ResettlementTime": "2019-05-14 07:00:00",
-            "PartialStatus": 1,
-            "Legs": [{
-		    "LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
-                    "SportId": 29,
-                    "Sport": "Soccer",
-                    "SportGroup": 0,
-                    "League": "Ukraine - Premier League",
-                    "BetType": 3,
-                    "LeagueId": 2650,
-                    "SelectionType": 4,
-                    "Selection": "Karpaty Lviv",
-                    "InplayScore": null,
-                    "InPlay": false,
-                    "Odds": -138.000,
-                    "Handicap": 1.00,
-                    "Period": 1,
-                    "LegStatus": "PUSH",
-                    "TeamType": 0,
-                    "EventName": "Chornomorets Odessa-vs-Karpaty Lviv"
-                },
-                {
-		    "LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
-                    "SportId": 29,
-                    "Sport": "Soccer",
-                    "SportGroup": 0,
-                    "League": "Ukraine - Premier League",
-                    "BetType": 2,
-                    "LeagueId": 2650,
-                    "SelectionType": 0,
-                    "Selection": "Desna",
-                    "InplayScore": null,
-                    "InPlay": false,
-                    "Odds": -126.000,
-                    "Handicap": 0.00,
-                    "Period": 0,
-                    "LegStatus": "LOSE",
-                    "TeamType": 0,
-                    "EventName": "Desna-vs-Vorskla Poltava"
-                }
-            ],
-            "WagerMasterId": 725755322
-        }
-    }]
+    "Signature": "9qOierMPv8iqy0fFsNO84sXxp4WJtDkGQYw13gLJzj1LSwvG6zmM6yhRb3h88ZTHVyK6cRADh1K\NuxeNh4CxqQ==",
+    "Actions": [
+		{
+	        "Id": 15560892634075535,
+	        "Name": "SETTLED",
+	    	"PlayerInfo": {
+	            "LoginId": "MPvZSDqM1685576929",
+	            "UserCode": "PXM130000D"
+	    	},
+	        "Transaction": {
+	            "TransactionId": 15560892277038,
+	            "TransactionType": "CREDIT",
+	            "TransactionDate": "2019-05-14T04:00:00",
+	            "Amount": 50.000
+	        },
+	        "WagerInfo": {
+	            "WagerId": 725755355,
+	            "Type": "parlay",
+	            "BetType": 6,
+	            "Odds": 209.000,
+	            "OddsFormat": 0,
+	            "ToWin": 209.000,
+	            "ToRisk": 100.000,
+	            "ProfitAndLoss": -50.000,
+	            "Outcome": "LOSE",
+	            "SettlementTime": "2019-05-14 06:00:00",
+	            "ResettlementTime": "2019-05-14 07:00:00",
+	            "PartialStatus": 1,
+	            "Legs": [
+					{
+			    		"LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
+	                    "SportId": 29,
+	                    "Sport": "Soccer",
+	                    "SportGroup": 0,
+	                    "League": "Ukraine - Premier League",
+	                    "BetType": 3,
+	                    "LeagueId": 2650,
+	                    "SelectionType": 4,
+	                    "Selection": "Karpaty Lviv",
+	                    "InplayScore": null,
+	                    "InPlay": false,
+	                    "Odds": -138.000,
+	                    "Handicap": 1.00,
+	                    "Period": 1,
+	                    "LegStatus": "PUSH",
+	                    "TeamType": 0,
+	                    "EventName": "Chornomorets Odessa-vs-Karpaty Lviv"
+	                },
+	                {
+			    		"LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
+	                    "SportId": 29,
+	                    "Sport": "Soccer",
+	                    "SportGroup": 0,
+	                    "League": "Ukraine - Premier League",
+	                    "BetType": 2,
+	                    "LeagueId": 2650,
+	                    "SelectionType": 0,
+	                    "Selection": "Desna",
+	                    "InplayScore": null,
+	                    "InPlay": false,
+	                    "Odds": -126.000,
+	                    "Handicap": 0.00,
+	                    "Period": 0,
+	                    "LegStatus": "LOSE",
+	                    "TeamType": 0,
+	                    "EventName": "Desna-vs-Vorskla Poltava"
+	                }
+	            ],
+	            "WagerMasterId": 725755322
+	        }
+	    }
+	]
 }
 ```
 
@@ -1005,12 +1022,14 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
         "UserCode": "PIN00115", // (String)
         // (Money) Balance after perform transaction
         "AvailableBalance": 1.02,
-        "Actions": [{
-            "Id": 15560892634075535,
-            "WagerId": 725755355, // (Long)
-            "TransactionId": 15560892277038, // (Long)    
-            "ResponseCode": 0 // Refer to Action Response Code
-        }]
+        "Actions": [
+			{
+	            "Id": 15560892634075535,
+	            "WagerId": 725755355, // (Long)
+	            "TransactionId": 15560892277038, // (Long)    
+	            "ResponseCode": 0 // Refer to Action Response Code
+        	}
+		]
     },
     "ErrorCode": 0, // Refer to Request Error Code
     "Timestamp": "2018-01-15T15:20:14" // (Date)
@@ -1020,43 +1039,42 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 
 ```js
 {
-  "Timestamp": "2021-07-02T12:52:07",
-  "Signature": "pybnPupUEeQs3JpavwTUfsbMl7ux82vwlhigjbsT0ICBw77bYE9ULDWK7cw3bQSRx0qE\
-        +VLGegK6UvO/fkUNlA==",
-  "Actions": [
-    {
-      "Id": 15560892634075535,
-      "Name": "SETTLED",
-      "PlayerInfo": {
-     	"LoginId": "MPvZSDqM1685576929",
-        "UserCode": "PXM130000D"
-      },
-      "Transaction": {
-        "TransactionId": 15560892277038,
-        "TransactionType": "CREDIT",
-        "TransactionDate": "2021-07-02T12:51:54",
-        "Amount": 5837893
-      },
-      "WagerInfo": {
-        "WagerId": 725755355,
-	"Type": "single",
-        "BetType": 8,
-        "Odds": 9.084,
-        "OddsFormat": 1,
-        "ToWin": "5195307.000",
-        "ToRisk": "642586.000",
-	"Stake": "642586.000",
-        "ProfitAndLoss": "5195307.000",
-        "Outcome": "WIN",
-        "Period": 0,
-        "SettlementTime": "2021-07-02 12:51:54",
-        "ResettlementTime": "2021-07-02 13:51:54",
-        "PartialStatus": 1,
-        "Description": "Baseball - MLB\nMinnesota Twins vs Chicago White Sox - Over 8.5 @ -128 for Game\nArizona Diamondbacks vs St. Louis Cardinals - Over 8.5 @ -123 for Game\n\nBaseball - Korea Professional Baseball\nDoosan Bears vs Hanwha Eagles - Doosan Bears @ -162 for Game\nG2 Samsung Lions vs G2 SSG Landers - Over 8.5 @ -135 for Game\n\nOld ticket : Ref No: 0000000 / 00000000\nMember id : ABCXYZ",
-	"OriginalWagerId": 725755354
-      }
-    }
-  ]
+	"Timestamp": "2021-07-02T12:52:07",
+	"Signature": "pybnPupUEeQs3JpavwTUfsbMl7ux82vwlhigjbsT0ICBw77bYE9ULDWK7cw3bQSRx0qE\+VLGegK6UvO/fkUNlA==",
+	"Actions": [
+    	{
+			"Id": 15560892634075535,
+			"Name": "SETTLED",
+			"PlayerInfo": {
+				"LoginId": "MPvZSDqM1685576929",
+				"UserCode": "PXM130000D"
+			},
+			"Transaction": {
+				"TransactionId": 15560892277038,
+				"TransactionType": "CREDIT",
+				"TransactionDate": "2021-07-02T12:51:54",
+				"Amount": 5837893
+			},
+			"WagerInfo": {
+				"WagerId": 725755355,
+				"Type": "single",
+				"BetType": 8,
+				"Odds": 9.084,
+				"OddsFormat": 1,
+				"ToWin": "5195307.000",
+				"ToRisk": "642586.000",
+				"Stake": "642586.000",
+				"ProfitAndLoss": "5195307.000",
+				"Outcome": "WIN",
+				"Period": 0,
+				"SettlementTime": "2021-07-02 12:51:54",
+				"ResettlementTime": "2021-07-02 13:51:54",
+				"PartialStatus": 1,
+				"Description": "Baseball - MLB\nMinnesota Twins vs Chicago White Sox - Over 8.5 @ -128 for Game\nArizona Diamondbacks vs St. Louis Cardinals - Over 8.5 @ -123 for Game\n\nBaseball - Korea Professional Baseball\nDoosan Bears vs Hanwha Eagles - Doosan Bears @ -162 for Game\nG2 Samsung Lions vs G2 SSG Landers - Over 8.5 @ -135 for Game\n\nOld ticket : Ref No: 0000000 / 00000000\nMember id : ABCXYZ",
+				"OriginalWagerId": 725755354
+      		}
+		}
+	]
 }
 ```
 
@@ -1064,20 +1082,20 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 
 ```js
 {
-  "Result": {
-    "UserCode": "PIN00115",
-    "AvailableBalance": "2542586.95",
-    "Actions": [
-      {
-        "Id": 15560892634075535,
-        "TransactionId": 11707259,
-        "WagerId": 725755355,
-        "ResponseCode": 0 // Refer to Action Response Code
-      }
-    ]
-  },
-  "ErrorCode": 0,
-  "Timestamp": "2021-07-02T16:52:08"
+	"Result": {
+	    "UserCode": "PIN00115",
+	    "AvailableBalance": "2542586.95",
+	    "Actions": [
+			{
+		        "Id": 15560892634075535,
+		        "TransactionId": 11707259,
+		        "WagerId": 725755355,
+		        "ResponseCode": 0 // Refer to Action Response Code
+			}
+	    ]
+	},
+	"ErrorCode": 0,
+	"Timestamp": "2021-07-02T16:52:08"
 }
 ```
 ### 2.2.4. REJECTED Action
@@ -1089,25 +1107,26 @@ The Sportsbook Platform will call to the Operator wallet to notify that the wage
 ```js
 {
     "Timestamp": "2018-01-15T15:20:14", // (Date)
-    "Signature": "w2QdXVixBhwuogVDouo08WaKrx5EzE6pNerQkaRMhHZ2ljQZ1u5gZzE\
-        +/9H2FMiRJlvZz/QB0F4QlsXd4StmRA==",
-    "Actions": [{
-        "Id": 2445645645,
-        "Name": "REJECTED",
-    	"PlayerInfo": {
-            "LoginId": "MPvZSDqM1685576929",
-	    "UserCode": "PXM130000D"
-    	},
-        "WagerInfo": {
-            "WagerId": 1545454 // (Long)
-        },
-        "Transaction": {
-            "TransactionId": 123456789, // (Long)
-            "TransactionType": "CREDIT", // Transaction Type
-            "TransactionDate": "2019-01-18T15:20:15", // (Date)        
-            "Amount": 15.55 // (Money)
-        }
-    }]
+    "Signature": "w2QdXVixBhwuogVDouo08WaKrx5EzE6pNerQkaRMhHZ2ljQZ1u5gZzE\+/9H2FMiRJlvZz/QB0F4QlsXd4StmRA==",
+    "Actions": [
+		{
+	        "Id": 2445645645,
+	        "Name": "REJECTED",
+	    	"PlayerInfo": {
+	            "LoginId": "MPvZSDqM1685576929",
+		    	"UserCode": "PXM130000D"
+	    	},
+	        "WagerInfo": {
+	            "WagerId": 1545454 // (Long)
+	        },
+	        "Transaction": {
+	            "TransactionId": 123456789, // (Long)
+	            "TransactionType": "CREDIT", // Transaction Type
+	            "TransactionDate": "2019-01-18T15:20:15", // (Date)        
+	            "Amount": 15.55 // (Money)
+	        }
+		}
+	]
 }
 ```
 
@@ -1118,12 +1137,14 @@ The Sportsbook Platform will call to the Operator wallet to notify that the wage
     "Result": {
         "UserCode": "PIN00115",
         "AvailableBalance": 18.02,
-        "Actions": [{
-            "Id": 2445645645,
-            "TransactionId": 123456789,
-            "WagerId": 1545454,
-            "ResponseCode": 0 // Refer to Action Response Code
-        }]
+        "Actions": [
+			{
+	            "Id": 2445645645,
+	            "TransactionId": 123456789,
+	            "WagerId": 1545454,
+	            "ResponseCode": 0 // Refer to Action Response Code
+        	}
+		]
     },
     "ErrorCode": 0,
     "Timestamp": "2019-05-03T00:18:27"
@@ -1139,25 +1160,26 @@ When the bet is cancelled, the Sportsbook Platform will call the Operator with t
 ```js
 {
     "Timestamp": "2018-01-15T15:20:14", // (Date)
-    "Signature": "w2QdXVixBhwuogVDouo08WaKrx5EzE6pNerQkaRMhHZ2ljQZ1u5gZzE\
-        +/9H2FMiRJlvZz/QB0F4QlsXd4StmRA==",
-    "Actions": [{
-        "Id": 124457,
-        "Name": "CANCELLED",
-    	"PlayerInfo": {
-            "LoginId": "MPvZSDqM1685576929",
-	    "UserCode": "PXM130000D"
-    	},
-        "WagerInfo": {
-            "WagerId": 1545454 // (Long)
-        },
-        "Transaction": {
-            "TransactionId": 123456789, // (Long)
-            "TransactionType": "CREDIT", // Transaction Type
-            "TransactionDate": "2019-01-18T15:20:15", // (Date)        
-            "Amount": 15.55 // (Money)
-        }
-    }]
+    "Signature": "w2QdXVixBhwuogVDouo08WaKrx5EzE6pNerQkaRMhHZ2ljQZ1u5gZzE\+/9H2FMiRJlvZz/QB0F4QlsXd4StmRA==",
+    "Actions": [
+		{
+	        "Id": 124457,
+	        "Name": "CANCELLED",
+	    	"PlayerInfo": {
+	            "LoginId": "MPvZSDqM1685576929",
+		    	"UserCode": "PXM130000D"
+	    	},
+	        "WagerInfo": {
+	            "WagerId": 1545454 // (Long)
+	        },
+	        "Transaction": {
+	            "TransactionId": 123456789, // (Long)
+	            "TransactionType": "CREDIT", // Transaction Type
+	            "TransactionDate": "2019-01-18T15:20:15", // (Date)        
+	            "Amount": 15.55 // (Money)
+	        }
+	    }
+	]
 }
 ```
 
@@ -1169,12 +1191,14 @@ When the bet is cancelled, the Sportsbook Platform will call the Operator with t
         "UserCode": "PIN00115", // (String)
         // (Money) Balance after perform transaction
         "AvailableBalance": 18.02,
-        "Actions": [{
-            "Id": 124457, // (Long)
-            "WagerId": 1545454, // (Long)
-            "TransactionId": 123456789, // (Long)
-            "ResponseCode": 0 // Refer to Action Response Code
-        }]
+        "Actions": [
+			{
+	            "Id": 124457, // (Long)
+	            "WagerId": 1545454, // (Long)
+	            "TransactionId": 123456789, // (Long)
+	            "ResponseCode": 0 // Refer to Action Response Code
+        	}
+		]
     },
     "ErrorCode": 0, // Refer to Request Error Code
     "Timestamp": "2018-01-15T15:20:14" // (Date)
@@ -1193,27 +1217,28 @@ In the Transaction of Rollback action, we send a ReferTransactionId property. Th
 ```js
 {
     "Timestamp": "2019-05-03T23:32:47",
-    "Signature": "fhpsVEdPsn+BbdFw+NxTzhV6+r4TM06LCgRplAnuYfgERdrcsWljQPXR\
-        /IAs9h54qXy6hXlDpXpMW/m1J37Syg==",
-    "Actions": [{
-        "Id": 15560892634070450,
-        "Name": "ROLLBACKED",
-    	"PlayerInfo": {
-            "LoginId": "MPvZSDqM1685576929",
-            "UserCode": "PXM130000D"
-    	},
-        "Transaction": {
-            "TransactionId": 15560892276088,
-      "ReferTransactionId": 15560892276087,
-            "TransactionType": "CREDIT",
-            "TransactionDate": "2019-05-04T03:32:47",
-            "Amount": 10
-        },
-        "WagerInfo": {
-            "WagerId": 724839645
-        },
-	"RollbackReason": "Malformed response"
-    }]
+    "Signature": "fhpsVEdPsn+BbdFw+NxTzhV6+r4TM06LCgRplAnuYfgERdrcsWljQPXR\/IAs9h54qXy6hXlDpXpMW/m1J37Syg==",
+    "Actions": [
+		{
+	        "Id": 15560892634070450,
+	        "Name": "ROLLBACKED",
+	    	"PlayerInfo": {
+	            "LoginId": "MPvZSDqM1685576929",
+	            "UserCode": "PXM130000D"
+	    	},
+	        "Transaction": {
+	            "TransactionId": 15560892276088,
+	      		"ReferTransactionId": 15560892276087,
+	            "TransactionType": "CREDIT",
+	            "TransactionDate": "2019-05-04T03:32:47",
+	            "Amount": 10
+	        },
+	        "WagerInfo": {
+	            "WagerId": 724839645
+	        },
+			"RollbackReason": "Malformed response"
+	    }
+	]
 }
 ```
 
@@ -1224,12 +1249,14 @@ In the Transaction of Rollback action, we send a ReferTransactionId property. Th
     "Result": {
         "UserCode": "SU1070000H",
         "AvailableBalance": 191.71500000000003,
-        "Actions": [{
-            "Id": 15560892634070450,
-            "TransactionId": 15560892276088,
-            "WagerId": 724839645,
-        "ResponseCode": 0
-        }]
+        "Actions": [
+			{
+	            "Id": 15560892634070450,
+	            "TransactionId": 15560892276088,
+	            "WagerId": 724839645,
+	        	"ResponseCode": 0
+        	}
+		]
     },
     "ErrorCode": 0,
     "Timestamp": "2019-05-03T19:32:47"
@@ -1247,14 +1274,14 @@ When a bet needs to be resettled due to an incorrect result or any other reason 
 ```js
 {
     "Timestamp": "2019-05-07T22:19:26",
-    "Signature": "bgDLFBQBcU1UqOq+HUMUKTSeOAKRwnm1bu7igURAKI2ZD9updNLL\
-        +pNRoJQ2CvC9EYr1DtBAYYNpPPVpnCUHKw==",
-    "Actions": [{
+    "Signature": "bgDLFBQBcU1UqOq+HUMUKTSeOAKRwnm1bu7igURAKI2ZD9updNLL\+pNRoJQ2CvC9EYr1DtBAYYNpPPVpnCUHKw==",
+    "Actions": [
+		{
             "Id": 15560892634071356,
             "Name": "UNSETTLED",
             "PlayerInfo": {
-		"LoginId": "MPvZSDqM1685576929",
-		"UserCode": "PXM130000D"
+				"LoginId": "MPvZSDqM1685576929",
+				"UserCode": "PXM130000D"
             },
             "Transaction": {
                 "TransactionId": 15560892276754,
@@ -1270,8 +1297,8 @@ When a bet needs to be resettled due to an incorrect result or any other reason 
             "Id": 15560892634071356,
             "Name": "CANCELLED",
             "PlayerInfo": {
-		"LoginId": "MPvZSDqM1685576929",
-		"UserCode": "PXM130000D"
+				"LoginId": "MPvZSDqM1685576929",
+				"UserCode": "PXM130000D"
             },
             "Transaction": {
                 "TransactionId": 15560892276755,
@@ -1294,17 +1321,18 @@ When a bet needs to be resettled due to an incorrect result or any other reason 
     "Result": {
         "UserCode": "S013000005",
         "AvailableBalance": 9900,
-        "Actions": [{
+        "Actions": [
+			{
                 "Id": 15560892634071356,
                 "TransactionId": 15560892276754,
                 "WagerId": 725057660,
-            "ResponseCode": 0
+            	"ResponseCode": 0
             },
             {
                 "Id": 15560892634071356,
                 "TransactionId": 15560892276755,
                 "WagerId": 725057660,
-            "ResponseCode": 0
+            	"ResponseCode": 0
             }
         ]
     },
