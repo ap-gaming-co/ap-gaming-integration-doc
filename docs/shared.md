@@ -897,15 +897,13 @@ This service updates the status for a player.
 | `userCode`  | Header | String  (required 必需项)  |  | This is agent code that you get at step 2. E.g: CO1AP1 此为在第二步骤获取的代理编号，例如，CO1AP1 |
 | `token` | Header | String (required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
 | `userCode` | Query | String (required 必需项)  |  | This is the user code / loginID of the player. E.g: PA10000000.<br/>此为玩家登录名/用户名，例如PA10000000 |
-| `status` | Query | String (required 必需项)  | `ACTIVE`, `INACTIVE`, `SUSPENDED` | See User Status in the Data-format. 详见数据格式中的用户状态。|
+| `status` | Query | String (required 必需项)  | `ACTIVE`, `INACTIVE` | See User Status in the Data-format. 详见数据格式中的用户状态。|
 
 **Note:**
 -	`INACTIVE` player CANNOT login on Member site
--	`SUSPENDED` player CAN login on Member site, but CANNOT place bet
 
 **注：**
 -	`INACTIVE` 玩家不可登陆 
--	`SUSPENDED` 玩家可以登陆，但不能投注
 
 *Sample code (java) - See HttpUtils class at Appendix*
 *示例代码（java）– 请参阅附录里的 HttpUtils class*
