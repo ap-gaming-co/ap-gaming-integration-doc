@@ -161,7 +161,7 @@ E.g. `2018-12-20T04:05:06`
 | 405 | Your wallet does not exist in system. |  |
 | 406 | Your wallet is inactive. |  |
 | 407 | Invalid product. |  |
-| 423 | Your account is . Please contact your upline for help. | When the agentCodes are INACTIVE/SUSPENDED and CLOSED, it will display the errorCode 423.  |
+| 423 | Your account is . Please contact your upline for help. | When the agentCodes are INACTIVE and CLOSED, it will display the errorCode 423.  |
 
 ## 7. Event Status
 
@@ -947,7 +947,6 @@ E.g. `2018-12-20T04:05:06`
 | --- | --- | --- |
 | `ACTIVE` | User is active | ‘ACTIVE’ player CAN log in and place bet on Member site. | 
 | `INACTIVE` | User is inactive | ‘INACTIVE’ player CANNOT log in on Member site. | 
-| `SUSPENDED` | User is suspended by direct agent. | ‘SUSPENDED’ player CAN log in on Member site, but CANNOT place bet. | 
 | `SUSPENDED_BY_COMPANY` | User is suspended by ‘Company’ agent. | ‘SUSPENDED_BY_COMPANY’ player CAN log in on Member site, but CANNOT place bet. | 
 | `CLOSED` | User is closed by administrator | ‘CLOSED’ player CANNOT log in on Member site. | 
 | `INACTIVE_BY_COMPANY` | User is inactive by company | ‘INACTIVE_BY_COMPANY’ player CANNOT log in on Member site. | 
