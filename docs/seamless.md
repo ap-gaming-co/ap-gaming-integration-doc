@@ -931,20 +931,20 @@ Response data when accepting bet with no balance adjustment.
 
 ```js
 {
-  "Result": {
-    "UserCode": "1MU0000003",
-    "AvailableBalance": 9003.95,
-    "Actions": [
-      {
-        "Id": 15560892635807548,
-        "TransactionId": null,
-        "WagerId": 2206450842,
-        "ResponseCode": 0
-      }
-    ]
-  },
-  "ErrorCode": 0,
-  "Timestamp": "2026-03-08T23:03:27"
+    "Result": {
+        "UserCode": "1MU0000003",
+        "AvailableBalance": 9003.95,
+        "Actions": [
+            {
+                "Id": 15560892635807548,
+                "TransactionId": null,
+                "WagerId": 2206450842,
+                "ResponseCode": 0
+            }
+        ]
+    },
+    "ErrorCode": 0,
+    "Timestamp": "2026-03-08T23:03:27"
 }
 ```
 
