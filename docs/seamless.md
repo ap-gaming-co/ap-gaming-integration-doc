@@ -454,83 +454,83 @@ In `BETTED` action, we send the number of bets that will be generated using the 
 *Teaser*
 ```js
 {
-  "Timestamp": "2026-03-09T03:03:23",
-  "Signature": "guLBgsi9qMAYHra2U1SIjVpyzGLACXtm/uJ3Q1ssfZZRvK0UBkKssy0fW7yTlqMdUlPc1sllYkMsG2InC/xhvQ==",
-  "Actions": [
-    {
-      "Id": 15560892635807547,
-      "Name": "BETTED",
-      "Transaction": {
-        "TransactionId": 15560893247112,
-        "TransactionType": "DEBIT",
-        "TransactionDate": "2026-03-09T03:03:23",
-        "Amount": 1.00
-      },
-      "PlayerInfo": {
-        "LoginId": "1MU0000003",
-        "UserCode": "1MU0000003"
-      },
-      "WagerInfo": {
-        "WagerId": 2206450842,
-        "Type": "TEASER",
-        "BetType": 7,
-        "SportId": 4,
-        "Sport": "Basketball",
-        "Odds": 1.000,
-        "OddsFormat": 2,
-        "ToWin": 1.000,
-        "ToRisk": 1.000,
-        "Stake": 1.000,
-        "PlayerIPAddress": "172.21.8.35",
-        "Legs": [
-          {
-            "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
-            "SportId": 4,
-            "Sport": "Basketball",
-            "SportGroup": 1,
-            "League": "NBA",
-            "BetType": 2,
-            "LeagueId": 487,
-            "EventId": 1625292952,
-            "EventDateFm": "2026-03-09 19:10:00",
-            "SelectionType": 0,
-            "InplayScore": null,
-            "InPlay": false,
-            "Odds": 0.000,
-            "Handicap": -6.50,
-            "Period": 0,
-            "TeamType": 1,
-            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-            "Point": 4.5000000,
-            "Type": "NBA, College and WNBA 2 - 6 Team",
-            "Selection": "Cleveland Cavaliers"
-          },
-          {
-            "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
-            "SportId": 4,
-            "Sport": "Basketball",
-            "SportGroup": 1,
-            "League": "NBA",
-            "BetType": 3,
-            "LeagueId": 487,
-            "EventId": 1625292952,
-            "EventDateFm": "2026-03-09 19:10:00",
-            "SelectionType": 4,
-            "InplayScore": null,
-            "InPlay": false,
-            "Odds": 0.000,
-            "Handicap": 233.50,
-            "Period": 0,
-            "TeamType": 1,
-            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-            "Point": 6.5000000,
-            "Type": "NBA, College and WNBA 2 - 6 Team",
-            "Selection": "Under"
-          }
-        ]
-      }
-    }
-  ]
+    "Timestamp": "2026-03-09T03:03:23",
+    "Signature": "guLBgsi9qMAYHra2U1SIjVpyzGLACXtm/uJ3Q1ssfZZRvK0UBkKssy0fW7yTlqMdUlPc1sllYkMsG2InC/xhvQ==",
+    "Actions": [
+        {
+            "Id": 15560892635807548,
+            "Name": "BETTED",
+            "Transaction": {
+                "TransactionId": 15560893247112,
+                "TransactionType": "DEBIT",
+                "TransactionDate": "2026-03-09T03:03:23",
+                "Amount": 1
+            },
+            "PlayerInfo": {
+                "LoginId": "1MU0000003",
+                "UserCode": "1MU0000003"
+            },
+            "WagerInfo": {
+                "WagerId": 2206450842,
+                "Type": "TEASER",
+                "BetType": 7,
+                "SportId": 4,
+                "Sport": "Basketball",
+                "Odds": 1,
+                "OddsFormat": 2,
+                "ToWin": 1,
+                "ToRisk": 1,
+                "Stake": 1,
+                "PlayerIPAddress": "172.21.8.35",
+                "Legs": [
+                    {
+                        "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
+                        "SportId": 4,
+                        "Sport": "Basketball",
+                        "SportGroup": 1,
+                        "League": "NBA",
+                        "BetType": 2,
+                        "LeagueId": 487,
+                        "EventId": 1625292952,
+                        "EventDateFm": "2026-03-09 19:10:00",
+                        "SelectionType": 0,
+                        "InplayScore": null,
+                        "InPlay": false,
+                        "Odds": 0,
+                        "Handicap": -6.5,
+                        "Period": 0,
+                        "TeamType": 1,
+                        "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
+                        "Point": 4.5,
+                        "Type": "NBA, College and WNBA 2 - 6 Team",
+                        "Selection": "Cleveland Cavaliers"
+                    },
+                    {
+                        "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
+                        "SportId": 4,
+                        "Sport": "Basketball",
+                        "SportGroup": 1,
+                        "League": "NBA",
+                        "BetType": 3,
+                        "LeagueId": 487,
+                        "EventId": 1625292952,
+                        "EventDateFm": "2026-03-09 19:10:00",
+                        "SelectionType": 4,
+                        "InplayScore": null,
+                        "InPlay": false,
+                        "Odds": 0,
+                        "Handicap": 233.5,
+                        "Period": 0,
+                        "TeamType": 1,
+                        "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
+                        "Point": 6.5,
+                        "Type": "NBA, College and WNBA 2 - 6 Team",
+                        "Selection": "Under"
+                    }
+                ]
+            }
+        }
+    ]
 }
 ```
 
@@ -538,39 +538,39 @@ In `BETTED` action, we send the number of bets that will be generated using the 
 
 ```js
 {
-  "Timestamp": "2021-07-02T15:22:07",
-  "Signature": "ADGNbaOMwu/lNxQTnpAZFlzsMK76mvl1JehKtC9lprVvpKkDGasdez1e2P2mSr8F0czOLf4Y2fedcbaw5YO7Iw==",
-  "Actions": [
-    {
-      "Id": 15560892634072091,
-      "Name": "BETTED",
-      "ManualWager": true,
-      "PlayerInfo": {
-         "LoginId": "MPvZSDqM1685576929",
-         "UserCode": "PXM130000D"
-      },
-      "Transaction": {
-        "TransactionId": 15560892277229,
-        "TransactionType": "DEBIT",
-        "TransactionDate": "2021-06-30T02:04:26",
-        "Amount": 642586
-      },
-      "WagerInfo": {
-        "WagerId": 725462707,
-        "Type": "single",
-        "BetType": 8,
-        "Odds": 9.084,
-        "OddsFormat": 1,
-        "ToWin": "5195307.000",
-        "ToRisk": "642586.000",
-		"Stake": "642586.000",
-        "Period": 0,
-        "Description": "Baseball - MLB\nMinnesota Twins vs Chicago White Sox - Over 8.5 @ -128 for Game\nArizona Diamondbacks vs St. Louis Cardinals - Over 8.5 @ -123 for Game\n\nBaseball - Korea Professional Baseball\nDoosan Bears vs Hanwha Eagles - Doosan Bears @ -162 for Game\nG2 Samsung Lions vs G2 SSG Landers - Over 8.5 @ -135 for Game\n\nOld ticket : Ref No: 00000000 / 11111111\nMember id : ABCXYZ",
-		"PlayerIPAddress": "10.10.12.8",
-		"OriginalWagerId": 725462706
-      }
-    }
-  ]
+    "Timestamp": "2021-07-02T15:22:07",
+    "Signature": "ADGNbaOMwu/lNxQTnpAZFlzsMK76mvl1JehKtC9lprVvpKkDGasdez1e2P2mSr8F0czOLf4Y2fedcbaw5YO7Iw==",
+    "Actions": [
+        {
+            "Id": 15560892634072092,
+            "Name": "BETTED",
+            "ManualWager": true,
+            "PlayerInfo": {
+                "LoginId": "MPvZSDqM1685576929",
+                "UserCode": "PXM130000D"
+            },
+            "Transaction": {
+                "TransactionId": 15560892277229,
+                "TransactionType": "DEBIT",
+                "TransactionDate": "2021-06-30T02:04:26",
+                "Amount": 642586
+            },
+            "WagerInfo": {
+                "WagerId": 725462707,
+                "Type": "single",
+                "BetType": 8,
+                "Odds": 9.084,
+                "OddsFormat": 1,
+                "ToWin": "5195307.000",
+                "ToRisk": "642586.000",
+                "Stake": "642586.000",
+                "Period": 0,
+                "Description": "Baseball - MLB\nMinnesota Twins vs Chicago White Sox - Over 8.5 @ -128 for Game\nArizona Diamondbacks vs St. Louis Cardinals - Over 8.5 @ -123 for Game\n\nBaseball - Korea Professional Baseball\nDoosan Bears vs Hanwha Eagles - Doosan Bears @ -162 for Game\nG2 Samsung Lions vs G2 SSG Landers - Over 8.5 @ -135 for Game\n\nOld ticket : Ref No: 00000000 / 11111111\nMember id : ABCXYZ",
+                "PlayerIPAddress": "10.10.12.8",
+                "OriginalWagerId": 725462706
+            }
+        }
+    ]
 }
 ```
 **Response Data for Single, Parlay and Teaser, Manual cases.**
