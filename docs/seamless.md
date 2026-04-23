@@ -660,20 +660,20 @@ Response data when accepting bet with no balance adjustment.
 
 ```js
 {
-	"Result": {
-		"UserCode": "P1L0000001",
-    	"AvailableBalance": 13471.05,
-    	"Actions": [
-			{
-        		"Id": 15560892635790863,
-        		"TransactionId": null,
-        		"WagerId": 2200510331,
-        		"ResponseCode": 0
-			}
-		]
-  },
-  "ErrorCode": 0,
-  "Timestamp": "2024-03-22T00:41:14"
+    "Result": {
+        "UserCode": "P1L0000001",
+        "AvailableBalance": 13471.05,
+        "Actions": [
+            {
+                "Id": 15560892635790864,
+                "TransactionId": null,
+                "WagerId": 2200510331,
+                "ResponseCode": 0
+            }
+        ]
+    },
+    "ErrorCode": 0,
+    "Timestamp": "2024-03-22T00:41:14"
 }
 ```
 
