@@ -50,8 +50,7 @@ All requests from the Sportsbook Platform to Operator Wallet API have basic info
 {
     // other property of POST data.
     "Timestamp": "2018-01-15T15:20:14",
-    "Signature": "aTFzUoIUD7Tpclf9XQ/+kuyEkNRJCUMK12XgQoVmhKuy6HGle5pj1sdZJJ\
-        +FSu23MZhy+ppH02fe3kDnB5CgMw=="
+    "Signature": "aTFzUoIUD7Tpclf9XQ/+kuyEkNRJCUMK12XgQoVmhKuy6HGle5pj1sdZJJ\+FSu23MZhy+ppH02fe3kDnB5CgMw=="
 }
 ```
 | Parameter 参数 | Type 类型 | E.g. Value 设置值 | Description 描述 |
