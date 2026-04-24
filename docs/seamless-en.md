@@ -409,83 +409,83 @@ In `BETTED` action, we send the number of bets that will be generated using the 
 *Teaser*
 ```js
 {
-  "Timestamp": "2026-03-09T03:03:23",
-  "Signature": "guLBgsi9qMAYHra2U1SIjVpyzGLACXtm/uJ3Q1ssfZZRvK0UBkKssy0fW7yTlqMdUlPc1sllYkMsG2InC/xhvQ==",
-  "Actions": [
-    {
-      "Id": 15560892635807547,
-      "Name": "BETTED",
-      "Transaction": {
-        "TransactionId": 15560893247112,
-        "TransactionType": "DEBIT",
-        "TransactionDate": "2026-03-09T03:03:23",
-        "Amount": 1.00
-      },
-      "PlayerInfo": {
-        "LoginId": "1MU0000003",
-        "UserCode": "1MU0000003"
-      },
-      "WagerInfo": {
-        "WagerId": 2206450842,
-        "Type": "TEASER",
-        "BetType": 7,
-        "SportId": 4,
-        "Sport": "Basketball",
-        "Odds": 1.000,
-        "OddsFormat": 2,
-        "ToWin": 1.000,
-        "ToRisk": 1.000,
-        "Stake": 1.000,
-        "PlayerIPAddress": "172.21.8.35",
-        "Legs": [
-          {
-            "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
-            "SportId": 4,
-            "Sport": "Basketball",
-            "SportGroup": 1,
-            "League": "NBA",
-            "BetType": 2,
-            "LeagueId": 487,
-            "EventId": 1625292952,
-            "EventDateFm": "2026-03-09 19:10:00",
-            "SelectionType": 0,
-            "InplayScore": null,
-            "InPlay": false,
-            "Odds": 0.000,
-            "Handicap": -6.50,
-            "Period": 0,
-            "TeamType": 1,
-            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-            "Point": 4.5000000,
-            "Type": "NBA, College and WNBA 2 - 6 Team",
-            "Selection": "Cleveland Cavaliers"
-          },
-          {
-            "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
-            "SportId": 4,
-            "Sport": "Basketball",
-            "SportGroup": 1,
-            "League": "NBA",
-            "BetType": 3,
-            "LeagueId": 487,
-            "EventId": 1625292952,
-            "EventDateFm": "2026-03-09 19:10:00",
-            "SelectionType": 4,
-            "InplayScore": null,
-            "InPlay": false,
-            "Odds": 0.000,
-            "Handicap": 233.50,
-            "Period": 0,
-            "TeamType": 1,
-            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-            "Point": 6.5000000,
-            "Type": "NBA, College and WNBA 2 - 6 Team",
-            "Selection": "Under"
-          }
-        ]
-      }
-    }
-  ]
+    "Timestamp": "2026-03-09T03:03:23",
+    "Signature": "guLBgsi9qMAYHra2U1SIjVpyzGLACXtm/uJ3Q1ssfZZRvK0UBkKssy0fW7yTlqMdUlPc1sllYkMsG2InC/xhvQ==",
+    "Actions": [
+        {
+            "Id": 15560892635807548,
+            "Name": "BETTED",
+            "Transaction": {
+                "TransactionId": 15560893247112,
+                "TransactionType": "DEBIT",
+                "TransactionDate": "2026-03-09T03:03:23",
+                "Amount": 1
+            },
+            "PlayerInfo": {
+                "LoginId": "1MU0000003",
+                "UserCode": "1MU0000003"
+            },
+            "WagerInfo": {
+                "WagerId": 2206450842,
+                "Type": "TEASER",
+                "BetType": 7,
+                "SportId": 4,
+                "Sport": "Basketball",
+                "Odds": 1,
+                "OddsFormat": 2,
+                "ToWin": 1,
+                "ToRisk": 1,
+                "Stake": 1,
+                "PlayerIPAddress": "172.21.8.35",
+                "Legs": [
+                    {
+                        "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
+                        "SportId": 4,
+                        "Sport": "Basketball",
+                        "SportGroup": 1,
+                        "League": "NBA",
+                        "BetType": 2,
+                        "LeagueId": 487,
+                        "EventId": 1625292952,
+                        "EventDateFm": "2026-03-09 19:10:00",
+                        "SelectionType": 0,
+                        "InplayScore": null,
+                        "InPlay": false,
+                        "Odds": 0,
+                        "Handicap": -6.5,
+                        "Period": 0,
+                        "TeamType": 1,
+                        "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
+                        "Point": 4.5,
+                        "Type": "NBA, College and WNBA 2 - 6 Team",
+                        "Selection": "Cleveland Cavaliers"
+                    },
+                    {
+                        "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
+                        "SportId": 4,
+                        "Sport": "Basketball",
+                        "SportGroup": 1,
+                        "League": "NBA",
+                        "BetType": 3,
+                        "LeagueId": 487,
+                        "EventId": 1625292952,
+                        "EventDateFm": "2026-03-09 19:10:00",
+                        "SelectionType": 4,
+                        "InplayScore": null,
+                        "InPlay": false,
+                        "Odds": 0,
+                        "Handicap": 233.5,
+                        "Period": 0,
+                        "TeamType": 1,
+                        "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
+                        "Point": 6.5,
+                        "Type": "NBA, College and WNBA 2 - 6 Team",
+                        "Selection": "Under"
+                    }
+                ]
+            }
+        }
+    ]
 }
 ```
 
@@ -493,39 +493,39 @@ In `BETTED` action, we send the number of bets that will be generated using the 
 
 ```js
 {
-  "Timestamp": "2021-07-02T15:22:07",
-  "Signature": "ADGNbaOMwu/lNxQTnpAZFlzsMK76mvl1JehKtC9lprVvpKkDGasdez1e2P2mSr8F0czOLf4Y2fedcbaw5YO7Iw==",
-  "Actions": [
-    {
-      "Id": 15560892634072091,
-      "Name": "BETTED",
-      "ManualWager": true,
-      "PlayerInfo": {
-         "LoginId": "MPvZSDqM1685576929",
-         "UserCode": "PXM130000D"
-      },
-      "Transaction": {
-        "TransactionId": 15560892277229,
-        "TransactionType": "DEBIT",
-        "TransactionDate": "2021-06-30T02:04:26",
-        "Amount": 642586
-      },
-      "WagerInfo": {
-        "WagerId": 725462707,
-        "Type": "single",
-        "BetType": 8,
-        "Odds": 9.084,
-        "OddsFormat": 1,
-        "ToWin": "5195307.000",
-        "ToRisk": "642586.000",
-		"Stake": "642586.000",
-        "Period": 0,
-        "Description": "Baseball - MLB\nMinnesota Twins vs Chicago White Sox - Over 8.5 @ -128 for Game\nArizona Diamondbacks vs St. Louis Cardinals - Over 8.5 @ -123 for Game\n\nBaseball - Korea Professional Baseball\nDoosan Bears vs Hanwha Eagles - Doosan Bears @ -162 for Game\nG2 Samsung Lions vs G2 SSG Landers - Over 8.5 @ -135 for Game\n\nOld ticket : Ref No: 00000000 / 11111111\nMember id : ABCXYZ",
-		"PlayerIPAddress": "10.10.12.8",
-		"OriginalWagerId": 725462706
-      }
-    }
-  ]
+    "Timestamp": "2021-07-02T15:22:07",
+    "Signature": "ADGNbaOMwu/lNxQTnpAZFlzsMK76mvl1JehKtC9lprVvpKkDGasdez1e2P2mSr8F0czOLf4Y2fedcbaw5YO7Iw==",
+    "Actions": [
+        {
+            "Id": 15560892634072092,
+            "Name": "BETTED",
+            "ManualWager": true,
+            "PlayerInfo": {
+                "LoginId": "MPvZSDqM1685576929",
+                "UserCode": "PXM130000D"
+            },
+            "Transaction": {
+                "TransactionId": 15560892277229,
+                "TransactionType": "DEBIT",
+                "TransactionDate": "2021-06-30T02:04:26",
+                "Amount": 642586
+            },
+            "WagerInfo": {
+                "WagerId": 725462707,
+                "Type": "single",
+                "BetType": 8,
+                "Odds": 9.084,
+                "OddsFormat": 1,
+                "ToWin": "5195307.000",
+                "ToRisk": "642586.000",
+                "Stake": "642586.000",
+                "Period": 0,
+                "Description": "Baseball - MLB\nMinnesota Twins vs Chicago White Sox - Over 8.5 @ -128 for Game\nArizona Diamondbacks vs St. Louis Cardinals - Over 8.5 @ -123 for Game\n\nBaseball - Korea Professional Baseball\nDoosan Bears vs Hanwha Eagles - Doosan Bears @ -162 for Game\nG2 Samsung Lions vs G2 SSG Landers - Over 8.5 @ -135 for Game\n\nOld ticket : Ref No: 00000000 / 11111111\nMember id : ABCXYZ",
+                "PlayerIPAddress": "10.10.12.8",
+                "OriginalWagerId": 725462706
+            }
+        }
+    ]
 }
 ```
 **Response Data for Single, Parlay and Teaser, Manual cases.**
@@ -605,20 +605,20 @@ Response data when accepting bet with no balance adjustment.
 
 ```js
 {
-	"Result": {
-		"UserCode": "P1L0000001",
-    	"AvailableBalance": 13471.05,
-    	"Actions": [
-			{
-        		"Id": 15560892635790863,
-        		"TransactionId": null,
-        		"WagerId": 2200510331,
-        		"ResponseCode": 0
-			}
-		]
-  },
-  "ErrorCode": 0,
-  "Timestamp": "2024-03-22T00:41:14"
+    "Result": {
+        "UserCode": "P1L0000001",
+        "AvailableBalance": 13471.05,
+        "Actions": [
+            {
+                "Id": 15560892635790864,
+                "TransactionId": null,
+                "WagerId": 2200510331,
+                "ResponseCode": 0
+            }
+        ]
+    },
+    "ErrorCode": 0,
+    "Timestamp": "2024-03-22T00:41:14"
 }
 ```
 
@@ -787,79 +787,79 @@ Response data when accepting bet with no balance adjustment.
 *Teaser*
 ```js
 {
-  "Timestamp": "2026-03-09T03:03:27",
-  "Signature": "guLBgsi9qMAYHra2U1SIjVPnMJ8s3VNQOnuhUfkmDwxjBUyP1kDEfP2SEneR+TySIKYVa3dnuBiWVhf6PZvF8A==",
-  "Actions": [
-    {
-      "Id": 15560892635807548,
-      "Name": "ACCEPTED",
-      "PlayerInfo": {
-        "LoginId": "1MU0000003",
-        "UserCode": "1MU0000003"
-      },
-      "WagerInfo": {
-        "WagerId": 2206450842,
-        "Type": "teaser",
-        "BetType": 7,
-        "SportId": 4,
-        "Sport": "Basketball",
-        "Odds": 1.000,
-        "OddsFormat": 2,
-        "ToWin": 1.000,
-        "ToRisk": 1.000,
-        "Stake": 1.000,
-        "Legs": [
-          {
-            "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
-            "SportId": 4,
-            "Sport": "Basketball",
-            "SportGroup": 1,
-            "League": "NBA",
-            "BetType": 2,
-            "LeagueId": 487,
-            "EventId": 1625292952,
-            "EventDateFm": "2026-03-09 19:10:00",
-            "SelectionType": 0,
-            "InplayScore": null,
-            "InPlay": false,
-            "Odds": 0.000,
-            "Handicap": -6.50,
-            "Period": 0,
-            "LegStatus": "ACCEPTED",
-            "TeamType": 1,
-            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-            "Point": 4.5000000,
-            "Type": "NBA, College and WNBA 2 - 6 Team",
-            "Selection": "Cleveland Cavaliers"
-          },
-          {
-            "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
-            "SportId": 4,
-            "Sport": "Basketball",
-            "SportGroup": 1,
-            "League": "NBA",
-            "BetType": 3,
-            "LeagueId": 487,
-            "EventId": 1625292952,
-            "EventDateFm": "2026-03-09 19:10:00",
-            "SelectionType": 4,
-            "InplayScore": null,
-            "InPlay": false,
-            "Odds": 0.000,
-            "Handicap": 233.50,
-            "Period": 0,
-            "LegStatus": "ACCEPTED",
-            "TeamType": 1,
-            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-            "Point": 6.5000000,
-            "Type": "NBA, College and WNBA 2 - 6 Team",
-            "Selection": "Under"
-          }
+	"Timestamp": "2026-03-09T03:03:27",
+	"Signature": "guLBgsi9qMAYHra2U1SIjVPnMJ8s3VNQOnuhUfkmDwxjBUyP1kDEfP2SEneR+TySIKYVa3dnuBiWVhf6PZvF8A==",
+	"Actions": [
+		{
+			"Id": 15560892635807548,
+			"Name": "ACCEPTED",
+			"PlayerInfo": {
+				"LoginId": "1MU0000003",
+				"UserCode": "1MU0000003"
+			},
+			"WagerInfo": {
+	        "WagerId": 2206450842,
+	        "Type": "teaser",
+	        "BetType": 7,
+	        "SportId": 4,
+	        "Sport": "Basketball",
+	        "Odds": 1.000,
+	        "OddsFormat": 2,
+	        "ToWin": 1.000,
+	        "ToRisk": 1.000,
+	        "Stake": 1.000,
+        	"Legs": [
+				{
+		            "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
+		            "SportId": 4,
+		            "Sport": "Basketball",
+		            "SportGroup": 1,
+		            "League": "NBA",
+		            "BetType": 2,
+		            "LeagueId": 487,
+		            "EventId": 1625292952,
+		            "EventDateFm": "2026-03-09 19:10:00",
+		            "SelectionType": 0,
+		            "InplayScore": null,
+		            "InPlay": false,
+		            "Odds": 0.000,
+		            "Handicap": -6.50,
+		            "Period": 0,
+		            "LegStatus": "ACCEPTED",
+		            "TeamType": 1,
+		            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
+		            "Point": 4.5000000,
+		            "Type": "NBA, College and WNBA 2 - 6 Team",
+		            "Selection": "Cleveland Cavaliers"
+				},
+				{
+		            "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
+		            "SportId": 4,
+		            "Sport": "Basketball",
+		            "SportGroup": 1,
+		            "League": "NBA",
+		            "BetType": 3,
+		            "LeagueId": 487,
+		            "EventId": 1625292952,
+		            "EventDateFm": "2026-03-09 19:10:00",
+		            "SelectionType": 4,
+		            "InplayScore": null,
+		            "InPlay": false,
+		            "Odds": 0.000,
+		            "Handicap": 233.50,
+		            "Period": 0,
+		            "LegStatus": "ACCEPTED",
+		            "TeamType": 1,
+		            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
+		            "Point": 6.5000000,
+		            "Type": "NBA, College and WNBA 2 - 6 Team",
+		            "Selection": "Under"
+				}
         ],
         "WagerMasterId": 0,
         "WagerNum": 0
-      }
-    }
+	}
+}
 ```
 
 **Teaser Response Data**
@@ -868,20 +868,20 @@ Response data when accepting bet with no balance adjustment.
 
 ```js
 {
-  "Result": {
-    "UserCode": "1MU0000003",
-    "AvailableBalance": 9003.95,
-    "Actions": [
-      {
-        "Id": 15560892635807548,
-        "TransactionId": null,
-        "WagerId": 2206450842,
-        "ResponseCode": 0
-      }
-    ]
-  },
-  "ErrorCode": 0,
-  "Timestamp": "2026-03-08T23:03:27"
+    "Result": {
+        "UserCode": "1MU0000003",
+        "AvailableBalance": 9003.95,
+        "Actions": [
+            {
+                "Id": 15560892635807548,
+                "TransactionId": null,
+                "WagerId": 2206450842,
+                "ResponseCode": 0
+            }
+        ]
+    },
+    "ErrorCode": 0,
+    "Timestamp": "2026-03-08T23:03:27"
 }
 ```
 
@@ -987,86 +987,87 @@ Response data when accepting a bet with balance adjustment.
 *Teaser*
 ```js
 {
-  "Timestamp": "2026-03-09T03:03:27",
-  "Signature": "guLBgsi9qMAYHra2U1SIjVPnMJ8s3VNQOnuhUfkmDwxjBUyP1kDEfP2SEneR+TySIKYVa3dnuBiWVhf6PZvF8A==",
-  "Actions": [
-    {
-      "Id": 15560892635807548,
-      "Name": "ACCEPTED",
-      "PlayerInfo": {
-        "LoginId": "1MU0000003",
-        "UserCode": "1MU0000003"
-      },
-        "Transaction": {
-            "TransactionId": 15560892276044,
-            "TransactionType": "CREDIT",
-            "TransactionDate": "2026-03-09T03:03:27",
-            "Amount": 2.00 // Amount need adjust
-        },
-      "WagerInfo": {
-        "WagerId": 2206450842,
-        "Type": "teaser",
-        "BetType": 7,
-        "SportId": 4,
-        "Sport": "Basketball",
-        "Odds": 1.000,
-        "OddsFormat": 2,
-        "ToWin": 1.000,
-        "ToRisk": 1.000,
-        "Stake": 1.000,
-        "Legs": [
-          {
-            "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
-            "SportId": 4,
-            "Sport": "Basketball",
-            "SportGroup": 1,
-            "League": "NBA",
-            "BetType": 2,
-            "LeagueId": 487,
-            "EventId": 1625292952,
-            "EventDateFm": "2026-03-09 19:10:00",
-            "SelectionType": 0,
-            "InplayScore": null,
-            "InPlay": false,
-            "Odds": 0.000,
-            "Handicap": -6.50,
-            "Period": 0,
-            "LegStatus": "ACCEPTED",
-            "TeamType": 1,
-            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-            "Point": 4.5000000,
-            "Type": "NBA, College and WNBA 2 - 6 Team",
-            "Selection": "Cleveland Cavaliers"
-          },
-          {
-            "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
-            "SportId": 4,
-            "Sport": "Basketball",
-            "SportGroup": 1,
-            "League": "NBA",
-            "BetType": 3,
-            "LeagueId": 487,
-            "EventId": 1625292952,
-            "EventDateFm": "2026-03-09 19:10:00",
-            "SelectionType": 4,
-            "InplayScore": null,
-            "InPlay": false,
-            "Odds": 0.000,
-            "Handicap": 233.50,
-            "Period": 0,
-            "LegStatus": "ACCEPTED",
-            "TeamType": 1,
-            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-            "Point": 6.5000000,
-            "Type": "NBA, College and WNBA 2 - 6 Team",
-            "Selection": "Under"
-          }
-        ],
-        "WagerMasterId": 0,
-        "WagerNum": 0
-      }
-    }
-  
+	"Timestamp": "2026-03-09T03:03:27",
+	"Signature": "guLBgsi9qMAYHra2U1SIjVPnMJ8s3VNQOnuhUfkmDwxjBUyP1kDEfP2SEneR+TySIKYVa3dnuBiWVhf6PZvF8A==",
+	"Actions": [
+    	{
+			"Id": 15560892635807548,
+			"Name": "ACCEPTED",
+			"PlayerInfo": {
+        		"LoginId": "1MU0000003",
+        		"UserCode": "1MU0000003"
+      		},
+	        "Transaction": {
+	            "TransactionId": 15560892276044,
+	            "TransactionType": "CREDIT",
+	            "TransactionDate": "2026-03-09T03:03:27",
+	            "Amount": 2.00 // Amount to adjust
+	        },
+			"WagerInfo": {
+				"WagerId": 2206450842,
+				"Type": "teaser",
+				"BetType": 7,
+				"SportId": 4,
+				"Sport": "Basketball",
+				"Odds": 1.000,
+				"OddsFormat": 2,
+				"ToWin": 1.000,
+				"ToRisk": 1.000,
+				"Stake": 1.000,
+        		"Legs": [
+          			{
+			            "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
+			            "SportId": 4,
+			            "Sport": "Basketball",
+			            "SportGroup": 1,
+			            "League": "NBA",
+			            "BetType": 2,
+			            "LeagueId": 487,
+			            "EventId": 1625292952,
+			            "EventDateFm": "2026-03-09 19:10:00",
+			            "SelectionType": 0,
+			            "InplayScore": null,
+			            "InPlay": false,
+			            "Odds": 0.000,
+			            "Handicap": -6.50,
+			            "Period": 0,
+			            "LegStatus": "ACCEPTED",
+			            "TeamType": 1,
+			            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
+			            "Point": 4.5000000,
+			            "Type": "NBA, College and WNBA 2 - 6 Team",
+			            "Selection": "Cleveland Cavaliers"
+          			},
+          			{
+			            "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
+			            "SportId": 4,
+			            "Sport": "Basketball",
+			            "SportGroup": 1,
+			            "League": "NBA",
+			            "BetType": 3,
+			            "LeagueId": 487,
+			            "EventId": 1625292952,
+			            "EventDateFm": "2026-03-09 19:10:00",
+			            "SelectionType": 4,
+			            "InplayScore": null,
+			            "InPlay": false,
+			            "Odds": 0.000,
+			            "Handicap": 233.50,
+			            "Period": 0,
+			            "LegStatus": "ACCEPTED",
+			            "TeamType": 1,
+			            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
+			            "Point": 6.5000000,
+			            "Type": "NBA, College and WNBA 2 - 6 Team",
+			            "Selection": "Under"
+					}
+				],
+				"WagerMasterId": 0,
+				"WagerNum": 0
+			}
+		}
+	]
+}
 ```
 
 **Teaser Response Data**
@@ -1075,20 +1076,20 @@ Response data when accepting a bet with balance adjustment.
 
 ```js
 {
-  "Result": {
-    "UserCode": "1MU0000003",
-    "AvailableBalance": 9005.95,
-    "Actions": [
-      {
-        "Id": 15560892635807548,
-        "TransactionId": null,
-        "WagerId": 2206450842,
-        "ResponseCode": 0
-      }
-    ]
-  },
-  "ErrorCode": 0,
-  "Timestamp": "2026-03-08T23:03:27"
+	"Result": {
+		"UserCode": "1MU0000003",
+		"AvailableBalance": 9005.95,
+		"Actions": [
+			{
+				"Id": 15560892635807548,
+				"TransactionId": null,
+				"WagerId": 2206450842,
+				"ResponseCode": 0
+			}
+		]
+	},
+	"ErrorCode": 0,
+	"Timestamp": "2026-03-08T23:03:27"
 }
 ```
 
@@ -1130,19 +1131,19 @@ Response data when accepting bet.
 
 ```js
 {
-  "Result": {
-    "UserCode": "XZ10700",
-    "AvailableBalance": "172.71500000000003",
-    "Actions": [
-      {
-        "Id": 19532026,
-        "WagerId": 1751348096,
-        "ResponseCode": 0 // Refer to Action Response Code
-      }
-    ]
-  },
-  "ErrorCode": 0,
-  "Timestamp": "2021-07-02T16:51:32"
+	"Result": {
+		"UserCode": "XZ10700",
+		"AvailableBalance": "172.71500000000003",
+		"Actions": [
+			{
+				"Id": 19532026,
+				"WagerId": 1751348096,
+				"ResponseCode": 0 // Refer to Action Response Code
+			}
+		]
+	},
+	"ErrorCode": 0,
+	"Timestamp": "2021-07-02T16:51:32"
 }
 ```
 
@@ -1333,137 +1334,137 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 *Teaser*
 ```js
 {
-  "Timestamp": "2026-03-09T21:26:12",
-  "Signature": "bkSyUHJ8aj39TYC+MA6jc2f7QPXj7OwbH9Zo9/5jJjQ7UDpWKvXnFqvAGE4dUkzKVHcue9vXIBITmql7jNiizg==",
-  "Actions": [
-    {
-      "Id": 15560892635807552,
-      "Name": "SETTLED",
-      "Transaction": {
-        "TransactionId": 15560893247114,
-        "TransactionType": "CREDIT",
-        "TransactionDate": "2026-03-09T21:25:55",
-        "Amount": 2.0000000
-      },
-      "PlayerInfo": {
-        "LoginId": "1MU0000003",
-        "UserCode": "1MU0000003"
-      },
-      "WagerInfo": {
-        "WagerId": 2206450842,
-        "Type": "teaser",
-        "BetType": 7,
-        "SportId": 4,
-        "Sport": "Basketball",
-        "Odds": 1.000,
-        "OddsFormat": 2,
-        "ToWin": 1.000,
-        "ToRisk": 1.000,
-        "Stake": 1.000,
-        "ProfitAndLoss": 1.000,
-        "Outcome": "WIN",
-        "SettlementTime": "2026-03-09 21:25:55",
-        "Legs": [
-          {
-            "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
-            "SportId": 4,
-            "Sport": "Basketball",
-            "SportGroup": 1,
-            "League": "NBA",
-            "BetType": 2,
-            "LeagueId": 487,
-            "EventId": 1625292952,
-            "EventDateFm": "2026-03-09 19:10:00",
-            "SelectionType": 0,
-            "InplayScore": null,
-            "InPlay": false,
-            "Odds": 0.000,
-            "Handicap": -6.50,
-            "Period": 0,
-            "LegStatus": "WON",
-            "TeamType": 1,
-            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-            "Point": 4.5000000,
-            "Type": "NBA, College and WNBA 2 - 6 Team",
-            "Selection": "Cleveland Cavaliers",
-            "Scores": [
-              {
-                "Period": 1,
-                "Score": "56-44"
-              },
-              {
-                "Period": 3,
-                "Score": "26-20"
-              },
-              {
-                "Period": 4,
-                "Score": "30-24"
-              }
-            ]
-          },
-          {
-            "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
-            "SportId": 4,
-            "Sport": "Basketball",
-            "SportGroup": 1,
-            "League": "NBA",
-            "BetType": 3,
-            "LeagueId": 487,
-            "EventId": 1625292952,
-            "EventDateFm": "2026-03-09 19:10:00",
-            "SelectionType": 4,
-            "InplayScore": null,
-            "InPlay": false,
-            "Odds": 0.000,
-            "Handicap": 233.50,
-            "Period": 0,
-            "LegStatus": "WON",
-            "TeamType": 1,
-            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-            "Point": 6.5000000,
-            "Type": "NBA, College and WNBA 2 - 6 Team",
-            "Selection": "Under",
-            "Scores": [
-              {
-                "Period": 1,
-                "Score": "56-44"
-              },
-              {
-                "Period": 3,
-                "Score": "26-20"
-              },
-              {
-                "Period": 4,
-                "Score": "30-24"
-              }
-            ]
-          }
-        ],
-        "WagerMasterId": 0,
-        "WagerNum": 0
-      }
-    }
-  ]
+    "Timestamp": "2026-03-09T21:26:12",
+    "Signature": "bkSyUHJ8aj39TYC+MA6jc2f7QPXj7OwbH9Zo9/5jJjQ7UDpWKvXnFqvAGE4dUkzKVHcue9vXIBITmql7jNiizg==",
+    "Actions": [
+        {
+            "Id": 15560892635807552,
+            "Name": "SETTLED",
+            "Transaction": {
+                "TransactionId": 15560893247114,
+                "TransactionType": "CREDIT",
+                "TransactionDate": "2026-03-09T21:25:55",
+                "Amount": 2
+            },
+            "PlayerInfo": {
+                "LoginId": "1MU0000003",
+                "UserCode": "1MU0000003"
+            },
+            "WagerInfo": {
+                "WagerId": 2206450842,
+                "Type": "teaser",
+                "BetType": 7,
+                "SportId": 4,
+                "Sport": "Basketball",
+                "Odds": 1,
+                "OddsFormat": 2,
+                "ToWin": 1,
+                "ToRisk": 1,
+                "Stake": 1,
+                "ProfitAndLoss": 1,
+                "Outcome": "WIN",
+                "SettlementTime": "2026-03-09 21:25:55",
+                "Legs": [
+                    {
+                        "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
+                        "SportId": 4,
+                        "Sport": "Basketball",
+                        "SportGroup": 1,
+                        "League": "NBA",
+                        "BetType": 2,
+                        "LeagueId": 487,
+                        "EventId": 1625292952,
+                        "EventDateFm": "2026-03-09 19:10:00",
+                        "SelectionType": 0,
+                        "InplayScore": null,
+                        "InPlay": false,
+                        "Odds": 0,
+                        "Handicap": -6.5,
+                        "Period": 0,
+                        "LegStatus": "WON",
+                        "TeamType": 1,
+                        "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
+                        "Point": 4.5,
+                        "Type": "NBA, College and WNBA 2 - 6 Team",
+                        "Selection": "Cleveland Cavaliers",
+                        "Scores": [
+                            {
+                                "Period": 1,
+                                "Score": "56-44"
+                            },
+                            {
+                                "Period": 3,
+                                "Score": "26-20"
+                            },
+                            {
+                                "Period": 4,
+                                "Score": "30-24"
+                            }
+                        ]
+                    },
+                    {
+                        "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
+                        "SportId": 4,
+                        "Sport": "Basketball",
+                        "SportGroup": 1,
+                        "League": "NBA",
+                        "BetType": 3,
+                        "LeagueId": 487,
+                        "EventId": 1625292952,
+                        "EventDateFm": "2026-03-09 19:10:00",
+                        "SelectionType": 4,
+                        "InplayScore": null,
+                        "InPlay": false,
+                        "Odds": 0,
+                        "Handicap": 233.5,
+                        "Period": 0,
+                        "LegStatus": "WON",
+                        "TeamType": 1,
+                        "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
+                        "Point": 6.5,
+                        "Type": "NBA, College and WNBA 2 - 6 Team",
+                        "Selection": "Under",
+                        "Scores": [
+                            {
+                                "Period": 1,
+                                "Score": "56-44"
+                            },
+                            {
+                                "Period": 3,
+                                "Score": "26-20"
+                            },
+                            {
+                                "Period": 4,
+                                "Score": "30-24"
+                            }
+                        ]
+                    }
+                ],
+                "WagerMasterId": 0,
+                "WagerNum": 0
+            }
+        }
+    ]
 }
 ```
 
 **Teaser Response Data**
 ```js
 {
-  "Result": {
-    "UserCode": "1MU0000003",
-    "AvailableBalance": 9007.98,
-    "Actions": [
-      {
-        "Id": 15560892635807552,
-        "TransactionId": 15560893247114,
-        "WagerId": 2206450842,
-        "ResponseCode": 0
-      }
-    ]
-  },
-  "ErrorCode": 0,
-  "Timestamp": "2026-03-09T17:26:12"
+    "Result": {
+        "UserCode": "1MU0000003",
+        "AvailableBalance": 9007.98,
+        "Actions": [
+            {
+                "Id": 15560892635807552,
+                "TransactionId": 15560893247114,
+                "WagerId": 2206450842,
+                "ResponseCode": 0
+            }
+        ]
+    },
+    "ErrorCode": 0,
+    "Timestamp": "2026-03-09T17:26:12"
 }
 ```
 **Manual Wager Type: Request Data**
