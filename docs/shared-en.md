@@ -1981,8 +1981,7 @@ Please refer to
   "loginId": "KR0000", 
   "wagerDateFm": "2017-07-26 02:13:31"
   "turnover": 0.00,
-  "settleDateFm":  "2017-07-26 04:11:22",
-  "resettleDateFm": "2017-07-26 05:11:22"
+  "settleDateFm":  "2017-07-26 04:11:22"
 } 
 ```
 
@@ -2026,10 +2025,14 @@ public class WagerFeed {
     long wagerId;  
     String status;  
     BigDecimal toWin;  
-    BigDecimal toRisk;  
+    BigDecimal toRisk;
+	BigDecimal stake;
+	int period;
+	String product;
     BigDecimal winLoss;  
-    String currency;  
-    String userCode;  
+    String currencyCode;  
+    String userCode;
+	String loginId;
     String wagerDateFm;  
     String sport;  
     String league;  
@@ -2057,7 +2060,8 @@ public class WagerFeed {
     String eventDateFm;  
     int oddsFormat;  
     String wagerType;
-    String result;  
+    String result;
+	String settleDateFm;
     // GETTER SETTER HERE  
 }  
 public class EventScore {  
@@ -2070,8 +2074,10 @@ public class WagerFeedSelection {
     String selection;  
     String eventDateFm;  
     List<EventScore> scores = new ArrayList<>();  
-    String sport;  
-    String league;  
+    String sport;
+	int sportId;  
+    String league;
+	int leagueId;
     String homeTeam;  
     String awayTeam;  
     BigDecimal odds;  
