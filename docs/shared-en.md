@@ -13,10 +13,10 @@
     - [3. API Functions API](#3-api-functions-api)
         - [3.1. FA001 – LoginV2](#31-fa001-loginv2)
 		- [3.2.	FA002 – Logout](#32-fa002-logout)
-        - [3.4.	FP001 – Create User](#34-fp001-create-user)
-        - [3.5. FP003 – Get Player](#35-fp003-get-player)
-        - [3.6. FP004 – Get List Player](#36-fp004-get-list-player)
-        - [3.7. FP007 – Change Status Member](#37-fp007-change-status-member)
+        - [3.3.	FP001 – Create User](#33-fp001-create-user)
+        - [3.4. FP002 – Get Player](#34-fp002-get-player)
+        - [3.5. FP003 – Get List Player](#35-fp003-get-list-player)
+        - [3.6. FP004 – Change Status Member](#36-fp004-change-status-member)
         - [3.8. FR001 – Wagers](#38-fr001-wagers)
         - [3.10. FR003 – Win Loss Simple](#310-fr003-win-loss-simple)
         - [3.11. FR004 – Get My Bet](#311-fr004-get-my-bet)
@@ -447,7 +447,7 @@ namespace Logout
 }  
 ```
 
-### 3.4. FP001 – Create User <a name="34-fp001-create-user"></a>
+### 3.3. FP001 – Create User <a name="33-fp001-create-user"></a>
 
 This service is used to sign up a player.
 
@@ -526,7 +526,7 @@ Usage Limits
 
 Usage is limited to a maximum of 10 requests per 5 seconds.
 
-### 3.5. FP003 – Get Player <a name="35-fp003-get-player"></a>
+### 3.4. FP002 – Get Player <a name="34-fp002-get-player"></a>
 
 This service returns player information.
 
@@ -611,7 +611,7 @@ namespace GetPlayer
 }  
 ```
 
-### 3.6. FP004 – Get List Player <a name="36-fp004-get-list-player"></a>
+### 3.5. FP003 – Get List Player <a name="35-fp003-get-list-player"></a>
 
 This service returns a list of player information.
 
@@ -691,7 +691,7 @@ namespace GetListPlayer
 }]  
 ```
 
-### 3.7. FP007 – Change Status Member<a name="37-fp007-change-status-member"></a>
+### 3.6. FP004 – Change Status Member<a name="36-fp004-change-status-member"></a>
 
 This service updates the status for a player.
 
