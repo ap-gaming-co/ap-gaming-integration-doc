@@ -11,8 +11,8 @@
         - [2.5. Errors and Exceptions 错误和例外](#25-errors-and-exceptions)
         - [2.6. Getting started 如何开始](#26-getting-started)
     - [3. API Functions API功能](#3-api-functions-api)
+        - [3.1. FA001 – LoginV2 登陆V2](#33-fa001-loginv2)
         - [3.2.	FA002 – Logout 登出](#32-fa002-logout)
-        - [3.3. FA003 – LoginV2 登陆V2](#33-fa003-loginv2)
         - [3.4.	FP001 – Create User 创建用户](#34-fp001-create-user)
         - [3.5. FP003 – Get Player 获取用户](#35-fp003-get-player)
         - [3.6. FP004 – Get List Player 获取用户列表](#36-fp004-get-list-player)
@@ -266,84 +266,7 @@ For each service call, you must pass token verification and the appropriate para
 
 ## 3. API Functions API功能 <a name="3-api-functions-api"></a>
 
-### 3.2. FA002 – Logout 登出 <a name="32-fa002-logout"></a>
-
-If you need to logout from system by userCode. You must call this function. 如果你需要通过userCode登出系统。你需要调用这个函数。
-
-**Endpoint 端点**
-
-| Name 名称 | Value 设置值 | Description 描述 |
-| --- | --- | --- |
-| URL | `/player/logout` | |
-| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. <br/>对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。|
-
-**Parameters 参数**
-
-| Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
-| --- | --- | --- | --- | --- |
-| `userCode` | Header | String <br/>(required 必需项) | | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
-| `token` | Header | String <br/>(optional 非必需项) | Token is available for 15 minutes after creation.  令牌在创建之后的15分钟内有效 | |
-| `userCode` | Query | String <br/>(required 必需项) | | This is the user code / loginID of the player. E.g: `PA10000000` 此为玩家登录名/用户名，例如`PA10000000` |
-
-*Sample code (java) - See HttpUtils class at Appendix*
-*示例代码（java）– 请参阅附录里的 HttpUtils class*	
-
-```java
-import java.io.IOException;  
-import java.util.HashMap;  
-import java.util.Map;  
-private static void doLogout() throws IOException {  
-    Map params = new HashMap();  
-    params.put("userCode", "PA10000000");  
-    Map headers = new HashMap();  
-    headers.put("userCode", "CO1AP1");  
-    headers.put("token", "gvbLZb70DhMNXMLw3egvktPT3sfDWnDC5QI97MXHqK9FCFO1n6oepaXQivCIVpsDlth/\
-        jbR/qgUcpi2wHc62Tw==");
-    String url = "http://apidomain.com/b2b/player/logout";  
-    String result = HttpUtils.post(url, "", params, headers);  
-    System.out.println(result);  
-}
-```
-
-*Sample code (C#)  示例代码（C#）*
-
-```csharp
-using System;  
-using System.Net.Http;  
-using System.Collections.Generic;  
-using System.Threading.Tasks;  
-  
-namespace Logout  
-{  
-    class Program  
-    {  
-        static void Main(string[] args)  
-        {  
-            Dictionary<string, string> parameters = new Dictionary<string, string>();  
-            parameters.Add("userCode", "PA10000000");  
-  
-            Dictionary<string, string> headers = new Dictionary<string, string>();  
-            headers.Add("userCode","CO1AP1");  
-            headers.Add("token","DIwYQJZIYiosWrbXQe+TFdyMk6POZvbcM1KjxxQObZEn0+efzoMCb3i\
-                +PWr1ZFuj0UciR8w+qqo1M2hJ965Y9w==");  
-  
-            Console.WriteLine(HttpUtils.PostRequest("http://apidomain.com/b2b/player/logout", 
-                parameters, headers).Result);  
-            Console.ReadKey();  
-        }  
-    }  
-} 
-```
-
-*Response反应*
-
-```js
-{  
-    "status": "successful"  
-}  
-```
-
-### 3.3. FA003 – LoginV2 登陆V2 <a name="33-fa003-loginv2"></a>
+### 3.1. FA001 – LoginV2 登陆V2 <a name="33-fa003-loginv2"></a>
 
 This service is used to create a new user and generate a URL that will allow the player to access the website without needing to login. This service is different from FA001 in that if the player does not exist in the system, a new user will be created.
 
@@ -479,6 +402,83 @@ When the player clicks on the “Back” icon ![Workflow](./../res/back-icon.png
 当你点击“返回”图标，应用程序将发送重定向到google.com页面
 
 *Note: This feature is only available on the Mobile version 注意：此功能只有在移动版本上有*
+
+### 3.2. FA002 – Logout 登出 <a name="32-fa002-logout"></a>
+
+If you need to logout from system by userCode. You must call this function. 如果你需要通过userCode登出系统。你需要调用这个函数。
+
+**Endpoint 端点**
+
+| Name 名称 | Value 设置值 | Description 描述 |
+| --- | --- | --- |
+| URL | `/player/logout` | |
+| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body. <br/>对于 POST 方法，建议在请求正文中以 JSON 对象的形式发送参数。|
+
+**Parameters 参数**
+
+| Name <br/>名称 | Type <br/>类型 | Value 设置值 | Validation 验证 | Description 描述 |
+| --- | --- | --- | --- | --- |
+| `userCode` | Header | String <br/>(required 必需项) | | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
+| `token` | Header | String <br/>(optional 非必需项) | Token is available for 15 minutes after creation.  令牌在创建之后的15分钟内有效 | |
+| `userCode` | Query | String <br/>(required 必需项) | | This is the user code / loginID of the player. E.g: `PA10000000` 此为玩家登录名/用户名，例如`PA10000000` |
+
+*Sample code (java) - See HttpUtils class at Appendix*
+*示例代码（java）– 请参阅附录里的 HttpUtils class*	
+
+```java
+import java.io.IOException;  
+import java.util.HashMap;  
+import java.util.Map;  
+private static void doLogout() throws IOException {  
+    Map params = new HashMap();  
+    params.put("userCode", "PA10000000");  
+    Map headers = new HashMap();  
+    headers.put("userCode", "CO1AP1");  
+    headers.put("token", "gvbLZb70DhMNXMLw3egvktPT3sfDWnDC5QI97MXHqK9FCFO1n6oepaXQivCIVpsDlth/\
+        jbR/qgUcpi2wHc62Tw==");
+    String url = "http://apidomain.com/b2b/player/logout";  
+    String result = HttpUtils.post(url, "", params, headers);  
+    System.out.println(result);  
+}
+```
+
+*Sample code (C#)  示例代码（C#）*
+
+```csharp
+using System;  
+using System.Net.Http;  
+using System.Collections.Generic;  
+using System.Threading.Tasks;  
+  
+namespace Logout  
+{  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            Dictionary<string, string> parameters = new Dictionary<string, string>();  
+            parameters.Add("userCode", "PA10000000");  
+  
+            Dictionary<string, string> headers = new Dictionary<string, string>();  
+            headers.Add("userCode","CO1AP1");  
+            headers.Add("token","DIwYQJZIYiosWrbXQe+TFdyMk6POZvbcM1KjxxQObZEn0+efzoMCb3i\
+                +PWr1ZFuj0UciR8w+qqo1M2hJ965Y9w==");  
+  
+            Console.WriteLine(HttpUtils.PostRequest("http://apidomain.com/b2b/player/logout", 
+                parameters, headers).Result);  
+            Console.ReadKey();  
+        }  
+    }  
+} 
+```
+
+*Response反应*
+
+```js
+{  
+    "status": "successful"  
+}  
+```
 
 ### 3.4. FP001 – Create User 创建用户 <a name="34-fp001-create-user"></a>
 
