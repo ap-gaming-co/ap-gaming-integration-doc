@@ -11,7 +11,7 @@
         - [2.5. Errors and Exceptions 错误和例外](#25-errors-and-exceptions)
         - [2.6. Getting started 如何开始](#26-getting-started)
     - [3. API Functions API功能](#3-api-functions-api)
-        - [3.1. FA001 – LoginV2 登陆V2](#31-fa001--loginv2-%E7%99%BB%E9%99%86v2)
+        - [3.1. FA001 – LoginV2 登陆V2](#31-fa001-loginv2)
         - [3.2.	FA002 – Logout 登出](#32-fa002-logout)
         - [3.4.	FP001 – Create User 创建用户](#34-fp001-create-user)
         - [3.5. FP003 – Get Player 获取用户](#35-fp003-get-player)
@@ -266,7 +266,7 @@ For each service call, you must pass token verification and the appropriate para
 
 ## 3. API Functions API功能 <a name="3-api-functions-api"></a>
 
-### 3.1. FA001 – LoginV2 登陆V2 <a name="33-fa003-loginv2"></a>
+### 3.1. FA001 – LoginV2 登陆V2 <a name="31-fa001-loginv2"></a>
 
 This service is used to create a new user and generate a URL that will allow the player to access the website without needing to login. This service is different from FA001 in that if the player does not exist in the system, a new user will be created.
 
