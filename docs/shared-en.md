@@ -11,8 +11,8 @@
         - [2.5. Errors and Exceptions](#25-errors-and-exceptions)
         - [2.6. Getting started](#26-getting-started)
     - [3. API Functions API](#3-api-functions-api)
-        - [3.2.	FA002 – Logout](#32-fa002-logout)
-        - [3.3. FA003 – LoginV2](#33-fa003-loginv2)
+        - [3.1. FA001 – LoginV2](#31-fa001-loginv2)
+		- [3.2.	FA002 – Logout](#32-fa002-logout)
         - [3.4.	FP001 – Create User](#34-fp001-create-user)
         - [3.5. FP003 – Get Player](#35-fp003-get-player)
         - [3.6. FP004 – Get List Player](#36-fp004-get-list-player)
@@ -246,83 +246,7 @@ For each service call, you must pass token verification and the appropriate para
 
 ## 3. API Functions API<a name="3-api-functions-api"></a>
 
-### 3.2. FA002 – Logout <a name="32-fa002-logout"></a>
-
-If you need to logout from system by userCode. You must call this function. 
-
-**Endpoint**
-
-| Name | Value | Description |
-| --- | --- | --- |
-| URL | `/player/logout` | |
-| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body.|
-
-**Parameters**
-
-| Name <br/> | Type <br/> | Value | Validation | Description |
-| --- | --- | --- | --- | --- |
-| `userCode` | Header | String <br/>(required) | | This is the agent code obtained in step 2. E.g: CO1AP1. |
-| `token` | Header | String <br/>(optional) | Token is available for 15 minutes after creation. | |
-| `userCode` | Query | String <br/>(required) | | This is the user code / loginID of the player. E.g: `PA10000000`|
-
-*Sample code (java) - See HttpUtils class at Appendix*
-
-```java
-import java.io.IOException;  
-import java.util.HashMap;  
-import java.util.Map;  
-private static void doLogout() throws IOException {  
-    Map params = new HashMap();  
-    params.put("userCode", "PA10000000");  
-    Map headers = new HashMap();  
-    headers.put("userCode", "CO1AP1");  
-    headers.put("token", "gvbLZb70DhMNXMLw3egvktPT3sfDWnDC5QI97MXHqK9FCFO1n6oepaXQivCIVpsDlth/\
-        jbR/qgUcpi2wHc62Tw==");
-    String url = "http://apidomain.com/b2b/player/logout";  
-    String result = HttpUtils.post(url, "", params, headers);  
-    System.out.println(result);  
-}
-```
-
-*Sample code (C#)*
-
-```csharp
-using System;  
-using System.Net.Http;  
-using System.Collections.Generic;  
-using System.Threading.Tasks;  
-  
-namespace Logout  
-{  
-    class Program  
-    {  
-        static void Main(string[] args)  
-        {  
-            Dictionary<string, string> parameters = new Dictionary<string, string>();  
-            parameters.Add("userCode", "PA10000000");  
-  
-            Dictionary<string, string> headers = new Dictionary<string, string>();  
-            headers.Add("userCode","CO1AP1");  
-            headers.Add("token","DIwYQJZIYiosWrbXQe+TFdyMk6POZvbcM1KjxxQObZEn0+efzoMCb3i\
-                +PWr1ZFuj0UciR8w+qqo1M2hJ965Y9w==");  
-  
-            Console.WriteLine(HttpUtils.PostRequest("http://apidomain.com/b2b/player/logout", 
-                parameters, headers).Result);  
-            Console.ReadKey();  
-        }  
-    }  
-} 
-```
-
-*Response*
-
-```js
-{  
-    "status": "successful"  
-}  
-```
-
-### 3.3. FA003 – LoginV2 <a name="33-fa003-loginv2"></a>
+### 3.1. FA001 – LoginV2 <a name="31-fa001-loginv2"></a>
 
 This service is used to create a new user and generate a URL that will allow the player to access the website without needing to login. This service is different from FA001 in that if the player does not exist in the system, a new user will be created.
 
@@ -446,6 +370,82 @@ http://whitelabelapidomain.com/member-service/v2/login-token?locale=en&token=eGR
 When the player clicks on the “Back” icon ![Workflow](./../res/back-icon.png), the app will redirect to google.com.
 
 *Note: This feature is only available on the Mobile version*
+
+### 3.2. FA002 – Logout <a name="32-fa002-logout"></a>
+
+If you need to logout from system by userCode. You must call this function. 
+
+**Endpoint**
+
+| Name | Value | Description |
+| --- | --- | --- |
+| URL | `/player/logout` | |
+| Method | `GET`/`POST` | For POST method, it is recommended to send parameters as a JSON object in the request body.|
+
+**Parameters**
+
+| Name <br/> | Type <br/> | Value | Validation | Description |
+| --- | --- | --- | --- | --- |
+| `userCode` | Header | String <br/>(required) | | This is the agent code obtained in step 2. E.g: CO1AP1. |
+| `token` | Header | String <br/>(optional) | Token is available for 15 minutes after creation. | |
+| `userCode` | Query | String <br/>(required) | | This is the user code / loginID of the player. E.g: `PA10000000`|
+
+*Sample code (java) - See HttpUtils class at Appendix*
+
+```java
+import java.io.IOException;  
+import java.util.HashMap;  
+import java.util.Map;  
+private static void doLogout() throws IOException {  
+    Map params = new HashMap();  
+    params.put("userCode", "PA10000000");  
+    Map headers = new HashMap();  
+    headers.put("userCode", "CO1AP1");  
+    headers.put("token", "gvbLZb70DhMNXMLw3egvktPT3sfDWnDC5QI97MXHqK9FCFO1n6oepaXQivCIVpsDlth/\
+        jbR/qgUcpi2wHc62Tw==");
+    String url = "http://apidomain.com/b2b/player/logout";  
+    String result = HttpUtils.post(url, "", params, headers);  
+    System.out.println(result);  
+}
+```
+
+*Sample code (C#)*
+
+```csharp
+using System;  
+using System.Net.Http;  
+using System.Collections.Generic;  
+using System.Threading.Tasks;  
+  
+namespace Logout  
+{  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            Dictionary<string, string> parameters = new Dictionary<string, string>();  
+            parameters.Add("userCode", "PA10000000");  
+  
+            Dictionary<string, string> headers = new Dictionary<string, string>();  
+            headers.Add("userCode","CO1AP1");  
+            headers.Add("token","DIwYQJZIYiosWrbXQe+TFdyMk6POZvbcM1KjxxQObZEn0+efzoMCb3i\
+                +PWr1ZFuj0UciR8w+qqo1M2hJ965Y9w==");  
+  
+            Console.WriteLine(HttpUtils.PostRequest("http://apidomain.com/b2b/player/logout", 
+                parameters, headers).Result);  
+            Console.ReadKey();  
+        }  
+    }  
+} 
+```
+
+*Response*
+
+```js
+{  
+    "status": "successful"  
+}  
+```
 
 ### 3.4. FP001 – Create User <a name="34-fp001-create-user"></a>
 
