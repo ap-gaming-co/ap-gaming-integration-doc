@@ -17,14 +17,14 @@
         - [3.4. FP002 – Get Player 获取用户](#34-fp002-get-player)
         - [3.5. FP003 – Get List Player 获取用户列表](#35-fp003-get-list-player)
         - [3.6. FP004 – Change Status Member 更改用户状态](#36-fp004-change-status-member)
-        - [3.8. FR001 – Wagers 投注](#38-fr001-wagers)
-        - [3.9. FR002 – All Wagers V2 所有投注V2](#39-fr002-all-wagers-v2)
-        - [3.10. FR003 – Win Loss Simple - 简易盈亏](#310-fr003-win-loss-simple)
-        - [3.11. FR004 – Get My Bet – 获取我的投注](#311-fr004-get-my-bet)
-        - [3.12. FR005 – Wager Feed – 投注资料](#312-fr005-wager-feed)
-        - [3.13. FR006 – Announcement 公告](#313-fr006-announcement)
-        - [3.14. FR009 – Get Hot Event 获取热门赛事](#314-fr009-get-hot-event)
-        - [3.15. FR010 – Deep link 深层链接 ](#315-fr010-deep-link-content)
+        - [3.7. FR001 – Wagers 投注](#37-fr001-wagers)
+        - [3.8. FR002 – All Wagers V2 所有投注V2](#38-fr002-all-wagers-v2)
+        - [3.9. FR003 – Win Loss Simple - 简易盈亏](#39-fr003-win-loss-simple)
+        - [3.10. FR004 – Get My Bet – 获取我的投注](#310-fr004-get-my-bet)
+        - [3.11. FR005 – Wager Feed – 投注资料](#311-fr005-wager-feed)
+        - [3.12. FR006 – Announcement 公告](#312-fr006-announcement)
+        - [3.13. FR009 – Get Hot Event 获取热门赛事](#313-fr009-get-hot-event)
+        - [3.14. FR010 – Deep link 深层链接 ](#314-fr010-deep-link-content)
     - [4. Screens and Workflows 截图和工作流程](#4-screens-and-workflows)
     - [5. Appendix 附录](#5-appendix)
         - [5.1. View 界面](#51-view)
@@ -827,7 +827,7 @@ namespace ChangeStatusMember
 }
 ```
 
-### 3.8. FR001 – Wagers 投注 <a name="38-fr001-wagers"></a>
+### 3.7. FR001 – Wagers 投注 <a name="37-fr001-wagers"></a>
 
 This service returns all wagers for a player.
 
@@ -1318,7 +1318,7 @@ namespace Wagers
 ]  
 ```
 
-### 3.9. FR002 – All Wagers V2 所有投注V2 <a name="39-fr002-all-wagers-v2"></a>
+### 3.8. FR002 – All Wagers V2 所有投注V2 <a name="38-fr002-all-wagers-v2"></a>
 
 This service returns all wagers for a player (this function works as FR002 and will replace it in the future).
 
@@ -1504,7 +1504,7 @@ Please refer to
 ```
 
 
-### 3.10. FR003 – Win Loss Simple - 简易盈亏 <a name="310-fr003-win-loss-simple"></a>
+### 3.9. FR003 – Win Loss Simple - 简易盈亏 <a name="39-fr003-win-loss-simple"></a>
 
 This service returns a simple win loss report for agent or player.
 
@@ -1648,7 +1648,7 @@ namespace WinLostSimple
 } 
 ```
 
-### 3.11. FR004 – Get My Bet – 获取我的投注 <a name="311-fr004-get-my-bet"></a>
+### 3.10. FR004 – Get My Bet – 获取我的投注 <a name="310-fr004-get-my-bet"></a>
 
 This service is used to generate a URL to allow the user to redirect to the My Bet page without needing to log in.
 
@@ -1754,7 +1754,7 @@ The result is a URL to log in to the System. This URL will open a new popup in t
 } 
 ```
 
-### 3.12. FR005 – Wager Feed 投注资料 <a name="312-fr005-wager-feed"></a>
+### 3.11. FR005 – Wager Feed 投注资料 <a name="311-fr005-wager-feed"></a>
 
 This service will push wager changes to the B2B customer servers via HTTP.
 
@@ -2082,7 +2082,7 @@ public class WagerFeedSelection {
 }  
 ```
 
-### 3.13. FR006 – Announcement 公告 <a name="313-fr006-announcement"></a>
+### 3.12. FR006 – Announcement 公告 <a name="312-fr006-announcement"></a>
 
 This service will get match announcements.
 
@@ -2205,7 +2205,7 @@ namespace Announcement
 ]  
 ```
 
-### 3.14. FR009 – Get Hot Event 获取热门赛事 <a name="314-fr009-get-hot-event"></a>
+### 3.13. FR009 – Get Hot Event 获取热门赛事 <a name="313-fr009-get-hot-event"></a>
 
 This service will return hot events configured by B2B Agent.
 
@@ -2340,7 +2340,7 @@ namespace ChangeStatusForDepositWithdraw
     ]  
 }]
 ```
-### 3.15. FR010 – Deep Link 深层链接 <a name="315-fr010-deep-link-content"></a>
+### 3.14. FR010 – Deep Link 深层链接 <a name="314-fr010-deep-link-content"></a>
 
 Open your iFrame
 
