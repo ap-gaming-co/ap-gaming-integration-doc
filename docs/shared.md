@@ -18,13 +18,13 @@
         - [3.5. FP003 – Get List Player 获取用户列表](#35-fp003-get-list-player)
         - [3.6. FP004 – Change Status Member 更改用户状态](#36-fp004-change-status-member)
         - [3.8. FR001 – Wagers 投注](#38-fr001-wagers)
+        - [3.9. FR002 – All Wagers V2 所有投注V2](#39-fr002-all-wagers-v2)
         - [3.10. FR003 – Win Loss Simple - 简易盈亏](#310-fr003-win-loss-simple)
         - [3.11. FR004 – Get My Bet – 获取我的投注](#311-fr004-get-my-bet)
         - [3.12. FR005 – Wager Feed – 投注资料](#312-fr005-wager-feed)
         - [3.13. FR006 – Announcement 公告](#313-fr006-announcement)
         - [3.14. FR009 – Get Hot Event 获取热门赛事](#314-fr009-get-hot-event)
         - [3.15. FR010 – Deep link 深层链接 ](#315-fr010-deep-link-content)
-        - [3.16. FR011 – All Wagers V2 所有投注V2](#316-fr011-all-wagers-v2)
     - [4. Screens and Workflows 截图和工作流程](#4-screens-and-workflows)
     - [5. Appendix 附录](#5-appendix)
         - [5.1. View 界面](#51-view)
@@ -1318,6 +1318,192 @@ namespace Wagers
 ]  
 ```
 
+### 3.9. FR002 – All Wagers V2 所有投注V2 <a name="39-fr002-all-wagers-v2"></a>
+
+This service returns all wagers for a player (this function works as FR002 and will replace it in the future).
+
+获取你用户所有的投注 （此功能与 FR002 相同，并将在未来取代 FR002）。
+
+The service is using pagination which is to split the results into smaller pages
+
+该服务采用分页机制，用来将结果拆分为较小的页面进行展示。
+
+**Endpoint 端点:**
+
+| Name 名称 | Value 设置值 | Description 描述 |
+| ---  | ---  | ---   |
+| URL  | `/report/all-wagers-v2`  |   |
+| Method  | `GET`  |   |
+
+**Parameters 参数:**
+
+| Name 名称 | Type 类型 <br/> | Value 设置值 | Validation 验证 | Description 描述 |
+| ---  | ---  | --- | ---  | ---  |
+| `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
+| `token` | Header | String(required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
+| `dateFrom` | Query | Date (optional 非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-15 23:59:59 例如: 2016-10-15 23:59:59 |
+| `dateTo (1)` | Query | Date (optional 非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours 例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
+| `userCode` | Query | String (optional 非必需项) |  | This is the user code / loginID of the player. E.g: PA10000000. 玩家用户名/登录名 |
+| `settle` | Query | Int (optional 非必需项) | 1: settled 1: 1: 已结算 <br/>0: unsettled 0: 0: 未结算 <br/>-1: all (both settled and unsettled) (Default: -1) -1: 所有（包含已结算和未结算）（默认：-1） | 1 = wager status: SETTLED or CANCELLED 1 = 注单状态：已结算或已取消 <br/>0 = wager status includes: OPEN or PENDING  0 = 注单状态包括：等待中 或者 注单未结算 <br/>-1 = All wager status values -1 = 所有注单状态值。 |
+| `filterBy (2)` | Query | String (optional 非必需项) | event_date 比赛日期, wager_date 注单日期, settle_date 结算日期, update_date 更新日期 (Default 默认: wager_date 注单日期) |
+| `locale` | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言将根据该品牌的可用语言而定。 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）|
+| `wagerIds` | Query | String (optional 非必需项) | A comma-separated list of wagerIDs to be returned. 用逗号分隔的注单ID列表将会被返回 |  Example: `6862955`,`6862947` |
+| `fromRecord` | Query | Int (optional 非必需项) | The starting wager index from which the API should return results (Default: 0). API 应从哪个注单索引开始返回结果（默认值：0）。 |  Example 1: If fromRecord =0, the response would start from the first wager <br/>Example 2: If fromRecord=1000, the response would start from wager 1001 <br/> 示例 1：如果 fromRecord = 0，响应将从第一笔投注开始。<br/> 示例 2：如果 fromRecord = 1000，响应将从第 1001 笔投注开始。|
+
+**Note 注意:**
+
+(1): 
+1. WITHOUT date range: a. System shall return all wagers from last 24 hours.
+2. Specific date range: <br/> a. If `userCode` = null, valid date range will be up to 24 hours. <br/> b. If `userCode` != null, valid date range will be up to 168 hours (7 days).
+3. The API will always return maximum 1000 wagers per each call.
+
+Example: To retrieve all wager data for user code X, assuming there are 2,500 wagers, three calls are required:
+
+1. First call: retrieves the first 1000 wagers (page 1), with indexes from 0 to 999.
+2. Second call: retrieves the next 1000 wagers (page 2), with indexes from 1000 to 1999.
+3. Third call: retrieves wagers with indexes from 2000 to 2999 (page 3). However, since the total number of wagers is 2,500, only the remaining 500 wagers (indexes 2000 to 2499) are returned in this response.
+
+Queries should continue until a response returns no records or the number of records returned is less than 1000, indicating that all available data has been retrieved.
+
+1. 如未输入日期范围：a. 系统应返回过去24小时内的全部注单。
+2. 如果输入了日期范围: <br/> a. 如果 userCode = null, 有效日期范围最高为24小时。<br/> b. 如果 userCode != null, 有效日期范围最高为168小时(7 天).
+3. 每次 API 调用最多返回 1000 笔投注记录。
+
+例如：若需获取用户代码 X 的全部投注数据，假设共有 2,500 笔投注，则需要调用三次：
+
+1. 第一次调用：获取前 1000 笔投注（第 1 页），索引范围为 0 至 999。
+2. 第二次调用：获取接下来的 1000 笔投注（第 2 页），索引范围为 1000 至 1999。
+3. 第三次调用：获取索引范围为 2000 至 2999 的投注（第 3 页）。但由于投注总数为 2,500 笔，因此本次响应仅返回剩余的 500 笔投注（索引 2000 至 2499）。
+
+请持续调用接口，直至返回记录数为 0 或少于 1000 条，表示数据已全部获取完成。
+
+
+(2):	
+When filterBy is settle_date, the system will only query data by date (not time) but dateFrom and dateTo must still use yyyy-MM-dd HH:00:00 format. 
+
+URL example: http://apidomain.com/b2b/report/all-wagers-v2?wagerIds=6862955,6862947
+
+在 filterBy 是 settle_date 的情况下，系统只按日期格式查询数据，但 dateFrom 和 dateTo 仍然使用 yyyy-MM-dd HH:00:00 的格式。
+
+URL 示例: http://apidomain.com/b2b/report/all-wagers-v2?wagerIds=6862955,6862947
+
+**Response OK 返回OK**
+
+The response result is the same as with FR001 except that the result may contain data for more than one “userCode”. 
+
+响应结果与 FR001 相同，只是结果可能包含多个“userCode”的数据。
+
+Please refer to 
+
+请参考以下
+
+```js
+[  
+  {  
+    "wagerId": 6862955,
+    "eventId": 688720403,
+    "eventName": "Winner of 2018 Super Bowl?",  
+    "parentEventName": null,  
+    "headToHead": null,  
+    "wagerDateFm": "2017-04-17 07:15:29",  
+    "eventDateFm": "2017-09-01 09:30:00",  
+    "settleDateFm": null,  // in case status=”SETTLED” is value like "2017-09-01 22:02:15”
+    "resettleDateFm": null,
+    "status": "OPEN",  
+    "homeTeam": "New England Patriots",  
+    "awayTeam": "Winner of 2018 Super Bowl?",  
+    "selection": "New England Patriots",  
+    "handicap": 0,  
+    "odds": 5.39,  
+    "oddsFormat": 1,  
+    "betType": 99,  
+    "wagerType: "single",
+    "leagueId": 5121,
+    "league": "NFL",  
+    "stake": 10.00,  
+    "sportId": 15,
+    "sport": "Football",  
+    "currencyCode": "CNY",  
+    "inplayScore": "",  //the live event's current score
+    "inPlay": false,  //indicate that the wager is placed on In Play event
+    "homePitcher": null,  
+    "awayPitcher": null,  
+    "homePitcherName": null,  
+    "awayPitcherName": null,  
+    "period": 0,  
+    "cancellationStatus": null,  
+    "parlaySelections": [],  
+    "category": "Futures",  
+    "toWin": 43.90,  //is the amount that player will win if he wins the bet
+    "toRisk": 10.00,  //is the amount that player will lose if he loses the bet
+    "product": "SB",
+    "isResettle": null, // in case status=”SETTLED” value is true or false
+    "parlayMixOdds": 5.39,
+    "parlayFinalOdds": 5.39,
+    "competitors": [],  
+    "userCode": "Q23100000D",  
+    "loginId": "Q23100D",  
+    "winLoss": 0.00,  
+    "scores": [],  
+    "result": null,
+    "volume": 10.00,
+    "view" : 'D-Compact' //D: Desktop M: Mobile
+  },  
+  {  
+    "wagerId": 6862947,
+    "eventId": 688976540,
+    "eventName": "Player to Win ATP French Open ? (All In)",  
+    "parentEventName": null,  
+    "headToHead": null,  
+    "wagerDateFm": "2017-04-17 07:11:17",  
+    "eventDateFm": "2017-05-22 09:30:00",  
+    "settleDateFm": null,
+    "resettleDateFm": null,
+    "status": "OPEN",  
+    "homeTeam": "Andy Murray",  
+    "awayTeam": "Player to Win ATP French Open ? (All In)",  
+    "selection": "Andy Murray",  
+    "handicap": 0,  
+    "odds": 5.36,  
+    "oddsFormat": 1,  
+    "betType": 99,  
+    "wagerType: "single",
+    "leagueId": 9281,
+    "league": "ATP French Open",  
+    "stake": 10.00,  
+    "sportId": 33,
+    "sport": "Tennis",  
+    "currencyCode": "CNY",  
+    "inplayScore": "",  //the live event's current score
+    "inPlay": false,  //indicate that the wager is placed on In Play event
+    "homePitcher": null,  
+    "awayPitcher": null,  
+    "homePitcherName": null,  
+    "awayPitcherName": null,  
+    "period": 0,  
+    "cancellationStatus": null,  
+    "parlaySelections": [],  
+    "category": "To Win",  
+    "toWin": 43.60, //is the amount that player will win if he wins the bet 
+    "toRisk": 10.00,  //is the amount that player will lose if he loses the bet
+    "product": "SB",
+    "isResettle": null, // in case status=”SETTLED” value is true or false
+    "parlayMixOdds": 5.36,
+    "parlayFinalOdds": 5.36,
+    "competitors": [],  
+    "userCode": "Q23100000D",  
+    "loginId": "Q23100D",  
+    "winLoss": 0.00,  
+    "scores": [],  
+    "turnover": 0.00,  
+    "result": null,
+    "volume": 10.00,
+    "view" : 'M-Asian' //D: Desktop M: Mobile
+  }  
+]  
+```
+
+
 ### 3.10. FR003 – Win Loss Simple - 简易盈亏 <a name="310-fr003-win-loss-simple"></a>
 
 This service returns a simple win loss report for agent or player.
@@ -2229,192 +2415,6 @@ Here is the list of deeplink URLs that are used in New Euro View:
 | Esport View Favourites  电竞界面 最爱  | https://:hostname/:lang/standard/esports-hub/favourites |
 | Esport View Favourites Participant  电竞界面 最爱 参加者  | https://:hostname/:lang/standard/esports-hub/favourites/:sportCode#:name |
 | Esport View Multiview  电竞界面 多视图 | https://:hostname/:lang/standard/esports-hub/live/multiview |
-
-### 3.16. FR011 – All Wagers V2 所有投注V2 <a name="316-fr011-all-wagers-v2"></a>
-
-This service returns all wagers for a player (this function works as FR002 and will replace it in the future).
-
-获取你用户所有的投注 （此功能与 FR002 相同，并将在未来取代 FR002）。
-
-The service is using pagination which is to split the results into smaller pages
-
-该服务采用分页机制，用来将结果拆分为较小的页面进行展示。
-
-**Endpoint 端点:**
-
-| Name 名称 | Value 设置值 | Description 描述 |
-| ---  | ---  | ---   |
-| URL  | `/report/all-wagers-v2`  |   |
-| Method  | `GET`  |   |
-
-**Parameters 参数:**
-
-| Name 名称 | Type 类型 <br/> | Value 设置值 | Validation 验证 | Description 描述 |
-| ---  | ---  | --- | ---  | ---  |
-| `userCode`  | Header | String (required必需项)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. 此为在第二步骤获取的代理编号，例如，CO1AP1 |
-| `token` | Header | String(required 必需项) | Token is available for 15 minutes after creation. 令牌在创建之后的15分钟内有效 |  |
-| `dateFrom` | Query | Date (optional 非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-15 23:59:59 例如: 2016-10-15 23:59:59 |
-| `dateTo (1)` | Query | Date (optional 非必需项)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4 创建日期格式 yyyy-MM-dd HH:mm:ss 时区为GMT-4 | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours 例如：2016-10-16 23:59:59 规则： dateTo - dateFrom <= 24 hours 结束日期-开始日期小于等于24小时 |
-| `userCode` | Query | String (optional 非必需项) |  | This is the user code / loginID of the player. E.g: PA10000000. 玩家用户名/登录名 |
-| `settle` | Query | Int (optional 非必需项) | 1: settled 1: 1: 已结算 <br/>0: unsettled 0: 0: 未结算 <br/>-1: all (both settled and unsettled) (Default: -1) -1: 所有（包含已结算和未结算）（默认：-1） | 1 = wager status: SETTLED or CANCELLED 1 = 注单状态：已结算或已取消 <br/>0 = wager status includes: OPEN or PENDING  0 = 注单状态包括：等待中 或者 注单未结算 <br/>-1 = All wager status values -1 = 所有注单状态值。 |
-| `filterBy (2)` | Query | String (optional 非必需项) | event_date 比赛日期, wager_date 注单日期, settle_date 结算日期, update_date 更新日期 (Default 默认: wager_date 注单日期) |
-| `locale` | Query | String (optional 非必需项) | Supported locales based on brand’s available languages. 支持的语言将根据该品牌的可用语言而定。 |  See Locale (Language) in the Data-format. 详见数据格式中的区域代码（语言）|
-| `wagerIds` | Query | String (optional 非必需项) | A comma-separated list of wagerIDs to be returned. 用逗号分隔的注单ID列表将会被返回 |  Example: `6862955`,`6862947` |
-| `fromRecord` | Query | Int (optional 非必需项) | The starting wager index from which the API should return results (Default: 0). API 应从哪个注单索引开始返回结果（默认值：0）。 |  Example 1: If fromRecord =0, the response would start from the first wager <br/>Example 2: If fromRecord=1000, the response would start from wager 1001 <br/> 示例 1：如果 fromRecord = 0，响应将从第一笔投注开始。<br/> 示例 2：如果 fromRecord = 1000，响应将从第 1001 笔投注开始。|
-
-**Note 注意:**
-
-(1): 
-1. WITHOUT date range: a. System shall return all wagers from last 24 hours.
-2. Specific date range: <br/> a. If `userCode` = null, valid date range will be up to 24 hours. <br/> b. If `userCode` != null, valid date range will be up to 168 hours (7 days).
-3. The API will always return maximum 1000 wagers per each call.
-
-Example: To retrieve all wager data for user code X, assuming there are 2,500 wagers, three calls are required:
-
-1. First call: retrieves the first 1000 wagers (page 1), with indexes from 0 to 999.
-2. Second call: retrieves the next 1000 wagers (page 2), with indexes from 1000 to 1999.
-3. Third call: retrieves wagers with indexes from 2000 to 2999 (page 3). However, since the total number of wagers is 2,500, only the remaining 500 wagers (indexes 2000 to 2499) are returned in this response.
-
-Queries should continue until a response returns no records or the number of records returned is less than 1000, indicating that all available data has been retrieved.
-
-1. 如未输入日期范围：a. 系统应返回过去24小时内的全部注单。
-2. 如果输入了日期范围: <br/> a. 如果 userCode = null, 有效日期范围最高为24小时。<br/> b. 如果 userCode != null, 有效日期范围最高为168小时(7 天).
-3. 每次 API 调用最多返回 1000 笔投注记录。
-
-例如：若需获取用户代码 X 的全部投注数据，假设共有 2,500 笔投注，则需要调用三次：
-
-1. 第一次调用：获取前 1000 笔投注（第 1 页），索引范围为 0 至 999。
-2. 第二次调用：获取接下来的 1000 笔投注（第 2 页），索引范围为 1000 至 1999。
-3. 第三次调用：获取索引范围为 2000 至 2999 的投注（第 3 页）。但由于投注总数为 2,500 笔，因此本次响应仅返回剩余的 500 笔投注（索引 2000 至 2499）。
-
-请持续调用接口，直至返回记录数为 0 或少于 1000 条，表示数据已全部获取完成。
-
-
-(2):	
-When filterBy is settle_date, the system will only query data by date (not time) but dateFrom and dateTo must still use yyyy-MM-dd HH:00:00 format. 
-
-URL example: http://apidomain.com/b2b/report/all-wagers-v2?wagerIds=6862955,6862947
-
-在 filterBy 是 settle_date 的情况下，系统只按日期格式查询数据，但 dateFrom 和 dateTo 仍然使用 yyyy-MM-dd HH:00:00 的格式。
-
-URL 示例: http://apidomain.com/b2b/report/all-wagers-v2?wagerIds=6862955,6862947
-
-**Response OK 返回OK**
-
-The response result is the same as with FR001 except that the result may contain data for more than one “userCode”. 
-
-响应结果与 FR001 相同，只是结果可能包含多个“userCode”的数据。
-
-Please refer to 
-
-请参考以下
-
-```js
-[  
-  {  
-    "wagerId": 6862955,
-    "eventId": 688720403,
-    "eventName": "Winner of 2018 Super Bowl?",  
-    "parentEventName": null,  
-    "headToHead": null,  
-    "wagerDateFm": "2017-04-17 07:15:29",  
-    "eventDateFm": "2017-09-01 09:30:00",  
-    "settleDateFm": null,  // in case status=”SETTLED” is value like "2017-09-01 22:02:15”
-    "resettleDateFm": null,
-    "status": "OPEN",  
-    "homeTeam": "New England Patriots",  
-    "awayTeam": "Winner of 2018 Super Bowl?",  
-    "selection": "New England Patriots",  
-    "handicap": 0,  
-    "odds": 5.39,  
-    "oddsFormat": 1,  
-    "betType": 99,  
-    "wagerType: "single",
-    "leagueId": 5121,
-    "league": "NFL",  
-    "stake": 10.00,  
-    "sportId": 15,
-    "sport": "Football",  
-    "currencyCode": "CNY",  
-    "inplayScore": "",  //the live event's current score
-    "inPlay": false,  //indicate that the wager is placed on In Play event
-    "homePitcher": null,  
-    "awayPitcher": null,  
-    "homePitcherName": null,  
-    "awayPitcherName": null,  
-    "period": 0,  
-    "cancellationStatus": null,  
-    "parlaySelections": [],  
-    "category": "Futures",  
-    "toWin": 43.90,  //is the amount that player will win if he wins the bet
-    "toRisk": 10.00,  //is the amount that player will lose if he loses the bet
-    "product": "SB",
-    "isResettle": null, // in case status=”SETTLED” value is true or false
-    "parlayMixOdds": 5.39,
-    "parlayFinalOdds": 5.39,
-    "competitors": [],  
-    "userCode": "Q23100000D",  
-    "loginId": "Q23100D",  
-    "winLoss": 0.00,  
-    "scores": [],  
-    "result": null,
-    "volume": 10.00,
-    "view" : 'D-Compact' //D: Desktop M: Mobile
-  },  
-  {  
-    "wagerId": 6862947,
-    "eventId": 688976540,
-    "eventName": "Player to Win ATP French Open ? (All In)",  
-    "parentEventName": null,  
-    "headToHead": null,  
-    "wagerDateFm": "2017-04-17 07:11:17",  
-    "eventDateFm": "2017-05-22 09:30:00",  
-    "settleDateFm": null,
-    "resettleDateFm": null,
-    "status": "OPEN",  
-    "homeTeam": "Andy Murray",  
-    "awayTeam": "Player to Win ATP French Open ? (All In)",  
-    "selection": "Andy Murray",  
-    "handicap": 0,  
-    "odds": 5.36,  
-    "oddsFormat": 1,  
-    "betType": 99,  
-    "wagerType: "single",
-    "leagueId": 9281,
-    "league": "ATP French Open",  
-    "stake": 10.00,  
-    "sportId": 33,
-    "sport": "Tennis",  
-    "currencyCode": "CNY",  
-    "inplayScore": "",  //the live event's current score
-    "inPlay": false,  //indicate that the wager is placed on In Play event
-    "homePitcher": null,  
-    "awayPitcher": null,  
-    "homePitcherName": null,  
-    "awayPitcherName": null,  
-    "period": 0,  
-    "cancellationStatus": null,  
-    "parlaySelections": [],  
-    "category": "To Win",  
-    "toWin": 43.60, //is the amount that player will win if he wins the bet 
-    "toRisk": 10.00,  //is the amount that player will lose if he loses the bet
-    "product": "SB",
-    "isResettle": null, // in case status=”SETTLED” value is true or false
-    "parlayMixOdds": 5.36,
-    "parlayFinalOdds": 5.36,
-    "competitors": [],  
-    "userCode": "Q23100000D",  
-    "loginId": "Q23100D",  
-    "winLoss": 0.00,  
-    "scores": [],  
-    "turnover": 0.00,  
-    "result": null,
-    "volume": 10.00,
-    "view" : 'M-Asian' //D: Desktop M: Mobile
-  }  
-]  
-```
-
 
 ## 4. Screens and Workflows 截图和工作流程 <a name="4-screens-and-workflows"></a>
 
