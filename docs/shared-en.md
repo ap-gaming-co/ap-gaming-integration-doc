@@ -17,14 +17,15 @@
         - [3.4. FP002 – Get Player](#34-fp002-get-player)
         - [3.5. FP003 – Get List Player](#35-fp003-get-list-player)
         - [3.6. FP004 – Change Status Member](#36-fp004-change-status-member)
-        - [3.8. FR001 – Wagers](#38-fr001-wagers)
-        - [3.10. FR003 – Win Loss Simple](#310-fr003-win-loss-simple)
-        - [3.11. FR004 – Get My Bet](#311-fr004-get-my-bet)
-        - [3.12. FR005 – Wager Feed](#312-fr005-wager-feed)
-        - [3.13. FR006 – Announcement](#313-fr006-announcement)
-        - [3.14. FR009 – Get Hot Event](#314-fr009-get-hot-event)
-        - [3.15. FR010 – Deep link](#315-fr010-deep-link-content)
-        - [3.16. FR011 – All Wagers V2](#316-fr011-all-wagers-v2)
+        - [3.7. FR001 – Wagers](#37-fr001-wagers)
+        - [3.8. FR002 – All Wagers V2](#38-fr002-all-wagers-v2)
+        - [3.9. FR003 – Win Loss Simple](#39-fr003-win-loss-simple)
+        - [3.10. FR004 – Get My Bet](#310-fr004-get-my-bet)
+        - [3.11. FR005 – Wager Feed](#311-fr005-wager-feed)
+        - [3.12. FR006 – Announcement](#312-fr006-announcement)
+        - [3.13. FR009 – Get Hot Event](#313-fr009-get-hot-event)
+        - [3.14. FR010 – Deep link](#314-fr010-deep-link-content)
+
     - [4. Screens and Workflows](#4-screens-and-workflows)
     - [5. Appendix](#5-appendix)
         - [5.1. View](#51-view)
@@ -778,7 +779,7 @@ namespace ChangeStatusMember
 }
 ```
 
-### 3.8. FR001 – Wagers <a name="38-fr001-wagers"></a>
+### 3.7. FR001 – Wagers <a name="37-fr001-wagers"></a>
 
 This service returns all wagers for a player.
 
@@ -1262,7 +1263,167 @@ namespace Wagers
 ]  
 ```
 
-### 3.10. FR003 – Win Loss Simple<a name="310-fr003-win-loss-simple"></a>
+### 3.8. FR002 – All Wagers V2 <a name="38-fr002-all-wagers-v2"></a>
+
+This service returns all wagers for a player (this function works as FR002 and will replace it in the future).
+The service is using pagination which is to split the results into smaller pages
+
+**Endpoint:**
+
+| Name | Value  | Description  |
+| ---  | ---  | ---   |
+| URL  | `/report/all-wagers-v2`  |   |
+| Method  | `GET`  |   |
+
+**Parameters:**
+
+| Name | Type <br/> | Value | Validation | Description |
+| ---  | ---  | --- | ---  | ---  |
+| `userCode`  | Header | String (required)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. |
+| `token` | Header | String(required) | Token is available for 15 minutes after creation. |  |
+| `dateFrom` | Query | Date (optional)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-15 23:59:59  |
+| `dateTo (1)` | Query | Date (optional)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours  |
+| `userCode` | Query | String (optional) |  | This is the user code / loginID of the player. E.g: PA10000000. |
+| `settle` | Query | Int (optional) | 1: settled 1: <br/>0: unsettled 0: <br/>-1: all (both settled and unsettled) (Default: -1) | 1 = wager status: SETTLED or CANCELLED <br/>0 = wager status includes: OPEN or PENDING <br/>-1 = All wager status values |
+| `filterBy (2)` | Query | String(optional) | event_date wager_date settle_date update_date (Default: wager_date): wager_date |
+| `locale` | Query | String (optional) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format.|
+| `wagerIds` | Query | String(optional) | A comma-separated list of wagerIDs to be returned. |  Example: `6862955`,`6862947` |
+| `fromRecord` | Query | Int(optional) | The starting wager index from which the API should return results (Default: 0). |  Example 1: If fromRecord =0, the response would start from the first wager <br/>Example 2: If fromRecord=1000, the response would start from wager 1001 |
+
+**Note:**
+
+(1): 
+1. WITHOUT date range: a. System shall return all wagers from last 24 hours.
+2. Specific date range: <br/> a. If `userCode` = null, valid date range will be up to 24 hours. <br/> b. If `userCode` != null, valid date range will be up to 168 hours (7 days).
+3.  The API will always return maximum 1000 wagers per each call.
+
+Example: To retrieve all wager data for user code X, assuming there are 2,500 wagers, three calls are required:
+
+1. First call: retrieves the first 1000 wagers (page 1), with indexes from 0 to 999.
+2. Second call: retrieves the next 1000 wagers (page 2), with indexes from 1000 to 1999.
+3. Third call: retrieves wagers with indexes from 2000 to 2999 (page 3). However, since the total number of wagers is 2,500, only the remaining 500 wagers (indexes 2000 to 2499) are returned in this response.
+
+Queries should continue until a response returns no records or the number of records returned is less than 1000, indicating that all available data has been retrieved.
+
+
+(2):	
+When filterBy is settle_date, the system will only query data by date (not time) but dateFrom and dateTo must still use yyyy-MM-dd HH:00:00 format.
+
+URL example: http://apidomain.com/b2b/report/all-wagers-v2?wagerIds=6862955,6862947
+
+**Response OK**
+
+The response result is the same as with FR001 except that the result may contain data for more than one “userCode”.
+
+Please refer to
+
+```js
+[  
+  {  
+    "wagerId": 6862955,
+    "eventId": 688720403,
+    "eventName": "Winner of 2018 Super Bowl?",  
+    "parentEventName": null,  
+    "headToHead": null,  
+    "wagerDateFm": "2017-04-17 07:15:29",  
+    "eventDateFm": "2017-09-01 09:30:00",  
+    "settleDateFm": null,  // in case status=”SETTLED” is value like "2017-09-01 22:02:15”
+    "resettleDateFm": null,
+    "status": "OPEN",  
+    "homeTeam": "New England Patriots",  
+    "awayTeam": "Winner of 2018 Super Bowl?",  
+    "selection": "New England Patriots",  
+    "handicap": 0,  
+    "odds": 5.39,  
+    "oddsFormat": 1,  
+    "betType": 99,  
+    "wagerType: "single",
+    "leagueId": 5121,
+    "league": "NFL",  
+    "stake": 10.00,  
+    "sportId": 15,
+    "sport": "Football",  
+    "currencyCode": "CNY",  
+    "inplayScore": "",  //the live event's current score
+    "inPlay": false,  //indicate that the wager is placed on In Play event
+    "homePitcher": null,  
+    "awayPitcher": null,  
+    "homePitcherName": null,  
+    "awayPitcherName": null,  
+    "period": 0,  
+    "cancellationStatus": null,  
+    "parlaySelections": [],  
+    "category": "Futures",  
+    "toWin": 43.90,  //is the amount that player will win if he wins the bet
+    "toRisk": 10.00,  //is the amount that player will lose if he loses the bet
+    "product": "SB",
+    "isResettle": null, // in case status=”SETTLED” value is true or false
+    "parlayMixOdds": 5.39,
+    "parlayFinalOdds": 5.39,
+    "competitors": [],  
+    "userCode": "Q23100000D",  
+    "loginId": "Q23100D",  
+    "winLoss": 0.00,  
+    "scores": [],  
+    "result": null,
+    "volume": 10.00,
+    "view" : 'D-Compact' //D: Desktop M: Mobile
+  },  
+  {  
+    "wagerId": 6862947,
+    "eventId": 688976540,
+    "eventName": "Player to Win ATP French Open ? (All In)",  
+    "parentEventName": null,  
+    "headToHead": null,  
+    "wagerDateFm": "2017-04-17 07:11:17",  
+    "eventDateFm": "2017-05-22 09:30:00",  
+    "settleDateFm": null,
+    "resettleDateFm": null,
+    "status": "OPEN",  
+    "homeTeam": "Andy Murray",  
+    "awayTeam": "Player to Win ATP French Open ? (All In)",  
+    "selection": "Andy Murray",  
+    "handicap": 0,  
+    "odds": 5.36,  
+    "oddsFormat": 1,  
+    "betType": 99,  
+    "wagerType: "single",
+    "leagueId": 9281,
+    "league": "ATP French Open",  
+    "stake": 10.00,  
+    "sportId": 33,
+    "sport": "Tennis",  
+    "currencyCode": "CNY",  
+    "inplayScore": "",  //the live event's current score
+    "inPlay": false,  //indicate that the wager is placed on In Play event
+    "homePitcher": null,  
+    "awayPitcher": null,  
+    "homePitcherName": null,  
+    "awayPitcherName": null,  
+    "period": 0,  
+    "cancellationStatus": null,  
+    "parlaySelections": [],  
+    "category": "To Win",  
+    "toWin": 43.60, //is the amount that player will win if he wins the bet 
+    "toRisk": 10.00,  //is the amount that player will lose if he loses the bet
+    "product": "SB",
+    "isResettle": null, // in case status=”SETTLED” value is true or false
+    "parlayMixOdds": 5.36,
+    "parlayFinalOdds": 5.36,
+    "competitors": [],  
+    "userCode": "Q23100000D",  
+    "loginId": "Q23100D",  
+    "winLoss": 0.00,  
+    "scores": [],  
+    "turnover": 0.00,  
+    "result": null,
+    "volume": 10.00,
+    "view" : 'M-Asian' //D: Desktop M: Mobile
+  }  
+]  
+```
+
+### 3.9. FR003 – Win Loss Simple<a name="39-fr003-win-loss-simple"></a>
 
 This service returns a simple win loss report for agent or player.
 
@@ -1387,7 +1548,7 @@ namespace WinLostSimple
 } 
 ```
 
-### 3.11. FR004 – Get My Bet<a name="311-fr004-get-my-bet"></a>
+### 3.10. FR004 – Get My Bet<a name="310-fr004-get-my-bet"></a>
 
 This service is used to generate a URL to allow the user to redirect to the My Bet page without needing to log in.
 
@@ -1486,7 +1647,7 @@ The result is a URL to log in to the System. This URL will open a new popup in t
 } 
 ```
 
-### 3.12. FR005 – Wager Feed  <a name="312-fr005-wager-feed"></a>
+### 3.11. FR005 – Wager Feed  <a name="311-fr005-wager-feed"></a>
 
 This service will push wager changes to the B2B customer servers via HTTP.
 
@@ -1808,7 +1969,7 @@ public class WagerFeedSelection {
 }  
 ```
 
-### 3.13. FR006 – Announcement <a name="313-fr006-announcement"></a>
+### 3.12. FR006 – Announcement <a name="312-fr006-announcement"></a>
 
 This service will get match announcements.
 
@@ -1926,7 +2087,7 @@ namespace Announcement
 ]  
 ```
 
-### 3.14. FR009 – Get Hot Event <a name="314-fr009-get-hot-event"></a>
+### 3.13. FR009 – Get Hot Event <a name="313-fr009-get-hot-event"></a>
 
 This service will return hot events configured by B2B Agent.
 
@@ -2056,7 +2217,7 @@ namespace ChangeStatusForDepositWithdraw
     ]  
 }]
 ```
-### 3.15. FR010 – Deep Link <a name="315-fr010-deep-link-content"></a>
+### 3.14. FR010 – Deep Link <a name="314-fr010-deep-link-content"></a>
 
 Open your iFrame
 
@@ -2119,166 +2280,6 @@ Here is the list of deeplink URLs that are used in New Euro View:
 | Esport View Favourites | https://:hostname/:lang/standard/esports-hub/favourites |
 | Esport View Favourites Participant| https://:hostname/:lang/standard/esports-hub/favourites/:sportCode#:name |
 | Esport View Multiview | https://:hostname/:lang/standard/esports-hub/live/multiview |
-
-### 3.16. FR011 – All Wagers V2 <a name="316-fr011-all-wagers-v2"></a>
-
-This service returns all wagers for a player (this function works as FR002 and will replace it in the future).
-The service is using pagination which is to split the results into smaller pages
-
-**Endpoint:**
-
-| Name | Value  | Description  |
-| ---  | ---  | ---   |
-| URL  | `/report/all-wagers-v2`  |   |
-| Method  | `GET`  |   |
-
-**Parameters:**
-
-| Name | Type <br/> | Value | Validation | Description |
-| ---  | ---  | --- | ---  | ---  |
-| `userCode`  | Header | String (required)  |  | This is the agent code obtained in step 2. E.g: CO1AP1. |
-| `token` | Header | String(required) | Token is available for 15 minutes after creation. |  |
-| `dateFrom` | Query | Date (optional)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-15 23:59:59  |
-| `dateTo (1)` | Query | Date (optional)  | Created Date Time format yyyy-MM-dd HH:mm:ss GMT-4  | Example: 2016-10-16 23:59:59 Rule: dateTo – dateFrom <= 24 hours  |
-| `userCode` | Query | String (optional) |  | This is the user code / loginID of the player. E.g: PA10000000. |
-| `settle` | Query | Int (optional) | 1: settled 1: <br/>0: unsettled 0: <br/>-1: all (both settled and unsettled) (Default: -1) | 1 = wager status: SETTLED or CANCELLED <br/>0 = wager status includes: OPEN or PENDING <br/>-1 = All wager status values |
-| `filterBy (2)` | Query | String(optional) | event_date wager_date settle_date update_date (Default: wager_date): wager_date |
-| `locale` | Query | String (optional) | Supported locales based on brand’s available languages. |  See Locale (Language) in the Data-format.|
-| `wagerIds` | Query | String(optional) | A comma-separated list of wagerIDs to be returned. |  Example: `6862955`,`6862947` |
-| `fromRecord` | Query | Int(optional) | The starting wager index from which the API should return results (Default: 0). |  Example 1: If fromRecord =0, the response would start from the first wager <br/>Example 2: If fromRecord=1000, the response would start from wager 1001 |
-
-**Note:**
-
-(1): 
-1. WITHOUT date range: a. System shall return all wagers from last 24 hours.
-2. Specific date range: <br/> a. If `userCode` = null, valid date range will be up to 24 hours. <br/> b. If `userCode` != null, valid date range will be up to 168 hours (7 days).
-3.  The API will always return maximum 1000 wagers per each call.
-
-Example: To retrieve all wager data for user code X, assuming there are 2,500 wagers, three calls are required:
-
-1. First call: retrieves the first 1000 wagers (page 1), with indexes from 0 to 999.
-2. Second call: retrieves the next 1000 wagers (page 2), with indexes from 1000 to 1999.
-3. Third call: retrieves wagers with indexes from 2000 to 2999 (page 3). However, since the total number of wagers is 2,500, only the remaining 500 wagers (indexes 2000 to 2499) are returned in this response.
-
-Queries should continue until a response returns no records or the number of records returned is less than 1000, indicating that all available data has been retrieved.
-
-
-(2):	
-When filterBy is settle_date, the system will only query data by date (not time) but dateFrom and dateTo must still use yyyy-MM-dd HH:00:00 format.
-
-URL example: http://apidomain.com/b2b/report/all-wagers-v2?wagerIds=6862955,6862947
-
-**Response OK**
-
-The response result is the same as with FR001 except that the result may contain data for more than one “userCode”.
-
-Please refer to
-
-```js
-[  
-  {  
-    "wagerId": 6862955,
-    "eventId": 688720403,
-    "eventName": "Winner of 2018 Super Bowl?",  
-    "parentEventName": null,  
-    "headToHead": null,  
-    "wagerDateFm": "2017-04-17 07:15:29",  
-    "eventDateFm": "2017-09-01 09:30:00",  
-    "settleDateFm": null,  // in case status=”SETTLED” is value like "2017-09-01 22:02:15”
-    "resettleDateFm": null,
-    "status": "OPEN",  
-    "homeTeam": "New England Patriots",  
-    "awayTeam": "Winner of 2018 Super Bowl?",  
-    "selection": "New England Patriots",  
-    "handicap": 0,  
-    "odds": 5.39,  
-    "oddsFormat": 1,  
-    "betType": 99,  
-    "wagerType: "single",
-    "leagueId": 5121,
-    "league": "NFL",  
-    "stake": 10.00,  
-    "sportId": 15,
-    "sport": "Football",  
-    "currencyCode": "CNY",  
-    "inplayScore": "",  //the live event's current score
-    "inPlay": false,  //indicate that the wager is placed on In Play event
-    "homePitcher": null,  
-    "awayPitcher": null,  
-    "homePitcherName": null,  
-    "awayPitcherName": null,  
-    "period": 0,  
-    "cancellationStatus": null,  
-    "parlaySelections": [],  
-    "category": "Futures",  
-    "toWin": 43.90,  //is the amount that player will win if he wins the bet
-    "toRisk": 10.00,  //is the amount that player will lose if he loses the bet
-    "product": "SB",
-    "isResettle": null, // in case status=”SETTLED” value is true or false
-    "parlayMixOdds": 5.39,
-    "parlayFinalOdds": 5.39,
-    "competitors": [],  
-    "userCode": "Q23100000D",  
-    "loginId": "Q23100D",  
-    "winLoss": 0.00,  
-    "scores": [],  
-    "result": null,
-    "volume": 10.00,
-    "view" : 'D-Compact' //D: Desktop M: Mobile
-  },  
-  {  
-    "wagerId": 6862947,
-    "eventId": 688976540,
-    "eventName": "Player to Win ATP French Open ? (All In)",  
-    "parentEventName": null,  
-    "headToHead": null,  
-    "wagerDateFm": "2017-04-17 07:11:17",  
-    "eventDateFm": "2017-05-22 09:30:00",  
-    "settleDateFm": null,
-    "resettleDateFm": null,
-    "status": "OPEN",  
-    "homeTeam": "Andy Murray",  
-    "awayTeam": "Player to Win ATP French Open ? (All In)",  
-    "selection": "Andy Murray",  
-    "handicap": 0,  
-    "odds": 5.36,  
-    "oddsFormat": 1,  
-    "betType": 99,  
-    "wagerType: "single",
-    "leagueId": 9281,
-    "league": "ATP French Open",  
-    "stake": 10.00,  
-    "sportId": 33,
-    "sport": "Tennis",  
-    "currencyCode": "CNY",  
-    "inplayScore": "",  //the live event's current score
-    "inPlay": false,  //indicate that the wager is placed on In Play event
-    "homePitcher": null,  
-    "awayPitcher": null,  
-    "homePitcherName": null,  
-    "awayPitcherName": null,  
-    "period": 0,  
-    "cancellationStatus": null,  
-    "parlaySelections": [],  
-    "category": "To Win",  
-    "toWin": 43.60, //is the amount that player will win if he wins the bet 
-    "toRisk": 10.00,  //is the amount that player will lose if he loses the bet
-    "product": "SB",
-    "isResettle": null, // in case status=”SETTLED” value is true or false
-    "parlayMixOdds": 5.36,
-    "parlayFinalOdds": 5.36,
-    "competitors": [],  
-    "userCode": "Q23100000D",  
-    "loginId": "Q23100D",  
-    "winLoss": 0.00,  
-    "scores": [],  
-    "turnover": 0.00,  
-    "result": null,
-    "volume": 10.00,
-    "view" : 'M-Asian' //D: Desktop M: Mobile
-  }  
-]  
-```
 
 
 ## 4. Screens and Workflows  <a name="4-screens-and-workflows"></a>
