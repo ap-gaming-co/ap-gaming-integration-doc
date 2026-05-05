@@ -13,10 +13,10 @@
     - [3. API Functions API功能](#3-api-functions-api)
         - [3.1. FA001 – LoginV2 登陆V2](#31-fa001-loginv2)
         - [3.2.	FA002 – Logout 登出](#32-fa002-logout)
-        - [3.4.	FP001 – Create User 创建用户](#34-fp001-create-user)
-        - [3.5. FP003 – Get Player 获取用户](#35-fp003-get-player)
-        - [3.6. FP004 – Get List Player 获取用户列表](#36-fp004-get-list-player)
-        - [3.7. FP007 – Change Status Member 更改用户状态](#37-fp007-change-status-member)
+        - [3.3.	FP001 – Create User 创建用户](#33-fp001-create-user)
+        - [3.4. FP003 – Get Player 获取用户](#34-fp003-get-player)
+        - [3.5. FP004 – Get List Player 获取用户列表](#35-fp004-get-list-player)
+        - [3.6. FP007 – Change Status Member 更改用户状态](#36-fp007-change-status-member)
         - [3.8. FR001 – Wagers 投注](#38-fr001-wagers)
         - [3.10. FR003 – Win Loss Simple - 简易盈亏](#310-fr003-win-loss-simple)
         - [3.11. FR004 – Get My Bet – 获取我的投注](#311-fr004-get-my-bet)
@@ -480,7 +480,7 @@ namespace Logout
 }  
 ```
 
-### 3.4. FP001 – Create User 创建用户 <a name="34-fp001-create-user"></a>
+### 3.3. FP001 – Create User 创建用户 <a name="33-fp001-create-user"></a>
 
 This service is used to sign up a player.
 
@@ -564,7 +564,7 @@ Usage is limited to a maximum of 10 requests per 5 seconds.
 
 最大使用限制为每 5 秒10 个请求。
 
-### 3.5. FP003 – Get Player 获取用户 <a name="35-fp003-get-player"></a>
+### 3.4. FP003 – Get Player 获取用户 <a name="34-fp003-get-player"></a>
 
 This service returns player information.
 
@@ -652,7 +652,7 @@ namespace GetPlayer
 }  
 ```
 
-### 3.6. FP004 – Get List Player 获取用户列表 <a name="36-fp004-get-list-player"></a>
+### 3.5. FP004 – Get List Player 获取用户列表 <a name="35-fp004-get-list-player"></a>
 
 This service returns a list of player information.
 
@@ -735,7 +735,7 @@ namespace GetListPlayer
 }]  
 ```
 
-### 3.7. FP007 – Change Status Member 更改用户状态 <a name="37-fp007-change-status-member"></a>
+### 3.6. FP007 – Change Status Member 更改用户状态 <a name="36-fp007-change-status-member"></a>
 
 This service updates the status for a player.
 
