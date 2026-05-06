@@ -227,6 +227,8 @@ E.g. `2018-12-20T04:05:06`
 | `DRAW` | Wager has been settled as draw |  |
 | `HALF_WON_HALF_PUSHED` | Wager has been settled as half win |  |
 | `HALF_LOST_HALF_PUSHED` | Wager has been settled as half lose |  |
+| `CANCELLED`  | Wager was cancelled | |
+| `REFUNDED` | Wager was refunded|  |
 
 ## 11. Wager Status
 
