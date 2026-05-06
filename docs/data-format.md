@@ -230,6 +230,8 @@ E.g. `2018-12-20T04:05:06`
 | `DRAW` | Wager has been settled as draw<br/>注单已结算为平局。 |  |
 | `HALF_WON_HALF_PUSHED` | Wager has been settled as half win<br/>注单已结算为赢一半。 |  |
 | `HALF_LOST_HALF_PUSHED` | Wager has been settled as half lose<br/>注单已结算为输一半。 |  |
+| `CANCELLED`  | Wager was cancelled <br/>注单被取消 | |
+| `REFUNDED` | Wager was refunded<br/>注单已退款。 |  |
 
 ## 11. Wager Status 注单状态
 
