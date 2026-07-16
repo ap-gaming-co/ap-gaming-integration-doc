@@ -97,7 +97,8 @@ Successful response will return JSON format. <br>
   'userCode': 'PA10000000',     // string   
   'loginId': 'PA1000',     // string   
   'availableBalance': 1010.00,   // decimal(after deposit)   
-  'amount': 10.00      // decimal   
+  'amount': 10.00,      // decimal 
+  'transactionId': '2026071668200440'  // string   
 }
 ```
 
@@ -186,7 +187,8 @@ Successful response will return JSON format.<br>
   'userCode': 'PA10000000',     // string   
   'loginId': 'PA1000',     // string   
   'availableBalance': 1010.00,   // decimal(after withdrawal)   
-  'amount': 10.00      // decimal   
+  'amount': 10.00,      // decimal
+  'transactionId': '2026071668200440'  // string      
 }        
 ```
 
@@ -279,7 +281,8 @@ namespace Transactions
     "userCode": "Q23100000A",  
     "loginId": "Q23100000A",  
     "remarks": "Deposit to Q23100000A",  
-    "transferDate": "2017-04-24 02:10:12"  
+    "transferDate": "2017-04-24 02:10:12",
+    "transactionId": '2026071668200440'
   },  
   {  
     "agentCode": "Q231",  
@@ -288,7 +291,8 @@ namespace Transactions
     "userCode": "Q23100000A",  
     "loginId": "Q23100000A",  
     "remarks": "Withdrawal from Q23100000A",  
-    "transferDate": "2017-04-24 02:13:26"  
+    "transferDate": "2017-04-24 02:13:26",
+    "transactionId": '2026071668200441'
   },  
   {  
     "agentCode": "Q231",  
@@ -297,7 +301,8 @@ namespace Transactions
     "userCode": "Q231000000",  
     "loginId": "Q231000000",  
     "remarks": "Deposit to Q231000000",  
-    "transferDate": "2017-05-03 00:38:39"  
+    "transferDate": "2017-05-03 00:38:39",
+    "transactionId": '2026071668200442'  
   }    
 ] 
 ```
@@ -382,7 +387,8 @@ namespace ChangeStatusForDepositWithdraw
     "transferDate": "2018-11-15 23:18:34",  
     "transferType": "DEPOSIT",  
     "amount": 0.2,  
-    "userCode": "Q231000000"  
+    "userCode": "Q231000000",
+    "transactionId": '2026071668200440'  
 }
 ```
 
@@ -392,7 +398,8 @@ namespace ChangeStatusForDepositWithdraw
     "transferDate": "2018-11-14 20:15:20",  
     "transferType": "WITHDRAW",  
     "amount": 5,  
-    "userCode": "Q231000000"  
+    "userCode": "Q231000000",
+    "transactionId": '2026071668200441'  
 }  
 ```
 
