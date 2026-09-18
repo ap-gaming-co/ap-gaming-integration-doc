@@ -112,8 +112,8 @@
 | 6 | `MIX_PARLAY` | | 
 | 7 | ``TEASER`` | | 
 | 8 | `MANUAL_PLAY` | | 
-| 97 | `OE` | Odd Even| 
-| 99 | `SPECIAL`/`OUTRIGHT` | | 
+| 9 | `SPECIAL` | | 
+| 99 | `OUTRIGH`/`T` | | 
 
 ## 4. Odds Format
 
