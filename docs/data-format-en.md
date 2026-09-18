@@ -112,8 +112,7 @@
 | 6 | `MIX_PARLAY` | | 
 | 7 | ``TEASER`` | | 
 | 8 | `MANUAL_PLAY` | | 
-| 9 | `SPECIAL` | | 
-| 99 | `OUTRIGHT` | | 
+| 99 | `SPECIAL/OUTRIGHT` | | 
 
 ## 4. Odds Format
 
