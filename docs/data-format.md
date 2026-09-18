@@ -112,8 +112,7 @@
 | 6 | `MIX_PARLAY` | 混合过关| 
 | 7 | ``TEASER`` | 变让分过关盘| 
 | 8 | `MANUAL_PLAY` | 人工注單| 
-| 9 | `SPECIAL` | 特别投注| 
-| 99 | `OUTRIGHT` | 优胜冠军| 
+| 99 | `SPECIAL/OUTRIGHT` | 特别投注/优胜冠军| 
 
 ## 4. Odds Format 赔率格式
 
