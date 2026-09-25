@@ -128,6 +128,11 @@ Withdraw for player.<br>
 | amount  | Decimal(10, 2) (required必需项)  | Value > 0 <br> 设置值>0 |   |
 | transactionId | String(50) (optional非必需项) | Value > 0<br> 设置值>0 | The transactionId can be used to check a transaction’s status. It is a unique ID. 用于检查交易状态的交易ID |
 
+Please wait for the first request to be completed or confirmed before retrying. Sending a new request with a different transactionId may result in a duplicate transfer.
+
+如果您沒有收到第一次提款請求的回應，請不要使用不同的 transactionId 再次發送請求。
+請等待第一次請求完成或確認結果後再進行重試。使用不同的 transactionId 重新發送請求，可能會導致重複轉帳。
+
 *Sample code (java) - See HttpUtils class at Appendix*
 *示例代码（java）– 请参阅附录里的 HttpUtils class*
 
