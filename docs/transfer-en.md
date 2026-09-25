@@ -125,6 +125,10 @@ Withdraw for player.<br>
 | amount  | Decimal (10, 2) (required) | Value > 0 |
 | transactionId | String (50) (optional) | Value > 0 | The transactionId can be used to check a transaction’s status. It is a unique ID. |
 
+If you do not receive a response from the first withdrawal request, do not send a new request with a different transactionId.
+
+Please wait for the first request to be completed or confirmed before retrying. Sending a new request with a different transactionId may result in a duplicate transfer.
+
 *Sample code (java) - See HttpUtils class at Appendix*
 
 ```java
