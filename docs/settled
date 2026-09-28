@@ -1236,54 +1236,87 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 
 ```js
 {
-    "Timestamp": "2019-05-14T04:19:40",
-    "Signature": "HolXboM6LNFzni/Bh8FRJw4AqpdwmtcqrGagPDECNlxx3RuFisBLc2M8cySyJmnChSwwEPMko\87sUaEkcfjn4Q==",
-    "Actions": [
-		{
-	        "Id": 15560892634071798,
-	        "Name": "SETTLED",
-	    	"PlayerInfo": {
-	            "LoginId": "MPvZSDqM1685576929",
-	            "UserCode": "PXM130000D"
-	    	},
-	        "Transaction": {
-	            "TransactionId": 15560892277038,
-	            "TransactionType": "CREDIT",
-	            "TransactionDate": "2019-05-14T04:00:00",
-	            "Amount": 14.840
-	        },
-	        "WagerInfo": {
-	            "WagerId": 725361010,
-	            "Type": "single",
-	            "BetType": 1,
-	            "Sport": "Baseball",
-	            "Odds": 2.120,
-	            "OddsFormat": 1,
-	            "ToWin": 7.840,
-	            "ToRisk": 7.000,
-	            "Period": 0,
-	            "SettlementTime": "2019-05-14 06:00:00",
-	            "ResettlementTime": "2019-05-14 07:00:00",
-	            "PartialStatus": 1,
-	            "EventId": 985845048,
-	            "EventName": "Yokohama Bay Stars-vs-Chunichi Dragons",
-	            "LeagueId": 187703,
-	            "LeagueName": "Nippon Professional Baseball",
-		    	"ParentEventName": null,
-	            "Inplay": false,
-	            "InPlayScore": "",
-	            "Handicap": 0.00,
-	            "SelectionType": "HOME",
-	            "Selection": "Yokohama Bay Stars",
-	            "HomePitcher": "Y. Ono",
-	            "AwayPitcher": "K. Azuma",
-	            "HomePitcherName": "Y. Ono",
-	            "AwayPitcherName": "K. Azuma",
-	            "ProfitAndLoss": 7.840,
-	            "Outcome": "WIN"    
-	        }
-    	}
-	]
+  "Timestamp": "2026-09-27T18:00:07",
+  "Signature": "2AD6PL76ckmClDrP4URVkxFPiVqGP2OyTf/dxPuHWd1GIhbdjl8TdX5GxLLBLWfhF1WEb2LxiN0olyf7EKuHMA==",
+  "Actions": [
+    {
+      "Id": "166542372",
+      "Name": "SETTLED",
+      "Transaction": {
+        "TransactionId": "97131355",
+        "TransactionType": "CREDIT",
+        "TransactionDate": "2026-09-27T18:00:03",
+        "Amount": 37151.92
+      },
+      "PlayerInfo": {
+        "LoginId": "AOZ02OZ133021",
+        "UserCode": "26103011IR"
+      },
+      "WagerInfo": {
+        "WagerId": 3130474691,
+        "Type": "single",
+        "BetType": 2,
+        "SportId": 3,
+        "Sport": "Baseball",
+        "Odds": 2.78,
+        "OddsFormat": 1,
+        "ToWin": 23787.92,
+        "ToRisk": 13364,
+        "Stake": 13364,
+        "ProfitAndLoss": 23787.92,
+        "Outcome": "WIN",
+        "Period": 0,
+        "SettlementTime": "2026-09-27 18:00:03",
+        "PartialStatus": 1,
+        "EventId": 1637422401,
+        "ParentEventId": 1637154315,
+        "EventName": "San Diego Padres-vs-Arizona Diamondbacks",
+        "EventDateFm": "2026-09-27 15:10:00",
+        "LeagueId": 246,
+        "LeagueName": "MLB",
+        "Inplay": true,
+        "InPlayScore": "",
+        "Handicap": -3.5,
+        "SelectionType": "HOME",
+        "Selection": "San Diego Padres",
+        "Scores": [
+          {
+            "Period": 1,
+            "Score": "3-0"
+          },
+          {
+            "Period": 3,
+            "Score": "0-0"
+          },
+          {
+            "Period": 4,
+            "Score": "0-0"
+          },
+          {
+            "Period": 5,
+            "Score": "1-0"
+          },
+          {
+            "Period": 6,
+            "Score": "1-0"
+          },
+          {
+            "Period": 7,
+            "Score": "1-0"
+          },
+          {
+            "Period": 8,
+            "Score": "1-1"
+          },
+          {
+            "Period": 9,
+            "Score": "3-3"
+          }
+        ],
+        "ParentEventName": null
+      }
+    }
+  ]
 }
 ```
 
