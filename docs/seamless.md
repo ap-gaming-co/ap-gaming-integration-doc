@@ -613,43 +613,43 @@ The Sportsbook Platform will call to the Operator to notify them that the bet wa
 
 ```js
 {
-	"Timestamp": "2024-03-22T04:41:14",
-	"Signature": "6rC+ptbJmJQJ6Cn/X5p95dvnq/yOR7pWvalM7acs/hlCRryXBW7uy/tDcqbuVJFMEe4Qt8XkKQ7syvPPHpNcqA==",
-	"Actions": [
-    	{
-      		"Id": 15560892635790863,
-      		"Name": "ACCEPTED",
-      		"PlayerInfo": {
-				"LoginId": "Test.ABCD.1000475355",
-        		"UserCode": "P1L0000001"
-      		},
-      		"WagerInfo":
-				{
-        			"WagerId": 2200510331,
-        			"Type": "single",
-        			"BetType": 1,
-        			"Sport": "Soccer",
-        			"Odds": 210.000,
-        			"OddsFormat": 0,
-        			"ToWin": 44.100,
-        			"ToRisk": 21.000,
-        			"Stake": 21.000,
-        			"Period": 0,
-        			"EventId": 1587781217,
-        			"EventName": "Everton-vs-Liverpool",
-        			"EventDateFm": "2024-03-24 09:00:00",
-        			"LeagueId": 8713,
-        			"LeagueName": "England - Women Super League",
-        			"SportId": 29,
-        			"Inplay": false,
-        			"InPlayScore": "",
-        			"Handicap": 0.00,
-        			"SelectionType": "HOME",
-        			"Selection": "Everton",
-        			"ParentEventName": null
-			}
-    	}
-	]
+  "Timestamp": "2026-09-27T17:41:34",
+  "Signature": "2AD6PL76ckmClDrP4URVk8drQP5I7FE4VrAoTZZ3BPbDLA/k7mxL/0Ynx3a+Cw1CWchRlKbIeyov7qQCyPQX/w==",
+  "Actions": [
+    {
+      "Id": "166541951",
+      "Name": "ACCEPTED",
+      "PlayerInfo": {
+        "LoginId": "AOZ02OZ133021",
+        "UserCode": "26103011IR"
+      },
+      "WagerInfo": {
+        "WagerId": 3130474691,
+        "Type": "single",
+        "BetType": 2,
+        "SportId": 3,
+        "Sport": "Baseball",
+        "Odds": 2.78,
+        "OddsFormat": 1,
+        "ToWin": 23787.92,
+        "ToRisk": 13364,
+        "Stake": 13364,
+        "Period": 0,
+        "EventId": 1637422401,
+        "ParentEventId": 1637154315,
+        "EventName": "San Diego Padres-vs-Arizona Diamondbacks",
+        "EventDateFm": "2026-09-27 15:10:00",
+        "LeagueId": 246,
+        "LeagueName": "MLB",
+        "Inplay": true,
+        "InPlayScore": "",
+        "Handicap": -3.5,
+        "SelectionType": "HOME",
+        "Selection": "San Diego Padres",
+        "ParentEventName": null
+      }
+    }
+  ]
 }
 ```
 
