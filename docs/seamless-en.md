@@ -230,49 +230,50 @@ If the response received from the BETTED action is invalid or incomplete, the Sp
 
 ```js
 {
-    "Timestamp": "2022-06-14T07:32:16",
-    "Signature": "XKEa2UKfrWfVcDaIp/MDt62ujb8QkAx2Ja1AdkeIjcbeN65a5yzWojP4RBKxVLV9HOnEKiLYSbT0ssdc5KDVXQ==",
-    "Actions": [
-        {
-            "Id": 1923899,
-            "Name": "BETTED",
-            "PlayerInfo": {
-				"LoginId": "MPvZSDqM1685576929",
-				"UserCode": "PXM130000D"
-			},
-			"Transaction": {
-				"TransactionId": 1177217,
-        		"TransactionType": "DEBIT",
-        		"TransactionDate": "2022-06-14T07:32:16",
-        		"Amount": 100
-			},
-            "WagerInfo": {
-                "WagerId": 46739150,
-                "Type": "SINGLE",
-                "BetType": 99,
-                "Odds": 0.043,
-                "OddsFormat": 2,
-                "ToWin": 4.3,
-                "ToRisk": 100,
-                "Stake": 100,
-                "Period": 0,
-                "Selection": "Kanga 1, Gravitas 0",
-                "EventId": 1554522772,
-                "EventName": "Correct Score",
-                "EventDateFm": "2022-06-14 07:15:00",
-                "LeagueId": 212168,
-                "SportId": 12,
-                "Sport": "E Sports",
-                "Inplay": true,
-                "InPlayScore": "",
-                "Handicap": 0.0,
-                "SelectionType": "10",
-                "LeagueName": "League of Legends - LCO",
-                "ParentEventName": "Kanga-vs-Gravitas",
-				"PlayerIPAddress": "10.10.12.8"
-            }
-        }
-    ]
+  "Timestamp": "2026-09-27T17:41:20",
+  "Signature": "2AD6PL76ckmClDrP4URVk15VDqOddbXVpYu+jU9dhqADzpnCYqV/PZw2GaPVh0jhEMvgWF0VNT+eE0gzWYY+JA==",
+  "Actions": [
+    {
+      "Id": "166541949",
+      "Name": "BETTED",
+      "Transaction": {
+        "TransactionId": "97131106",
+        "TransactionType": "DEBIT",
+        "TransactionDate": "2026-09-27T17:41:20",
+        "Amount": 13364
+      },
+      "PlayerInfo": {
+        "LoginId": "AOZ02OZ133021",
+        "UserCode": "26103011IR"
+      },
+      "WagerInfo": {
+        "WagerId": 3130474691,
+        "Type": "SINGLE",
+        "BetType": 2,
+        "Odds": 2.62,
+        "OddsFormat": 1,
+        "ToWin": 21649.68,
+        "ToRisk": 13364,
+        "Stake": 13364,
+        "Period": 0,
+        "Selection": "San Diego Padres",
+        "EventId": 1637422401,
+        "ParentEventId": 1637154315,
+        "EventName": "San Diego Padres-vs-Arizona Diamondbacks",
+        "EventDateFm": "2026-09-27 15:10:00",
+        "LeagueId": 246,
+        "SportId": 3,
+        "Sport": "Baseball",
+        "Inplay": true,
+        "InPlayScore": null,
+        "Handicap": -3.5,
+        "SelectionType": "HOME",
+        "LeagueName": "MLB",
+        "ParentEventName": null,
+        "PlayerIPAddress": "211.235.65.107"
+      }
+    }
+  ]
 }
 ```
 
@@ -559,43 +560,43 @@ The Sportsbook Platform will call to the Operator to notify them that the bet wa
 
 ```js
 {
-	"Timestamp": "2024-03-22T04:41:14",
-	"Signature": "6rC+ptbJmJQJ6Cn/X5p95dvnq/yOR7pWvalM7acs/hlCRryXBW7uy/tDcqbuVJFMEe4Qt8XkKQ7syvPPHpNcqA==",
-	"Actions": [
-    	{
-      		"Id": 15560892635790863,
-      		"Name": "ACCEPTED",
-      		"PlayerInfo": {
-				"LoginId": "Test.ABCD.1000475355",
-        		"UserCode": "P1L0000001"
-      		},
-      		"WagerInfo":
-				{
-        			"WagerId": 2200510331,
-        			"Type": "single",
-        			"BetType": 1,
-        			"Sport": "Soccer",
-        			"Odds": 210.000,
-        			"OddsFormat": 0,
-        			"ToWin": 44.100,
-        			"ToRisk": 21.000,
-        			"Stake": 21.000,
-        			"Period": 0,
-        			"EventId": 1587781217,
-        			"EventName": "Everton-vs-Liverpool",
-        			"EventDateFm": "2024-03-24 09:00:00",
-        			"LeagueId": 8713,
-        			"LeagueName": "England - Women Super League",
-        			"SportId": 29,
-        			"Inplay": false,
-        			"InPlayScore": "",
-        			"Handicap": 0.00,
-        			"SelectionType": "HOME",
-        			"Selection": "Everton",
-        			"ParentEventName": null
-			}
-    	}
-	]
+  "Timestamp": "2026-09-27T17:41:34",
+  "Signature": "2AD6PL76ckmClDrP4URVk8drQP5I7FE4VrAoTZZ3BPbDLA/k7mxL/0Ynx3a+Cw1CWchRlKbIeyov7qQCyPQX/w==",
+  "Actions": [
+    {
+      "Id": "166541951",
+      "Name": "ACCEPTED",
+      "PlayerInfo": {
+        "LoginId": "AOZ02OZ133021",
+        "UserCode": "26103011IR"
+      },
+      "WagerInfo": {
+        "WagerId": 3130474691,
+        "Type": "single",
+        "BetType": 2,
+        "SportId": 3,
+        "Sport": "Baseball",
+        "Odds": 2.78,
+        "OddsFormat": 1,
+        "ToWin": 23787.92,
+        "ToRisk": 13364,
+        "Stake": 13364,
+        "Period": 0,
+        "EventId": 1637422401,
+        "ParentEventId": 1637154315,
+        "EventName": "San Diego Padres-vs-Arizona Diamondbacks",
+        "EventDateFm": "2026-09-27 15:10:00",
+        "LeagueId": 246,
+        "LeagueName": "MLB",
+        "Inplay": true,
+        "InPlayScore": "",
+        "Handicap": -3.5,
+        "SelectionType": "HOME",
+        "Selection": "San Diego Padres",
+        "ParentEventName": null
+      }
+    }
+  ]
 }
 ```
 
@@ -1157,54 +1158,87 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 
 ```js
 {
-    "Timestamp": "2019-05-14T04:19:40",
-    "Signature": "HolXboM6LNFzni/Bh8FRJw4AqpdwmtcqrGagPDECNlxx3RuFisBLc2M8cySyJmnChSwwEPMko\87sUaEkcfjn4Q==",
-    "Actions": [
-		{
-	        "Id": 15560892634071798,
-	        "Name": "SETTLED",
-	    	"PlayerInfo": {
-	            "LoginId": "MPvZSDqM1685576929",
-	            "UserCode": "PXM130000D"
-	    	},
-	        "Transaction": {
-	            "TransactionId": 15560892277038,
-	            "TransactionType": "CREDIT",
-	            "TransactionDate": "2019-05-14T04:00:00",
-	            "Amount": 14.840
-	        },
-	        "WagerInfo": {
-	            "WagerId": 725361010,
-	            "Type": "single",
-	            "BetType": 1,
-	            "Sport": "Baseball",
-	            "Odds": 2.120,
-	            "OddsFormat": 1,
-	            "ToWin": 7.840,
-	            "ToRisk": 7.000,
-	            "Period": 0,
-	            "SettlementTime": "2019-05-14 06:00:00",
-	            "ResettlementTime": "2019-05-14 07:00:00",
-	            "PartialStatus": 1,
-	            "EventId": 985845048,
-	            "EventName": "Yokohama Bay Stars-vs-Chunichi Dragons",
-	            "LeagueId": 187703,
-	            "LeagueName": "Nippon Professional Baseball",
-		    	"ParentEventName": null,
-	            "Inplay": false,
-	            "InPlayScore": "",
-	            "Handicap": 0.00,
-	            "SelectionType": "HOME",
-	            "Selection": "Yokohama Bay Stars",
-	            "HomePitcher": "Y. Ono",
-	            "AwayPitcher": "K. Azuma",
-	            "HomePitcherName": "Y. Ono",
-	            "AwayPitcherName": "K. Azuma",
-	            "ProfitAndLoss": 7.840,
-	            "Outcome": "WIN"    
-	        }
-    	}
-	]
+  "Timestamp": "2026-09-27T18:00:07",
+  "Signature": "2AD6PL76ckmClDrP4URVkxFPiVqGP2OyTf/dxPuHWd1GIhbdjl8TdX5GxLLBLWfhF1WEb2LxiN0olyf7EKuHMA==",
+  "Actions": [
+    {
+      "Id": "166542372",
+      "Name": "SETTLED",
+      "Transaction": {
+        "TransactionId": "97131355",
+        "TransactionType": "CREDIT",
+        "TransactionDate": "2026-09-27T18:00:03",
+        "Amount": 37151.92
+      },
+      "PlayerInfo": {
+        "LoginId": "AOZ02OZ133021",
+        "UserCode": "26103011IR"
+      },
+      "WagerInfo": {
+        "WagerId": 3130474691,
+        "Type": "single",
+        "BetType": 2,
+        "SportId": 3,
+        "Sport": "Baseball",
+        "Odds": 2.78,
+        "OddsFormat": 1,
+        "ToWin": 23787.92,
+        "ToRisk": 13364,
+        "Stake": 13364,
+        "ProfitAndLoss": 23787.92,
+        "Outcome": "WIN",
+        "Period": 0,
+        "SettlementTime": "2026-09-27 18:00:03",
+        "PartialStatus": 1,
+        "EventId": 1637422401,
+        "ParentEventId": 1637154315,
+        "EventName": "San Diego Padres-vs-Arizona Diamondbacks",
+        "EventDateFm": "2026-09-27 15:10:00",
+        "LeagueId": 246,
+        "LeagueName": "MLB",
+        "Inplay": true,
+        "InPlayScore": "",
+        "Handicap": -3.5,
+        "SelectionType": "HOME",
+        "Selection": "San Diego Padres",
+        "Scores": [
+          {
+            "Period": 1,
+            "Score": "3-0"
+          },
+          {
+            "Period": 3,
+            "Score": "0-0"
+          },
+          {
+            "Period": 4,
+            "Score": "0-0"
+          },
+          {
+            "Period": 5,
+            "Score": "1-0"
+          },
+          {
+            "Period": 6,
+            "Score": "1-0"
+          },
+          {
+            "Period": 7,
+            "Score": "1-0"
+          },
+          {
+            "Period": 8,
+            "Score": "1-1"
+          },
+          {
+            "Period": 9,
+            "Score": "3-3"
+          }
+        ],
+        "ParentEventName": null
+      }
+    }
+  ]
 }
 ```
 
