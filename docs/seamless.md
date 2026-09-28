@@ -262,49 +262,50 @@ If the response received from the BETTED action is invalid or incomplete, the Sp
 
 ```js
 {
-    "Timestamp": "2022-06-14T07:32:16",
-    "Signature": "XKEa2UKfrWfVcDaIp/MDt62ujb8QkAx2Ja1AdkeIjcbeN65a5yzWojP4RBKxVLV9HOnEKiLYSbT0ssdc5KDVXQ==",
-    "Actions": [
-        {
-            "Id": 1923899,
-            "Name": "BETTED",
-            "PlayerInfo": {
-				"LoginId": "MPvZSDqM1685576929",
-				"UserCode": "PXM130000D"
-			},
-			"Transaction": {
-				"TransactionId": 1177217,
-        		"TransactionType": "DEBIT",
-        		"TransactionDate": "2022-06-14T07:32:16",
-        		"Amount": 100
-			},
-            "WagerInfo": {
-                "WagerId": 46739150,
-                "Type": "SINGLE",
-                "BetType": 99,
-                "Odds": 0.043,
-                "OddsFormat": 2,
-                "ToWin": 4.3,
-                "ToRisk": 100,
-                "Stake": 100,
-                "Period": 0,
-                "Selection": "Kanga 1, Gravitas 0",
-                "EventId": 1554522772,
-                "EventName": "Correct Score",
-                "EventDateFm": "2022-06-14 07:15:00",
-                "LeagueId": 212168,
-                "SportId": 12,
-                "Sport": "E Sports",
-                "Inplay": true,
-                "InPlayScore": "",
-                "Handicap": 0.0,
-                "SelectionType": "10",
-                "LeagueName": "League of Legends - LCO",
-                "ParentEventName": "Kanga-vs-Gravitas",
-				"PlayerIPAddress": "10.10.12.8"
-            }
-        }
-    ]
+  "Timestamp": "2026-09-27T17:41:20",
+  "Signature": "2AD6PL76ckmClDrP4URVk15VDqOddbXVpYu+jU9dhqADzpnCYqV/PZw2GaPVh0jhEMvgWF0VNT+eE0gzWYY+JA==",
+  "Actions": [
+    {
+      "Id": "166541949",
+      "Name": "BETTED",
+      "Transaction": {
+        "TransactionId": "97131106",
+        "TransactionType": "DEBIT",
+        "TransactionDate": "2026-09-27T17:41:20",
+        "Amount": 13364
+      },
+      "PlayerInfo": {
+        "LoginId": "AOZ02OZ133021",
+        "UserCode": "26103011IR"
+      },
+      "WagerInfo": {
+        "WagerId": 3130474691,
+        "Type": "SINGLE",
+        "BetType": 2,
+        "Odds": 2.62,
+        "OddsFormat": 1,
+        "ToWin": 21649.68,
+        "ToRisk": 13364,
+        "Stake": 13364,
+        "Period": 0,
+        "Selection": "San Diego Padres",
+        "EventId": 1637422401,
+        "ParentEventId": 1637154315,
+        "EventName": "San Diego Padres-vs-Arizona Diamondbacks",
+        "EventDateFm": "2026-09-27 15:10:00",
+        "LeagueId": 246,
+        "SportId": 3,
+        "Sport": "Baseball",
+        "Inplay": true,
+        "InPlayScore": null,
+        "Handicap": -3.5,
+        "SelectionType": "HOME",
+        "LeagueName": "MLB",
+        "ParentEventName": null,
+        "PlayerIPAddress": "211.235.65.107"
+      }
+    }
+  ]
 }
 ```
 
