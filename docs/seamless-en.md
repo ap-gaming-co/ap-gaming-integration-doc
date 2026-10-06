@@ -309,185 +309,170 @@ In `BETTED` action, we send the number of bets that will be generated using the 
 *Parlay*
 ```js
 {
-    "Timestamp": "2022-07-15T09:50:14",
-    "Signature": "NsSP2DR6VC+IM6GYDs5qXHYZFiDixcap+WwKiVVQpWYHbDzdFT2o2AVk56Naiv6W5ohoupX0WAiG9mIUOtO3Nw==",
-    "Actions": [
-        {
-            "Id": 1929876,
-            "Name": "BETTED",
-            "PlayerInfo": {
-				"LoginId": "MPvZSDqM1685576929",
-				"UserCode": "PXM130000D"
-            },
-            "Transaction": {
-                "TransactionId": 1180518,
-                "TransactionType": "DEBIT",
-                "TransactionDate": "2022-07-15T09:50:14",
-                "Amount": 33
-            },
-            "WagerInfo": {
-                "WagerId": 47076606,
-                "Type": "PARLAY",
-                "BetType": 6,
-                "Odds": -0.143,
-                "OddsFormat": 4,
-                "ToWin": "230.770",
-                "ToRisk": "33.000",
-                "Stake": "33.000",
-				"PlayerIPAddress": "10.10.12.8",
-                "Legs": [
-                    {
-						"LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
-                        "SportId": 29,
-                        "Sport": "Soccer",
-                        "SportGroup": 0,
-                        "League": "Canada - Premier League",
-                        "BetType": 1,
-                        "LeagueId": 205098,
-                        "EventId": 1555400711,
-                        "EventDateFm": "2022-07-15 19:30:00",
-                        "SelectionType": 2,
-                        "InplayScore": null,
-                        "InPlay": false,
-                        "Odds": 2.910,
-                        "Handicap": 0.0,
-                        "Period": 0,
-                        "TeamType": 0,
-                        "EventName": "York United FC-vs-Pacific FC",
-                        "Selection": "Draw"
-                    },
-                    {
-						"LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
-                        "SportId": 29,
-                        "Sport": "Soccer",
-                        "SportGroup": 0,
-                        "League": "Club Friendlies",
-                        "BetType": 2,
-                        "LeagueId": 1863,
-                        "EventId": 1555686630,
-                        "EventDateFm": "2022-07-15 11:00:00",
-                        "SelectionType": 1,
-                        "InplayScore": null,
-                        "InPlay": false,
-                        "Odds": 0.666,
-                        "Handicap": 0.25,
-                        "Period": 0,
-                        "TeamType": 0,
-                        "EventName": "Istanbul Basaksehir FK-vs-Konyaspor Club",
-                        "Selection": "Konyaspor Club"
-                    },
-                    {
-						"LegId": "b0bbbc91-a8f8-4b37-b439-149060fcaa16",
-                        "SportId": 29,
-                        "Sport": "Soccer",
-                        "SportGroup": 0,
-                        "League": "Brazil - Serie B",
-                        "BetType": 3,
-                        "LeagueId": 1835,
-                        "EventId": 1555400748,
-                        "EventDateFm": "2022-07-15 18:00:00",
-                        "SelectionType": 3,
-                        "InplayScore": null,
-                        "InPlay": false,
-                        "Odds": 0.649,
-                        "Handicap": 1.75,
-                        "Period": 0,
-                        "TeamType": 0,
-                        "EventName": "Criciuma EC SC-vs-AA Ponte Preta SP",
-                        "Selection": "Over"
-                    }
-                ],
-                "WagerMasterId": 47076606,
-                "WagerNum": 1,
-                "RoundRobinOptions": [
-                    "Parlay"
-                ]
-            }
-        }
-    ]
+  "Timestamp": "2026-09-27T23:35:36",
+  "Signature": "2AD6PL76ckmClDrP4URVk5GgYMlMS4z9XlFNqx9svPfICUrU524oiWd5INtIyDFJimnPqBdibLBb0z+MPjTJCQ==",
+  "Actions": [
+    {
+      "Id": "166551820",
+      "Name": "BETTED",
+      "Transaction": {
+        "TransactionId": "97136844",
+        "TransactionType": "DEBIT",
+        "TransactionDate": "2026-09-27T23:35:35",
+        "Amount": 500000
+      },
+      "PlayerInfo": {
+        "LoginId": "AOZ02OZ1740072",
+        "UserCode": "26103011VK"
+      },
+      "WagerInfo": {
+        "WagerId": 3130545257,
+        "Type": "PARLAY",
+        "BetType": 6,
+        "Odds": 3.089,
+        "OddsFormat": 1,
+        "ToWin": 1044887.2,
+        "ToRisk": 500000,
+        "Stake": 500000,
+        "PlayerIPAddress": "223.38.229.210",
+        "Legs": [
+          {
+            "LegId": "422aff66-e228-4c1b-9592-407db0fc0849",
+            "SportId": 33,
+            "Sport": "Tennis",
+            "SportGroup": 2,
+            "League": "WTA Beijing - Qualifiers",
+            "BetType": 2,
+            "LeagueId": 6646,
+            "EventId": 1637447691,
+            "ParentEventId": 1637443943,
+            "EventDateFm": "2026-09-27 23:00:00",
+            "SelectionType": 0,
+            "InplayScore": null,
+            "InPlay": true,
+            "Odds": 1.813,
+            "Handicap": 7.5,
+            "Period": 0,
+            "TeamType": 0,
+            "EventName": "Carol Zhao (Games)-vs-Vivian Wolff (Games)",
+            "Selection": "Carol Zhao (Games)"
+          },
+          {
+            "LegId": "dedd6d37-efee-418d-a2fb-799c21ab65ad",
+            "SportId": 33,
+            "Sport": "Tennis",
+            "SportGroup": 2,
+            "League": "WTA Beijing - Qualifiers",
+            "BetType": 3,
+            "LeagueId": 6646,
+            "EventId": 1637447572,
+            "ParentEventId": 1637443842,
+            "EventDateFm": "2026-09-27 23:00:00",
+            "SelectionType": 4,
+            "InplayScore": null,
+            "InPlay": true,
+            "Odds": 1.704,
+            "Handicap": 22.5,
+            "Period": 0,
+            "TeamType": 0,
+            "EventName": "Mina Hodzic (Games)-vs-Zhuoxuan Bai (Games)",
+            "Selection": "Under"
+          }
+        ],
+        "WagerMasterId": 3130545257,
+        "WagerNum": 1,
+        "RoundRobinOptions": [
+          "Parlay"
+        ]
+      }
+    }
+  ]
 }
 ```
 *Teaser*
 ```js
 {
-    "Timestamp": "2026-03-09T03:03:23",
-    "Signature": "guLBgsi9qMAYHra2U1SIjVpyzGLACXtm/uJ3Q1ssfZZRvK0UBkKssy0fW7yTlqMdUlPc1sllYkMsG2InC/xhvQ==",
-    "Actions": [
-        {
-            "Id": 15560892635807548,
-            "Name": "BETTED",
-            "Transaction": {
-                "TransactionId": 15560893247112,
-                "TransactionType": "DEBIT",
-                "TransactionDate": "2026-03-09T03:03:23",
-                "Amount": 1
-            },
-            "PlayerInfo": {
-                "LoginId": "1MU0000003",
-                "UserCode": "1MU0000003"
-            },
-            "WagerInfo": {
-                "WagerId": 2206450842,
-                "Type": "TEASER",
-                "BetType": 7,
-                "SportId": 4,
-                "Sport": "Basketball",
-                "Odds": 1,
-                "OddsFormat": 2,
-                "ToWin": 1,
-                "ToRisk": 1,
-                "Stake": 1,
-                "PlayerIPAddress": "172.21.8.35",
-                "Legs": [
-                    {
-                        "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
-                        "SportId": 4,
-                        "Sport": "Basketball",
-                        "SportGroup": 1,
-                        "League": "NBA",
-                        "BetType": 2,
-                        "LeagueId": 487,
-                        "EventId": 1625292952,
-                        "EventDateFm": "2026-03-09 19:10:00",
-                        "SelectionType": 0,
-                        "InplayScore": null,
-                        "InPlay": false,
-                        "Odds": 0,
-                        "Handicap": -6.5,
-                        "Period": 0,
-                        "TeamType": 1,
-                        "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-                        "Point": 4.5,
-                        "Type": "NBA, College and WNBA 2 - 6 Team",
-                        "Selection": "Cleveland Cavaliers"
-                    },
-                    {
-                        "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
-                        "SportId": 4,
-                        "Sport": "Basketball",
-                        "SportGroup": 1,
-                        "League": "NBA",
-                        "BetType": 3,
-                        "LeagueId": 487,
-                        "EventId": 1625292952,
-                        "EventDateFm": "2026-03-09 19:10:00",
-                        "SelectionType": 4,
-                        "InplayScore": null,
-                        "InPlay": false,
-                        "Odds": 0,
-                        "Handicap": 233.5,
-                        "Period": 0,
-                        "TeamType": 1,
-                        "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-                        "Point": 6.5,
-                        "Type": "NBA, College and WNBA 2 - 6 Team",
-                        "Selection": "Under"
-                    }
-                ]
-            }
-        }
-    ]
+  "Timestamp": "2026-09-23T06:41:47",
+  "Signature": "6kNQIKRHMAnHi8cjtIyCSJJGSZbOJscmXxuLp+gi29JRth6nNLVvlUtsc32AZLJE+mnpSh2aYs9S57S9j0NR+A==",
+  "Actions": [
+    {
+      "Id": "166193321",
+      "Name": "BETTED",
+      "Transaction": {
+        "TransactionId": "96929265",
+        "TransactionType": "DEBIT",
+        "TransactionDate": "2026-09-23T06:41:47",
+        "Amount": 1
+      },
+      "PlayerInfo": {
+        "LoginId": "gbptestbroker",
+        "UserCode": "O430100008"
+      },
+      "WagerInfo": {
+        "WagerId": 3128044648,
+        "Type": "TEASER",
+        "BetType": 7,
+        "SportId": 4,
+        "Sport": "Basketball",
+        "Odds": 0.909,
+        "OddsFormat": 2,
+        "ToWin": 0.91,
+        "ToRisk": 1,
+        "Stake": 1,
+        "PlayerIPAddress": "57.182.187.99",
+        "Legs": [
+          {
+            "LegId": "d3f5b213-ad95-16dc-afac-b7a6b68aefc3",
+            "SportId": 4,
+            "Sport": "Basketball",
+            "SportGroup": 1,
+            "League": "WNBA",
+            "BetType": 2,
+            "LeagueId": 578,
+            "EventId": 1636816675,
+            "ParentEventId": 1636816675,
+            "EventDateFm": "2026-09-23 20:00:00",
+            "SelectionType": 0,
+            "InplayScore": null,
+            "InPlay": false,
+            "Odds": 0,
+            "Handicap": 2.5,
+            "Period": 0,
+            "TeamType": 1,
+            "EventName": "New York Liberty-vs-Atlanta Dream",
+            "Point": "4.5000000",
+            "Type": "NBA, College and WNBA 2 - 6 Team",
+            "Selection": "New York Liberty"
+          },
+          {
+            "LegId": "50fbf323-a0da-47b2-57cc-356076244575",
+            "SportId": 4,
+            "Sport": "Basketball",
+            "SportGroup": 1,
+            "League": "WNBA",
+            "BetType": 3,
+            "LeagueId": 578,
+            "EventId": 1636816675,
+            "ParentEventId": 1636816675,
+            "EventDateFm": "2026-09-23 20:00:00",
+            "SelectionType": 4,
+            "InplayScore": null,
+            "InPlay": false,
+            "Odds": 0,
+            "Handicap": 181,
+            "Period": 0,
+            "TeamType": 1,
+            "EventName": "New York Liberty-vs-Atlanta Dream",
+            "Point": "4.5000000",
+            "Type": "NBA, College and WNBA 2 - 6 Team",
+            "Selection": "Under"
+          }
+        ]
+      }
+    }
+  ]
 }
+
 ```
 
 **Manual Wager Type: POST Data for Request**
@@ -698,69 +683,78 @@ Response data when accepting a bet with balance adjustment.
 *Parlay*
 ```js
 {
-    "Timestamp": "2019-05-14T06:42:37",
-    "Signature": "pybnPupUEeQs3JpavwTUfsbMl7ux82vwlhigjbsT0ICBw77bYE9ULDWK7cw3bQSRx0qE\+VLGegK6UvO/fkUNlA==",
-    "Actions": [
-		{
-        	"Id": 15560892634071858,
-        	"Name": "ACCEPTED",
-    		"PlayerInfo": {
-            	"LoginId": "MPvZSDqM1685576929",
-            	"UserCode": "PXM130000D"
-    		},
-        	"WagerInfo": {
-            	"WagerId": 725428677,
-            	"Type": "parlay",
-            	"BetType": 6,
-            	"Odds": 3.324,
-            	"OddsFormat": 2,
-            	"ToWin": 39.890,
-            	"ToRisk": 12.000,
-            	"Legs": [
-					{
-                    	"LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
-                    	"SportId": 29,
-                    	"Sport": "Soccer",
-                    	"SportGroup": 0,
-                    	"LeagueId": 154545454,
-                    	"League": "Brazil - Serie B",
-	                    "BetType": 1,
-	                    "SelectionType": 2,
-	                    "Selection": "DRAW",
-	                    "InplayScore": null,
-	                    "InPlay": false,
-	                    "Odds": 2.920,
-	                    "Handicap": 0.00,
-	                    "Period": 0,
-	                    "LegStatus": "ACCEPTED",
-	                    "TeamType": 0,
-	                    "EventName": "Oeste Itapolis-vs-Cuiaba"
-                	},
-                	{
-			    		"LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
-	                    "SportId": 29,
-	                    "Sport": "Soccer",
-	                    "SportGroup": 0,
-	                    "LeagueId": 154545455,
-	                    "League": "Brazil - Serie B",
-	                    "BetType": 3,
-	                    "SelectionType": 3,
-	                    "Selection": "Brasil de Pelotas",
-	                    "InplayScore": null,
-	                    "InPlay": false,
-	                    "Odds": 0.480,
-	                    "Handicap": 1.50,
-	                    "Period": 0,
-	                    "LegStatus": "ACCEPTED",
-	                    "TeamType": 0,
-	                    "EventName": "Figueirense-vs-Brasil de Pelotas"
-                	}
-				],
-            	"WagerMasterId": 725428677
-        	}
-    	}
-	]
+  "Timestamp": "2026-09-27T23:35:50",
+  "Signature": "2AD6PL76ckmClDrP4URVk0G5+PfTUGJ7V00K/0BSs9PE85hzWciGqtCe7JN62LvgonFX3Esd09rJLYv/EzCQjg==",
+  "Actions": [
+    {
+      "Id": "166551824",
+      "Name": "ACCEPTED",
+      "PlayerInfo": {
+        "LoginId": "AOZ02OZ1740072",
+        "UserCode": "26103011VK"
+      },
+      "WagerInfo": {
+        "WagerId": 3130545257,
+        "Type": "parlay",
+        "BetType": 6,
+        "Odds": 3.089,
+        "OddsFormat": 1,
+        "ToWin": 1044887.21,
+        "ToRisk": 500000,
+        "Stake": 500000,
+        "Legs": [
+          {
+            "LegId": "422aff66-e228-4c1b-9592-407db0fc0849",
+            "SportId": 33,
+            "Sport": "Tennis",
+            "SportGroup": 2,
+            "League": "WTA Beijing - Qualifiers",
+            "BetType": 2,
+            "LeagueId": 6646,
+            "EventId": 1637447691,
+            "ParentEventId": 1637443943,
+            "EventDateFm": "2026-09-27 23:00:00",
+            "SelectionType": 0,
+            "InplayScore": null,
+            "InPlay": true,
+            "Odds": 1.813,
+            "Handicap": 7.5,
+            "Period": 0,
+            "LegStatus": "ACCEPTED",
+            "TeamType": 0,
+            "EventName": "Carol Zhao (Games)-vs-Vivian Wolff (Games)",
+            "Selection": "Carol Zhao (Games)"
+          },
+          {
+            "LegId": "dedd6d37-efee-418d-a2fb-799c21ab65ad",
+            "SportId": 33,
+            "Sport": "Tennis",
+            "SportGroup": 2,
+            "League": "WTA Beijing - Qualifiers",
+            "BetType": 3,
+            "LeagueId": 6646,
+            "EventId": 1637447572,
+            "ParentEventId": 1637443842,
+            "EventDateFm": "2026-09-27 23:00:00",
+            "SelectionType": 4,
+            "InplayScore": null,
+            "InPlay": true,
+            "Odds": 1.704,
+            "Handicap": 22.5,
+            "Period": 0,
+            "LegStatus": "ACCEPTED",
+            "TeamType": 0,
+            "EventName": "Mina Hodzic (Games)-vs-Zhuoxuan Bai (Games)",
+            "Selection": "Under"
+          }
+        ],
+        "WagerMasterId": 3130545257,
+        "WagerNum": 1
+      }
+    }
+  ]
 }
+
 ```
 
 **Parlay Response Data**
@@ -788,78 +782,82 @@ Response data when accepting bet with no balance adjustment.
 *Teaser*
 ```js
 {
-	"Timestamp": "2026-03-09T03:03:27",
-	"Signature": "guLBgsi9qMAYHra2U1SIjVPnMJ8s3VNQOnuhUfkmDwxjBUyP1kDEfP2SEneR+TySIKYVa3dnuBiWVhf6PZvF8A==",
-	"Actions": [
-		{
-			"Id": 15560892635807548,
-			"Name": "ACCEPTED",
-			"PlayerInfo": {
-				"LoginId": "1MU0000003",
-				"UserCode": "1MU0000003"
-			},
-			"WagerInfo": {
-	        "WagerId": 2206450842,
-	        "Type": "teaser",
-	        "BetType": 7,
-	        "SportId": 4,
-	        "Sport": "Basketball",
-	        "Odds": 1.000,
-	        "OddsFormat": 2,
-	        "ToWin": 1.000,
-	        "ToRisk": 1.000,
-	        "Stake": 1.000,
-        	"Legs": [
-				{
-		            "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
-		            "SportId": 4,
-		            "Sport": "Basketball",
-		            "SportGroup": 1,
-		            "League": "NBA",
-		            "BetType": 2,
-		            "LeagueId": 487,
-		            "EventId": 1625292952,
-		            "EventDateFm": "2026-03-09 19:10:00",
-		            "SelectionType": 0,
-		            "InplayScore": null,
-		            "InPlay": false,
-		            "Odds": 0.000,
-		            "Handicap": -6.50,
-		            "Period": 0,
-		            "LegStatus": "ACCEPTED",
-		            "TeamType": 1,
-		            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-		            "Point": 4.5000000,
-		            "Type": "NBA, College and WNBA 2 - 6 Team",
-		            "Selection": "Cleveland Cavaliers"
-				},
-				{
-		            "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
-		            "SportId": 4,
-		            "Sport": "Basketball",
-		            "SportGroup": 1,
-		            "League": "NBA",
-		            "BetType": 3,
-		            "LeagueId": 487,
-		            "EventId": 1625292952,
-		            "EventDateFm": "2026-03-09 19:10:00",
-		            "SelectionType": 4,
-		            "InplayScore": null,
-		            "InPlay": false,
-		            "Odds": 0.000,
-		            "Handicap": 233.50,
-		            "Period": 0,
-		            "LegStatus": "ACCEPTED",
-		            "TeamType": 1,
-		            "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-		            "Point": 6.5000000,
-		            "Type": "NBA, College and WNBA 2 - 6 Team",
-		            "Selection": "Under"
-				}
+  "Timestamp": "2026-09-23T06:41:55",
+  "Signature": "6kNQIKRHMAnHi8cjtIyCSDeOV67PX3dAuH26FjGySitYoqWUosb2Gf2l4kEc94HMnhxvUMpCAx5lI0F4ZDTU5A==",
+  "Actions": [
+    {
+      "Id": "166193322",
+      "Name": "ACCEPTED",
+      "PlayerInfo": {
+        "LoginId": "gbptestbroker",
+        "UserCode": "O430100008"
+      },
+      "WagerInfo": {
+        "WagerId": 3128044648,
+        "Type": "teaser",
+        "BetType": 7,
+        "SportId": 4,
+        "Sport": "Basketball",
+        "Odds": 0.909,
+        "OddsFormat": 2,
+        "ToWin": 0.91,
+        "ToRisk": 1,
+        "Stake": 1,
+        "Legs": [
+          {
+            "LegId": "50fbf323-a0da-47b2-57cc-356076244575",
+            "SportId": 4,
+            "Sport": "Basketball",
+            "SportGroup": 1,
+            "League": "WNBA",
+            "BetType": 3,
+            "LeagueId": 578,
+            "EventId": 1636816675,
+            "ParentEventId": 1636816675,
+            "EventDateFm": "2026-09-23 20:00:00",
+            "SelectionType": 4,
+            "InplayScore": null,
+            "InPlay": false,
+            "Odds": 0,
+            "Handicap": 181,
+            "Period": 0,
+            "LegStatus": "ACCEPTED",
+            "TeamType": 1,
+            "EventName": "New York Liberty-vs-Atlanta Dream",
+            "Point": "4.5000000",
+            "Type": "NBA, College and WNBA 2 - 6 Team",
+            "Selection": "Under"
+          },
+          {
+            "LegId": "d3f5b213-ad95-16dc-afac-b7a6b68aefc3",
+            "SportId": 4,
+            "Sport": "Basketball",
+            "SportGroup": 1,
+            "League": "WNBA",
+            "BetType": 2,
+            "LeagueId": 578,
+            "EventId": 1636816675,
+            "ParentEventId": 1636816675,
+            "EventDateFm": "2026-09-23 20:00:00",
+            "SelectionType": 0,
+            "InplayScore": null,
+            "InPlay": false,
+            "Odds": 0,
+            "Handicap": 2.5,
+            "Period": 0,
+            "LegStatus": "ACCEPTED",
+            "TeamType": 1,
+            "EventName": "New York Liberty-vs-Atlanta Dream",
+            "Point": "4.5000000",
+            "Type": "NBA, College and WNBA 2 - 6 Team",
+            "Selection": "New York Liberty"
+          }
         ],
         "WagerMasterId": 0,
         "WagerNum": 0
-	}
+      }
+    }
+  ]
 }
 ```
 
@@ -1269,79 +1267,248 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 *Parlay*
 ```js
 {
-    "Timestamp": "2019-05-21T11:59:57",
-    "Signature": "9qOierMPv8iqy0fFsNO84sXxp4WJtDkGQYw13gLJzj1LSwvG6zmM6yhRb3h88ZTHVyK6cRADh1K\NuxeNh4CxqQ==",
-    "Actions": [
-		{
-	        "Id": 15560892634075535,
-	        "Name": "SETTLED",
-	    	"PlayerInfo": {
-	            "LoginId": "MPvZSDqM1685576929",
-	            "UserCode": "PXM130000D"
-	    	},
-	        "Transaction": {
-	            "TransactionId": 15560892277038,
-	            "TransactionType": "CREDIT",
-	            "TransactionDate": "2019-05-14T04:00:00",
-	            "Amount": 50.000
-	        },
-	        "WagerInfo": {
-	            "WagerId": 725755355,
-	            "Type": "parlay",
-	            "BetType": 6,
-	            "Odds": 209.000,
-	            "OddsFormat": 0,
-	            "ToWin": 209.000,
-	            "ToRisk": 100.000,
-	            "ProfitAndLoss": -50.000,
-	            "Outcome": "LOSE",
-	            "SettlementTime": "2019-05-14 06:00:00",
-	            "ResettlementTime": "2019-05-14 07:00:00",
-	            "PartialStatus": 1,
-	            "Legs": [
-					{
-			    		"LegId": "68bf2b8a-81a9-d9de-32f5-8c13dcc47ddc",
-	                    "SportId": 29,
-	                    "Sport": "Soccer",
-	                    "SportGroup": 0,
-	                    "League": "Ukraine - Premier League",
-	                    "BetType": 3,
-	                    "LeagueId": 2650,
-	                    "SelectionType": 4,
-	                    "Selection": "Karpaty Lviv",
-	                    "InplayScore": null,
-	                    "InPlay": false,
-	                    "Odds": -138.000,
-	                    "Handicap": 1.00,
-	                    "Period": 1,
-	                    "LegStatus": "PUSH",
-	                    "TeamType": 0,
-	                    "EventName": "Chornomorets Odessa-vs-Karpaty Lviv"
-	                },
-	                {
-			    		"LegId": "a76c7bad-1ceb-9b9c-fbd4-235d8ab4f99f",
-	                    "SportId": 29,
-	                    "Sport": "Soccer",
-	                    "SportGroup": 0,
-	                    "League": "Ukraine - Premier League",
-	                    "BetType": 2,
-	                    "LeagueId": 2650,
-	                    "SelectionType": 0,
-	                    "Selection": "Desna",
-	                    "InplayScore": null,
-	                    "InPlay": false,
-	                    "Odds": -126.000,
-	                    "Handicap": 0.00,
-	                    "Period": 0,
-	                    "LegStatus": "LOSE",
-	                    "TeamType": 0,
-	                    "EventName": "Desna-vs-Vorskla Poltava"
-	                }
-	            ],
-	            "WagerMasterId": 725755322
-	        }
-	    }
-	]
+  "Timestamp": "2026-09-28T00:26:25",
+  "Signature": "2AD6PL76ckmClDrP4URVk+44cqd5FP0rmZKdVQG6FCdLZaXmwltrwYRsbugtq6fzG1JaZlUk/lDIJSma/pROuw==",
+  "Actions": [
+    {
+      "Id": "166552733",
+      "Name": "SETTLED",
+      "PlayerInfo": {
+        "LoginId": "AOZ02OZ1740072",
+        "UserCode": "26103011VK"
+      },
+      "WagerInfo": {
+        "WagerId": 3130545257,
+        "Type": "parlay",
+        "BetType": 6,
+        "Odds": 3.089,
+        "OddsFormat": 1,
+        "ToWin": 1044887.21,
+        "ToRisk": 500000,
+        "Stake": 500000,
+        "ProfitAndLoss": -500000,
+        "Outcome": "LOSE",
+        "SettlementTime": "2026-09-28 00:26:17",
+        "PartialStatus": 1,
+        "Legs": [
+          {
+            "LegId": "422aff66-e228-4c1b-9592-407db0fc0849",
+            "SportId": 33,
+            "Sport": "Tennis",
+            "SportGroup": 2,
+            "League": "WTA Beijing - Qualifiers",
+            "BetType": 2,
+            "LeagueId": 6646,
+            "EventId": 1637447691,
+            "ParentEventId": 1637443943,
+            "EventDateFm": "2026-09-27 23:00:00",
+            "SelectionType": 0,
+            "InplayScore": null,
+            "InPlay": true,
+            "Odds": 1.813,
+            "Handicap": 7.5,
+            "Period": 0,
+            "LegStatus": "LOSE",
+            "TeamType": 0,
+            "EventName": "Carol Zhao (Games)-vs-Vivian Wolff (Games)",
+            "Selection": "Carol Zhao (Games)",
+            "Scores": [
+              {
+                "Period": 1,
+                "Score": "1-6"
+              },
+              {
+                "Period": 6,
+                "Score": "0-1"
+              },
+              {
+                "Period": 7,
+                "Score": "0-1"
+              },
+              {
+                "Period": 8,
+                "Score": "0-1"
+              },
+              {
+                "Period": 9,
+                "Score": "0-1"
+              },
+              {
+                "Period": 10,
+                "Score": "0-1"
+              },
+              {
+                "Period": 12,
+                "Score": "0-1"
+              },
+              {
+                "Period": 13,
+                "Score": "Cancelled"
+              },
+              {
+                "Period": 14,
+                "Score": "Cancelled"
+              },
+              {
+                "Period": 19,
+                "Score": "0-1"
+              },
+              {
+                "Period": 20,
+                "Score": "0-1"
+              },
+              {
+                "Period": 21,
+                "Score": "1-0"
+              },
+              {
+                "Period": 22,
+                "Score": "0-1"
+              },
+              {
+                "Period": 23,
+                "Score": "0-1"
+              },
+              {
+                "Period": 24,
+                "Score": "0-1"
+              }
+            ]
+          },
+          {
+            "LegId": "dedd6d37-efee-418d-a2fb-799c21ab65ad",
+            "SportId": 33,
+            "Sport": "Tennis",
+            "SportGroup": 2,
+            "League": "WTA Beijing - Qualifiers",
+            "BetType": 3,
+            "LeagueId": 6646,
+            "EventId": 1637447572,
+            "ParentEventId": 1637443842,
+            "EventDateFm": "2026-09-27 23:00:00",
+            "SelectionType": 4,
+            "InplayScore": null,
+            "InPlay": true,
+            "Odds": 1.704,
+            "Handicap": 22.5,
+            "Period": 0,
+            "LegStatus": "WON",
+            "TeamType": 0,
+            "EventName": "Mina Hodzic (Games)-vs-Zhuoxuan Bai (Games)",
+            "Selection": "Under",
+            "Scores": [
+              {
+                "Period": 0,
+                "Score": "7-12"
+              },
+              {
+                "Period": 1,
+                "Score": "4-6"
+              },
+              {
+                "Period": 2,
+                "Score": "3-6"
+              },
+              {
+                "Period": 6,
+                "Score": "0-1"
+              },
+              {
+                "Period": 7,
+                "Score": "0-1"
+              },
+              {
+                "Period": 8,
+                "Score": "1-0"
+              },
+              {
+                "Period": 9,
+                "Score": "1-0"
+              },
+              {
+                "Period": 10,
+                "Score": "0-1"
+              },
+              {
+                "Period": 11,
+                "Score": "1-0"
+              },
+              {
+                "Period": 12,
+                "Score": "0-1"
+              },
+              {
+                "Period": 13,
+                "Score": "0-1"
+              },
+              {
+                "Period": 14,
+                "Score": "1-0"
+              },
+              {
+                "Period": 15,
+                "Score": "0-1"
+              },
+              {
+                "Period": 16,
+                "Score": "Cancelled"
+              },
+              {
+                "Period": 17,
+                "Score": "Cancelled"
+              },
+              {
+                "Period": 19,
+                "Score": "0-1"
+              },
+              {
+                "Period": 20,
+                "Score": "0-1"
+              },
+              {
+                "Period": 21,
+                "Score": "1-0"
+              },
+              {
+                "Period": 22,
+                "Score": "1-0"
+              },
+              {
+                "Period": 23,
+                "Score": "0-1"
+              },
+              {
+                "Period": 24,
+                "Score": "0-1"
+              },
+              {
+                "Period": 25,
+                "Score": "0-1"
+              },
+              {
+                "Period": 26,
+                "Score": "1-0"
+              },
+              {
+                "Period": 27,
+                "Score": "0-1"
+              },
+              {
+                "Period": 28,
+                "Score": "Cancelled"
+              },
+              {
+                "Period": 29,
+                "Score": "Cancelled"
+              }
+            ]
+          }
+        ],
+        "WagerMasterId": 3130545257,
+        "WagerNum": 1
+      }
+    }
+  ]
 }
 ```
 **Parlay Response Data**
@@ -1368,117 +1535,97 @@ Note: In SETTLED action, request data may have a Transaction or not. If there is
 *Teaser*
 ```js
 {
-    "Timestamp": "2026-03-09T21:26:12",
-    "Signature": "bkSyUHJ8aj39TYC+MA6jc2f7QPXj7OwbH9Zo9/5jJjQ7UDpWKvXnFqvAGE4dUkzKVHcue9vXIBITmql7jNiizg==",
-    "Actions": [
-        {
-            "Id": 15560892635807552,
-            "Name": "SETTLED",
-            "Transaction": {
-                "TransactionId": 15560893247114,
-                "TransactionType": "CREDIT",
-                "TransactionDate": "2026-03-09T21:25:55",
-                "Amount": 2
-            },
-            "PlayerInfo": {
-                "LoginId": "1MU0000003",
-                "UserCode": "1MU0000003"
-            },
-            "WagerInfo": {
-                "WagerId": 2206450842,
-                "Type": "teaser",
-                "BetType": 7,
-                "SportId": 4,
-                "Sport": "Basketball",
-                "Odds": 1,
-                "OddsFormat": 2,
-                "ToWin": 1,
-                "ToRisk": 1,
-                "Stake": 1,
-                "ProfitAndLoss": 1,
-                "Outcome": "WIN",
-                "SettlementTime": "2026-03-09 21:25:55",
-                "Legs": [
-                    {
-                        "LegId": "d419c5ed-4d60-050c-f6b0-a80f799dc7cd",
-                        "SportId": 4,
-                        "Sport": "Basketball",
-                        "SportGroup": 1,
-                        "League": "NBA",
-                        "BetType": 2,
-                        "LeagueId": 487,
-                        "EventId": 1625292952,
-                        "EventDateFm": "2026-03-09 19:10:00",
-                        "SelectionType": 0,
-                        "InplayScore": null,
-                        "InPlay": false,
-                        "Odds": 0,
-                        "Handicap": -6.5,
-                        "Period": 0,
-                        "LegStatus": "WON",
-                        "TeamType": 1,
-                        "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-                        "Point": 4.5,
-                        "Type": "NBA, College and WNBA 2 - 6 Team",
-                        "Selection": "Cleveland Cavaliers",
-                        "Scores": [
-                            {
-                                "Period": 1,
-                                "Score": "56-44"
-                            },
-                            {
-                                "Period": 3,
-                                "Score": "26-20"
-                            },
-                            {
-                                "Period": 4,
-                                "Score": "30-24"
-                            }
-                        ]
-                    },
-                    {
-                        "LegId": "f08ed97a-f4de-7660-d6ca-08800ac7f137",
-                        "SportId": 4,
-                        "Sport": "Basketball",
-                        "SportGroup": 1,
-                        "League": "NBA",
-                        "BetType": 3,
-                        "LeagueId": 487,
-                        "EventId": 1625292952,
-                        "EventDateFm": "2026-03-09 19:10:00",
-                        "SelectionType": 4,
-                        "InplayScore": null,
-                        "InPlay": false,
-                        "Odds": 0,
-                        "Handicap": 233.5,
-                        "Period": 0,
-                        "LegStatus": "WON",
-                        "TeamType": 1,
-                        "EventName": "Cleveland Cavaliers-vs-Philadelphia 76ers",
-                        "Point": 6.5,
-                        "Type": "NBA, College and WNBA 2 - 6 Team",
-                        "Selection": "Under",
-                        "Scores": [
-                            {
-                                "Period": 1,
-                                "Score": "56-44"
-                            },
-                            {
-                                "Period": 3,
-                                "Score": "26-20"
-                            },
-                            {
-                                "Period": 4,
-                                "Score": "30-24"
-                            }
-                        ]
-                    }
-                ],
-                "WagerMasterId": 0,
-                "WagerNum": 0
-            }
-        }
-    ]
+  "Timestamp": "2026-09-23T22:16:36",
+  "Signature": "6kNQIKRHMAnHi8cjtIyCSP3fI+Su7G5xY1Ut0o+7fvdlHtFtoOo414iQPCf13rXJ885fMMYxMFkYCksW2MIfJQ==",
+  "Actions": [
+    {
+      "Id": "166244726",
+      "Name": "SETTLED",
+      "PlayerInfo": {
+        "LoginId": "gbptestbroker",
+        "UserCode": "O430100008"
+      },
+      "WagerInfo": {
+        "WagerId": 3128044648,
+        "Type": "teaser",
+        "BetType": 7,
+        "SportId": 4,
+        "Sport": "Basketball",
+        "Odds": 0.909,
+        "OddsFormat": 2,
+        "ToWin": 0.91,
+        "ToRisk": 1,
+        "Stake": 1,
+        "ProfitAndLoss": -1,
+        "Outcome": "LOSE",
+        "SettlementTime": "2026-09-23 22:16:31",
+        "Legs": [
+          {
+            "LegId": "50fbf323-a0da-47b2-57cc-356076244575",
+            "SportId": 4,
+            "Sport": "Basketball",
+            "SportGroup": 1,
+            "League": "WNBA",
+            "BetType": 3,
+            "LeagueId": 578,
+            "EventId": 1636816675,
+            "ParentEventId": 1636816675,
+            "EventDateFm": "2026-09-23 20:00:00",
+            "SelectionType": 4,
+            "InplayScore": null,
+            "InPlay": false,
+            "Odds": 0,
+            "Handicap": 181,
+            "Period": 0,
+            "LegStatus": "WON",
+            "TeamType": 1,
+            "EventName": "New York Liberty-vs-Atlanta Dream",
+            "Point": "4.5000000",
+            "Type": "NBA, College and WNBA 2 - 6 Team",
+            "Selection": "Under",
+            "Scores": [
+              {
+                "Period": 1,
+                "Score": "26-41"
+              }
+            ]
+          },
+          {
+            "LegId": "d3f5b213-ad95-16dc-afac-b7a6b68aefc3",
+            "SportId": 4,
+            "Sport": "Basketball",
+            "SportGroup": 1,
+            "League": "WNBA",
+            "BetType": 2,
+            "LeagueId": 578,
+            "EventId": 1636816675,
+            "ParentEventId": 1636816675,
+            "EventDateFm": "2026-09-23 20:00:00",
+            "SelectionType": 0,
+            "InplayScore": null,
+            "InPlay": false,
+            "Odds": 0,
+            "Handicap": 2.5,
+            "Period": 0,
+            "LegStatus": "LOSE",
+            "TeamType": 1,
+            "EventName": "New York Liberty-vs-Atlanta Dream",
+            "Point": "4.5000000",
+            "Type": "NBA, College and WNBA 2 - 6 Team",
+            "Selection": "New York Liberty",
+            "Scores": [
+              {
+                "Period": 1,
+                "Score": "26-41"
+              }
+            ]
+          }
+        ],
+        "WagerMasterId": 0,
+        "WagerNum": 0
+      }
+    }
+  ]
 }
 ```
 
