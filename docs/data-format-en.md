@@ -191,7 +191,7 @@ E.g. `2018-12-20T04:05:06`
 | hi | Hindi | 
 | hy | Armenian |
 | ka | Georgian |
-| uk | Ukrainian |
+| ua | Ukrainian |
 | he | Hebrew |
 | km | Khmer |
 | sv | Swedish |
