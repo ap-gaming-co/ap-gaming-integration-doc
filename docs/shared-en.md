@@ -24,7 +24,8 @@
         - [3.11. FR005 – Wager Feed](#311-fr005-wager-feed)
         - [3.12. FR006 – Announcement](#312-fr006-announcement)
         - [3.13. FR009 – Get Hot Event](#313-fr009-get-hot-event)
-        - [3.14. FR010 – Deep link](#314-fr010-deep-link-content)
+        - [3.14. FR009 – Get Hot Event V2](#314-fr009-get-hot-event-v2)
+        - [3.15. FR010 – Deep link](#314-fr010-deep-link-content)
 
     - [4. Screens and Workflows](#4-screens-and-workflows)
     - [5. Appendix](#5-appendix)
@@ -2226,7 +2227,180 @@ namespace ChangeStatusForDepositWithdraw
     ]  
 }]
 ```
-### 3.14. FR010 – Deep Link <a name="314-fr010-deep-link-content"></a>
+### 3.14. FR009 – Get Hot Event V2 <a name="314-fr009-get-hot-event-v2"></a>
+
+This service will return hot events configured by B2B Agent.
+
+Call the API along with the Sport name to get events. Each Sport has its own logic for getting hot events:
+
+- If the requested Sports are configured as B2B Hot Events on the Partner Service BO Site, the system will return the Hot Events for those Sports.
+- For requested Sports without configured Hot Events, the system automatically selects Hot Events when automatic selection is available for that Sport:
+    - Soccer: Hot Soccer Teams and Hot Leagues (events starting in the next 15 days), followed by the highest Money Line max bet.
+    - E-Sports: Hot E-Sports Teams and Hot Leagues (events starting in the next 15 days), followed by the highest Money Line max bet, for each Game.
+    - Other Sports: Hot Leagues (events starting in the next 15 days), followed by the highest Money Line max bet.
+- Automatic selection returns up to 50 Hot Events per Sport, or per Game for E-Sports, by default. This limit depends on the service configuration.
+
+The delay setting of the User/Agent identified by `userCode` determines the events and odds returned. Users with delay enabled receive only pre-match events with delayed odds. Users without delay may receive both pre-match and live events.
+
+The Event IDs obtained from this API can be passed into the LoginV2 API to redirect players to the corresponding event page.
+
+**Endpoint:**
+
+| Name | Value | Description |
+| --- | --- | --- |
+| URL | `/v2/hot-events` | Get hot events with period-level odds. |
+| Method | `GET` | |
+
+**Parameters**
+
+| Name | Type | Value | Validation | Description |
+| --- | --- | --- | --- | --- |
+| `userCode` | Header | String (required) | | This is the agent code obtained in step 2. E.g: CO1AP1. |
+| `locale` | Query | String (optional) | Supported locales based on brand's available languages. | See Locale (Language) in the Data-format. |
+| `oddsFormat` | Query | String (optional) | Supported values: AM, EU, HK, ID, MY. | See Odds Format in the Data-format. |
+| `sports` | Query | String (required) | A comma-separated list of Sport names. | See Sport in the Data-format. |
+
+*Sample code (Java) - See HttpUtils class at Appendix*
+
+```java
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+private static void getHotEventsV2() throws IOException {
+    Map<String, String> params = new HashMap<>();
+    params.put("sports", "soccer");
+    params.put("locale", "en");
+    params.put("oddsFormat", "EU");
+    Map<String, String> headers = new HashMap<>();
+    headers.put("userCode", "Q231");
+
+    String url = "http://apidomain.com/b2b/v2/hot-events";
+    String result = HttpUtils.get(url, "", params, headers);
+    System.out.println(result);
+}
+```
+
+*Sample code (C#)*
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+namespace GetHotEventsV2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("sports", "soccer");
+            parameters.Add("locale", "en");
+            parameters.Add("oddsFormat", "EU");
+            Dictionary<string, string> headers = new Dictionary<string, string>();
+            headers.Add("userCode", "Q231");
+            Console.WriteLine(HttpUtils.GetRequest("http://apidomain.com/b2b/v2/hot-events",
+                parameters, headers).Result);
+            Console.ReadKey();
+        }
+    }
+}
+```
+
+V2 returns odds in `periods[]`, where `number` identifies each period. `inPlay` is `true` for a live event and `false` for a pre-match event. `parentEventId` is the parent event ID, or the event's own ID if it has no parent. For spreads and totals, `altLineId` is `0` for the main line or the corresponding ID for an alternate line.
+
+**Response OK**
+
+Illustrative response using `oddsFormat=EU`, including two periods and main/alternate lines:
+
+```json
+[
+    {
+        "id": 29,
+        "name": "Soccer",
+        "leagues": [
+            {
+                "id": 1728,
+                "name": "Sweden - Allsvenskan",
+                "events": [
+                    {
+                        "id": 1000605833,
+                        "home": "Djurgardens IF",
+                        "away": "Malmo FF",
+                        "starts": "2026-11-27 15:30:00",
+                        "parentEventId": 1000605833,
+                        "inPlay": false,
+                        "periods": [
+                            {
+                                "number": 0,
+                                "spreads": [
+                                    {
+                                        "hdp": "0",
+                                        "home": "1.86",
+                                        "away": "1.98",
+                                        "altLineId": 0
+                                    },
+                                    {
+                                        "hdp": "0.5",
+                                        "home": "1.45",
+                                        "away": "2.77",
+                                        "altLineId": 123456789
+                                    }
+                                ],
+                                "moneyline": {
+                                    "home": "2.65",
+                                    "away": "2.81",
+                                    "draw": "3.31"
+                                },
+                                "totals": [
+                                    {
+                                        "points": 2.25,
+                                        "over": "1.88",
+                                        "under": "1.95",
+                                        "altLineId": 0
+                                    },
+                                    {
+                                        "points": 1.75,
+                                        "over": "1.43",
+                                        "under": "2.79",
+                                        "altLineId": 123456790
+                                    }
+                                ]
+                            },
+                            {
+                                "number": 1,
+                                "spreads": [
+                                    {
+                                        "hdp": "0",
+                                        "home": "1.90",
+                                        "away": "1.92",
+                                        "altLineId": 0
+                                    }
+                                ],
+                                "moneyline": {
+                                    "home": "3.10",
+                                    "away": "3.20",
+                                    "draw": "2.10"
+                                },
+                                "totals": [
+                                    {
+                                        "points": 1.0,
+                                        "over": "1.85",
+                                        "under": "1.95",
+                                        "altLineId": 0
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+```
+
+### 3.15. FR010 – Deep Link <a name="314-fr010-deep-link-content"></a>
 
 Open your iFrame
 
